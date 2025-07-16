@@ -4,43 +4,66 @@ import { HiOutlineCheck } from "react-icons/hi2";
 const Pr_Section2 = () => {
   return (
     <>
-      <div className="bg-[url('/Paper-Texture.svg.png')] bg-cover bg-center lg:mt-50 mt-20">
+     <div className="w-[85%] m-auto">
+
+
+         <h2 className="text-[clamp(1rem,4vw,3rem)] font-medium text-[#FD853A] my-2 text-center">
+                What We Offer:
+              </h2>
+              <h2 className="text-[clamp(1rem,4vw,3rem)] font-medium leading-[3.2rem] text-center">
+                Targeted, High-Converting Performance Marketing Services
+
+              </h2>
+              <p className=" my-[2.5rem] text-center">
+              At <strong>Digital Whopper</strong>, we don’t just run ads, <strong>we engineer results</strong>. Our performance marketing 
+              services combine creativity, data, and advanced targeting to help your business grow faster and 
+              smarter.
+
+              </p>
+              <p className="text-center">Here’s what we bring to the table:</p>
+     </div>
+      <div className="bg-[url('/Paper-Texture.svg.png')] bg-cover bg-center lg:mt-50 mt-20 ">
+       
         <div className="bg-[#4F3DFE] text-white p-[4vw] flex gap-[40px] flex-col lg:flex-row relative bottom-10 lg:pt-40">
+       
           <div className="lg:w-1/2 mt-20 w-full">
             <section>
-              <p className="font-bold text-[1.3rem] text-[#FD853A] my-2">
-                Our Mission
-              </p>
-              <p className="font-bold md:text-[3rem] text-[2rem] md:w-[28rem] w-[18rem] leading-[3.2rem]">
-                Boost your with your business.
-              </p>
+           
+              <h2 className="font-bold md:text-[3rem] text-[2rem] md:w-[28rem] w-[18rem] leading-[3.2rem]">
+                Facebook Ad Services That Sell
+
+              </h2>
               <p className="w-[18rem] md:w-[28rem] my-[2.5rem]">
-                He moonlights difficult engrossed it, sportsmen. Interested has
-                all Devonshire difficulty gay assistance joy.
+           We’re a top-rated <strong>Facebook ad agency</strong> that helps brands create scroll-stopping creatives and 
+           razor-sharp targeting. Our <strong>Facebook ad services</strong> include:
+
               </p>
+             
             </section>
 
-            <section className="flex flex-col sm:flex-row gap-5">
+            <section className="flex flex-col sm:flex-row gap-5 flex-wrap">
               <div className="flex flex-col gap-3">
                 <div className="flex justify-center gap-2 items-start">
                   <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
                     <HiOutlineCheck />
                   </p>
                   <p className="w-[15rem]">
-                    Moonlight newspaper up its enjoyment
+                    Audience research and segmentation
+
                   </p>
                 </div>
                 <div className="flex justify-center gap-2 items-start">
                   <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
                     <HiOutlineCheck />
                   </p>
-                  <p className="w-[15rem]">She new course gets living.</p>
+                  <p className="w-[15rem]">Campaign setup and pixel integration</p>
                 </div>
                 <div className="flex justify-center gap-2 items-start">
                   <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
                     <HiOutlineCheck />
                   </p>
-                  <p className="w-[15rem]">She new course gets living.</p>
+                  <p className="w-[15rem]">A/B testing for creatives and headlines
+</p>
                 </div>
               </div>
 
@@ -49,23 +72,26 @@ const Pr_Section2 = () => {
                   <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
                     <HiOutlineCheck />
                   </p>
-                  <p className="w-[15rem]">Rooms oh fully taken by worse.</p>
+                  <p className="w-[15rem]">Retargeting campaigns to recover lost customers
+</p>
                 </div>
                 <div className="flex justify-center gap-2 items-start">
                   <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
                     <HiOutlineCheck />
                   </p>
-                  <p className="w-[15rem]">Perceived end certainly day.</p>
+                  <p className="w-[15rem]">Performance tracking and weekly reports</p>
                 </div>
-                <div className="flex justify-center gap-2 items-start">
-                  <p className="bg-[#FD853A] flex justify-center items-center h-5 w-5 rounded-full mt-1">
-                    <HiOutlineCheck />
-                  </p>
-                  <p className="w-[15rem]">
-                    Preference any astonished unreserved Mrs.
-                  </p>
-                </div>
+               
               </div>
+
+                <p className="w-full my-[2.5rem]">
+          Whether you're looking to increase sales, drive leads, or build brand awareness, our <strong>
+            facebook ad 
+          agency
+            </strong> team ensures every rupee spent delivers impact.
+
+
+              </p>
             </section>
           </div>
 

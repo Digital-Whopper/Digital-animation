@@ -9,12 +9,12 @@ const Section = () => {
       <div className="border border-gray-400 p-4 flex items-center justify-between mx-[3vw] md:mx-[10vw] lg:mx-[20vw] my-[5rem] rounded-4xl flex-wrap gap-[1rem]">
         <div className="flex items-center justify-center gap-1 relative">
           <FaLink />
-          <p>https:// yoursite.com</p>
+          <p>https://digitalwhopper.com/</p>
         </div>
 
         <div className="flex items-center justify-center gap-1">
           <MdOutlineEmail />
-          youremail@domain.com
+          digitalwhopperhelp@gmail.com
         </div>
 
         <div className="flex gap-1 items-center  bg-[#3E32BB] text-white py-2 px-4 rounded-2xl">
@@ -27,9 +27,13 @@ const Section = () => {
       </div>
 
       <div className="flex justify-center mx-[5%]">
-        <p className="w-[28rem] text-center flex md:text-[1.2rem]">
-          Welcome to SEOC where we specialize in revolutionizing your online
-          presence through expert SEO and digital marketing solutions.
+        <p className="w-[28rem] text-center text-[clamp(0.3rem,3vw,0.9rem)]">
+         At Digital Whopper, we help your business rise through the ranks with the 
+         <strong> best SEO services in Jaipur</strong>, 
+         ensuring your brand gets seen by the right audience at the right time. If you're a local startup or an 
+         established brand looking to scale, then our customised SEO solutions are designed specifically to help 
+         you put your business on Google.
+
         </p>
       </div>
 

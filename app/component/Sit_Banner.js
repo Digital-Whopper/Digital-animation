@@ -30,12 +30,10 @@ const Sit_Banner = () => {
 
 
   <div className="w-1/2 flex flex-col justify-center">
-<h2 className='text-white font-semi-bold text-[clamp(0.5rem,3vw,2rem)]'>  What Makes Digital
-Woopers Your</h2>
+<h2 className='text-white font-semi-bold text-[clamp(0.5rem,3vw,2rem)]'>What Makes Digital Whopper </h2>
 
 
-<h2 className=' text-[clamp(1rem,5vw,6rem)] font-bold text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFFFFF_7%,_#FD853A_100%)]'>  Perfect Marketing
-Ally ?</h2>
+<h2 className=' text-[clamp(1rem,5vw,6rem)] font-bold text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFFFFF_7%,_#FD853A_100%)]'>  the Best Digital Marketing Agency in Jaipur?</h2>
   </div>
 </div>
 

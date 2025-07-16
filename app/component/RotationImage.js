@@ -75,7 +75,7 @@ const RotationImage = ({
       <div className={`text-section w-[85%] m-auto ${custom || "pt-5"}`}>
         <div className={`w-full ${textclass || "text-left"}`}>
          {(linehead || lineheadspan || lineheadspancolor || Afterspan) && (
-  <h1 className="text-[clamp(1.5rem,5vw,4rem)] font-bold leading-tight">
+  <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold leading-tight">
     {linehead && <span>{linehead}</span>}
 
     {(lineheadspan || lineheadspancolor || Afterspan) && (
@@ -93,10 +93,10 @@ const RotationImage = ({
     )}
   </h1>
 )}
-
+{/* text-[clamp(0.5rem,3vw,1.5rem)] */}
          {(linepara || linespan) && (
   <p
-    className={`pt-[50px] text-[clamp(0.5rem,3vw,1.5rem)] w-full sm:w-full md:w-[85%] ${textclass || "text-left"}`}
+    className={`pt-[50px] text-[clamp(0.3rem,3vw,0.9rem)] w-full sm:w-full  ${textclass || "text-left"}`}
   >
     {linepara && <span  dangerouslySetInnerHTML={{ __html: linepara }} /> }
     {linespan && <span className="block" dangerouslySetInnerHTML={{ __html: linespan }} />}

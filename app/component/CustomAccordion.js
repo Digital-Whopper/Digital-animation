@@ -7,6 +7,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 
+// Icon Component
 function Icon({ id, open }) {
   return (
     <svg
@@ -15,46 +16,39 @@ function Icon({ id, open }) {
       viewBox="0 0 24 24"
       strokeWidth={2}
       stroke="currentColor"
-      className={`${id === open ? "rotate-180" : ""} transition-transform bg-[#FD853A] text-white rounded-full w-[25px] h-[25px]`}
+      className={`${
+        id === open ? "rotate-180" : ""
+      } transition-transform bg-[#FD853A] text-white rounded-full w-[25px] h-[25px]`}
     >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
     </svg>
   );
 }
 
-const CustomAccordion = () => {
+// CustomAccordion Component
+const CustomAccordion = ({ items }) => {
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="max-w-md mx-auto pt-0 p-4 flex flex-wrap">
-      <div className="block py-1 border-b border-black">
-      <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(1)} className="pt-0">
-          What is Material Tailwind?
-        </AccordionHeader>
-        <AccordionBody>
-          Material Tailwind is a UI library that combines Tailwind CSS with Material Design styles.
-        </AccordionBody>
-      </Accordion>
-      
-    
-      </div>
-     
-      <div className="block py-1  border-b border-black">
-      <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(2)} className="pt-0">
-          How to use Material Tailwind?
-        </AccordionHeader>
-        <AccordionBody>
-          Install it via npm/yarn, import components, and use them just like regular Tailwind elements.
-        </AccordionBody>
-      </Accordion>
-      </div>
-
-
-   
+    <div className="max-w-md mx-auto p-4 flex flex-wrap">
+      {items.map(({ id, title, body }) => (
+        <div key={id} className="block py-1 border-b border-black w-full">
+          <Accordion open={open === id} icon={<Icon id={id} open={open} />}>
+            <AccordionHeader onClick={() => handleOpen(id)} className="pt-0">
+              <p className="text-[clamp(0.3rem,3vw,0.9rem)]">{title}</p>
+            </AccordionHeader>
+            <AccordionBody>
+              <p className="text-[clamp(0.3rem,3vw,0.9rem)]">{body}</p>
+            </AccordionBody>
+          </Accordion>
+        </div>
+      ))}
     </div>
   );
 };

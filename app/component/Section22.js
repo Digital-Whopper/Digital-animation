@@ -19,14 +19,13 @@ export default function Section22() {
           About SEO
         </p>
 
-        <h4 className="md:text-[3.2vw] text-[8vw] leading-[10vw] font-semibold md:leading-[3.4vw]">
-          Comprehensive SEO &{" "}
-          <span className="text-[#3E32BB]">Digital Marketing</span> Solutions.
-        </h4>
+        <h2 className="text-[clamp(1rem,4vw,3rem)] font-semibold leading-[10vw] font-semibold md:leading-[3.4vw]">
+          What We Offer:{" "}
+          <span className="text-[#3E32BB]">End-to-End SEO</span> Services in Jaipur.
+        </h2>
         <p className="my-[1vw]">
-          Welcome to SEOC your trusted partner for comprehensive SEO and digital
-          marketing solutions. With our proven expertise and innovative
-          strategies the digital landscape.
+      <strong>Digital Whopper</strong> offers end-to-end SEO solutions that align with your business goals. Here’s 
+         what our comprehensive <strong>SEO services in Jaipur</strong> include:
         </p>
         <div className="flex gap-1 items-center my-[2vw] bg-[#3E32BB] text-white py-2 px-4 rounded-2xl w-[140px] text-center">
           <button>Learn More</button>

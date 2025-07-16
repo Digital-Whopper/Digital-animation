@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const BusinessIntro = () => {
   const fullText =
-    "Empower Your Business with AI-Driven Marketing, Web & App Solutions!";
+    "Get your Digital Solutions with Digital Whopper – The Best Digital Marketing Company in Jaipur!";
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const BusinessIntro = () => {
         {/* Right - Content */}
         <div>
           <button className="bg-orange-400 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
-            What is Digital Woopers?
+            Know us better!
           </button>
 
           {/* Animated Typing Text */}
@@ -41,18 +41,13 @@ const BusinessIntro = () => {
           </h2>
 
           <p className="text-gray-700 mb-4 text-[clamp(0.5rem,3vw,1rem)]">
-            We offer cutting-edge digital marketing, web development, and app
-            development services designed to accelerate your business growth.
-            Our AI-powered strategies and expert-driven solutions help you scale
-            your online presence, generate leads, and boost sales—without
-            unnecessary risks.
+           We provide 3600 online marketing services. From SEO and social media campaigns to complete branding solutions, we work to make your brand dominate the digital market. Our expert team uses ethical tactics to give your brand exponential organic growth.
+          Building a Start-up? Expanding an established business? We’ll help you build your brand online. 
           </p>
           <p className="text-gray-500 text-[clamp(0.5rem,3vw,1rem)]">
-            Choose from a wide range of tailored services, including SEO, social
-            media marketing, custom website design, and app development.
-            Whether you're a startup, an expanding brand, or an established
-            enterprise, we have the perfect strategy to drive your success in
-            the digital world!
+            Still confused about which <strong>digital marketing agency in Jaipur</strong> will be best for you? Well then, explore our portfolio! We’ve scaled start-ups like Mani, Ekatra etc. and made them people favourite! 
+We proudly say that we’re the <strong>best digital marketing company in Jaipur</strong> that offers comprehensive services essential for your brand to thrive in the digital world. 
+
           </p>
         </div>
       </div>

@@ -313,7 +313,7 @@ disableAnimation={true}
         
         <div className="boxes-div gap-x-4 mt-10 text-white flex  flex-wrap justify-center ">
         {boxCard.boxesDec.map((box, index) => (
-        <div key={index}  className="box-card  bg-[#4f3dfe] w-[85%] md:w-[48%] lg:w-[24%] rounded-[20px] p-4 mt-5 lg:mt-0">
+        <div key={index}  className="box-card  bg-[#4f3dfe] w-[85%] md:w-[48%] lg:w-[23%] rounded-[20px] p-4 mt-5 lg:mt-0">
         <div className="flex  "><div className="bg-white rounded-full p-4 text-[#aea6fe] text-2xl">
                     {box.src}
                 
@@ -554,7 +554,7 @@ Here’s why we are a<strong> trusted mobile application development company in 
         {/* About us  */}
     <section className="Aboutus-sec max-w-full"> 
     <div className=" py-10 flex flex-wrap items-center">
-    <div className="left-abt flex  flex-wrap-reverse md:flex-nowrap w-[100%] lg:w-[40%] relative">
+    <div className="left-abt flex  flex-wrap-reverse md:flex-nowrap w-[100%] lg:w-[50%] relative">
         
      <div  ref={ref} className="num-box bg-[#e1e1e1] rounded-tr-[20px] rounded-br-[20px] w-full md:w-[70%] py-14 lg:py-20 text-center md:pr-24">
 
@@ -587,7 +587,7 @@ Here’s why we are a<strong> trusted mobile application development company in 
         </div>
         </div>
     </div>
-    <div className="right-abt  w-[100%] lg:w-[45%] px-6 lg:pr-10 mt-12">
+    <div className="right-abt  w-[100%] lg:w-[50%] px-6 lg:pr-10 mt-12">
         <div className="ftext w-full flex justify-center md:justify-start items-center"><div className="bg-[#4f3dfe] w-[35px] h-[2px]"></div>
         <div className="text-[#4f3dfe] font-semibold px-2"><h4>About Us</h4></div> 
         <div className="bg-[#4f3dfe] w-[35px] h-[2px]"></div></div>

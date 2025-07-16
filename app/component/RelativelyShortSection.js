@@ -14,19 +14,19 @@ export default function RelativelyShortSection() {
   }, []);
 
   const timeline = [
-    { year: 2019, label: 'Started our mission' },
-    { year: 2020, label: 'Launched first product' },
-    { year: 2021, label: 'Scaled our operations' },
-    { year: 2022, label: '1M+ Users milestone' },
-    { year: 2023, label: 'Global expansion' },
+    { year: 2020, label: 'Started our mission' },
+    { year: 2021, label: 'Expansion' },
+    { year: 2022, label: 'First Milestone' },
+    { year: "2023-24", label: '100+ Projects' },
+    { year: 2025, label: 'Second Milestone' }
   ];
 
   const paragraphs = [
-    "Our experience has helped thousands of clients improve their trading skills and become successful traders.",
-    "We have been devoted to full-time trading since 2011, gaining lots of experience, which we decided to offer to a wider number of people.",
-    "Our Clients Has The Potential To Become A Profitable Trader. We started trading on financial markets more than 15 years ago.",
-    "We have been devoted to full-time trading since 2011, gaining lots of experience, which we decided to offer to a wider number of people.",
-    "In 2015 we began offering clients training courses. Thousands of satisfied clients have already passed our courses And we continue to innovate in 2023 to reach more aspiring traders.",
+    "We took the first step towards transforming the business landscape and opening avenues to thrive in the digital world.",
+    "Started with the vision of our founder we’ve expanded our professional team and services offered.",
+    "Having successfully built over 50 businesses, our turning point arrived with the project of Ekatra (our Shark Tank India Client).",
+    "Counting on projects, we successfully built an online reputation of a century of brands this year, and many more to come.",
+    "5 years since our digitalisation mission started, we are now praised by the Government of Rajasthan and are proud to be funded for expansion. This is not the END, many MORE MILESTONES are awaited.",
     
   ];
 
@@ -54,11 +54,11 @@ export default function RelativelyShortSection() {
    {/* Heading */}
         <div className="text-left w-full ">
           <h2 className="text-[clamp(1rem,4vw,3rem)]  font-bold leading-tight text-gray-900">
-            Our Clients have the Potential to <br />
-            Become Profitable Trader in a <br />
+            Driven by Passion at Every Stage, <br />
+            Our Milestones Reflects <br />
           
             <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent font-bold">
-              Relatively Short Time
+              How Far We’ve Come
             </span>
            
           </h2>

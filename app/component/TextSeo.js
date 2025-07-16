@@ -25,7 +25,7 @@ const TextSeo = (
       <ul className="list-disc pl-5 text-[clamp(0.3rem,3vw,0.9rem)] mt-2">
               
                {textList.map((text, index) => (
-        <li key={index}>{text}</li>
+        <li key={index} dangerouslySetInnerHTML={{ __html: text }} />
       ))}
              
           </ul>

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const MilestoneItem = ({ title, description }) => (
+const MilestoneItem = ({ title, description, lineheading, spanhead, milestonesSet1, milestonesSet2 }) => (
   <div className="text">
     <h3 className="text-[#344054] text-[clamp(1rem,3vw,2rem)] font-semibold mb-3">{title}</h3>
     <p className="text-[#98A2B3] text-lg">{description}</p>
@@ -35,7 +35,7 @@ const lineVariants = {
   },
 };
 
-const LineAnimation = ({ lineheading, spanhead }) => {
+const LineAnimation = ({ lineheading, spanhead, milestonesSet1, milestonesSet2 }) => {
   
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
@@ -60,17 +60,7 @@ const LineAnimation = ({ lineheading, spanhead }) => {
     }
   }, [isInView]);
 
-  const milestonesSet1 = [
-    { title: "The Inception", description: "Turning Ideas into Ambitions" },
-    { title: "Building the Core", description: "Establishing Expertise" },
-    { title: "Expanding Horizons", description: "Serving Diverse Industries" },
-  ];
-
-  const milestonesSet2 = [
-    { title: "Innovation Stage", description: "Pushing Boundaries" },
-    { title: "Market Growth", description: "Expanding Our Reach" },
-    { title: "Future Vision", description: "Shaping Tomorrow" },
-  ];
+  
 
   return (
     <section ref={sectionRef}>

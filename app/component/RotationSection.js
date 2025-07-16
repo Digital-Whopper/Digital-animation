@@ -118,11 +118,19 @@ const RotationSection = () => {
           rotate_img="/lines.svg"
           width_img="500"
           height_img="80"
-             linehead="Design-driven development" 
-lineheadspan="of your"
-lineheadspancolor="Web Product"
-linepara="A full-cycle digital service agency. We do everything from design to end-to-end development to maintenance. We have worked with more than 50+ brands.
-LogoSchedule a demo"
+             linehead="Grow your brand online with the " 
+
+lineheadspancolor="best digital marketing company in Jaipur"
+linepara={`<span class="block">Welcome to Digital Whopper! Your only destination to achieve integrated digital growth!</span>
+  <span class="block">Boost your brand's visibility, generate leads and drive conversions!</span>
+  We combine human creativity with the latest technologies to provide the best results. 
+  With AI ruling the digital world, we recreate brand identity to be more customer-centric. 
+  We develop unique data-driven marketing strategies for your brand that connect with your ideal audience. 
+  We've helped over 50 brands boost visibility, generate leads and increase ROI. No matter your business size, 
+  we are the <strong>best digital marketing company in Jaipur</strong> you can find to grow your brand. 
+  Your success is our mission! 
+  
+  `}
 
 
           />
@@ -141,14 +149,14 @@ LogoSchedule a demo"
             />
               <Link href="/Contact">
             <button className="bg-black text-xs lg:text-base text-white font-medium p-4 rounded-[30px] w-[100%] font-bold">
-              Schedule a demo
+              Enquire now!
             </button>
               </Link>
           </div>
           <div className="w-[80%] md:w-[30%] lg:w-[15%]">
              <Link href="/Contact">
       <button className="font-bold w-full bg-transparent border-2 border-black text-xs lg:text-base text-black font-medium p-4 rounded-[30px]">
-        Contact sales
+        Contact
       </button>
     </Link>
           </div>

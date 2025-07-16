@@ -6,16 +6,20 @@ const Pr_Section = () => {
     <div >
       <div className="bg-[#CFCFCF] min-h-screen flex flex-col-reverse md:flex-row items-center md:p-0 p- mx-[3%] rounded-2xl">
         <div className="md:w-1/2 m-20 w-full px-5">
-          <p>Pleasure and so read the was hope.</p>
-          <h4 className="font-bold text-5xl leading-14 my-5">
-            Ready to take <br />
-            <span className="text-[#FD853A]">your business </span> <br />
-            to the next level?
-          </h4>
-          <p className="my-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit- et ut massa
-            libero egestas malesuada viverra my-5gravida libero cursus nulla leo
-            pulvinar.
+      
+          <h1 className="font-bold text-[clamp(1.5rem,5vw,3rem)] my-5">
+            <span className="text-[clamp(0.3rem,3vw,0.9rem)]">Increase Your Marketing ROI & Sales With </span> <br/>the Best
+             <br />
+            <span className="text-[#FD853A]">Performance Marketing </span> <br />
+            Agency in Jaipur
+          </h1>
+          <p className="my-5 text-[clamp(0.3rem,3vw,0.9rem)]">
+            Are you pouring money into ad campaigns, boosting posts, and following every “growth hack” but still 
+            not seeing real, measurable returns? We can feel your pain. There are hundreds of businesses like yours 
+            that are burning all their budget on digital marketing that doesn’t convert. Here’s the truth: 
+            Traditional marketing is broken. You don’t need “more traffic.” You need better traffic, the kind that 
+            converts. And that’s where a <strong>performance marketing agency</strong> can help you.
+
           </p>
 
           <div className="flex items-center ">
@@ -37,17 +41,27 @@ const Pr_Section = () => {
                 <CiStar className="" />
                 <CiStar className="" />
               </div>
-            </div>
-          </div>
-        </div>
 
+              
+            </div>
+
+         
+          </div>
+
+          
+        </div>
+  
       <div className="relative md:w-1/2 w-[95%] h-[75vh] top-[35px]">
         <img src="/Rectangle 28 (1).png" alt="" className="absolute w-[80%] "/>
         <img src="/Rectangle 28.png" alt=""  className="absolute  w-[80%] top-[5%] left-[5%]" />
         <img src="/Rectangle 29.png" alt="" className="absolute w-[80%] top-[10%] left-[10%]"/>
      </div>
+
       </div>
-    
+     <p className="w-[85%] m-auto">Digital Whopper is a top-tier performance marketing agency and a trusted Facebook ad 
+                agency in Jaipur that helps brands like yours transform ad spend into real revenue. If you're 
+                scaling an eCommerce brand or a local service provider looking to dominate your niche, we tailor 
+                strategies that actually perform.</p>
       <section className="flex flex-col md:flex-row justify-center gap-[8%] items-center lg:mt-30">
         <div className="md:w-70 mt-10 text-center">
           <h2 className="text-3xl font-bold">200+</h2>

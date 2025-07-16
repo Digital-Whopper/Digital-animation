@@ -227,6 +227,7 @@ linepara={`You&rsquo;ve got a great product or service. You&rsquo;ve put in endl
   You&rsquo;ve spent a lot of money already on your business. And now you want the world to find it. 
   But despite all your hard work, your customers can't find you online. Your competitors just keep ranking first, and your business remains invisible on the internet. With so much competition these days, even the best of businesses fail to get discovered without a good strategy. That's why you require a <strong>digital marketing agency</strong> to guide you through the competition and achieve actual results online `}
 linespan={`Digital Whopper is the best digital marketing agency in Jaipur that helps businesses just like yours get seen, get clicks, and get results.`}
+
 disableAnimation={true}
 
 />
@@ -393,8 +394,8 @@ disableAnimation={true}
 
 
 <ServiceText 
-service_head="Why Digital Whopper is the Best "
-service_span="Digital Marketing Agency in Jaipur"
+service_head="Why Digital Whopper is the Best Digital Marketing"
+service_span=" Agency in Jaipur"
 serveclass="block"
 service_para={`Not all agencies are created equal. Here’s why hundreds 
 of businesses choose Digital Whopper as their <strong>digital marketing agency in Jaipur.</strong>

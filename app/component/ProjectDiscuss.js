@@ -2,12 +2,12 @@ import React from 'react'
 
 const ProjectDiscuss = () => {
   return (
-    <div className='py-[150px] border-b border-r border-l border-[#b5b5b5] border-t-0 m-[6px]'>
+    <div className='py-10 border-b border-r border-l border-[#b5b5b5] border-t-0 m-[6px]'>
 
         <div className=" w-[85%] m-auto flex flex-wrap justify-between ">
-        <div className="contact-heading">
-        <h2 className='text-[clamp(1rem,4vw,3rem)]'>Let&rsquo;s Discuss
-        <span className='block'> Your Project</span></h2>
+        <div className="contact-heading w-[50%]">
+        <h2 className='text-[clamp(1rem,4vw,3rem)] font-semibold'>Why Is Digital Whopper the Best Web Development Company in Jaipur?
+        Your Project</h2>
         </div>
 
 

@@ -16,8 +16,7 @@ Testimonials That <br/>Speak <span className="text-[#FD853A]">to My Results</spa
             </div>
       
       <p className="text-[#344054] w-full md:w-[50%] m-auto text-center mt-5 text-[clamp(0.5rem,3vw,1 rem)] ">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+        We’re not merely boasting of our achievements. Our clients have observed an actual transformation. Have a look at their words that reflect the results we delivered!
       </p>
 
    

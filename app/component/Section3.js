@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Section3 = () => {
@@ -10,8 +11,8 @@ const Section3 = () => {
 
       <div>
         <p className="font-semibold md:text-[3vw] text-[5vw] md:w-[40%] w-[60%] text-center m-auto">
-          Our Handpicked Digital Marketing
-          <span className="text-[#4F3DFE]">Case Study</span>
+          What we Do
+          <span className="text-[#4F3DFE]"> Our Work</span>
         </p>
       </div>
 
@@ -58,9 +59,12 @@ const Section3 = () => {
       </div>
 
       <div className="my-11 flex justify-center ">
-        <p className="text-[12px] md:text-[1.2vw] text-[#4F3DFE] font-semibold border-t-2 border-t-[#4F3DFE] p-2 inline-block border-b-2 border-b-[#4F3DFE]">
+        <Link href="/Services">
+          <p className="text-[12px] md:text-[1.2vw] text-[#4F3DFE] font-semibold border-t-2 border-t-[#4F3DFE] p-2 inline-block border-b-2 border-b-[#4F3DFE]">
           VIEW MORE CASE STUDAY
         </p>
+        </Link>
+      
       </div>
     </>
   );

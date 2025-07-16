@@ -7,12 +7,12 @@ const page = () => {
     <section className="w-[90%] md:w-[80%] mx-auto py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: Image */}
-        <div className="relative w-full h-[300px] md:h-[400px]">
+        <div className="relative w-full h-[500px] md:h-[500px]">
           <Image
-            src="/seooffice.jpg" 
+            src="/company.jpeg" 
             alt="About Us"
             fill
-            className="rounded-2xl object-cover"
+            className="rounded-xl"
             priority
           />
         </div>
@@ -23,15 +23,14 @@ const page = () => {
             About <span className="text-orange-500">Us</span>
           </h2>
           <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-            We’re a team of passionate creatives and developers dedicated to building
-            exceptional digital experiences. With a focus on innovation and excellence,
-            we bring ideas to life through design, code, and strategy.
+            At Digital Whopper, we are not here as another digital marketing agency. We are your creative growth partner. Our objective is really simple: to help you grow your business online with smart, powerful and best possible digital strategies. Whether you are a small startup dreaming of waking or a large business looking to scale higher, we have got your back.
+
           </p>
-          <ul className="space-y-2 text-gray-800">
+          {/* <ul className="space-y-2 text-gray-800">
             <li>✅ 10+ Years of Industry Experience</li>
             <li>✅ 100+ Projects Successfully Delivered</li>
             <li>✅ Global Clientele</li>
-          </ul>
+          </ul> */}
      
         </div>
       </div>

@@ -9,10 +9,10 @@ import AppDevMain from '../component/AppDevMain-DW'
 
 const page = () => {
   return (
-    <div>
+    <main>
       <AppDevMain/>
       
-    </div>
+    </main>
   )
 }
 

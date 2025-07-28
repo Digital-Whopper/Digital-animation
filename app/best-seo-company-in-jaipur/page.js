@@ -49,7 +49,7 @@ const faqs = [
 
 const page = () => {
   return (
-    <>
+    <main>
       <div className='relative'>
   <div className="w-[50px] h-[50px] md:w-[80px] md:h-[80px] rounded-full 
                 bg-gradient-to-b from-[#9c8af8] to-[#5f41f4] 
@@ -115,7 +115,7 @@ disableAnimation={true}
     <Section5/>
 
     <FAQ faqs={faqs} />
-    </>
+    </main>
   
 
 // {/* <>

@@ -7,11 +7,11 @@ import Ecommerce from '../component/Ecommerce-DW'
 
 const page = () => {
   return (
-    <div>
+    <main>
 
       
       <Ecommerce/>
-    </div>
+    </main>
   )
 }
 

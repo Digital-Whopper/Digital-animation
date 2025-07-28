@@ -46,7 +46,7 @@ const faqs = [
 
 const page = () => {
   return (
-    <div >
+    <main>
      {/* <PerformanceSection/>
      <Section2/>
      <ReadyBox/>
@@ -88,7 +88,7 @@ milestonesSet1={[
 
 <FAQ faqs={faqs} />
 
-    </div>
+    </main>
   )
 }
 

@@ -12,12 +12,12 @@ const Page = () => {
 
 
   return (
-<div>
+<main>
 <WebDev/>
 
 
 
-</div>
+</main>
 
   );
 }

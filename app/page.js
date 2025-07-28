@@ -1,4 +1,7 @@
-"use client";
+export const metadata = {
+  title: "Best Digital Marketing Agency in Jaipur | Digital Whopper",
+  description: "Tired of searching? Digital Whopper is the best digital marketing agency in Jaipur offering SEO, performance marketing, web development, and E-commerce solution.",
+};
 
 import Articals from "./component/Articals";
 import Testimoniols from "./component/Testimoniols";

@@ -15,10 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Best Digital Marketing Agency in Jaipur | Digital Whopper",
-  description: "Tired of searching? Digital Whopper is the best digital marketing agency in Jaipur offering SEO, performance marketing, web development, and E-commerce solution.",
-};
+
 
 export default function RootLayout({ children }) {
   return (

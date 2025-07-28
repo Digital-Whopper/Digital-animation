@@ -272,7 +272,7 @@ disableAnimation={true}
                 <div className="w-full flex justify-center items-center pt-10">
             <div className="AppFirst-div-main text-center max-w-xl lg:max-w-3xl">
        
-            <div className="btn-div flex mt-8 justify-center gap-x-4">
+            {/* <div className="btn-div flex mt-8 justify-center gap-x-4">
                 <div>
                     
                     <button className="bg-[#4f3dfe] text-xs md:text-base text-white rounded-lg px-6 py-2 font-semibold border-2 border-[#4f3dfe]">
@@ -282,7 +282,7 @@ disableAnimation={true}
                     
                     
                     <button className="border border-black rounded-lg px-10 py-2 text-xs md:text-base  font-semibold border-2	">{appFirstContent.button2Text}</button></div>
-                </div>
+                </div> */}
                 </div>
                 </div>
 
@@ -414,14 +414,14 @@ Here’s why we are a<strong> trusted mobile application development company in 
             </ul>
             </div>
         
-        <div className="btn-div flex mt-8  gap-x-4">
+        {/* <div className="btn-div flex mt-8  gap-x-4">
             <div>
         <button className="bg-[#4f3dfe] text-xs md:text-base text-white rounded-lg px-6 py-2 font-semibold border-2 border-[#4f3dfe]">
             {info.button1Text}</button></div>
              <div>
                 <button className="border border-black text-xs md:text-base rounded-lg px-2 md:px-10 py-2 font-semibold border-2">
                     {info.button2Text}</button></div>
-            </div>
+            </div> */}
             </div>
             </div>
              <div className="mt-0 md:mt-4 w-full md:w-[40%] flex justify-center">
@@ -595,7 +595,10 @@ Here’s why we are a<strong> trusted mobile application development company in 
             <h2>Ready to Build the App That Grows Your Business?</h2> </div>
         <div className="mt-4 text-[clamp(0.3rem,3vw,0.9rem)]  text-justify  text-[#5C5F6E]">
             <p>You don’t need to be a tech expert. You don’t need to deal with delays. You just need a team that delivers. At Digital Whopper, we combine strategy, design, and tech into mobile apps that solve real problems and drive real results. Get in touch with our expert mobile app team and start your journey today! We’ll map out your vision, answer your questions, and show you exactly how your app can succeed in today’s market.</p> </div>
-        <div className="mt-4 flex md:justify-start justify-center"><button className="flex items-center gap-2 rounded-[50px] md:text-base text-xs text-white px-2 lg:px-4 py-2 bg-[#4f3dfe]">Discover More <span className="bg-white text-black p-2 rounded-full"><MdArrowOutward /></span></button></div>
+        {/* <div className="mt-4 flex md:justify-start justify-center">
+            <button className="flex items-center gap-2 rounded-[50px] md:text-base text-xs text-white px-2 
+            lg:px-4 py-2 bg-[#4f3dfe]">Discover More <span className="bg-white text-black p-2 rounded-full">
+                <MdArrowOutward /></span></button></div> */}
     </div>
     </div>
     </section>

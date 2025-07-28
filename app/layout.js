@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Best Digital Marketing Company in Jaipur ",
-  description: "Digital Whopper is the best digital marketing company in Jaipur offering expert SEO, PPC, social media marketing, branding, and website development services.",
+  title: "Best Digital Marketing Agency in Jaipur | Digital Whopper",
+  description: "Tired of searching? Digital Whopper is the best digital marketing agency in Jaipur offering SEO, performance marketing, web development, and E-commerce solution.",
 };
 
 export default function RootLayout({ children }) {

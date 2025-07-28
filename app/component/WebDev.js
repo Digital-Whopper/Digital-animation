@@ -90,7 +90,7 @@ const testimonials = [
  
 ];
 
-const Page = () => {
+const WebDev = () => {
 
 
 
@@ -277,7 +277,7 @@ disableAnimation={true}
                 <h4 className="text-left text-base md:text-xl font-semibold py-3">{service.title}</h4>
              <p className="text-[clamp(0.3rem,3vw,0.9rem)] " dangerouslySetInnerHTML={{ __html: service.description }}/>
                 {/* <button className="flex items-center gap-4 pb-1 border-b border-black">
-                  Explore page <span><FiArrowRight /></span>
+                  Explore WebDev <span><FiArrowRight /></span>
                 </button> */}
               </div>
             </div>
@@ -513,5 +513,5 @@ Here’s what makes us different:</p>
   );
 }
 
-export default Page;
+export default WebDev;
 

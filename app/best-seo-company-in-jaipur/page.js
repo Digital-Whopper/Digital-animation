@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Best SEO Company in Jaipur | Digital Whopper",
+  description: "Looking for the Best SEO Company in Jaipur? Digital Whopper boosts your rankings with proven strategies, local SEO expertise, and ROI-driven results. Contact us today!",
+};
 import React from 'react'
 import RotationImage from '../component/RotationImage'
 // import LinText from '../component/LineText'
@@ -60,9 +64,9 @@ const page = () => {
  rotate_img="/lines.svg"
           width_img="500"
           height_img="80"
-             linehead = "Get More Customers to Visit Your Website with the"
+             linehead = "Get More Customers to Visit Your Website with"
             
-             lineheadspancolor=" Company in Jaipur Best SEO"
+             lineheadspancolor=" The Best SEO Company in Jaipur"
    linepara={`You’ve built a stunning website. Your products are solid. Your content is strategy-driven. 
     But no one’s visiting. No clicks. No leads. No sales. If your business isn’t showing up on Google, you won’t be 
     able to scale or build a sustainable business, no matter what you do. You need your customers to notice you and 

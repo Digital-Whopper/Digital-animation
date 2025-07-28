@@ -19,7 +19,8 @@ const FooterSection = () => {
     {
       title: "Our Services",
       items: ["Ecommerce","App Development", "Web Development",  "PerformanceMarketing"],
-      link: ["/Ecommerce","/AppDevelopment", "/shopify-website-development",  "/PerformanceMarketing"],
+      link: ["/ecommerce-marketing-services","/mobile-application-development-company-in-jaipur", 
+        "/web-development-company-in-jaipur",  "/performance-marketing-agency"],
     },
     {
       title: "Quick Links",

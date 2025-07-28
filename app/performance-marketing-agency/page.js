@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Digital Whopper – Best Performance Marketing Agency",
+  description: "As a top performance marketing agency, Digital Whopper focus on result-oriented campaigns to boost your ROI and drive your business success.",
+};
 import React from 'react'
 import PerformanceSection from '../component/PerformanceSection'
 import Section2 from '../component/Section2'

@@ -16,12 +16,12 @@ const HeaderSection = () => {
       name: 'Services',
       href: '/Services',
       subLinks: [
-        { name: 'App Development', href: '/AppDevelopment' },
-        { name: 'Shopify Development', href: '/shopify-website-development' },
-        { name: 'Ecommerce', href: '/Ecommerce' },
-        { name: 'SEO Optimization', href: '/seo' },
+        { name: 'App Development', href: '/mobile-application-development-company-in-jaipur' },
+        { name: 'Shopify Development', href: '/web-development-company-in-jaipur' },
+        { name: 'Ecommerce', href: '/ecommerce-marketing-services' },
+        { name: 'SEO', href: '/best-seo-company-in-jaipur' },
        
- { name: 'Performance Marketing', href: '/PerformanceMarketing' },
+ { name: 'Performance Marketing', href: '/performance-marketing-agency' },
       ],
     },
     //  { name: 'Marketing', href: '#' },

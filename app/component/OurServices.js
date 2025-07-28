@@ -13,17 +13,17 @@ const OurServices = () => {
     {
       title: "Web Design",
       image: "/Sevice1.jpg",
-      href: "/shopify-website-development",
+      href: "/web-development-company-in-jaipur",
     },
     {
       title: "App Development",
       image: "/Sevice1.jpg",
-      href: "/AppDevelopment",
+      href: "/mobile-application-development-company-in-jaipur",
     },
     {
       title: "Ecommerce",
       image: "/Sevice1.jpg",
-      href: "/Ecommerce",
+      href: "/ecommerce-marketing-services",
     },
   ];
 

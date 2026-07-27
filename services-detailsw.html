@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Details | Digital Whopper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styleb.css">
+<link rel="stylesheet" href="section.css">
+<style>
+  /* ==========================================================================
+   📸 BRAND IMAGE LOGO MULTI-SCALE SYNCHRONIZATION
+   ========================================================================== */
+  .logo-img-asset {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  /* ==========================================================================
+     🖼 RE-CALIBRATED GRAPHIC STYLES FOR DETAILS HERO
+     ========================================================================== */
+  .detail-hero-section {
+    padding: 140px 0 80px !important;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  /* 1. Top Left Back Button */
+  .back-btn-wrapper {
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  /* Single Column Centered/Stacked Layout */
+  .detail-single-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* 2. Heading Section */
+  .detail-header-block {
+    text-align: left;
+  }
+  .detail-header-block h1 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    margin: 8px 0;
+    color: var(--text);
+  }
+
+  /* 3. Media Image Box */
+  .detail-media-panel {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 82, 255, 0.12);
+    box-shadow: var(--card-shadow-default);
+  }
+  .detail-service-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* 4. Description Text */
+  .detail-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  /* 5. Points / Features List */
+  .detail-features-block {
+    border-top: 1px solid rgba(0, 82, 255, 0.1);
+    padding-top: 20px;
+  }
+  .detail-features-block h3 {
+    color: #0052ff;
+    font-size: 18px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .feature-list-render {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+  }
+  .feature-list-render li {
+    font-size: 15px; 
+    color: var(--muted); 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-weight: 500;
+  }
+  .feature-list-render li::before {
+    content: "✦"; 
+    color: #0052ff; 
+    text-shadow: 0 0 8px rgba(0, 82, 255, 0.4); 
+    font-weight: 700;
+  }
+
+  /* 6. Center Aligned Action Button */
+  .cta-center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  /* 📱 Responsive Mobile Adaptations */
+  @media(max-width: 900px) { 
+    .detail-hero-section { padding: 90px 0 40px !important; }
+    .feature-list-render { grid-template-columns: 1fr; gap: 10px; } 
+    .detail-service-img { max-height: 260px; }
+    .detail-header-block{display: flex;
+    align-items: center;
+    justify-content: center;}
+  }
+</style>
+</head>
+<body>
+
+<div id="customPreloader" class="preloader-overlay">
+  <div class="preloader-content">
+    <h2 class="preloader-brand">Digital Whopper</h2>
+    <div class="preloader-spinner">
+      <span class="spinner-dot"></span>
+      <span class="spinner-dot"></span>
+    </div>
+  </div>
+</div>
+
+<header id="mainHeader">
+  <nav>
+    <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
+      <div class="logo-icon-box">
+        <img src="img/landing-logo.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon" id="logoIcon">
+      </div>
+      <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
+    </a>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/servicesw.html">Services</a>
+      <a href="/projects.html">PortFolio</a>
+      <a href="#">SEO Audit</a>
+      <a href="#">SMO Audit</a>
+      <a href="#">Shark Tank Journey</a>
+      <a href="#">Punch In</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/" class="btn btn-gold">Enquire now</a>
+    </div>
+  </nav>
+</header>
+
+<section class="detail-hero-section">
+  <div class="pink-blob"></div>
+  <div class="purple-ambient-glow"></div>
+
+  <div class="wrap">
+    
+    <!-- 1. Top Left Back Button -->
+    <div class="back-btn-wrapper">
+      <a href="servicesw.html" class="btn btn-ghost" style="padding: 10px 22px; font-size: 13px; border-color: rgba(0, 82, 255, 0.15); color: #0052ff;">← Back to Services</a>
+    </div>
+
+    <div class="detail-single-layout">
+      
+      <!-- 2. Heading Section -->
+      <div class="detail-header-block">
+        <div style="font-size: 46px; margin-bottom: 4px;" id="serviceIcon">🚀</div>
+        <h1 class="text-shine" id="serviceTitle">Loading Strategy...</h1>
+      </div>
+
+      <!-- 3. Image Section -->
+      <div class="detail-media-panel">
+        <img src="" alt="Service Showcase" id="serviceImage" class="detail-service-img">
+      </div>
+
+      <!-- 4. Description Section -->
+      <p class="detail-desc" id="serviceDesc"></p>
+
+      <!-- 5. Points / Features Section -->
+      <div class="detail-features-block">
+        <h3>Core Deliverables Included:</h3>
+        <ul class="feature-list-render" id="serviceFeatures"></ul>
+      </div>
+
+      <!-- 6. Center Aligned Button -->
+      <div class="cta-center-wrapper">
+        <a href="https://wa.me/916200379161" target="_blank" class="btn btn-gold" style="padding: 14px 36px; font-size: 15px;">Deploy This Strategy Now ✦</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ✦ FOOTER SECTION ✦ -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="logo">
+          <div class="logo-mark">DW</div>Digital Whopper
+        </a>
+        <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
+        <p><a href="tel:+916200379161">+91 6200379161</a><br><a href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a></p>
+        <div class="socials">
+          <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Pages</h4>
+          <a href="/index.html">Home</a>
+          <a href="/servicesw.html">Services</a>
+          <a href="/projects.html">Portfolio</a>
+          <a href="/#about">About</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h4>Our services</h4>
+          <a href="/servicesw.html">App &amp; Shopify Development</a>
+          <a href="/servicesw.html">SEO &amp; SMO Optimisation</a>
+          <a href="/servicesw.html">E-Commerce</a>
+          <a href="/servicesw.html">Performance Marketing</a>
+          <a href="/servicesw.html">Web Design &amp; Development</a>
+        </div>
+        <div class="foot-col">
+          <h4>Quick links</h4>
+          <a href="/#blog">Blog</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#milestones">Our journey</a>
+          <a href="https://wa.me/916200379161" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Digital Whopper. All rights reserved.</span>
+      <span>Made with ✦ in Jaipur, the Pink City</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 🤖 WHOPPY AI CHATBOT MATRIX -->
+<div class="chatbot-wrapper">
+  <div class="chat-bubble" id="chatBubble">
+    <div class="robot-image-container">
+      <img src="hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+    </div>
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-user">
+        <div class="bot-avatar-container">
+          <img src="hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+        </div>
+        <div>
+          <h4>Whoppy AI</h4>
+          <span class="status-online">● Online</span>
+        </div>
+      </div>
+      <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+    </div>
+
+    <div class="chat-body-messages" id="chatMessages">
+      <div class="msg-bubble bot-msg">
+        Hi there! I am Whoppy, your Digital Whopper AI assistant. How can I help grow your brand today? 🚀
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggest-chip" onclick="triggerBotResponse('Services')">Our Services</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Check Pricing</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Human 👤</button>
+      </div>
+    </div>
+
+    <div class="chat-footer-input">
+      <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+      <button id="sendChatBtn" class="send-msg-btn">✦</button>
+    </div>
+  </div>
+</div>
+
+<!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+<div class="mobile-app-bottom-nav">
+  <a href="/index.html" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </div>
+    <span>Home</span>
+  </a>
+
+  <a href="/servicesw.html" class="app-nav-item active">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    </div>
+    <span>Services</span>
+  </a>
+
+  <a href="/projects.html" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+    </div>
+    <span>Projects</span>
+  </a>
+
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z"/></svg>
+    </div>
+    <span>WhatsApp</span>
+  </a>
+
+  <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </div>
+    <span>Call Us</span>
+  </a>
+</div>
+
+<script src="scriptb.js"></script>
+<script src="section.js"></script>
+<script src="services-script.js"></script>
+
+<script>
+  // Dynamic Database synchronized with servicesw.html
+  const serviceDatabase = [
+    { 
+      title: "SEO Domination", 
+      icon: "🔍", 
+      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80", 
+      desc: "Rank first on search engines. We implement aggressive, data-driven organic strategies that lock keyword footprint and scale conversion traffic.", 
+      features: ["Intent Keyword Architecture", "Core Web Vitals Boost", "High-Velocity Link Outreach", "Semantic Content Mapping"]
+    },
+    { 
+      title: "Performance Ads", 
+      icon: "🚀", 
+      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80", 
+      desc: "Maximize your enterprise ROAS. Our hybrid ad operations isolate platform funnel leaks, laser-targeting highly qualified buyers instantly.", 
+      features: ["Funnel Architecture Planning", "CBO Scaling Protocols", "Ad Creative Matrix Mapping", "ROAS Optimization System"]
+    },
+    { 
+      title: "Web Development", 
+      icon: "💻", 
+      img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80", 
+      desc: "High-speed, scalable corporate sites. We program lightning-fast custom web applications powered by robust, clean engineering architectures.", 
+      features: ["Bespoke Frontend Engineering", "Core Web Vitals & Speed Optimization", "Interactive UI/UX Prototypes", "Cross-Platform Responsiveness"]
+    },
+    { 
+      title: "E-Commerce Scale", 
+      icon: "🛍️", 
+      img: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=600&q=80", 
+      desc: "Dominate Shopify, Amazon, and marketplaces. We build complete, high-conversion digital storefronts optimized for friction-free retention.", 
+      features: ["Custom Liquid Programming", "One-Page Instant Checkout", "Retention Flow Integrations", "AOV Optimization Systems"]
+    },
+    { 
+      title: "UI/UX Architecture", 
+      icon: "🎨", 
+      img: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80", 
+      desc: "Frictionless digital design systems. We craft conversion-focused customer experiences that balance artistic clarity with structural psychology.", 
+      features: ["User Journey Mapping", "Figma High-Fidelity Design", "Design System Engineering", "Interactive Prototyping"]
+    },
+    { 
+      title: "Social Brand Asset", 
+      icon: "📱", 
+      img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80", 
+      desc: "Build viral digital equity. We deploy premium social media operations that multiply your audience connection and cement top-of-mind recall.", 
+      features: ["Script Hook Blueprints", "High-Retention Editing Systems", "Creator Alignment Pipelines", "Multi-Channel Virality Map"]
+    }
+  ];
+
+  // DOM Content Loaded hone par data inject karo
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const rawId = params.get('id');
+    const id = (rawId !== null && !isNaN(rawId)) ? parseInt(rawId) : 0;
+    
+    // Safety Fallback check
+    const currentData = serviceDatabase[id] || serviceDatabase[0];
+
+    if(currentData) {
+      if(document.getElementById('serviceIcon')) document.getElementById('serviceIcon').innerText = currentData.icon;
+      if(document.getElementById('serviceTitle')) document.getElementById('serviceTitle').innerText = currentData.title;
+      if(document.getElementById('serviceDesc')) document.getElementById('serviceDesc').innerText = currentData.desc;
+      if(document.getElementById('serviceImage')) document.getElementById('serviceImage').src = currentData.img;
+      
+      if(document.getElementById('serviceFeatures')) {
+        document.getElementById('serviceFeatures').innerHTML = currentData.features.map(f => `<li>${f}</li>`).join('');
+      }
+      
+      document.title = `${currentData.title} | Digital Whopper`;
+    }
+  });
+</script>
+</body>
+</html>

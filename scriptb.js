@@ -16,6 +16,19 @@ cleanHtmlExtension();
 document.addEventListener('DOMContentLoaded', cleanHtmlExtension);
 
 
+// **********favicon
+// Global Favicon Injector
+(function injectGlobalFavicon() {
+  let favicon = document.querySelector("link[rel*='icon']");
+  if (!favicon) {
+    favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    document.head.appendChild(favicon);
+  }
+  favicon.type = 'image/png';
+  favicon.href = '/img/favicon.png?v=1';
+})();
+
 // ---- Custom Cyber Cursor Animation System ----
 const cursorDot = document.getElementById('customCursor');
 const cursorBlur = document.getElementById('customCursorBlur');
@@ -178,7 +191,7 @@ window.addEventListener('load', () => {
   if (preloader) {
     setTimeout(() => {
       preloader.classList.add('fade-out');
-    }, 600); // 1200ms की जगह 600ms में तुरंत लोड स्क्रीन हटा देगा
+    }, 200); // 1200ms की जगह 600ms में तुरंत लोड स्क्रीन हटा देगा
   }
 });
 
@@ -583,8 +596,8 @@ document.addEventListener('DOMContentLoaded', () => {
     globalHeaderContainer.innerHTML = `
       <nav>
         <a href="/" class="logo">
-          <img src="img/landing-logo.png" alt="Digital Whopper Logo" class="logo-img-asset">
-          Digital Whopper
+          <img src="img/4.png" alt="Digital Whopper Logo" class="logo-img-asset">
+          
         </a>        
         <div class="nav-links" id="navLinksMenu">
           <a href="/index.html">Home</a>
@@ -703,7 +716,7 @@ window.addEventListener('load', () => {
   if (preloader) {
     setTimeout(() => {
       preloader.classList.add('fade-out');
-    }, 1200); 
+    }, 500); 
   }
 });
 

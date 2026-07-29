@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>        
         <div class="nav-links" id="navLinksMenu">
           <a href="/index.html">Home</a>
-          <a href="/servicesw.html">Services</a>
+          <a href="/services.html">Services</a>
           <a href="/portfolio.html">PortFolio</a>
           <a href="#">SEO Audit</a>
           <a href="#">SMO Audit</a>

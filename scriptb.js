@@ -1,3 +1,21 @@
+// main.js ke sabse top par ye rakhein
+
+function cleanHtmlExtension() {
+  var path = window.location.pathname;
+  if (path.endsWith('.html')) {
+    var newPath = path.slice(0, -5);
+    var newUrl = newPath + window.location.search + window.location.hash;
+    window.history.replaceState(null, '', newUrl);
+  }
+}
+
+// 1. Instantly execute karein
+cleanHtmlExtension();
+
+// 2. Clear backup: Jab DOM fully load ho jaye tab bhi execute karein
+document.addEventListener('DOMContentLoaded', cleanHtmlExtension);
+
+
 // ---- Custom Cyber Cursor Animation System ----
 const cursorDot = document.getElementById('customCursor');
 const cursorBlur = document.getElementById('customCursorBlur');
@@ -526,7 +544,7 @@ if (heroHeading) {
 }
 
 // 🌟 AUTOMATIC CHARACTER TYPEWRITER ENGINE
-const wordsToType = [ "to Next Level", "via Web Dev", "via Paid Ads"];
+const wordsToType = ["to Next Level", "via Web Dev", "via Paid Ads","to next shark tank business"];
 let currentWordIndex = 0;
 let currentCharacterIndex = 0;
 let isDeletingArrayString = false;
@@ -576,7 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="#">SMO Audit</a>
           <a href="/shark-tank-journey.html">Shark Tank Journey</a>
         </div>
-        <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Why Us?</a></div>
+        <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Free Audit</a></div>
         
         <button class="menu-toggle-trigger" id="hamburgerBtn" aria-label="Toggle Navigation">
           <span></span>
@@ -1094,3 +1112,6 @@ function initCurvedTestimonialCarousel() {
 document.addEventListener('DOMContentLoaded', () => {
   initCurvedTestimonialCarousel();
 });
+
+
+// ********** url check 

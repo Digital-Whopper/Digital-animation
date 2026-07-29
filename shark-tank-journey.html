@@ -769,6 +769,24 @@
     <span>Call Us</span>
   </a>
 </div>
+<script>
+  (function() {
+    // Current URL path check karein
+    var path = window.location.pathname;
+
+    // Agar URL ke last me '.html' hai
+    if (path.endsWith('.html')) {
+      // '.html' ko remove karke new path banayein
+      var newPath = path.slice(0, -5);
+
+      // Query parameters ya hash (#) agar ho toh use bhi retain karein
+      var newUrl = newPath + window.location.search + window.location.hash;
+
+      // Browser ke address bar URL ko silent update karein (bina page reload kiye)
+      window.history.replaceState(null, '', newUrl);
+    }
+  })();
+</script>
 
 <script src="scriptb.js"></script>
 </body>

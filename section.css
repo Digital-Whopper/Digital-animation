@@ -573,7 +573,8 @@
 /* जब पर्पल स्लाइड एक्टिव होगी तब पूरे कैरोसेल बॉक्स को सॉफ्ट पर्पल ग्लो मिलेगा */
 .interview-carousel-wrapper:has(.interview-slide.active.theme-purple-s) {
   /* box-shadow: 0 30px 70px rgba(124, 58, 237, 0.12), 0 5px 15px rgba(0, 0, 0, 0.01) !important; */
-      box-shadow: 0 30px 70px rgb(124 58 237 / 46%), 0 5px 15px rgba(0, 0, 0, 0.01) !important;
+      /* box-shadow: 0 30px 70px rgb(124 58 237 / 46%), 0 5px 15px rgba(0, 0, 0, 0.01) !important; */
+      box-shadow: 0 30px 70px rgb(124 58 237 / 27%), 0 5px 15px rgba(0, 0, 0, 0.01) !important;
 }
 
 /* 🔵 2. BLUE THEME: Case Study 02 (Corporate Tech Blue) */

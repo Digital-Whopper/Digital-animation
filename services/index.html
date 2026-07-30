@@ -9,8 +9,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styleb.css">
-  <link rel="stylesheet" href="section.css">
+  <link rel="stylesheet" href="../styleb.css">
+  <link rel="stylesheet" href="../section.css">
   <style>
   /* ==========================================================================
      📸 BRAND IMAGE LOGO MULTI-SCALE SYNCHRONIZATION
@@ -134,15 +134,17 @@
     <nav>
       <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
         <div class="logo-icon-box">
-          <img src="img/landing-logo.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon"
+           <a href="/" class="logo">
+          <img src="img/4.png" alt="Digital Whopper Logo" class="logo-img-asset">
+        </a> 
             id="logoIcon">
         </div>
         <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
       </a>
       <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/services.html">Services</a>
-        <a href="/projects.html">PortFolio</a>
+        <a href="/">Home</a>
+        <a href="/services/" class="active">Services</a>
+        <a href="/portfolio">PortFolio</a>
         <a href="#">SEO Audit</a>
         <a href="#">SMO Audit</a>
         <a href="#">Shark Tank Journey</a>
@@ -206,19 +208,19 @@
         <div class="foot-links">
           <div class="foot-col">
             <h4>Pages</h4>
-            <a href="/index.html">Home</a>
-            <a href="/services.html">Services</a>
-            <a href="/projects.html">Portfolio</a>
+            <a href="/index/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/projects/">Portfolio</a>
             <a href="/#about">About</a>
             <a href="/contact">Contact</a>
           </div>
           <div class="foot-col">
             <h4>Our services</h4>
-            <a href="/services.html">App &amp; Shopify Development</a>
-            <a href="/services.html">SEO &amp; SMO Optimisation</a>
-            <a href="/services.html">E-Commerce</a>
-            <a href="/services.html">Performance Marketing</a>
-            <a href="/services.html">Web Design &amp; Development</a>
+            <a href="/services/">App &amp; Shopify Development</a>
+            <a href="/services/">SEO &amp; SMO Optimisation</a>
+            <a href="/services/">E-Commerce</a>
+            <a href="/services/">Performance Marketing</a>
+            <a href="/services/">Web Design &amp; Development</a>
           </div>
           <div class="foot-col">
             <h4>Quick links</h4>
@@ -240,7 +242,7 @@
   <div class="chatbot-wrapper">
     <div class="chat-bubble" id="chatBubble">
       <div class="robot-image-container">
-        <img src="hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+        <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
       </div>
     </div>
 
@@ -248,7 +250,7 @@
       <div class="chat-header">
         <div class="chat-header-user">
           <div class="bot-avatar-container">
-            <img src="hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+            <img src="../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
           </div>
           <div>
             <h4>Whoppy AI</h4>
@@ -278,7 +280,7 @@
 
   <!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
   <div class="mobile-app-bottom-nav">
-    <a href="/index.html" class="app-nav-item">
+    <a href="/" class="app-nav-item">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">
@@ -289,7 +291,7 @@
       <span>Home</span>
     </a>
 
-    <a href="/services.html" class="app-nav-item active">
+    <a href="/services" class="app-nav-item active">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">
@@ -301,7 +303,7 @@
       <span>Services</span>
     </a>
 
-    <a href="/projects.html" class="app-nav-item">
+    <a href="/projects/" class="app-nav-item">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">
@@ -334,9 +336,9 @@
     </a>
   </div>
 
-  <script src="scriptb.js"></script>
-  <script src="section.js"></script>
-  <script src="services-script.js"></script>
+  <script src="../scriptb.js"></script>
+  <script src="../section.js"></script>
+  <script src="../services-script.js"></script>
 
   <script>
     // Services Data
@@ -360,7 +362,7 @@
         <div class="service-card-content-right">
           <h3>${item.title}</h3>
           <p>${item.desc}</p>
-          <a href="services-detailsw.html?id=${index}" class="quad-action" style="text-decoration: none; display: inline-block;">Read More ✦</a>
+          <a href="services-details/?id=${index}" class="quad-action" style="text-decoration: none; display: inline-block;">Read More ✦</a>
         </div>
       </div>
     `).join('');

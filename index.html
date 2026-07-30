@@ -140,19 +140,20 @@
         <!-- 🌟 NEW ADDITION: 100+ HAPPY CLIENTS AVATARS (As per screenshot layout) -->
         <div class="hero-happy-clients-pod">
           <div class="client-avatar-stack">
-            <img
-              src="img/owner/ekatra_owner.jpg"
-              alt="Client Testimonial Avatar 1">
+            
             <img
               src="img/owner/marbleous.png"
               alt="Client Testimonial Avatar 2">
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80"
-              alt="Client Testimonial Avatar 3">
-            <img
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80"
+              <img
+              src="img/owner/client.png"
               alt="Client Testimonial Avatar 4">
-          </div>
+              <img
+              src="img/owner/ekatra_owner.jpg"
+              alt="Client Testimonial Avatar 1">
+              <img
+                src="img/owner/zoya_mam.jpeg"
+                alt="Client Testimonial Avatar 3">
+            </div>
           <div class="client-reviews-meta">
             <div class="reviews-title">150+ Happy Clients</div>
             <div class="reviews-stars-row">
@@ -2026,47 +2027,55 @@
     </div>
   </footer>
 
-  <div class="chatbot-wrapper">
-    <!-- Chat Trigger Bubble -->
-    <div class="chat-bubble" id="chatBubble">
-      <div class="robot-image-container">
-        <img src="hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
-      </div>
-    </div>
-
-    <!-- Chat Window Matrix -->
-    <div class="chat-window" id="chatWindow">
-      <div class="chat-header">
-        <div class="chat-header-user">
-          <div class="bot-avatar-container">
-            <img src="hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
-          </div>
-          <div>
-            <h4>Whoppy AI</h4>
-            <span class="status-online">● Online</span>
-          </div>
-        </div>
-        <button class="close-chat-btn" id="closeChatBtn">&times;</button>
-      </div>
-
-      <!-- 🌟 Dynamic Gradient Body Area -->
-      <div class="chat-body-messages" id="chatMessages">
-        <div class="msg-bubble bot-msg">
-          Hi there! I am Whoppy, your Digital Whopper AI assistant. How can I help grow your brand today? 🚀
-        </div>
-        <div class="chat-suggestions" id="chatSuggestions">
-          <button class="suggest-chip" onclick="triggerBotResponse('Services')">Our Services</button>
-          <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Check Pricing</button>
-          <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Human 👤</button>
-        </div>
-      </div>
-
-      <div class="chat-footer-input">
-        <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
-        <button id="sendChatBtn" class="send-msg-btn">✦</button>
-      </div>
+<!-- 🤖 WHOPPY AI CHATBOT WITH CHOTU CAPTION BADGE -->
+<div class="chatbot-wrapper">
+  
+  <!-- 1. Floating Chat Bubble Trigger -->
+  <div class="chat-bubble" id="chatBubble">
+    <div class="robot-image-container">
+      <!-- SIRF YE IMAGE UCHHAL KAR GULATI MAREGI -->
+      <img src="hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
     </div>
   </div>
+
+  <!-- 2. Chatbot Bottom Caption Tag -->
+  <div class="chatbot-caption-tag">
+    <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+  </div>
+
+  <!-- 3. Chat Window Matrix -->
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-user">
+        <div class="bot-avatar-container">
+          <img src="hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+        </div>
+        <div>
+          <h4>Whoppy AI (Chotu)</h4>
+          <span class="status-online">● Online</span>
+        </div>
+      </div>
+      <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+    </div>
+
+    <div class="chat-body-messages" id="chatMessages">
+      <div class="msg-bubble bot-msg">
+        Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your brand today? 🚀
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggest-chip" onclick="triggerBotResponse('Services')">Our Services</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Check Pricing</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Human 👤</button>
+      </div>
+    </div>
+
+    <div class="chat-footer-input">
+      <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+      <button id="sendChatBtn" class="send-msg-btn">✦</button>
+    </div>
+  </div>
+
+</div>
 
   <!-- 🌐 FLOATING LEFT SOCIAL LINKS (ALWAYS COLORFUL) -->
   <div class="side-social-shield-left">
@@ -2181,7 +2190,7 @@
     </a>
 
     <!-- Node 2: Services (Linked to #premium-services section id) -->
-    <a href="/servicesw" class="app-nav-item">
+    <a href="/services/" class="app-nav-item">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">
@@ -2194,7 +2203,7 @@
     </a>
 
     <!-- 🎯 Node 3: Projects (Linked to #work section id) -->
-    <a href="/projects.html" class="app-nav-item">
+    <a href="/projects/" class="app-nav-item">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round">

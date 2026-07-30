@@ -1,19 +1,27 @@
 // main.js ke sabse top par ye rakhein
 
-function cleanHtmlExtension() {
-  var path = window.location.pathname;
-  if (path.endsWith('.html')) {
-    var newPath = path.slice(0, -5);
-    var newUrl = newPath + window.location.search + window.location.hash;
-    window.history.replaceState(null, '', newUrl);
-  }
+// function cleanHtmlExtension() {
+//   var path = window.location.pathname;
+//   if (path.endsWith('.html')) {
+//     var newPath = path.slice(0, -5);
+//     var newUrl = newPath + window.location.search + window.location.hash;
+//     window.history.replaceState(null, '', newUrl);
+//   }
+// }
+
+// // 1. Instantly execute karein
+// cleanHtmlExtension();
+
+// // 2. Clear backup: Jab DOM fully load ho jaye tab bhi execute karein
+// document.addEventListener('DOMContentLoaded', cleanHtmlExtension);
+
+
+// Remove Trailing Slash from URL quietly
+if (window.location.pathname.endsWith('/') && window.location.pathname.length > 1) {
+    var cleanUrl = window.location.pathname.slice(0, -1) + window.location.search + window.location.hash;
+    window.history.replaceState(null, '', cleanUrl);
 }
 
-// 1. Instantly execute karein
-cleanHtmlExtension();
-
-// 2. Clear backup: Jab DOM fully load ho jaye tab bhi execute karein
-document.addEventListener('DOMContentLoaded', cleanHtmlExtension);
 
 
 // **********favicon
@@ -588,6 +596,8 @@ function startTypewriterLoop() {
 }
 
 // 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
+// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
+// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
 document.addEventListener('DOMContentLoaded', () => {
   const globalHeaderContainer = document.getElementById('mainHeader');
   const globalFooterContainer = document.getElementById('footer');
@@ -596,18 +606,17 @@ document.addEventListener('DOMContentLoaded', () => {
     globalHeaderContainer.innerHTML = `
       <nav>
         <a href="/" class="logo">
-          <img src="img/4.png" alt="Digital Whopper Logo" class="logo-img-asset">
-          
+          <img src="img/digitalwhopperlogo.png" alt="Digital Whopper Logo" class="logo-img-asset">
         </a>        
         <div class="nav-links" id="navLinksMenu">
-          <a href="/index.html">Home</a>
-          <a href="/services.html">Services</a>
-          <a href="/portfolio.html">PortFolio</a>
+          <a href="/">Home</a>
+          <a href="/services/">Services</a>
+          <a href="#">PortFolio</a>
           <a href="#">SEO Audit</a>
           <a href="#">SMO Audit</a>
-          <a href="/shark-tank-journey.html">Shark Tank Journey</a>
+          <a href="/shark-tank-journey/">Shark Tank Journey</a>
         </div>
-        <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Free Audit</a></div>
+        <div class="nav-cta"><a href="#" class="btn btn-gold">Free Audit</a></div>
         
         <button class="menu-toggle-trigger" id="hamburgerBtn" aria-label="Toggle Navigation">
           <span></span>
@@ -617,6 +626,33 @@ document.addEventListener('DOMContentLoaded', () => {
       </nav>
     `;
 
+    // 🚀 FIXED ACTIVE CLASS HIGHLIGHTER ENGINE
+    const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';
+    const navLinks = globalHeaderContainer.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+      let linkHref = link.getAttribute('href').toLowerCase().replace(/\/$/, '') || '/';
+
+      // Path Normalization (e.g. '/services' vs '/services.html')
+      const cleanCurrent = currentPath.replace('.html', '');
+      const cleanLink = linkHref.replace('.html', '');
+
+      let isActive = false;
+
+      if (cleanCurrent === '/' || cleanCurrent === '/index') {
+        isActive = (cleanLink === '/' || cleanLink === '/index');
+      } else {
+        isActive = (cleanLink !== '/' && cleanLink !== '#' && cleanCurrent.includes(cleanLink));
+      }
+
+      if (isActive) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Mobile Hamburger Menu Code
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     if (hamburgerBtn) {
       hamburgerBtn.addEventListener('click', (e) => {
@@ -634,14 +670,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  
+  // Footer code iske neeche jaisa hai waisa hi rahega...
 
   if (globalFooterContainer) {
     globalFooterContainer.innerHTML = `
       <div class="wrap">
         <div class="foot-top">
           <div class="foot-brand">
-            <a href="/" class="logo"><div class="logo-mark">DW</div>Digital Whopper</a>
-            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
+<a href="/" class="logo">
+          <img src="img/digitalwhopperlogo.png" alt="Digital Whopper Logo" class="logo-img-asset">
+          
+        </a>            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
             <p>
               <a href="tel:+916200379161">+91 6200379161</a><br>
               <a href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a>
@@ -656,32 +696,32 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="foot-col">
               <h4>Pages</h4>
               <a href="/">Home</a>
-              <a href="services.html">Services</a>
-              <a href="contact.html">Contact</a>
+              <a href="services/">Services</a>
+              <a href="contact/">Contact</a>
             </div>
             <div class="foot-col">
               <h4>Quick Links</h4>
-              <a href="blogs.html">Blogs</a>
-              <a href="services.html">Services</a>
-              <a href="contact.html">Contact</a>
+              <a href="blogs/">Blogs</a>
+              <a href="services/">Services</a>
+              <a href="contact/">Contact</a>
             </div>
             <div class="foot-col">
               <h4>Our services</h4>
-              <a href="services.html">App &amp; Shopify Development</a>
-              <a href="services.html">SEO &amp; SMO Optimisation</a>
-              <a href="services.html">E-Commerce</a>
-              <a href="services.html">Performance Marketing</a>
-              <a href="services.html">Web Design &amp; Development</a>
+              <a href="services/">App &amp; Shopify Development</a>
+              <a href="services/">SEO &amp; SMO Optimisation</a>
+              <a href="services/">E-Commerce</a>
+              <a href="services/">Performance Marketing</a>
+              <a href="services/">Web Design &amp; Development</a>
             </div>
           </div>
         </div>
         <div class="foot-bottom">
           <span>© 2026 Digital Whopper. All rights reserved.</span>
-          <span>Made with ✦ in Jaipur, the Pink City</span>
-        </div>
-      </div>
-    `;
-  }
+          </div>
+          </div>
+          `;
+        }
+        // <span>Made with ✦ in Jaipur, the Pink City</span>
 
   // 🚀 SAFETY CHECK RUNNERS: Code tab rendering runs securely
   renderThreeDivWorkspace();

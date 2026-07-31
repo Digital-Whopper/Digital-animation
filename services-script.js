@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
             <p>
               <a href="tel:+916200379161">+91 6200379161</a><br>
-              <a href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a>
+              <a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a>
             </p>
             <div class="socials">
               <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           </div>
           `;
-        }
-        // <span>Made with ✦ in Jaipur, the Pink City</span>
+  }
+  // <span>Made with ✦ in Jaipur, the Pink City</span>
 
   // 🌟 5. REVEAL SECTIONS ENGINE FOR THIS PAGE
   const revealSections = document.querySelectorAll('.scroll-reveal');

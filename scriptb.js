@@ -18,8 +18,8 @@
 
 // Remove Trailing Slash from URL quietly
 if (window.location.pathname.endsWith('/') && window.location.pathname.length > 1) {
-    var cleanUrl = window.location.pathname.slice(0, -1) + window.location.search + window.location.hash;
-    window.history.replaceState(null, '', cleanUrl);
+  var cleanUrl = window.location.pathname.slice(0, -1) + window.location.search + window.location.hash;
+  window.history.replaceState(null, '', cleanUrl);
 }
 
 
@@ -42,7 +42,7 @@ const cursorDot = document.getElementById('customCursor');
 const cursorBlur = document.getElementById('customCursorBlur');
 
 if (cursorDot && cursorBlur && window.innerWidth > 900) {
- 
+
 
   function applyCursorHooks() {
     const interactives = document.querySelectorAll('a, .btn, .work-card, .strategy-card, .blog-card, .faq-q, .chat-bubble, .suggest-chip, .close-chat-btn, .send-msg-btn, .service-card-core');
@@ -102,7 +102,7 @@ const projects = [
   { title: "Jewelry E-Store", tag: "Immersive Elegant UX/UI", images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] }
 ];
 
-let carouselIntervalIndex = null; 
+let carouselIntervalIndex = null;
 
 // ==========================================================================
 // 📱 OUR WORK SECTION - MOBILE 12 PROJECT LIMIT + LOAD MORE & FAST REVEAL
@@ -113,12 +113,12 @@ let mobileWorkLimit = 10; // मोबाइल पर शुरुआत मे
 function renderThreeDivWorkspace() {
   const leftTarget = document.getElementById('gridWorkspaceLeft');
   const rightTarget = document.getElementById('gridWorkspaceRight');
-  
+
   // Safety check: अगर एलिमेंट्स न मिलें तो एरर न आए
   if (!leftTarget || !rightTarget || typeof projects === 'undefined' || projects.length < 1) return;
 
   const isMobile = window.innerWidth <= 900;
-  
+
   // मोबाइल पर 12 प्रोजेक्ट्स, लैपटॉप पर पूरे प्रोजेक्ट्स
   const activeProjects = isMobile ? projects.slice(0, mobileWorkLimit) : projects;
 
@@ -138,7 +138,7 @@ function renderThreeDivWorkspace() {
 // 🔘 'View More Projects' बटन रेंडर करने का सुरक्षित फ़ंक्शन
 function renderLoadMoreButton(isMobile) {
   let loadMoreBtnContainer = document.getElementById('workLoadMoreContainer');
-  
+
   if (!isMobile || typeof projects === 'undefined' || mobileWorkLimit >= projects.length) {
     if (loadMoreBtnContainer) loadMoreBtnContainer.style.display = 'none';
     return;
@@ -148,7 +148,7 @@ function renderLoadMoreButton(isMobile) {
     loadMoreBtnContainer = document.createElement('div');
     loadMoreBtnContainer.id = 'workLoadMoreContainer';
     loadMoreBtnContainer.style.cssText = 'text-align: center; margin-top: 32px; width: 100%;';
-    
+
     const workWorkspace = document.querySelector('.work-workspace-container');
     if (workWorkspace && workWorkspace.parentElement) {
       workWorkspace.parentElement.appendChild(loadMoreBtnContainer);
@@ -174,7 +174,7 @@ function loadMoreProjects() {
 // ⚡ SCROLL REVEAL FAST INTERCEPTOR (बिना किसी Re-declaration Error के)
 document.addEventListener('DOMContentLoaded', () => {
   const revealSections = document.querySelectorAll('.scroll-reveal');
-  
+
   if (revealSections.length > 0) {
     const fastRevealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
           entry.target.classList.add('active');
         }
       });
-    }, { 
+    }, {
       threshold: 0.05,            // जैसे ही 5% दिखेगा तुरंत एनिमेट होगा
       rootMargin: "0px 0px 150px 0px" // स्क्रीन में आने से 150px पहले ही ट्रिगर होगा
     });
@@ -229,12 +229,12 @@ function generateCardTemplate(p, globalIdx) {
 
 //   // ⚡ 1. CHECK VIEWPORT MODE FOR INTERACTION
 //   const isMobileView = window.innerWidth <= 900;
-  
+
 //   track.innerHTML = project.images.map(imgUrl => {
 //     const mobileStyle = isMobileView 
 //       ? 'width: 100% !important; height: 100% !important; display: block !important; scroll-snap-align: start !important; flex-shrink: 0 !important;' 
 //       : 'width: 100%; height: 100%; flex: none; scroll-snap-align: start; object-fit: cover;';
-      
+
 //     return `<img src="${imgUrl}" class="phone-carousel-slide" style="${mobileStyle}" alt="Showcase Slide">`;
 //   }).join('');
 
@@ -242,12 +242,12 @@ function generateCardTemplate(p, globalIdx) {
 //     track.style.setProperty('flex-direction', 'column', 'important');
 //     track.style.setProperty('overflow-x', 'hidden', 'important');
 //     track.style.setProperty('overflow-y', 'scroll', 'important');
-    
+
 //     // 🌟 MOVES PHONE SIMULATOR TO POP-UP LAYER DYNAMICALLY ON MOBILE SCREENS
 //     const phoneSim = document.querySelector('.mock-device');
 //     const popupAnchor = document.getElementById('popupSimulatorAnchor');
 //     const popupOverlay = document.getElementById('mobileWorkPopup');
-    
+
 //     if (phoneSim && popupAnchor && popupOverlay) {
 //       popupAnchor.appendChild(phoneSim); // फ़ोन को ग्रिड से खींचकर पॉप-अप में डाल देगा
 //       popupOverlay.style.display = 'flex'; // पॉप-अप शो करेगा
@@ -350,7 +350,7 @@ function updatePhoneDisplay(projectIndex, element) {
     const phoneSim = document.querySelector('.mock-device');
     const popupAnchor = document.getElementById('popupSimulatorAnchor');
     const popupOverlay = document.getElementById('mobileWorkPopup');
-    
+
     if (phoneSim && popupAnchor && popupOverlay) {
       popupAnchor.appendChild(phoneSim);
       popupOverlay.style.display = 'flex';
@@ -366,17 +366,17 @@ function closeMobileWorkPopup() {
   const popupOverlay = document.getElementById('mobileWorkPopup');
   const phoneSim = document.querySelector('.mock-device');
   const originalCenterColumn = document.querySelector('.phone-center-column');
-  
+
   if (popupOverlay) popupOverlay.style.display = 'none';
   document.body.style.overflow = ''; // बैकग्राउंड स्क्रॉलिंग वापस चालू
-  
+
   // फ़ोन सिम्युलेटर को वापस ग्रिड लेआउट के बीच में सुरक्षित भेज देगा
   if (phoneSim && originalCenterColumn) {
     originalCenterColumn.appendChild(phoneSim);
   }
 }
 function moveCarouselNext(event) {
-  if(event) event.stopPropagation(); 
+  if (event) event.stopPropagation();
   const track = document.getElementById('phoneCarouselTrack');
   if (!track || !track.firstElementChild) return;
 
@@ -478,26 +478,26 @@ const sendChatBtn = document.getElementById('sendChatBtn');
 const chatUserInput = document.getElementById('chatUserInput');
 const chatMessages = document.getElementById('chatMessages');
 
-if(chatBubble && chatbotWrapper) {
+if (chatBubble && chatbotWrapper) {
   chatBubble.addEventListener('click', () => chatbotWrapper.classList.add('chat-open'));
 }
-if(closeChatBtn && chatbotWrapper) {
+if (closeChatBtn && chatbotWrapper) {
   closeChatBtn.addEventListener('click', () => chatbotWrapper.classList.remove('chat-open'));
 }
 
 function handleUserSendMessage() {
   const text = chatUserInput.value.trim();
-  if(!text) return;
+  if (!text) return;
 
   appendMessageBubble(text, 'user-msg');
   chatUserInput.value = '';
   processBotBrainResponse(text);
 }
 
-if(sendChatBtn) sendChatBtn.addEventListener('click', handleUserSendMessage);
-if(chatUserInput) {
+if (sendChatBtn) sendChatBtn.addEventListener('click', handleUserSendMessage);
+if (chatUserInput) {
   chatUserInput.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter') handleUserSendMessage();
+    if (e.key === 'Enter') handleUserSendMessage();
   });
 }
 
@@ -505,11 +505,11 @@ function appendMessageBubble(text, className) {
   const bubble = document.createElement('div');
   bubble.className = `msg-bubble ${className}`;
   bubble.innerHTML = text;
-  
-  const suggestions = document.getElementById('chatSuggestions');
-  if(suggestions && className === 'user-msg') suggestions.remove();
 
-  if(chatMessages) {
+  const suggestions = document.getElementById('chatSuggestions');
+  if (suggestions && className === 'user-msg') suggestions.remove();
+
+  if (chatMessages) {
     chatMessages.appendChild(bubble);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
@@ -522,27 +522,27 @@ function triggerBotResponse(keyword) {
 
 function processBotBrainResponse(input) {
   const query = input.toLowerCase();
-  
+
   const typing = document.createElement('div');
   typing.className = 'typing-indicator';
   typing.id = 'typingIndicator';
   typing.innerText = 'Whoppy is typing...';
-  if(chatMessages) {
+  if (chatMessages) {
     chatMessages.appendChild(typing);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
   setTimeout(() => {
     const indicator = document.getElementById('typingIndicator');
-    if(indicator) indicator.remove();
+    if (indicator) indicator.remove();
 
     let botReply = "That's interesting! Let me connect you directly to our growth team on WhatsApp for details. Or type 'services' to see what we build! 🚀";
 
-    if(query.includes('services') || query.includes('service') || query.includes('work')) {
+    if (query.includes('services') || query.includes('service') || query.includes('work')) {
       botReply = "We provide full 360° digital growth solutions! ✦ App & Shopify Build ✦ SEO Optimization ✦ Performance Meta/Google Funnel Ads ✦ D2C scaling. Which one are you looking for?";
-    } else if(query.includes('pricing') || query.includes('price') || query.includes('cost') || query.includes('charge')) {
+    } else if (query.includes('pricing') || query.includes('price') || query.includes('cost') || query.includes('charge')) {
       botReply = "Our packages are fully customized based on your business targets! Let's build a free consultation map. Drop us a ping on WhatsApp at +916200379161.";
-    } else if(query.includes('contact') || query.includes('human') || query.includes('speak') || query.includes('call')) {
+    } else if (query.includes('contact') || query.includes('human') || query.includes('speak') || query.includes('call')) {
       botReply = "Perfect! Opening direct WhatsApp hotline channel with our strategist. Click here: <a href='https://wa.me/916200379161' target='_blank' style='text-decoration:underline;color:#0052ff;'>Chat on WhatsApp</a> 📲";
     }
 
@@ -565,7 +565,7 @@ if (heroHeading) {
 }
 
 // 🌟 AUTOMATIC CHARACTER TYPEWRITER ENGINE
-const wordsToType = ["to Next Level", "via Web Dev", "via Paid Ads","to next shark tank business"];
+const wordsToType = ["to Next Level", "via Web Dev", "via Paid Ads", "to next shark tank business"];
 let currentWordIndex = 0;
 let currentCharacterIndex = 0;
 let isDeletingArrayString = false;
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  
+
   // Footer code iske neeche jaisa hai waisa hi rahega...
 
   if (globalFooterContainer) {
@@ -684,7 +684,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
             <p>
               <a href="tel:+916200379161">+91 6200379161</a><br>
-              <a href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a>
+              <a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a>
             </p>
             <div class="socials">
               <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
@@ -697,13 +697,13 @@ document.addEventListener('DOMContentLoaded', () => {
               <h4>Pages</h4>
               <a href="/">Home</a>
               <a href="services/">Services</a>
-              <a href="contact/">Contact</a>
+              <a href="#">Contact</a>
             </div>
             <div class="foot-col">
               <h4>Quick Links</h4>
               <a href="blogs/">Blogs</a>
               <a href="services/">Services</a>
-              <a href="contact/">Contact</a>
+              <a href="#">Contact</a>
             </div>
             <div class="foot-col">
               <h4>Our services</h4>
@@ -720,20 +720,20 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           </div>
           `;
-        }
-        // <span>Made with ✦ in Jaipur, the Pink City</span>
+  }
+  // <span>Made with ✦ in Jaipur, the Pink City</span>
 
   // 🚀 SAFETY CHECK RUNNERS: Code tab rendering runs securely
   renderThreeDivWorkspace();
   renderTwoRowCarouselTestimonials();
-  
+
   // ⚡ Default Project Auto-Focus Loader Block (Executed safely via DOM pointers check)
-// ==========================================================================
+  // ==========================================================================
   // 🎯 FIXED PROJECT LOADER BLOCK (STRICT CLICK-ONLY FOR MOBILE & TABLET)
   // ==========================================================================
   setTimeout(() => {
     const firstCardElement = document.querySelector('.work-column-left .work-card[data-index="0"]');
-    
+
     if (firstCardElement) {
       // 🚀 जादुई चेक: अगर स्क्रीन लैपटॉप/डेस्कटॉप (900px से बड़ी) है, तभी रीलोड पर पहला प्रोजेक्ट ऑटो-फोकस होगा
       if (window.innerWidth > 900) {
@@ -756,7 +756,7 @@ window.addEventListener('load', () => {
   if (preloader) {
     setTimeout(() => {
       preloader.classList.add('fade-out');
-    }, 500); 
+    }, 500);
   }
 });
 
@@ -773,9 +773,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let height = canvas.height = container['clientHeight'];
 
   const nodes = [];
-  const nodeCount = window.innerWidth < 768 ? 40 : 110; 
-  const connectionDistance = 115; 
-  
+  const nodeCount = window.innerWidth < 768 ? 40 : 110;
+  const connectionDistance = 115;
+
   const mousePointer = { x: null, y: null, radius: 180 };
 
   window.addEventListener('mousemove', (e) => {
@@ -798,9 +798,9 @@ document.addEventListener('DOMContentLoaded', () => {
     nodes.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.6, 
-      vy: (Math.random() - 0.5) * 0.6, 
-      radius: Math.random() * 2 + 1.5,  
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      radius: Math.random() * 2 + 1.5,
       pulseSpeed: Math.random() * 0.03 + 0.01,
       phase: Math.random() * Math.PI
     });
@@ -839,8 +839,8 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.beginPath();
           ctx.moveTo(n1.x, n1.y);
           ctx.lineTo(n2.x, n2.y);
-          ctx.strokeStyle = `rgba(0, 82, 255, ${lineAlpha})`; 
-          ctx.lineWidth = 0.95; 
+          ctx.strokeStyle = `rgba(0, 82, 255, ${lineAlpha})`;
+          ctx.lineWidth = 0.95;
           ctx.stroke();
         }
       }
@@ -883,7 +883,7 @@ function initStrategicCarousel() {
   // सुरक्षा जांच: अगर पेज पर एलिमेंट्स न मिलें तो कोड रुकेगा नहीं
   if (!intSlides.length || !intDots.length) return;
 
-  window.showSlide = function(index) {
+  window.showSlide = function (index) {
     if (index >= intSlides.length) {
       currentIntSlide = 0;
     } else if (index < 0) {
@@ -896,7 +896,7 @@ function initStrategicCarousel() {
     intSlides.forEach((slide, i) => {
       slide.classList.remove('active');
       if (intDots[i]) intDots[i].classList.remove('active');
-      
+
       if (i === currentIntSlide) {
         slide.classList.add('active');
         if (intDots[i]) intDots[i].classList.add('active');
@@ -904,11 +904,11 @@ function initStrategicCarousel() {
     });
   };
 
-  window.slideNav = function(direction) {
+  window.slideNav = function (direction) {
     showSlide(currentIntSlide + direction);
   };
 
-  window.jumpToSlide = function(index) {
+  window.jumpToSlide = function (index) {
     showSlide(index);
   };
 
@@ -937,19 +937,19 @@ function toggleDashboardState() {
   const capsule = document.getElementById('statusCapsuleBox');
   const redPill = document.getElementById('redStatePill');
   const greenPill = document.getElementById('greenStatePill');
-  
+
   // Graph & Sidebar Nodes
   const graphPath = document.getElementById('dynamicGraphPath');
   const graphFill = document.getElementById('dynamicGraphFill');
   const chartBadge = document.getElementById('chartBadge');
   const funnelTip = document.getElementById('funnelTip');
-  
+
   // Numerical Metrics
   const audits = document.getElementById('valStoreAudits');
   const sales = document.getElementById('valGrossSales');
   const traffic = document.getElementById('valTraffic');
   const funnelVal = document.getElementById('valFunnels');
-  
+
   // Progress Components
   const tConv = document.getElementById('txtConv');
   const tTrans = document.getElementById('txtTrans');
@@ -961,63 +961,63 @@ function toggleDashboardState() {
   if (currentEngineState === 'before') {
     currentEngineState = 'after';
     track.classList.add('after-engine-active');
-    
+
     // Switch Active Pills Visuals
     redPill.classList.remove('active');
     greenPill.classList.add('active');
     capsule.className = "badge-capsule-border glow-green";
-    
+
     // 🚀 STEP UP DIGITAL METRICS FOR AFTER ENGINE
     audits.innerText = "18.49K";
     sales.innerText = "$14,830";
     traffic.innerText = "9.84K 🔥";
     funnelVal.innerText = "76.4";
-    
+
     // Transform Smooth Canvas Graph Path
     graphPath.setAttribute('d', 'M0,90 Q40,40 80,20 T160,15 T240,10 T300,5');
     graphFill.setAttribute('d', 'M0,90 Q40,40 80,20 T160,15 T240,10 T300,5 L300,120 L0,120 Z');
-    
+
     chartBadge.innerText = "7.6x ROAS";
     chartBadge.style.background = "#10b981";
-    
+
     // Scale Interactive Progress Indicators
     tConv.innerText = "6.8%"; bConv.style.width = "78%"; bConv.style.background = "#10b981";
     tTrans.innerText = "9,540"; bTrans.style.width = "92%"; bTrans.style.background = "#10b981";
     tRet.innerText = "54.1%"; bRet.style.width = "68%"; bRet.style.background = "#10b981";
-    
+
     // Morph Right Funnel Engine Output Colors
     funnelTip.innerText = "7.6x";
     funnelTip.style.background = "#10b981";
     document.querySelectorAll('.funnel-segment').forEach((el, idx) => {
       el.style.background = `linear-gradient(90deg, #10b981, #059669)`;
     });
-    
+
   } else {
     currentEngineState = 'before';
     track.classList.remove('after-engine-active');
-    
+
     redPill.classList.add('active');
     greenPill.classList.remove('active');
     capsule.className = "badge-capsule-border glow-red";
-    
+
     // 📉 LOWER METRICS BACK TO BEFORE AUDIT
     audits.innerText = "4.23K";
     sales.innerText = "$1,956";
     traffic.innerText = "2.35K +";
     funnelVal.innerText = "12.3";
-    
+
     // Reset Canvas Graph Path
     graphPath.setAttribute('d', 'M0,90 Q40,95 80,70 T160,80 T240,65 T300,85');
     graphFill.setAttribute('d', 'M0,90 Q40,95 80,70 T160,80 T240,65 T300,85 L300,120 L0,120 Z');
-    
+
     chartBadge.innerText = "1.4x ROAS";
     chartBadge.style.background = "#ef4444";
-    
+
     // Reset Progress Bars
     tConv.innerText = "1.3%"; bConv.style.width = "22%"; bConv.style.background = "#0052ff";
     tTrans.innerText = "2,233"; bTrans.style.width = "45%"; bTrans.style.background = "#0052ff";
     tRet.innerText = "17.2%"; bRet.style.width = "17%"; bRet.style.background = "#0052ff";
-    
+
     // Reset Funnel Theme Colors
     funnelTip.innerText = "1.4x";
     funnelTip.style.background = "#ef4444";
@@ -1074,15 +1074,15 @@ function initCurvedTestimonialCarousel() {
   }
 
   const allCards = track.querySelectorAll('.wa-mock-chat-bubble-t');
-  
-  let speed = 0.8; 
+
+  let speed = 0.8;
   let currentX = 0;
   let isPaused = false;
 
   function animateLoop() {
     if (!isPaused) {
       const isMobile = window.innerWidth <= 900;
-      const cardWidthWithGap = isMobile ? (235 + 18) : (290 + 32); 
+      const cardWidthWithGap = isMobile ? (235 + 18) : (290 + 32);
       const singleSetWidth = totalOriginals * cardWidthWithGap;
 
       currentX -= speed;
@@ -1102,12 +1102,12 @@ function initCurvedTestimonialCarousel() {
           const cardRect = card.getBoundingClientRect();
           const screenCenter = window.innerWidth / 2;
           const cardCenter = cardRect.left + cardRect.width / 2;
-          
+
           let distanceFromCenter = (cardCenter - screenCenter) / (window.innerWidth / 1.2);
           distanceFromCenter = Math.max(-1, Math.min(1, distanceFromCenter));
 
-          const translateY = Math.abs(distanceFromCenter) * 35 - 10; 
-          const rotation = distanceFromCenter * 12; 
+          const translateY = Math.abs(distanceFromCenter) * 35 - 10;
+          const rotation = distanceFromCenter * 12;
           const zIndex = Math.round((1 - Math.abs(distanceFromCenter)) * 10);
           const opacity = 1 - Math.abs(distanceFromCenter) * 0.15;
 

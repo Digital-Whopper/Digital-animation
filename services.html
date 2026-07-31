@@ -12,110 +12,110 @@
   <link rel="stylesheet" href="styleb.css">
   <link rel="stylesheet" href="section.css">
   <style>
-  /* ==========================================================================
+    /* ==========================================================================
      📸 BRAND IMAGE LOGO MULTI-SCALE SYNCHRONIZATION
      ========================================================================== */
-  .logo-img-asset {
-    height: 34px;
-    width: auto;
-    object-fit: contain;
-    display: inline-block;
-    margin-right: 2px;
-  }
+    .logo-img-asset {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+      margin-right: 2px;
+    }
 
-  /* ==========================================================================
+    /* ==========================================================================
      🛍️ SERVICES GRID LAYOUT ENGINE (Laptop, Tablet & Mobile Controlled)
      ========================================================================== */
-  
-  /* 💻 1. Laptop / Desktop Screen: Always 4 Cards in 1 Line */
-  .services-quad-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 20px !important;
-    width: 100% !important;
-    max-width: 1320px;
-    margin: 0 auto;
-  }
 
-  .service-quad-card {
-    width: 100% !important;
-    box-shadow: var(--card-shadow-default);
-    border-radius: 20px;
-    padding: 24px 20px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* 📱 2. Tablet Screen (601px - 900px): 2 Cards Per Row */
-  @media (max-width: 900px) and (min-width: 601px) {
+    /* 💻 1. Laptop / Desktop Screen: Always 4 Cards in 1 Line */
     .services-quad-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 16px !important;
-    }
-  }
-
-  /* 📲 3. Mobile View (max-width: 600px): Single Column (1 Card Per Row) */
-  @media (max-width: 600px) {
-    .services-quad-grid {
-      grid-template-columns: 1fr !important;
-      gap: 16px !important;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 20px !important;
+      width: 100% !important;
+      max-width: 1320px;
+      margin: 0 auto;
     }
 
     .service-quad-card {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: flex-start !important;
-      gap: 16px !important;
-      padding: 18px !important;
-    }
-
-    /* Left Side Big Icon Frame for Mobile */
-    .quad-icon-box {
-      font-size: 42px !important;
-      line-height: 1 !important;
-      width: 60px !important;
-      height: 60px !important;
-      min-width: 60px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      background: rgba(0, 82, 255, 0.05);
-      border-radius: 14px;
-      margin-bottom: 0 !important;
-      flex-shrink: 0 !important;
-    }
-
-    /* Right Side Content Container for Mobile */
-    .service-card-content-right {
+      width: 100% !important;
+      box-shadow: var(--card-shadow-default);
+      border-radius: 20px;
+      padding: 24px 20px;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
     }
 
-    .service-quad-card h3 {
-      font-size: 16px !important;
-      margin-bottom: 6px !important;
-      line-height: 1.3 !important;
+    /* 📱 2. Tablet Screen (601px - 900px): 2 Cards Per Row */
+    @media (max-width: 900px) and (min-width: 601px) {
+      .services-quad-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
     }
 
-    .service-quad-card p {
-      font-size: 12.5px !important;
-      line-height: 1.4 !important;
-      margin-bottom: 10px !important;
-    }
+    /* 📲 3. Mobile View (max-width: 600px): Single Column (1 Card Per Row) */
+    @media (max-width: 600px) {
+      .services-quad-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
 
-    .quad-action {
-      align-self: flex-start !important;
-      padding: 6px 12px !important;
-      font-size: 11px !important;
-    }
+      .service-quad-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 18px !important;
+      }
 
-    .hero-service {
-      padding: 90px 0 30px !important;
+      /* Left Side Big Icon Frame for Mobile */
+      .quad-icon-box {
+        font-size: 42px !important;
+        line-height: 1 !important;
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: rgba(0, 82, 255, 0.05);
+        border-radius: 14px;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Right Side Content Container for Mobile */
+      .service-card-content-right {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .service-quad-card h3 {
+        font-size: 16px !important;
+        margin-bottom: 6px !important;
+        line-height: 1.3 !important;
+      }
+
+      .service-quad-card p {
+        font-size: 12.5px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .quad-action {
+        align-self: flex-start !important;
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+      }
+
+      .hero-service {
+        padding: 90px 0 30px !important;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 
 <body>
@@ -196,7 +196,7 @@
           </a>
           <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
           <p><a href="tel:+916200379161">+91 6200379161</a><br><a
-              href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a></p>
+              href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
           <div class="socials">
             <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
             <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>

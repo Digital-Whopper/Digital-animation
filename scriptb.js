@@ -520,9 +520,164 @@ function triggerBotResponse(keyword) {
   processBotBrainResponse(keyword);
 }
 
-function processBotBrainResponse(input) {
-  const query = input.toLowerCase();
+// ************ chat bot dashboard engine ************
+// 🧠 COMPANY KNOWLEDGE BASE (JSON DATABASE)
+// 🧠 DUAL-LANGUAGE (ENGLISH + HINGLISH) KNOWLEDGE BASE
+const botKnowledgeBase = [
+  {
+    category: "company_info",
+    keywords: [
+      "company", "about company", "digital whopper", "what is digital whopper", "agency", 
+      "whopper", "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h", 
+      "kya company h", "about digital whopper", "company info", "what about your company",
+      "tell me about your company", "what about company", "company details", "about your company",
+      "what does your company do", "whopper company", "company name"
+    ],
+    response_en: "<b>Digital Whopper</b> is the premier Digital Marketing Agency in Jaipur with 6+ years of experience! We help businesses rank #1 on Google, scale revenue, and build high-ticket brands via 360° digital marketing services.<br><br>👉 <b>Speak directly with our expert to scale your brand:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
+    response_hi: "<b>Digital Whopper</b> Jaipur ki <b>Best Digital Marketing Agency</b> hai jise 6+ saal ka solid experience hai! Hum businesses ko Google par #1 rank dilane aur sales/revenue scale karne me help karte hain 360° digital marketing services ke saath.<br><br>👉 <b>Apne brand ko scale karne ke liye hamare expert se baat karein:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "founder",
+    keywords: [
+      "founder", "owner", "ceo", "mishal", "mishal ahmad", "who built", "who started", 
+      "brain behind", "boss", "head", "founder kaun hai", "founder ka naam", "founder name", 
+      "kya naam hai founder", "founder kon h", "owner kon h", "kisne banaya", "kiski company hai", 
+      "founder kaun h", "kiske dwara"
+    ],
+    response_en: "Digital Whopper is founded by <b>Mishal Ahmad</b> — Growth Architect, mentor, and digital marketing expert! He has 10+ years of experience scaling brands from seed stage to Shark Tank India funding milestones. 🚀",
+    response_hi: "Digital Whopper ke founder <b>Mishal Ahmad</b> hain — Growth Architect, mentor aur digital marketing expert! Inhone brands ko seed stage se Shark Tank India tak scale karne me 10+ years ka experience hasil kiya hai. 🚀"
+  },
+  {
+    category: "company_info",
+    keywords: [
+      "about company", "digital whopper", "what is digital whopper", "agency", "whopper", 
+      "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h", 
+      "kya company h", "about digital whopper", "company info"
+    ],
+    response_en: "Digital Whopper is the <b>Best Digital Marketing Agency in Jaipur</b>! We offer 360° online growth solutions — from SEO, Performance Marketing, and Web Development to E-commerce management and Pitch Consulting.",
+    response_hi: "Digital Whopper Jaipur ki <b>Best Digital Marketing Agency</b> hai! Hum 360° online growth solutions provide karte hain — SEO, Performance Ads, Web Development, E-Commerce, aur Pitch Consulting tak."
+  },
+  {
+    category: "services_list",
+    keywords: [
+      "services", "service", "what do you do", "what you offer", "work list", "expertise", 
+      "kya kya kaam karte ho", "kya service hai", "kya kaam h", "kya offer karte ho", 
+      "kaunsi service", "kon konsi service", "service list"
+    ],
+    response_en: "We offer complete 360° Digital Growth Services:<br><br>🔍 <b>SEO Dominance</b><br>🚀 <b>Performance Ads (Meta & Google)</b><br>💻 <b>Web & App Development</b><br>🛍️ <b>Ecommerce Marketing</b><br>🎨 <b>Social Media Management</b><br>📱 <b>CRO & Analytics</b><br>🦈 <b>Pitch & UI/UX Consulting</b><br><br>👉 <b>You can speak directly with our expert to select the best service for your business:</b><br><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Click here to Chat on WhatsApp</a>",
+    response_hi: "Hum complete 360° Digital Growth Services offer karte hain:<br><br>🔍 <b>SEO Dominance</b><br>🚀 <b>Performance Ads (Meta & Google)</b><br>💻 <b>Web & App Development</b><br>🛍️ <b>Ecommerce Marketing</b><br>🎨 <b>Social Media Management</b><br>📱 <b>CRO & Analytics</b><br>🦈 <b>Pitch & UI/UX Consulting</b><br><br>👉 <b>Aap hamare expert se baat kar sakte hain apne business ke liye best service chun-ne ke liye:</b><br><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "seo",
+    keywords: [
+      "seo", "rank", "ranking", "google ranking", "search engine", "organic growth", 
+      "keywords", "top pe lana", "google par lana", "search me aana", "organic traffic"
+    ],
+    response_en: "Our <b>SEO Dominance</b> service helps you rank #1 across Google search and AI answers. We build organic foundations targeting high-intent keywords to drive compounding traffic!<br><br>👉 <b>Speak directly with our expert to get a free SEO Audit:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
+    response_hi: "Humari <b>SEO Dominance</b> service aapko Google par #1 rank dilane me help karti hai. Hum high-intent keywords target karke aapke business par organic traffic laate hain!<br><br>👉 <b>Free SEO Audit ke liye hamare expert se baat karein:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "performance_ads",
+    keywords: [
+      "ads", "paid ads", "performance ads", "performance marketing", "roas", "meta ads", 
+      "facebook ads", "google ads", "campaigns", "ads chalana", "leads lana", "paid promotion"
+    ],
+    response_en: "We build high-velocity Meta & Google ad funnels that capture leads, scale revenue, and deliver high-margin profit with up to 7.6x ROAS! 📈<br><br>👉 <b>Speak directly with our expert to plan your ad strategy:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
+    response_hi: "Hum high-velocity Meta aur Google Ads funnels banate hain jo aapke business ke liye high-ticket leads aur revenue scale karte hain — up to 7.6x ROAS ke saath! 📈<br><br>👉 <b>Ad strategy plan karne ke liye hamare expert se baat karein:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "web_development",
+    keywords: [
+      "website", "web development", "web dev", "site", "design", "shopify", "wordpress", 
+      "storefront", "app", "website banana", "website banwani hai", "site design", "web design"
+    ],
+    response_en: "We engineer custom, mobile-first, and high-converting websites and Shopify storefronts that turn visitors into loyal buyers! 💻<br><br>👉 <b>Speak directly with our expert for website consultation:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
+    response_hi: "Hum custom, mobile-friendly aur high-converting websites aur Shopify stores design karte hain jo visitors ko loyal customers me badalte hain! 💻<br><br>👉 <b>Website requirement discuss karne ke liye hamare expert se baat karein:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "ecommerce",
+    keywords: [
+      "ecommerce", "e-commerce", "ecom", "amazon", "flipkart", "etsy", "listing", "store", 
+      "online dukan", "online store", "product sell"
+    ],
+    response_en: "We optimize and manage digital storefronts across Amazon, Flipkart, Shopify, and Etsy — streamlining product funnels and lowering cart abandonment! 🛍️<br><br>👉 <b>Speak directly with our expert for E-Commerce scaling:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
+    response_hi: "Hum Amazon, Flipkart, Shopify, aur Etsy par aapke store ko optimize aur manage karte hain taaki sales badhein aur cart abandonment kam ho! 🛍️<br><br>👉 <b>Store sales badhane ke liye hamare expert se baat karein:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "shark_tank",
+    keywords: [
+      "shark tank", "shark", "ekatra", "marbleous", "funding", "investor", "shark tank client"
+    ],
+    response_en: "We have proudly managed digital growth & SEO for Shark Tank India featured/funded brands like <b>Ekatra</b> and <b>Marbleous</b>! 🦈",
+    response_hi: "Humnay Shark Tank India me feature aur fund hone waale brands jaise <b>Ekatra</b> aur <b>Marbleous</b> ki complete digital growth aur SEO manage ki hai! 🦈"
+  },
+  {
+    category: "location",
+    keywords: [
+      "location", "address", "office", "where", "jaipur", "place", "city", 
+      "office kahan hai", "office kaha h", "kahan par hai", "address kya hai", "kaha h office"
+    ],
+    response_en: "📍 <b>Office Address:</b><br>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017.",
+    response_hi: "📍 <b>Humara Office Address:</b><br>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017."
+  },
+  {
+    category: "contact",
+    keywords: [
+      "contact", "phone", "number", "call", "email", "mail", "talk", "speak", "human", "touch", 
+      "baat karni hai", "call karna hai", "number do", "phone number", "sampark", "kaise milen"
+    ],
+    response_en: "To get in touch with us: 📲<br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Click here to Chat</a>",
+    response_hi: "Humse contact karne ke liye: 📲<br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Yahan click karke baat karein</a>"
+  },
+  {
+    category: "pricing",
+    keywords: [
+      "price", "pricing", "cost", "charge", "packages", "fee", "rates", "budget", 
+      "kitna charge", "kitna paisa", "kya rate hai", "kitna lagega", "cost kya h", "kitna cost",
+      "website price", "website cost", "seo price", "seo cost", "ad budget"
+    ],
+    response_en: "Our growth packages and service pricing are fully customized according to your business requirements, goals, and project scope. We offer complete solutions tailored to get you maximum ROI.<br><br>👉 <b>You can speak directly with our expert for detailed consultation & exact quotation:</b><br><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Click here to Chat on WhatsApp</a>",
+    response_hi: "Humare growth packages aur service charges aapke business goals, requirements aur scope ke hisaab se custom hote hain. Hum aapko maximum ROI dilane ke liye tailored solutions offer karte hain.<br><br>👉 <b>Aap hamare expert se baat kar sakte hain exact pricing aur free consultation ke liye:</b><br><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>WhatsApp par baat karein</a>"
+  },
+  {
+    category: "journey",
+    keywords: [
+      "journey", "history", "milestones", "experience", "2020", "2025", "rajasthan government", 
+      "kab shuru hua", "kitne saal hue"
+    ],
+    response_en: "🚀 <b>Our Journey:</b><br>• <b>2020:</b> Started our mission.<br>• <b>2022:</b> Shark Tank success with Ekatra.<br>• <b>2023-24:</b> 100+ projects completed.<br>• <b>2025:</b> Funded & recognized for expansion by Govt. of Rajasthan!",
+    response_hi: "🚀 <b>Humara Safar:</b><br>• <b>2020:</b> Humne apni journey shuru ki.<br>• <b>2022:</b> Ekatra ke saath Shark Tank success.<br>• <b>2023-24:</b> 100+ projects complete kiye.<br>• <b>2025:</b> Govt. of Rajasthan se expansion funding mili!"
+  },
+  {
+    category: "greetings",
+    keywords: [
+      "hi", "hello", "hey", "hlo", "namaste", "good morning", "good evening", "chotu", 
+      "kaise ho", "kya haal hai", "kya chal raha hai", "kya haal h"
+    ],
+    response_en: "Hello! I am Chotu, your Digital Whopper AI Assistant. How can I help grow your business today? 🚀",
+    response_hi: "Hello! Main Chotu hu, aapka Digital Whopper AI Assistant. Aaj main aapke business ko grow karne me kaise help kar sakta hu? 🚀"
+  }
+];
 
+// 🌐 HINGLISH DETECTOR FUNCTION
+function isHinglishQuery(query) {
+  const hinglishIndicators = [
+    "kaun", "kon", "kya", "kaha", "kahan", "kaise", "kisne", "kitna", "hai", "h", "ho", "hu", 
+    "naam", "nam", "baare", "karti", "karta", "karde", "karne", "karke", "karte", "ko", "ki", 
+    "ke", "se", "me", "mein", "par", "chahiye", "batao", "bataen", "do", "karo", "kab", 
+    "saal", "safar", "paisa", "paisse", "milega", "milen", "lagga", "lagega", "hoga", "banwana", "chalana"
+  ];
+
+  const words = query.split(/\s+/);
+  return words.some(word => hinglishIndicators.includes(word));
+}
+
+// 🤖 DUAL-LANGUAGE SMART SEARCH ENGINE WITH ACCURATE WEIGHTAGE
+function processBotBrainResponse(input) {
+  const query = input.toLowerCase().trim();
+  const userIsHinglish = isHinglishQuery(query);
+
+  // Typing indicator
   const typing = document.createElement('div');
   typing.className = 'typing-indicator';
   typing.id = 'typingIndicator';
@@ -536,19 +691,41 @@ function processBotBrainResponse(input) {
     const indicator = document.getElementById('typingIndicator');
     if (indicator) indicator.remove();
 
-    let botReply = "That's interesting! Let me connect you directly to our growth team on WhatsApp for details. Or type 'services' to see what we build! 🚀";
+    let matchedItem = null;
+    let highestScore = 0;
 
-    if (query.includes('services') || query.includes('service') || query.includes('work')) {
-      botReply = "We provide full 360° digital growth solutions! ✦ App & Shopify Build ✦ SEO Optimization ✦ Performance Meta/Google Funnel Ads ✦ D2C scaling. Which one are you looking for?";
-    } else if (query.includes('pricing') || query.includes('price') || query.includes('cost') || query.includes('charge')) {
-      botReply = "Our packages are fully customized based on your business targets! Let's build a free consultation map. Drop us a ping on WhatsApp at +916200379161.";
-    } else if (query.includes('contact') || query.includes('human') || query.includes('speak') || query.includes('call')) {
-      botReply = "Perfect! Opening direct WhatsApp hotline channel with our strategist. Click here: <a href='https://wa.me/916200379161' target='_blank' style='text-decoration:underline;color:#0052ff;'>Chat on WhatsApp</a> 📲";
+    // Smart Score Matching Algorithm
+    botKnowledgeBase.forEach(item => {
+      let currentScore = 0;
+
+      item.keywords.forEach(keyword => {
+        if (query.includes(keyword)) {
+          // Specific/Lambi phrases ko high score
+          currentScore += keyword.length;
+        }
+      });
+
+      if (currentScore > highestScore) {
+        highestScore = currentScore;
+        matchedItem = item;
+      }
+    });
+
+    let bestResponse = null;
+
+    if (matchedItem && highestScore > 0) {
+      bestResponse = userIsHinglish ? matchedItem.response_hi : matchedItem.response_en;
+    } else {
+      if (userIsHinglish) {
+        bestResponse = "Mujhe aapka sawaal samajh nahi aaya. Aap mujhse <b>Company Experience (6+ Years)</b>, <b>Website Cost</b>, <b>360° SEO</b>, <b>Daily/Monthly Ads</b>, ya <b>Founder</b> ke baare me pooch sakte hain! 🚀<br><br>👉 <b>Aap hamare expert se baat kar sakte hain:</b><br><a href='https://wa.me/916200379161' target='_blank' style='text-decoration:underline;color:#0052ff;font-weight:700;'>WhatsApp par baat karein 📲</a>";
+      } else {
+        bestResponse = "I'm not sure I understood that completely. You can ask me about our <b>6+ Years Experience</b>, <b>Website Cost</b>, <b>360° SEO</b>, <b>Daily/Monthly Ads</b>, or <b>Founder</b>! 🚀<br><br>👉 <b>You can speak directly with our expert:</b><br><a href='https://wa.me/916200379161' target='_blank' style='text-decoration:underline;color:#0052ff;font-weight:700;'>Chat on WhatsApp 📲</a>";
+      }
     }
 
-    appendMessageBubble(botReply, 'bot-msg');
+    appendMessageBubble(bestResponse, 'bot-msg');
     if (typeof applyCursorHooks === "function") applyCursorHooks();
-  }, 1100);
+  }, 700);
 }
 
 // 🌟 HERO SCROLL DRIVEN HEADING ZOOM ENGINE

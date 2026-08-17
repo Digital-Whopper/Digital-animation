@@ -60,6 +60,13 @@
   ] 
 }
 </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWCB7BSZ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <style>
   .logo-img-asset {
@@ -73,6 +80,10 @@
 
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWCB7BSZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <div id="customPreloader" class="preloader-overlay">
     <div class="preloader-content">
       <h2 class="preloader-brand">Digital Whopper</h2>
@@ -802,7 +813,7 @@
 
   </section>
 
-  <section id="work" class="scroll-reveal">
+ <section id="work" class="scroll-reveal">
     <div class="wrap">
       <div class="eyebrow">Our work</div>
       <h3 class="h2 text-shine">Whopping Projects That Delivered Big
@@ -813,20 +824,138 @@
 
         <div class="work-column-left" id="gridWorkspaceLeft"></div>
 
-        <div class="phone-center-column">
-          <div class="mock-device">
-            <div class="phone-notch"></div>
-            <div class="phone-screen-display" id="phoneMockScreen">
-              <div class="screen-placeholder" id="screenPlaceholder">
-                <span class="pulsing-circle"></span>
-                <p>Click any card <br>to view live</p>
-              </div>
-              <div class="phone-carousel-track" id="phoneCarouselTrack"></div>
-              <div class="carousel-next-indicator" id="carouselNextBtn" onclick="moveCarouselNext(event)">✦</div>
-            </div>
-            <div class="phone-home-indicator"></div>
-          </div>
-        </div>
+        <!-- ==========================================================================
+     📱 FIXED IPHONE MOCKUP (FULL IMAGE FIT - NO BOTTOM CROP)
+     ========================================================================== -->
+<style>
+  /* 1. iPhone Outer Frame */
+  .mock-device {
+    height: 540px !important;
+    width: 270px;
+    margin: 0 auto;
+    position: relative;
+    background: #000000;
+    border-radius: 44px;
+    border: 9px solid #1a1f2c;
+    box-shadow: 0 25px 50px rgba(0, 82, 255, 0.25), 0 0 0 2px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* 2. Top White iPhone Notification/Status Bar */
+  .phone-status-bar {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: #ffffff !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 50;
+    box-sizing: border-box;
+  }
+
+  .phone-status-bar .status-time {
+    font-size: 11px;
+    font-weight: 800;
+    color: #000000 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* iPhone Dynamic Notch */
+  .phone-status-bar .phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 15px;
+    background: #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .phone-status-bar .status-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: #000000 !important;
+    font-weight: bold;
+  }
+
+  /* 3. Screen Display Area */
+  .phone-screen-display {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 30px);
+    background: #ffffff;
+    overflow: hidden !important;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 4. Full Image Fit - Shows 100% Image (Top to Bottom Bar) */
+  .phone-screen-display img,
+  .phone-carousel-track img,
+  .phone-carousel-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important; /* Entire screenshot fits completely without cropping bottom bar */
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+    display: block;
+  }
+
+  /* 5. Sleek Home Swipe Indicator (Overlay with slight transparency so it doesn't block text) */
+  .phone-home-indicator {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black bar */
+    border-radius: 10px;
+    z-index: 60;
+    pointer-events: none;
+  }
+</style>
+
+<!-- Replace your .phone-center-column HTML with this: -->
+<div class="phone-center-column">
+  <div class="mock-device">
+    
+    <!-- Top White Status Bar -->
+    <div class="phone-status-bar">
+      <span class="status-time">9:41</span>
+      <div class="phone-notch"></div>
+      <div class="status-icons">
+        <span>📶</span>
+        <span>⚡</span>
+        <span>🔋</span>
+      </div>
+    </div>
+
+    <!-- Phone Screen with Full Image -->
+    <div class="phone-screen-display" id="phoneMockScreen">
+      <div class="screen-placeholder" id="screenPlaceholder">
+        <span class="pulsing-circle"></span>
+        <p>Click any card <br>to view live</p>
+      </div>
+      <div class="phone-carousel-track" id="phoneCarouselTrack"></div>
+      <div class="carousel-next-indicator" id="carouselNextBtn" onclick="moveCarouselNext(event)">✦</div>
+    </div>
+
+    <!-- iPhone Home Indicator -->
+    <div class="phone-home-indicator"></div>
+  </div>
+</div>
 
         <div class="work-column-right" id="gridWorkspaceRight"></div>
 

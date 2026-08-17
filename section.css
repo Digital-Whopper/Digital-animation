@@ -2803,3 +2803,241 @@ box-shadow: 0 30px 70px rgb(234 88 12 / 30%), 0 5px 15px rgba(0, 0, 0, 0.01) !im
     display: none !important; /* Mobile screens par floating button completely hide ho jayega */
   }
 }
+
+
+
+/* service description */
+/* Rich Text Formatting Styles for Website */
+.service-description-content strong, 
+.service-description-content b {
+  font-weight: 700 !important;
+}
+
+.service-description-content em, 
+.service-description-content i {
+  font-style: italic !important;
+}
+
+.service-description-content h1, 
+.service-description-content h2, 
+.service-description-content h3 {
+  margin: 10px 0 6px 0;
+  font-weight: 700;
+}
+
+.service-description-content ul, 
+.service-description-content ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+/* ***** service menu tab  */
+/* Navigation Dropdown Base Styles */
+.nav-links .dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-links .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 240px;
+  max-height: none !important;
+  overflow: visible !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 9999;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeInDown 0.25s ease forwards;
+}
+
+.nav-links .dropdown-menu a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px !important;
+  color: #0f172a !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links .dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.nav-links .dropdown-menu a:hover {
+  background: rgba(0, 82, 255, 0.06);
+  color: #0052ff !important;
+  padding-left: 20px !important;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* chatbot ke liye mobile loop hover  */
+/* 📱 Mobile Screens Par Laptop Jaisa High-Jump & Somersault Animation Loop */
+@media (max-width: 900px) {
+  .chat-bubble .bot-bubble-img {
+    animation: mobileRobotHighJumpLoop 3.1s cubic-bezier(0.25, 1, 0.5, 1) infinite !important;
+  }
+}
+
+/* Kafi Uper High Jump (-95px) + 360° Flip + Smooth Pause Loop */
+@keyframes mobileRobotHighJumpLoop {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  8% {
+    /* Pre-jump squat */
+    transform: translateY(5px) rotate(-10deg) scale(0.92);
+  }
+  25% {
+    /* High Jump in the Air (-95px Height) + 180° Half Rotation */
+    transform: translateY(-95px) rotate(180deg) scale(1.3);
+    filter: drop-shadow(0 15px 22px rgba(0, 82, 255, 0.45));
+  }
+  42% {
+    /* Land back down with 360° Full Spin */
+    transform: translateY(-5px) rotate(360deg) scale(1.05);
+  }
+  50%, 100% {
+    /* Rest phase at bottom before next jump */
+    transform: translateY(0) rotate(360deg) scale(1);
+    filter: none;
+  }
+}
+
+/* blog me url show karne ke liye  */
+/* ==========================================================================
+   🔗 GLOBAL URL / LINK FIX FOR BLOGS & SERVICES (OVERRIDE BLACK TEXT)
+   ========================================================================== */
+
+/* Website, Dashboard Preview & Details Page ke har link ko blue aur underline karega */
+.detail-card a,
+.detail-desc a,
+.service-description-content a,
+.service-body-content a,
+.blog-body a,
+.hero-full-body-text a,
+.ql-editor a,
+div[dangerouslySetInnerHTML] a,
+.cards-grid p a,
+.detail-card p a {
+  color: #0052ff !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+/* Hover karne par dark blue shade */
+.detail-card a:hover,
+.detail-desc a:hover,
+.service-description-content a:hover,
+.service-body-content a:hover,
+.blog-body a:hover,
+.hero-full-body-text a:hover,
+.ql-editor a:hover,
+div[dangerouslySetInnerHTML] a:hover {
+  color: #0033cc !important;
+  text-decoration: underline !important;
+}
+
+/* Read More button par underline na aaye uske liye reset */
+a.read-more-btn,
+.blog-card a.read-more-btn {
+  text-decoration: none !important;
+}
+
+
+
+/* client logo 2 line carousel */
+/* ==========================================================================
+   🤝 HOMEPAGE 2-LINE INFINITE LOGO CAROUSEL ENGINE (SEO PAGE STYLE)
+   ========================================================================== */
+.clients-carousel-section {
+  padding: 40px 0 !important;
+  background: #ffffff !important;
+  border-top: 1px solid #f1f5f9 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.two-line-carousel-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.logo-carousel-track-home {
+  display: flex !important;
+  gap: 20px !important;
+  width: max-content !important;
+  will-change: transform;
+}
+
+/* Line 1 (Right Direction Scroll) & Line 2 (Left Direction Scroll) */
+.home-track-line-1 { animation: logoScrollRightHome 22s linear infinite !important; }
+.home-track-line-2 { animation: logoScrollLeftHome 22s linear infinite !important; }
+
+/* Hover par smooth pause */
+.two-line-carousel-wrapper:hover .logo-carousel-track-home {
+  animation-play-state: paused !important;
+}
+
+/* Ek saman size ke logo cards (Ekdam SEO page ki tarah) */
+.logo-card-pad-home {
+  width: 140px !important;
+  height: 70px !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+  flex-shrink: 0 !important;
+}
+
+.logo-card-pad-home img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Perfect Loop Animations (No Blank Gaps) */
+@keyframes logoScrollLeftHome {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes logoScrollRightHome {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}

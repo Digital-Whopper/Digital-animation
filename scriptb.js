@@ -80,26 +80,54 @@ window.addEventListener('scroll', () => {
 
 // 🌟 20+ HIGH DENSITY REAL-WORLD MARKETING & DEV PROJECTS REPOSITORY
 const projects = [
-  { title: "D2C Storefront", tag: "Shopify conversion build", images: ["https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Performance Ads", tag: "Meta + Google funnels", link: "https://rahultakdev.vercel.app/", images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Analytics Hub", tag: "SEO growth dashboard", images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Social Launch", tag: "Reels and creator content", images: ["https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=760&q=68"] },
-  { title: "CRM Flow", tag: "Lead nurture system", images: ["https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Creator Ads", tag: "Short-form launch kit", images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] },
-  { title: "EdTech Platform", tag: "LMS React Architecture", images: ["https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=760&q=68"] },
-  { title: "B2B SaaS Portal", tag: "Cloud Infrastructure Integration", images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Real Estate Funnel", tag: "High-Intent Meta Ad Lead Gen", images: ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] },
-  { title: "FMCG Brand Scale", tag: "Omnichannel Hyper-Growth", images: ["https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=760&q=68"] },
-  { title: "FinTech UI/UX", tag: "Secure Mobile Wallet Design", images: ["https://images.unsplash.com/photo-1563013544-824ae1d704d3?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Healthcare SEO", tag: "Medical Directory Scaling", images: ["https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Luxury Decor Site", tag: "High-Ticket WooCommerce Build", images: ["https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Crypto Tracker", tag: "Real-time API Web Dashboard", images: ["https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Automotive Growth", tag: "Hyperlocal Lead Generation", images: ["https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Fashion Branding", tag: "Lookbook & Creative Direction", images: ["https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=760&q=68"] },
-  { title: "AgriTech Application", tag: "Offline-First Mobile UI", images: ["https://images.unsplash.com/photo-1592982537447-7440771109a2?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Gym & Fitness App", tag: "Subscription Funnel Build", images: ["https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Travel Aggregator", tag: "Custom High-Concurrency API", images: ["https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=760&q=68"] },
-  { title: "Jewelry E-Store", tag: "Immersive Elegant UX/UI", images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=760&q=68", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=760&q=68"] }
+  // 1
+  { title: "Marbleous", tag: "Custom High-Concurrency API",thumbnail: "img/projects/marbess2.png", images: ["img/projects/marbess2.png", "img/projects/marbess3.png"] },
+  // 2
+  { title: "Ekatra", tag: "Immersive Elegant UX/UI",thumbnail: "img/projects/ekatra3.png", images: ["img/projects/ekatra1.png", "img/projects/ekatra2.png"] },
+  
+    //  3
+  { title: "Meenal Modi", tag: "SEO growth dashboard",
+    thumbnail: "img/projects/meenalth.png", images: ["img/projects/meenal.png", "img/projects/meenal1.png"] },
+    // 4
+  { title: "Gud Mishri", tag: "Reels and creator content",
+     thumbnail: "img/projects/gudhmisrith.png", images: ["img/projects/gudhmisri1.png", "img/projects/gudhmisri3.png"] },
+    //  5
+  { title: "Sahu Chai Wala", tag: "Lead nurture system", thumbnail: "img/projects/sahuchaiwala3.png", images: ["img/projects/sahuchaiwala1.png", "img/projects/sahuchaiwala2.png"] },
+  // 6
+  { title: "Namo Tandoori Chai", tag: "Short-form launch kit", thumbnail: "img/projects/namo3.png", images: ["img/projects/namo1.png", "img/projects/namo2.png"] },
+  // 7
+  { title: "Phulkari", tag: "LMS React Architecture", thumbnail: "img/projects/phulkari3.png", images: ["img/projects/phulkari1.png", "img/projects/phulkari2.png"] },
+  // 8
+  { title: "J-Pure", tag: "Cloud Infrastructure Integration", thumbnail: "img/projects/jpure3.png", images: ["img/projects/jpure1.png", "img/projects/jpure2.png"] },
+  // 9
+  { title: "Yatharth", tag: "High-Intent Meta Ad Lead Gen", thumbnail: "img/projects/yatharth3.png", images: ["img/projects/yatharth1.png", "img/projects/yatharth2.png"] },
+  // 10
+  { title: "Exporis", tag: "Omnichannel Hyper-Growth", thumbnail: "img/projects/exporis.webp", images: ["img/projects/exporis.webp", "img/projects/exporis.webp"] },
+  // 1
+  { title: "Dresszilla", tag: "Shopify conversion build",thumbnail: "img/projects/dresszilla.png", images: ["img/projects/dresszilla.png", "img/projects/dresszilla1.png"] },
+  // 2
+  { title: "Reducetax", tag: "Meta + Google funnels", 
+    // link: "https://rahultakdev.vercel.app/", 
+    thumbnail: "img/projects/reducetaxth.png",
+     images: ["img/projects/reducetax.png", "img/projects/reducetax1.png"] },
+  // 11
+  { title: "JCCA", tag: "Secure Mobile Wallet Design",thumbnail: "img/projects/jcca3.png", images: ["img/projects/jcca1.png", "img/projects/jcca2.png"] },
+  // 12
+  { title: "RajaRaya", tag: "Medical Directory Scaling",thumbnail: "img/projects/rajaraya3.png", images: ["img/projects/rajaraya1.png", "img/projects/rajaraya2.png"] },
+  // 13
+  { title: "Thegasbh", tag: "High-Ticket WooCommerce Build",thumbnail: "img/projects/thegasbh3.png", images: ["img/projects/thegasbh1.png", "img/projects/thegasbh2.png"] },
+  // 14
+  { title: "Weddingz Mantra", tag: "Real-time API Web Dashboard",thumbnail: "img/projects/wedding1.png", images: ["img/projects/wedding1.png", "img/projects/wedding2.png"] },
+  // 15
+  { title: "Coachify", tag: "Hyperlocal Lead Generation",thumbnail: "img/projects/coachify3.png", images: ["img/projects/coachify1.png", "img/projects/coachify2.png"] },
+  // 16
+  { title: "Maria Ross Paris", tag: "Lookbook & Creative Direction",thumbnail: "img/projects/ross3.png", images: ["img/projects/ross1.png", "img/projects/ross2.png"] },
+  // 17
+  { title: "Mum & Daughter", tag: "Offline-First Mobile UI",thumbnail: "img/projects/momd3.png", images: ["img/projects/momd1.png", "img/projects/momd2.png"] },
+  // 18
+  { title: "Homearte India", tag: "Subscription Funnel Build",thumbnail: "img/projects/homeart3.png", images: ["img/projects/homeart1.png", "img/projects/homeart2.png"] },
+  // 19
+  
 ];
 
 let carouselIntervalIndex = null;
@@ -204,9 +232,12 @@ window.addEventListener('load', () => {
 });
 
 function generateCardTemplate(p, globalIdx) {
+  // 🌟 Agar thumbnail property hai toh wo use hogi, nahi toh pehli image (fallback)
+  const cardThumbnail = p.thumbnail || (p.images && p.images[0]) || '';
+
   return `
     <div class="work-card" data-index="${globalIdx}" onclick="updatePhoneDisplay(${globalIdx}, this)">
-      <img src="${p.images[0]}" alt="${p.title}" loading="lazy">
+      <img src="${cardThumbnail}" alt="${p.title}" loading="lazy">
       <div class="work-card-body">
         <b>${p.title}</b>
         <span>${p.tag}</span>

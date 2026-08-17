@@ -1463,7 +1463,7 @@ box-shadow: 0 30px 70px rgb(234 88 12 / 30%), 0 5px 15px rgba(0, 0, 0, 0.01) !im
   /* 🤖 1. चैटबॉट को बॉटम बार के ऊपर खिसकाना */
   .chatbot-wrapper {
     bottom: 84px !important; /* बॉटम बार की 68px हाइट के ऊपर सुरक्षित स्पेस */
-    right: 16px !important;
+    right: 5px !important;
   }
   
   .chat-window {
@@ -2978,7 +2978,7 @@ a.read-more-btn,
    🤝 HOMEPAGE 2-LINE INFINITE LOGO CAROUSEL ENGINE (SEO PAGE STYLE)
    ========================================================================== */
 .clients-carousel-section {
-  padding: 40px 0 !important;
+  padding: 20px 0 !important;
   background: #ffffff !important;
   border-top: 1px solid #f1f5f9 !important;
   border-bottom: 1px solid #f1f5f9 !important;
@@ -2992,6 +2992,7 @@ a.read-more-btn,
   gap: 16px !important;
   width: 100% !important;
   overflow: hidden !important;
+  padding-bottom: 5px !important;
 }
 
 .logo-carousel-track-home {

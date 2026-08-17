@@ -879,56 +879,292 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Footer code iske neeche jaisa hai waisa hi rahega...
+if (globalFooterContainer) {
+  globalFooterContainer.innerHTML = `
+    <div class="wrap">
 
-  if (globalFooterContainer) {
-    globalFooterContainer.innerHTML = `
-      <div class="wrap">
-        <div class="foot-top">
-          <div class="foot-brand">
-<a href="/" class="logo">
-          <img src="img/digitalwhopperlogo.png" alt="Digital Whopper Logo" class="logo-img-asset">
-          
-        </a>            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
-            <p>
-              <a href="tel:+916200379161">+91 6200379161</a><br>
-              <a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a>
-            </p>
-            <div class="socials">
-              <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
+      <div class="foot-top">
+
+        <!-- FOOTER BRAND -->
+        <div class="foot-brand">
+
+          <a href="/" class="logo">
+            <img 
+              src="img/footerlogo.png" 
+              alt="Digital Whopper Logo" 
+              class="logo-img-asset"
+              style="height: 80px;"
+            >
+          </a>
+
+          <p>
+            3rd Floor, 4/11, Vidyut Abhiyanta Colony,
+            Sector 4, Malviya Nagar, Jaipur,
+            Rajasthan 302017
+          </p>
+
+          <p>
+            <a href="tel:+916200379161">
+              +91 6200379161
+            </a>
+            <br>
+
+            <a href="mailto:digitalwhopperofficial@gmail.com">
+              digitalwhopperofficial@gmail.com
+            </a>
+          </p>
+
+          <div class="socials">
+
+            <a 
+              href="https://www.facebook.com/officialdigitalwhopper"
+              target="_blank"
+              rel="noopener"
+            >
+              Facebook
+            </a>
+
+            <a 
+              href="https://www.instagram.com/digital_whopper/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+
+            <a 
+              href="https://www.linkedin.com/company/digitalwhopper/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+
           </div>
-          <div class="foot-links">
-            <div class="foot-col">
-              <h4>Pages</h4>
-              <a href="/">Home</a>
-              <a href="services/">Services</a>
-              <a href="#">Contact</a>
-            </div>
-            <div class="foot-col">
-              <h4>Quick Links</h4>
-              <a href="blogs/">Blogs</a>
-              <a href="services/">Services</a>
-              <a href="#">Contact</a>
-            </div>
-            <div class="foot-col">
-              <h4>Our services</h4>
-              <a href="services/">App &amp; Shopify Development</a>
-              <a href="services/">SEO &amp; SMO Optimisation</a>
-              <a href="services/">E-Commerce</a>
-              <a href="services/">Performance Marketing</a>
-              <a href="services/">Web Design &amp; Development</a>
-            </div>
-          </div>
+
         </div>
-        <div class="foot-bottom">
-          <span>© 2026 Digital Whopper. All rights reserved.</span>
+
+
+        <!-- =====================================
+             DESKTOP FOOTER
+        ====================================== -->
+
+        <div class="foot-links desktop-footer-links">
+
+          <!-- Pages -->
+          <div class="foot-col">
+
+            <h4>Pages</h4>
+
+            <a href="/">Home</a>
+            <a href="services/">Services</a>
+            <a href="#">Contact</a>
+
           </div>
+
+
+          <!-- Quick Links -->
+          <div class="foot-col">
+
+            <h4>Quick Links</h4>
+
+            <a href="blogs/">Blogs</a>
+            <a href="services/">Services</a>
+            <a href="#">Contact</a>
+
           </div>
-          `;
-  }
+
+
+          <!-- Services -->
+          <div class="foot-col">
+
+            <h4>Our Services</h4>
+
+            <a href="services/">
+              App &amp; Shopify Development
+            </a>
+
+            <a href="services/">
+              SEO &amp; SMO Optimisation
+            </a>
+
+            <a href="services/">
+              E-Commerce
+            </a>
+
+            <a href="services/">
+              Performance Marketing
+            </a>
+
+            <a href="services/">
+              Web Design &amp; Development
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- =====================================
+             MOBILE FOOTER ACCORDION
+        ====================================== -->
+
+        <div class="mobile-footer-links">
+
+
+          <!-- PAGES -->
+          <div class="mobile-footer-item">
+
+            <button
+              type="button"
+              class="mobile-footer-title"
+              data-footer-toggle
+            >
+              <span>Pages</span>
+              <span class="footer-plus">+</span>
+            </button>
+
+            <div class="mobile-footer-content">
+
+              <a href="/">Home</a>
+
+              <a href="services/">
+                Services
+              </a>
+
+              <a href="#">
+                Contact
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- OUR SERVICES -->
+          <div class="mobile-footer-item">
+
+            <button
+              type="button"
+              class="mobile-footer-title"
+              data-footer-toggle
+            >
+              <span>Our Services</span>
+              <span class="footer-plus">+</span>
+            </button>
+
+            <div class="mobile-footer-content">
+
+              <a href="services/">
+                App &amp; Shopify Development
+              </a>
+
+              <a href="services/">
+                SEO &amp; SMO Optimisation
+              </a>
+
+              <a href="services/">
+                E-Commerce
+              </a>
+
+              <a href="services/">
+                Performance Marketing
+              </a>
+
+              <a href="services/">
+                Web Design &amp; Development
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUICK LINKS -->
+          <div class="mobile-footer-item">
+
+            <button
+              type="button"
+              class="mobile-footer-title"
+              data-footer-toggle
+            >
+              <span>Quick Links</span>
+              <span class="footer-plus">+</span>
+            </button>
+
+            <div class="mobile-footer-content">
+
+              <a href="blogs/">
+                Blogs
+              </a>
+
+              <a href="services/">
+                Services
+              </a>
+
+              <a href="#">
+                Contact
+              </a>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="foot-bottom">
+
+        <span>
+          © 2026 Digital Whopper. All rights reserved.
+        </span>
+
+      </div>
+
+    </div>
+  `;
+}
+
+/* =========================================================
+   MOBILE FOOTER ACCORDION
+========================================================= */
+
+const footerToggleButtons = document.querySelectorAll(
+  '[data-footer-toggle]'
+);
+
+footerToggleButtons.forEach(button => {
+
+  button.addEventListener('click', function () {
+
+    const currentItem =
+      this.closest('.mobile-footer-item');
+
+    const allItems =
+      document.querySelectorAll('.mobile-footer-item');
+
+
+    /* Close all other items */
+    allItems.forEach(item => {
+
+      if (item !== currentItem) {
+        item.classList.remove('active');
+      }
+
+    });
+
+
+    /* Toggle current */
+    currentItem.classList.toggle('active');
+
+  });
+
+});
   // <span>Made with ✦ in Jaipur, the Pink City</span>
 
   // 🚀 SAFETY CHECK RUNNERS: Code tab rendering runs securely

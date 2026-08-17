@@ -284,15 +284,15 @@ header.scrolled nav { border-radius: 24px; max-width: 1400px; background: rgba(2
 .faq-item.open .faq-a { max-height: 200px; padding-bottom: 20px; }
 
 /* FOOTER SETUP */
-footer { border-top: 1px solid var(--line); padding: 60px 0 30px; color: var(--muted); background: #ffffff; }
+footer { border-top: 1px solid var(--line); padding: 30px 0 30px; color: var(--muted); background: #ffffff; }
 .foot-top { display: flex; 
   /* justify-content: space-between; */
-   flex-wrap: wrap; gap: 40px 130px; margin-bottom: 40px; }
+   flex-wrap: wrap; gap: 5px 165px; margin-bottom: 60px; }
 .foot-brand p { font-size: 13.5px; margin-top: 14px; max-width: 280px; }
 .foot-brand .socials { display: flex; gap: 16px; margin-top: 16px; }
 .foot-brand .socials a { font-size: 12.5px; }
 .foot-brand .socials a:hover { color: #0052ff; }
-.foot-links { display: flex; gap: 35px 60px; flex-wrap: wrap; }
+.foot-links { display: flex; gap: 35px 100px; flex-wrap: wrap; }
 .foot-col h4 { color: var(--text); font-size: 14px; margin-bottom: 14px; font-family: 'Sora', sans-serif; }
 .foot-col a { display: block; font-size: 13.5px; margin-bottom: 10px; color: var(--muted); }
 .foot-col a:hover { color: #0052ff; }
@@ -396,7 +396,7 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 30px; color: var(--m
   font-family: 'Sora', sans-serif;
   font-size: 10.5px;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 5px 3px;
   border-radius: 99px;
   border: 1px solid rgba(0, 82, 255, 0.15);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -418,10 +418,10 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 30px; color: var(--m
   .chatbot-caption-tag {
     white-space: normal !important;      /* 2 lines allow karega */
     text-align: center !important;        /* Text center aligned rahega */
-    max-width: 110px !important;          /* Width compact rakhega */
+    max-width: 100px !important;          /* Width compact rakhega */
     font-size: 9.5px !important;          /* Small & crisp font */
     line-height: 1.25 !important;
-    padding: 4px 8px !important;
+    /* padding: 4px 8px !important; */
     border-radius: 10px !important;       /* Mobile pill design */
     display: inline-block !important;
   }
@@ -1592,7 +1592,7 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 30px; color: var(--m
   /* padding: 60px 40px; */
   border-radius: 24px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 40px auto;
   box-shadow: 0 20px 50px rgba(0, 82, 255, 0.02);
   border: 1px solid rgba(0, 82, 255, 0.05);
@@ -2820,43 +2820,312 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 30px; color: var(--m
    FOOTER CENTER ALIGNMENT
 ========================= */
 
+/* =========================================================
+   PREMIUM FOOTER WATERMARK + MOBILE ACCORDION
+========================================================= */
+
 footer {
-  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-footer .foot-top {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+/* =========================================
+   COMPANY LOGO WATERMARK
+========================================= */
+
+/* footer::before {
+  content: "";
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background-image: url("img/footerlogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: 0.035;
+
+  pointer-events: none;
+
+  z-index: 0;
+} */
+
+
+/* Footer content logo ke upar rahe */
+footer .wrap {
+  position: relative;
+  z-index: 1;
 }
 
-footer .foot-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  footer {
+    position: relative;
+    overflow: hidden;
+
+    padding: 25px 0 25px;
+  }
+
+
+  /* -----------------------------------------
+     LARGE WATERMARK LOGO
+  ----------------------------------------- */
+
+  footer::before {
+    width: 480px;
+    height: 480px;
+
+    left: 50%;
+    top: 52%;
+
+    opacity: 0.045;
+
+    transform:
+      translate(-50%, -50%);
+  }
+
+
+  /* -----------------------------------------
+     DESKTOP LINKS HIDE
+  ----------------------------------------- */
+
+  .desktop-footer-links {
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE ACCORDION
+  ----------------------------------------- */
+
+  .mobile-footer-links {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+
+  .mobile-footer-item {
+    width: 100%;
+
+    border-bottom:
+      1px solid rgba(0, 0, 0, 0.10);
+  }
+
+ 
+ 
+
+  /* -----------------------------------------
+     TITLE
+  ----------------------------------------- */
+
+  .mobile-footer-title {
+
+    width: 100%;
+    min-height: 58px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: var(--text);
+
+    font-family: 'Sora', sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+
+    cursor: pointer;
+
+    text-align: left;
+  }
+
+
+  /* -----------------------------------------
+     PLUS ICON
+  ----------------------------------------- */
+
+  .footer-plus {
+
+    font-size: 22px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    transition:
+      transform .3s ease;
+  }
+
+
+  /* -----------------------------------------
+     DROPDOWN CONTENT
+  ----------------------------------------- */
+
+  .mobile-footer-content {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;   /* IMPORTANT */
+
+    justify-content: flex-start;
+
+    text-align: left;          /* IMPORTANT */
+
+    gap: 12px;
+
+    padding: 0;
+
+    transition:
+      max-height .35s ease,
+      opacity .25s ease,
+      padding .35s ease;
+  }
+
+
+  /* -----------------------------------------
+     DROPDOWN LINKS
+  ----------------------------------------- */
+
+  .mobile-footer-content a {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    padding: 0;
+
+    transition:
+      color .25s ease,
+      transform .25s ease;
+  }
+
+
+  .mobile-footer-content a:hover {
+
+    color: #0052ff;
+
+    transform: translateX(4px);
+  }
+
+
+  /* -----------------------------------------
+     OPEN ACCORDION
+  ----------------------------------------- */
+
+  .mobile-footer-item.active
+  .mobile-footer-content {
+
+    max-height: 350px;
+
+    opacity: 1;
+
+    padding:
+      0 0 18px 0;
+  }
+
+
+  /* + → × */
+
+  .mobile-footer-item.active
+  .footer-plus {
+
+    transform: rotate(45deg);
+  }
+
+
+  /* -----------------------------------------
+     BRAND SECTION
+  ----------------------------------------- */
+
+  footer .foot-brand {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: left;
+  }
+
+
+  footer .foot-brand p {
+
+    max-width: 100%;
+
+    text-align: left;
+  }
+
+
+  footer .foot-brand .socials {
+
+    justify-content: flex-start;
+  }
+
+
+  /* -----------------------------------------
+     BOTTOM
+  ----------------------------------------- */
+
+  footer .foot-bottom {
+
+    position: relative;
+
+    z-index: 2;
+
+    /* justify-content: center; */
+
+    text-align: center;
+
+    padding-top: 22px;
+  }
+
 }
 
-footer .foot-brand p {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-footer .foot-brand .socials {
-  justify-content: center;
-}
-
-footer .foot-links {
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-}
-
-footer .foot-col {
-  text-align: center;
-}
-
-footer .foot-bottom {
-  justify-content: center;
-  text-align: center;
-}
+ @media (min-width:901px) {
+    .mobile-footer-links {
+      display: none;
+    }
+  }
+/* facebook */

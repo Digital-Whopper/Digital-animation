@@ -81,17 +81,21 @@ window.addEventListener('scroll', () => {
 // 🌟 20+ HIGH DENSITY REAL-WORLD MARKETING & DEV PROJECTS REPOSITORY
 const projects = [
   // 1
-  { title: "Marbleous", tag: "Custom High-Concurrency API",thumbnail: "img/projects/marbess2.png", images: ["img/projects/marbess2.png", "img/projects/marbess3.png"] },
+  { title: "Marbleous", tag: "Custom High-Concurrency API", thumbnail: "img/projects/marbess2.png", images: ["img/projects/marbess2.png", "img/projects/marbess3.png"] },
   // 2
-  { title: "Ekatra", tag: "Immersive Elegant UX/UI",thumbnail: "img/projects/ekatra3.png", images: ["img/projects/ekatra1.png", "img/projects/ekatra2.png"] },
-  
-    //  3
-  { title: "Meenal Modi", tag: "SEO growth dashboard",
-    thumbnail: "img/projects/meenalth.png", images: ["img/projects/meenal.png", "img/projects/meenal1.png"] },
-    // 4
-  { title: "Gud Mishri", tag: "Reels and creator content",
-     thumbnail: "img/projects/gudhmisrith.png", images: ["img/projects/gudhmisri1.png", "img/projects/gudhmisri3.png"] },
-    //  5
+  { title: "Ekatra", tag: "Immersive Elegant UX/UI", thumbnail: "img/projects/ekatra3.png", images: ["img/projects/ekatra1.png", "img/projects/ekatra2.png"] },
+
+  //  3
+  {
+    title: "Meenal Modi", tag: "SEO growth dashboard",
+    thumbnail: "img/projects/meenalth.png", images: ["img/projects/meenal.png", "img/projects/meenal1.png"]
+  },
+  // 4
+  {
+    title: "Gud Mishri", tag: "Reels and creator content",
+    thumbnail: "img/projects/gudhmisrith.png", images: ["img/projects/gudhmisri1.png", "img/projects/gudhmisri3.png"]
+  },
+  //  5
   { title: "Sahu Chai Wala", tag: "Lead nurture system", thumbnail: "img/projects/sahuchaiwala3.png", images: ["img/projects/sahuchaiwala1.png", "img/projects/sahuchaiwala2.png"] },
   // 6
   { title: "Namo Tandoori Chai", tag: "Short-form launch kit", thumbnail: "img/projects/namo3.png", images: ["img/projects/namo1.png", "img/projects/namo2.png"] },
@@ -104,30 +108,32 @@ const projects = [
   // 10
   { title: "Exporis", tag: "Omnichannel Hyper-Growth", thumbnail: "img/projects/exporis.webp", images: ["img/projects/exporis.webp", "img/projects/exporis.webp"] },
   // 1
-  { title: "Dresszilla", tag: "Shopify conversion build",thumbnail: "img/projects/dresszilla.png", images: ["img/projects/dresszilla.png", "img/projects/dresszilla1.png"] },
+  { title: "Dresszilla", tag: "Shopify conversion build", thumbnail: "img/projects/dresszilla.png", images: ["img/projects/dresszilla.png", "img/projects/dresszilla1.png"] },
   // 2
-  { title: "Reducetax", tag: "Meta + Google funnels", 
+  {
+    title: "Reducetax", tag: "Meta + Google funnels",
     // link: "https://rahultakdev.vercel.app/", 
     thumbnail: "img/projects/reducetaxth.png",
-     images: ["img/projects/reducetax.png", "img/projects/reducetax1.png"] },
+    images: ["img/projects/reducetax.png", "img/projects/reducetax1.png"]
+  },
   // 11
-  { title: "JCCA", tag: "Secure Mobile Wallet Design",thumbnail: "img/projects/jcca3.png", images: ["img/projects/jcca1.png", "img/projects/jcca2.png"] },
+  { title: "JCCA", tag: "Secure Mobile Wallet Design", thumbnail: "img/projects/jcca3.png", images: ["img/projects/jcca1.png", "img/projects/jcca2.png"] },
   // 12
-  { title: "RajaRaya", tag: "Medical Directory Scaling",thumbnail: "img/projects/rajaraya3.png", images: ["img/projects/rajaraya1.png", "img/projects/rajaraya2.png"] },
+  { title: "RajaRaya", tag: "Medical Directory Scaling", thumbnail: "img/projects/rajaraya3.png", images: ["img/projects/rajaraya1.png", "img/projects/rajaraya2.png"] },
   // 13
-  { title: "Thegasbh", tag: "High-Ticket WooCommerce Build",thumbnail: "img/projects/thegasbh3.png", images: ["img/projects/thegasbh1.png", "img/projects/thegasbh2.png"] },
+  { title: "Thegasbh", tag: "High-Ticket WooCommerce Build", thumbnail: "img/projects/thegasbh3.png", images: ["img/projects/thegasbh1.png", "img/projects/thegasbh2.png"] },
   // 14
-  { title: "Weddingz Mantra", tag: "Real-time API Web Dashboard",thumbnail: "img/projects/wedding1.png", images: ["img/projects/wedding1.png", "img/projects/wedding2.png"] },
+  { title: "Weddingz Mantra", tag: "Real-time API Web Dashboard", thumbnail: "img/projects/wedding1.png", images: ["img/projects/wedding1.png", "img/projects/wedding2.png"] },
   // 15
-  { title: "Coachify", tag: "Hyperlocal Lead Generation",thumbnail: "img/projects/coachify3.png", images: ["img/projects/coachify1.png", "img/projects/coachify2.png"] },
+  { title: "Coachify", tag: "Hyperlocal Lead Generation", thumbnail: "img/projects/coachify3.png", images: ["img/projects/coachify1.png", "img/projects/coachify2.png"] },
   // 16
-  { title: "Maria Ross Paris", tag: "Lookbook & Creative Direction",thumbnail: "img/projects/ross3.png", images: ["img/projects/ross1.png", "img/projects/ross2.png"] },
+  { title: "Maria Ross Paris", tag: "Lookbook & Creative Direction", thumbnail: "img/projects/ross3.png", images: ["img/projects/ross1.png", "img/projects/ross2.png"] },
   // 17
-  { title: "Mum & Daughter", tag: "Offline-First Mobile UI",thumbnail: "img/projects/momd3.png", images: ["img/projects/momd1.png", "img/projects/momd2.png"] },
+  { title: "Mum & Daughter", tag: "Offline-First Mobile UI", thumbnail: "img/projects/momd3.png", images: ["img/projects/momd1.png", "img/projects/momd2.png"] },
   // 18
-  { title: "Homearte India", tag: "Subscription Funnel Build",thumbnail: "img/projects/homeart3.png", images: ["img/projects/homeart1.png", "img/projects/homeart2.png"] },
+  { title: "Homearte India", tag: "Subscription Funnel Build", thumbnail: "img/projects/homeart3.png", images: ["img/projects/homeart1.png", "img/projects/homeart2.png"] },
   // 19
-  
+
 ];
 
 let carouselIntervalIndex = null;
@@ -558,8 +564,8 @@ const botKnowledgeBase = [
   {
     category: "company_info",
     keywords: [
-      "company", "about company", "digital whopper", "what is digital whopper", "agency", 
-      "whopper", "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h", 
+      "company", "about company", "digital whopper", "what is digital whopper", "agency",
+      "whopper", "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h",
       "kya company h", "about digital whopper", "company info", "what about your company",
       "tell me about your company", "what about company", "company details", "about your company",
       "what does your company do", "whopper company", "company name"
@@ -570,9 +576,9 @@ const botKnowledgeBase = [
   {
     category: "founder",
     keywords: [
-      "founder", "owner", "ceo", "mishal", "mishal ahmad", "who built", "who started", 
-      "brain behind", "boss", "head", "founder kaun hai", "founder ka naam", "founder name", 
-      "kya naam hai founder", "founder kon h", "owner kon h", "kisne banaya", "kiski company hai", 
+      "founder", "owner", "ceo", "mishal", "mishal ahmad", "who built", "who started",
+      "brain behind", "boss", "head", "founder kaun hai", "founder ka naam", "founder name",
+      "kya naam hai founder", "founder kon h", "owner kon h", "kisne banaya", "kiski company hai",
       "founder kaun h", "kiske dwara"
     ],
     response_en: "Digital Whopper is founded by <b>Mishal Ahmad</b> — Growth Architect, mentor, and digital marketing expert! He has 10+ years of experience scaling brands from seed stage to Shark Tank India funding milestones. 🚀",
@@ -581,8 +587,8 @@ const botKnowledgeBase = [
   {
     category: "company_info",
     keywords: [
-      "about company", "digital whopper", "what is digital whopper", "agency", "whopper", 
-      "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h", 
+      "about company", "digital whopper", "what is digital whopper", "agency", "whopper",
+      "about agency", "company kya karti hai", "company ke baare me", "yeh kya company h",
       "kya company h", "about digital whopper", "company info"
     ],
     response_en: "Digital Whopper is the <b>Best Digital Marketing Agency in Jaipur</b>! We offer 360° online growth solutions — from SEO, Performance Marketing, and Web Development to E-commerce management and Pitch Consulting.",
@@ -591,8 +597,8 @@ const botKnowledgeBase = [
   {
     category: "services_list",
     keywords: [
-      "services", "service", "what do you do", "what you offer", "work list", "expertise", 
-      "kya kya kaam karte ho", "kya service hai", "kya kaam h", "kya offer karte ho", 
+      "services", "service", "what do you do", "what you offer", "work list", "expertise",
+      "kya kya kaam karte ho", "kya service hai", "kya kaam h", "kya offer karte ho",
       "kaunsi service", "kon konsi service", "service list"
     ],
     response_en: "We offer complete 360° Digital Growth Services:<br><br>🔍 <b>SEO Dominance</b><br>🚀 <b>Performance Ads (Meta & Google)</b><br>💻 <b>Web & App Development</b><br>🛍️ <b>Ecommerce Marketing</b><br>🎨 <b>Social Media Management</b><br>📱 <b>CRO & Analytics</b><br>🦈 <b>Pitch & UI/UX Consulting</b><br><br>👉 <b>You can speak directly with our expert to select the best service for your business:</b><br><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Click here to Chat on WhatsApp</a>",
@@ -601,7 +607,7 @@ const botKnowledgeBase = [
   {
     category: "seo",
     keywords: [
-      "seo", "rank", "ranking", "google ranking", "search engine", "organic growth", 
+      "seo", "rank", "ranking", "google ranking", "search engine", "organic growth",
       "keywords", "top pe lana", "google par lana", "search me aana", "organic traffic"
     ],
     response_en: "Our <b>SEO Dominance</b> service helps you rank #1 across Google search and AI answers. We build organic foundations targeting high-intent keywords to drive compounding traffic!<br><br>👉 <b>Speak directly with our expert to get a free SEO Audit:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
@@ -610,7 +616,7 @@ const botKnowledgeBase = [
   {
     category: "performance_ads",
     keywords: [
-      "ads", "paid ads", "performance ads", "performance marketing", "roas", "meta ads", 
+      "ads", "paid ads", "performance ads", "performance marketing", "roas", "meta ads",
       "facebook ads", "google ads", "campaigns", "ads chalana", "leads lana", "paid promotion"
     ],
     response_en: "We build high-velocity Meta & Google ad funnels that capture leads, scale revenue, and deliver high-margin profit with up to 7.6x ROAS! 📈<br><br>👉 <b>Speak directly with our expert to plan your ad strategy:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
@@ -619,7 +625,7 @@ const botKnowledgeBase = [
   {
     category: "web_development",
     keywords: [
-      "website", "web development", "web dev", "site", "design", "shopify", "wordpress", 
+      "website", "web development", "web dev", "site", "design", "shopify", "wordpress",
       "storefront", "app", "website banana", "website banwani hai", "site design", "web design"
     ],
     response_en: "We engineer custom, mobile-first, and high-converting websites and Shopify storefronts that turn visitors into loyal buyers! 💻<br><br>👉 <b>Speak directly with our expert for website consultation:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
@@ -628,7 +634,7 @@ const botKnowledgeBase = [
   {
     category: "ecommerce",
     keywords: [
-      "ecommerce", "e-commerce", "ecom", "amazon", "flipkart", "etsy", "listing", "store", 
+      "ecommerce", "e-commerce", "ecom", "amazon", "flipkart", "etsy", "listing", "store",
       "online dukan", "online store", "product sell"
     ],
     response_en: "We optimize and manage digital storefronts across Amazon, Flipkart, Shopify, and Etsy — streamlining product funnels and lowering cart abandonment! 🛍️<br><br>👉 <b>Speak directly with our expert for E-Commerce scaling:</b><br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Chat on WhatsApp</a>",
@@ -645,7 +651,7 @@ const botKnowledgeBase = [
   {
     category: "location",
     keywords: [
-      "location", "address", "office", "where", "jaipur", "place", "city", 
+      "location", "address", "office", "where", "jaipur", "place", "city",
       "office kahan hai", "office kaha h", "kahan par hai", "address kya hai", "kaha h office"
     ],
     response_en: "📍 <b>Office Address:</b><br>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017.",
@@ -654,7 +660,7 @@ const botKnowledgeBase = [
   {
     category: "contact",
     keywords: [
-      "contact", "phone", "number", "call", "email", "mail", "talk", "speak", "human", "touch", 
+      "contact", "phone", "number", "call", "email", "mail", "talk", "speak", "human", "touch",
       "baat karni hai", "call karna hai", "number do", "phone number", "sampark", "kaise milen"
     ],
     response_en: "To get in touch with us: 📲<br>📞 <b>Call:</b> <a href='tel:+916200379161'>+91 6200379161</a><br>✉️ <b>Email:</b> <a href='mailto:digitalwhopperofficial@gmail.com'>digitalwhopperofficial@gmail.com</a><br>💬 <b>WhatsApp:</b> <a href='https://wa.me/916200379161' target='_blank' style='color:#0052ff;font-weight:700;'>Click here to Chat</a>",
@@ -663,7 +669,7 @@ const botKnowledgeBase = [
   {
     category: "pricing",
     keywords: [
-      "price", "pricing", "cost", "charge", "packages", "fee", "rates", "budget", 
+      "price", "pricing", "cost", "charge", "packages", "fee", "rates", "budget",
       "kitna charge", "kitna paisa", "kya rate hai", "kitna lagega", "cost kya h", "kitna cost",
       "website price", "website cost", "seo price", "seo cost", "ad budget"
     ],
@@ -673,7 +679,7 @@ const botKnowledgeBase = [
   {
     category: "journey",
     keywords: [
-      "journey", "history", "milestones", "experience", "2020", "2025", "rajasthan government", 
+      "journey", "history", "milestones", "experience", "2020", "2025", "rajasthan government",
       "kab shuru hua", "kitne saal hue"
     ],
     response_en: "🚀 <b>Our Journey:</b><br>• <b>2020:</b> Started our mission.<br>• <b>2022:</b> Shark Tank success with Ekatra.<br>• <b>2023-24:</b> 100+ projects completed.<br>• <b>2025:</b> Funded & recognized for expansion by Govt. of Rajasthan!",
@@ -682,7 +688,7 @@ const botKnowledgeBase = [
   {
     category: "greetings",
     keywords: [
-      "hi", "hello", "hey", "hlo", "namaste", "good morning", "good evening", "chotu", 
+      "hi", "hello", "hey", "hlo", "namaste", "good morning", "good evening", "chotu",
       "kaise ho", "kya haal hai", "kya chal raha hai", "kya haal h"
     ],
     response_en: "Hello! I am Chotu, your Digital Whopper AI Assistant. How can I help grow your business today? 🚀",
@@ -693,9 +699,9 @@ const botKnowledgeBase = [
 // 🌐 HINGLISH DETECTOR FUNCTION
 function isHinglishQuery(query) {
   const hinglishIndicators = [
-    "kaun", "kon", "kya", "kaha", "kahan", "kaise", "kisne", "kitna", "hai", "h", "ho", "hu", 
-    "naam", "nam", "baare", "karti", "karta", "karde", "karne", "karke", "karte", "ko", "ki", 
-    "ke", "se", "me", "mein", "par", "chahiye", "batao", "bataen", "do", "karo", "kab", 
+    "kaun", "kon", "kya", "kaha", "kahan", "kaise", "kisne", "kitna", "hai", "h", "ho", "hu",
+    "naam", "nam", "baare", "karti", "karta", "karde", "karne", "karke", "karte", "ko", "ki",
+    "ke", "se", "me", "mein", "par", "chahiye", "batao", "bataen", "do", "karo", "kab",
     "saal", "safar", "paisa", "paisse", "milega", "milen", "lagga", "lagega", "hoga", "banwana", "chalana"
   ];
 
@@ -805,62 +811,71 @@ function startTypewriterLoop() {
 
 // 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
 // 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
-// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
+// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM (Powered by DW_SERVICES_DATA)
 document.addEventListener('DOMContentLoaded', () => {
   const globalHeaderContainer = document.getElementById('mainHeader');
   const globalFooterContainer = document.getElementById('footer');
+
+  // Dynamic dropdown list generated directly from Central Database
+  const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
+    ? DW_SERVICES_DATA.map(s => `
+        <a href="/services-details/?service=${s.slug}">
+          <span>${s.icon}</span> ${s.menuTitle || s.title}
+        </a>
+      `).join('')
+    : '';
 
   if (globalHeaderContainer) {
     globalHeaderContainer.innerHTML = `
       <nav>
         <a href="/" class="logo">
-          <img src="img/digitalwhopperlogo.png" alt="Digital Whopper Logo" class="logo-img-asset">
-        </a>        
+          <img src="/img/digitalwhopperlogo.png" alt="Digital Whopper Logo" class="logo-img-asset">
+        </a>
+
         <div class="nav-links" id="navLinksMenu">
           <a href="/">Home</a>
-          <a href="/services/">Services</a>
-          <a href="#">PortFolio</a>
-          <a href="#">SEO Audit</a>
+
+          <div class="dropdown">
+            <a href="/services/" class="services-main-link">Services</a>
+            <div class="dropdown-menu" id="navServicesDropdown">
+              <a href="/services/" class="services-view-all">✦ View All Services</a>
+              <div class="services-divider"></div>
+              ${servicesDropdownHTML}
+            </div>
+          </div>
+
+          <a href="/portfolio/">PortFolio</a>
+          <a href="/seo/">SEO By Location</a>
           <a href="#">SMO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
         </div>
-        <div class="nav-cta"><a href="#" class="btn btn-gold">Free Audit</a></div>
-        
+
+        <div class="nav-cta">
+          <a href="/contact/" class="btn btn-gold">Free Audit</a>
+        </div>
+
         <button class="menu-toggle-trigger" id="hamburgerBtn" aria-label="Toggle Navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </nav>
     `;
 
-    // 🚀 FIXED ACTIVE CLASS HIGHLIGHTER ENGINE
+    // Active Link Engine
     const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';
-    const navLinks = globalHeaderContainer.querySelectorAll('.nav-links a');
-
+    const navLinks = globalHeaderContainer.querySelectorAll('.nav-links > a, .nav-links .dropdown > a');
     navLinks.forEach(link => {
-      let linkHref = link.getAttribute('href').toLowerCase().replace(/\/$/, '') || '/';
-
-      // Path Normalization (e.g. '/services' vs '/services.html')
+      const href = link.getAttribute('href');
+      let linkHref = href ? href.toLowerCase().replace(/\/$/, '') : '';
       const cleanCurrent = currentPath.replace('.html', '');
       const cleanLink = linkHref.replace('.html', '');
+      let isActive = (cleanCurrent === '/' || cleanCurrent === '/index')
+        ? (cleanLink === '/' || cleanLink === '/index')
+        : (cleanLink !== '/' && cleanLink !== '#' && cleanCurrent.includes(cleanLink));
 
-      let isActive = false;
-
-      if (cleanCurrent === '/' || cleanCurrent === '/index') {
-        isActive = (cleanLink === '/' || cleanLink === '/index');
-      } else {
-        isActive = (cleanLink !== '/' && cleanLink !== '#' && cleanCurrent.includes(cleanLink));
-      }
-
-      if (isActive) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      if (isActive) link.classList.add('active');
+      else link.classList.remove('active');
     });
 
-    // Mobile Hamburger Menu Code
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     if (hamburgerBtn) {
       hamburgerBtn.addEventListener('click', (e) => {
@@ -879,314 +894,99 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-if (globalFooterContainer) {
-  globalFooterContainer.innerHTML = `
-    <div class="wrap">
+  if (globalFooterContainer) {
+    const footerServicesHTML = (typeof DW_SERVICES_DATA !== 'undefined')
+      ? DW_SERVICES_DATA.slice(0, 5).map(s => `
+          <a href="/services-details/?service=${s.slug}">${s.title}</a>
+        `).join('')
+      : '';
 
-      <div class="foot-top">
-
-        <!-- FOOTER BRAND -->
-        <div class="foot-brand">
-
-          <a href="/" class="logo">
-            <img 
-              src="img/footerlogo.png" 
-              alt="Digital Whopper Logo" 
-              class="logo-img-asset"
-              style="height: 80px;"
-            >
-          </a>
-
-          <p>
-            3rd Floor, 4/11, Vidyut Abhiyanta Colony,
-            Sector 4, Malviya Nagar, Jaipur,
-            Rajasthan 302017
-          </p>
-
-          <p>
-            <a href="tel:+916200379161">
-              +91 6200379161
+    globalFooterContainer.innerHTML = `
+      <div class="wrap">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <a href="/" class="logo">
+              <img src="/img/footerlogo.png" alt="Digital Whopper Logo" class="logo-img-asset" style="height: 80px;">
             </a>
-            <br>
-
-            <a href="mailto:digitalwhopperofficial@gmail.com">
-              digitalwhopperofficial@gmail.com
-            </a>
-          </p>
-
-          <div class="socials">
-
-            <a 
-              href="https://www.facebook.com/officialdigitalwhopper"
-              target="_blank"
-              rel="noopener"
-            >
-              Facebook
-            </a>
-
-            <a 
-              href="https://www.instagram.com/digital_whopper/"
-              target="_blank"
-              rel="noopener"
-            >
-              Instagram
-            </a>
-
-            <a 
-              href="https://www.linkedin.com/company/digitalwhopper/"
-              target="_blank"
-              rel="noopener"
-            >
-              LinkedIn
-            </a>
-
+            <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
+            <p>
+              <a href="tel:+916200379161">+91 6200379161</a><br>
+              <a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a>
+            </p>
+            <div class="socials">
+              <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
           </div>
 
-        </div>
-
-
-        <!-- =====================================
-             DESKTOP FOOTER
-        ====================================== -->
-
-        <div class="foot-links desktop-footer-links">
-
-          <!-- Pages -->
-          <div class="foot-col">
-
-            <h4>Pages</h4>
-
-            <a href="/">Home</a>
-            <a href="services/">Services</a>
-            <a href="#">Contact</a>
-
-          </div>
-
-
-          <!-- Quick Links -->
-          <div class="foot-col">
-
-            <h4>Quick Links</h4>
-
-            <a href="blogs/">Blogs</a>
-            <a href="services/">Services</a>
-            <a href="#">Contact</a>
-
-          </div>
-
-
-          <!-- Services -->
-          <div class="foot-col">
-
-            <h4>Our Services</h4>
-
-            <a href="services/">
-              App &amp; Shopify Development
-            </a>
-
-            <a href="services/">
-              SEO &amp; SMO Optimisation
-            </a>
-
-            <a href="services/">
-              E-Commerce
-            </a>
-
-            <a href="services/">
-              Performance Marketing
-            </a>
-
-            <a href="services/">
-              Web Design &amp; Development
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- =====================================
-             MOBILE FOOTER ACCORDION
-        ====================================== -->
-
-        <div class="mobile-footer-links">
-
-
-          <!-- PAGES -->
-          <div class="mobile-footer-item">
-
-            <button
-              type="button"
-              class="mobile-footer-title"
-              data-footer-toggle
-            >
-              <span>Pages</span>
-              <span class="footer-plus">+</span>
-            </button>
-
-            <div class="mobile-footer-content">
-
+          <div class="foot-links desktop-footer-links">
+            <div class="foot-col">
+              <h4>Pages</h4>
               <a href="/">Home</a>
-
-              <a href="services/">
-                Services
-              </a>
-
-              <a href="#">
-                Contact
-              </a>
-
+              <a href="/services/">Services</a>
+              <a href="/contact/">Contact</a>
             </div>
-
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <a href="/blogs/">Blogs</a>
+              <a href="/portfolio/">Portfolio</a>
+              <a href="/shark-tank-journey/">Shark Tank Journey</a>
+            </div>
+            <div class="foot-col">
+              <h4>Our Services</h4>
+              ${footerServicesHTML}
+            </div>
           </div>
 
-
-          <!-- OUR SERVICES -->
-          <div class="mobile-footer-item">
-
-            <button
-              type="button"
-              class="mobile-footer-title"
-              data-footer-toggle
-            >
-              <span>Our Services</span>
-              <span class="footer-plus">+</span>
-            </button>
-
-            <div class="mobile-footer-content">
-
-              <a href="services/">
-                App &amp; Shopify Development
-              </a>
-
-              <a href="services/">
-                SEO &amp; SMO Optimisation
-              </a>
-
-              <a href="services/">
-                E-Commerce
-              </a>
-
-              <a href="services/">
-                Performance Marketing
-              </a>
-
-              <a href="services/">
-                Web Design &amp; Development
-              </a>
-
+          <div class="mobile-footer-links">
+            <div class="mobile-footer-item">
+              <button type="button" class="mobile-footer-title" data-footer-toggle>
+                <span>Pages</span><span class="footer-plus">+</span>
+              </button>
+              <div class="mobile-footer-content">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/contact/">Contact</a>
+              </div>
             </div>
 
-          </div>
-
-
-          <!-- QUICK LINKS -->
-          <div class="mobile-footer-item">
-
-            <button
-              type="button"
-              class="mobile-footer-title"
-              data-footer-toggle
-            >
-              <span>Quick Links</span>
-              <span class="footer-plus">+</span>
-            </button>
-
-            <div class="mobile-footer-content">
-
-              <a href="blogs/">
-                Blogs
-              </a>
-
-              <a href="services/">
-                Services
-              </a>
-
-              <a href="#">
-                Contact
-              </a>
-
+            <div class="mobile-footer-item">
+              <button type="button" class="mobile-footer-title" data-footer-toggle>
+                <span>Our Services</span><span class="footer-plus">+</span>
+              </button>
+              <div class="mobile-footer-content">
+                ${footerServicesHTML}
+              </div>
             </div>
-
           </div>
-
-
         </div>
 
+        <div class="foot-bottom">
+          <span>© 2026 Digital Whopper. All rights reserved.</span>
+        </div>
       </div>
+    `;
 
-
-      <!-- FOOTER BOTTOM -->
-
-      <div class="foot-bottom">
-
-        <span>
-          © 2026 Digital Whopper. All rights reserved.
-        </span>
-
-      </div>
-
-    </div>
-  `;
-}
-
-/* =========================================================
-   MOBILE FOOTER ACCORDION
-========================================================= */
-
-const footerToggleButtons = document.querySelectorAll(
-  '[data-footer-toggle]'
-);
-
-footerToggleButtons.forEach(button => {
-
-  button.addEventListener('click', function () {
-
-    const currentItem =
-      this.closest('.mobile-footer-item');
-
-    const allItems =
-      document.querySelectorAll('.mobile-footer-item');
-
-
-    /* Close all other items */
-    allItems.forEach(item => {
-
-      if (item !== currentItem) {
-        item.classList.remove('active');
-      }
-
+    const footerToggleButtons = document.querySelectorAll('[data-footer-toggle]');
+    footerToggleButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const currentItem = this.closest('.mobile-footer-item');
+        document.querySelectorAll('.mobile-footer-item').forEach(item => {
+          if (item !== currentItem) item.classList.remove('active');
+        });
+        currentItem.classList.toggle('active');
+      });
     });
+  }
 
-
-    /* Toggle current */
-    currentItem.classList.toggle('active');
-
-  });
-
-});
-  // <span>Made with ✦ in Jaipur, the Pink City</span>
-
-  // 🚀 SAFETY CHECK RUNNERS: Code tab rendering runs securely
   renderThreeDivWorkspace();
   renderTwoRowCarouselTestimonials();
 
-  // ⚡ Default Project Auto-Focus Loader Block (Executed safely via DOM pointers check)
-  // ==========================================================================
-  // 🎯 FIXED PROJECT LOADER BLOCK (STRICT CLICK-ONLY FOR MOBILE & TABLET)
-  // ==========================================================================
   setTimeout(() => {
     const firstCardElement = document.querySelector('.work-column-left .work-card[data-index="0"]');
-
-    if (firstCardElement) {
-      // 🚀 जादुई चेक: अगर स्क्रीन लैपटॉप/डेस्कटॉप (900px से बड़ी) है, तभी रीलोड पर पहला प्रोजेक्ट ऑटो-फोकस होगा
-      if (window.innerWidth > 900) {
-        updatePhoneDisplay(0, firstCardElement);
-      } else {
-        // 📲 मोबाइल और टैबलेट पर रीलोड के समय सब कुछ बिल्कुल शांत रहेगा।
-        // पहली स्लाइड पर कोई एक्टिव क्लास या ऑन-लोड फंक्शनलिटी ट्रिगर नहीं होगी।
-        document.querySelectorAll('.work-card').forEach(card => card.classList.remove('active'));
-      }
+    if (firstCardElement && window.innerWidth > 900) {
+      updatePhoneDisplay(0, firstCardElement);
     }
   }, 100);
 

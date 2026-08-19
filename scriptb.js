@@ -845,7 +845,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <a href="/portfolio/">PortFolio</a>
-          <a href="/seo/">SEO By Location</a>
+          <a href="/seo/">SEO Service</a>
           <a href="#">SMO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
         </div>

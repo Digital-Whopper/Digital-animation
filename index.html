@@ -67,6 +67,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NWCB7BSZ');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSLZQ3LR');</script>
+<!-- End Google Tag Manager -->
 </head>
 <style>
   .logo-img-asset {
@@ -75,6 +83,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     object-fit: contain;
     display: inline-block;
     margin-right: 2px;
+  }
+  .text-align-start{
+    text-align: start;
   }
 </style>
 
@@ -998,6 +1009,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+<!-- ==========================================================================
+    🖼️ CASE COMPARISON: WEBSITE AUDIT VS SEO AUDIT (DUAL PANELS TOGGLE)
+    ========================================================================== -->
+ <!-- ==========================================================================
+    🖼️ CASE COMPARISON: WEBSITE AUDIT VS SEO AUDIT (DUAL PANELS TOGGLE)
+    ========================================================================== -->
   <div class="roas-impact-showcase"
     style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(16px); border: 1px solid rgba(0, 82, 255, 0.08); border-radius: 24px; padding: 40px; margin-bottom: 56px; box-shadow: 0 20px 40px rgba(0, 82, 255, 0.03); width: 100%;">
 
@@ -1016,43 +1033,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="roas-dual-display-grid"
       style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; width: 100%;">
 
-      <div class="roas-view-panel"
-        style="position: relative; border-radius: 16px; overflow: hidden; height: 340px; background: #0c0c0f; border: 1px solid rgba(0, 82, 255, 0.06); box-shadow: var(--card-shadow-default);">
-        <img src="img/before-after/Screenshot 2026-08-17 142649.png"
-          id="leftPanelBefore"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease; opacity: 1; transform: scale(1);"
-          alt="Left Before View">
-        <img src="img/before-after/before.png"
-          id="leftPanelAfter"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 0.5s ease; opacity: 0; transform: scale(0.98);"
-          alt="Left After View">
+      <!-- Left Panel -->
+      <div class="roas-view-panel browser-mockup-custom" id="leftPanelContainer"
+        style="position: relative; border-radius: 16px; overflow: hidden; height: 340px; background: #ffffff; border: 1px solid #cbd5e1; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+        
+        <!-- Browser Top Bar -->
+        <div style="background: #f1f5f9; padding: 8px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #e2e8f0; z-index: 10; position: relative;">
+          <div style="display: flex; gap: 5px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; display: inline-block;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+          </div>
+          <div id="leftTopUrl" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px 10px; font-size: 10.5px; color: #64748b; flex-grow: 1;">
+            🔒 https://gudmishri.in (Website Audit View)
+          </div>
+        </div>
 
-        <div
-          style="position: absolute; top: 16px; right: 16px; background: rgba(10, 15, 24, 0.75); backdrop-filter: blur(8px); color: #fff; padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; z-index: 5;">
-          Before View</div>
+        <!-- Scrollable/Static Viewport Container 1 -->
+        <div id="leftViewport" style="width: 100%; height: calc(100% - 33px); overflow-y: auto; overflow-x: hidden; position: relative; background: #ffffff; -webkit-overflow-scrolling: touch;">
+          <img id="leftImgEl" src="img/before-after/oldimg.png" alt="Audit View" style="width: 100%; height: auto; display: block; min-height: 100%; object-fit: contain;">
+          
+          <div id="leftScrollBadge" style="position: absolute; bottom: 10px; right: 10px; background: rgba(7, 19, 44, 0.85); backdrop-filter: blur(4px); color: #fff; font-size: 9.5px; font-weight: 700; padding: 4px 10px; border-radius: 99px; pointer-events: none; z-index: 5;">
+            ● Auto Scrolling (Hover to Pause)
+          </div>
+        </div>
+
+        <div id="leftBadgeLabel" class="panel-badge-label"
+          style="position: absolute; top: 45px; right: 16px; background: rgba(10, 15, 24, 0.75); backdrop-filter: blur(8px); color: #fff; padding: 4px 12px; border-radius: 30px; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; z-index: 5;">
+          Website Audit View</div>
       </div>
 
-      <div class="roas-view-panel"
-        style="position: relative; border-radius: 16px; overflow: hidden; height: 340px; background: #0c0c0f; border: 1px solid rgba(0, 82, 255, 0.06); box-shadow: var(--card-shadow-default);">
-        <img src="img/before-after/Screenshot 2026-08-17 142758.png"
-          id="rightPanelBefore"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: all 0.5s ease; opacity: 1; transform: scale(1);"
-          alt="Right Before View">
-        <img src="img/before-after/after.png"
-          id="rightPanelAfter"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-          transition: all 0.5s ease; opacity: 0; transform: scale(0.98);"
-          alt="Right After View">
+      <!-- Right Panel -->
+      <div class="roas-view-panel browser-mockup-custom" id="rightPanelContainer"
+        style="position: relative; border-radius: 16px; overflow: hidden; height: 340px; background: #ffffff; border: 1px solid #cbd5e1; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+        
+        <!-- Browser Top Bar -->
+        <div style="background: #f1f5f9; padding: 8px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #e2e8f0; z-index: 10; position: relative;">
+          <div style="display: flex; gap: 5px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; display: inline-block;"></span>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+          </div>
+          <div id="rightTopUrl" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px 10px; font-size: 10.5px; color: #64748b; flex-grow: 1;">
+            🔒 https://gudmishri.in (Website Audit View)
+          </div>
+        </div>
 
-        <div
-          style="position: absolute; top: 16px; right: 16px; background: rgba(10, 15, 24, 0.75); backdrop-filter: blur(8px); color: #fff; padding: 6px 14px; border-radius: 30px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; z-index: 5;">
-          After View</div>
+        <!-- Scrollable/Static Viewport Container 2 -->
+        <div id="rightViewport" style="width: 100%; height: calc(100% - 33px); overflow-y: auto; overflow-x: hidden; position: relative; background: #ffffff; -webkit-overflow-scrolling: touch;">
+          <img id="rightImgEl" src="img/before-after/newimg.png" alt="Audit View" style="width: 100%; height: auto; display: block; min-height: 100%; object-fit: contain;">
+          
+          <div id="rightScrollBadge" style="position: absolute; bottom: 10px; right: 10px; background: rgba(7, 19, 44, 0.85); backdrop-filter: blur(4px); color: #fff; font-size: 9.5px; font-weight: 700; padding: 4px 10px; border-radius: 99px; pointer-events: none; z-index: 5;">
+            ● Auto Scrolling (Hover to Pause)
+          </div>
+        </div>
+
+        <div id="rightBadgeLabel" class="panel-badge-label"
+          style="position: absolute; top: 45px; right: 16px; background: rgba(10, 15, 24, 0.75); backdrop-filter: blur(8px); color: #fff; padding: 4px 12px; border-radius: 30px; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; z-index: 5;">
+          Website Audit View</div>
       </div>
 
     </div>
 
     <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-
       <div class="roas-toggle-container"
         style="display: inline-flex; background: #edf2f9; padding: 6px; border-radius: 99px; border: 1px solid rgba(0, 82, 255, 0.05);">
         <button class="combo-toggle-btn active-state" onclick="switchDualDisplay('before', this)"
@@ -1065,11 +1108,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div id="dualMetricPill"
         style="padding: 12px 24px; border-radius: 99px; font-family: 'Sora', sans-serif; font-weight: 800; font-size: 14.5px; color: #ffffff; background: #ef4444; box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-        Website Transformation: Before vs After
+        Status: Website Audit Scroll View Active
       </div>
-
     </div>
-
   </div>
 
   <style>
@@ -1084,60 +1125,131 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         grid-template-columns: 1fr !important;
         gap: 20px !important;
       }
-
       .roas-view-panel {
         height: 240px !important;
-      }
-
-      .hero {
-        padding: 100px 0 20px 0 !important;
-      }
-
-      .enterprise-marketing-bottom-shield-m {
-        padding: 45px 0;
       }
     }
   </style>
 
   <script>
-    function switchDualDisplay(state, btnElement) {
-      // Both Left and Right image elements selection
-      const leftBefore = document.getElementById('leftPanelBefore');
-      const leftAfter = document.getElementById('leftPanelAfter');
-      const rightBefore = document.getElementById('rightPanelBefore');
-      const rightAfter = document.getElementById('rightPanelAfter');
-      const pill = document.getElementById('dualMetricPill');
+    let currentMode = 'before';
+    let scrollPosLeft = 0;
+    let scrollPosRight = 0;
 
-      // Toggle button active visual states
+    function switchDualDisplay(state, btnElement) {
+      currentMode = state;
+      const pill = document.getElementById('dualMetricPill');
+      
+      const leftImg = document.getElementById('leftImgEl');
+      const rightImg = document.getElementById('rightImgEl');
+      
+      const leftViewport = document.getElementById('leftViewport');
+      const rightViewport = document.getElementById('rightViewport');
+      
+      const leftTopUrl = document.getElementById('leftTopUrl');
+      const rightTopUrl = document.getElementById('rightTopUrl');
+      
+      const leftScrollBadge = document.getElementById('leftScrollBadge');
+      const rightScrollBadge = document.getElementById('rightScrollBadge');
+      
+      const leftBadgeLabel = document.getElementById('leftBadgeLabel');
+      const rightBadgeLabel = document.getElementById('rightBadgeLabel');
+
       document.querySelectorAll('.combo-toggle-btn').forEach(b => b.classList.remove('active-state'));
       btnElement.classList.add('active-state');
 
       if (state === 'before') {
-        // Show Before state on both columns simultaneously
-        leftBefore.style.opacity = '1'; leftBefore.style.transform = 'scale(1)';
-        leftAfter.style.opacity = '0'; leftAfter.style.transform = 'scale(0.98)';
+        // Website Audit Mode
+        leftImg.src = "img/before-after/oldimg.png";
+        rightImg.src = "img/before-after/newimg.png";
+        
+        leftTopUrl.innerText = "🔒 https://gudmishri.in (Website Audit View)";
+        rightTopUrl.innerText = "🔒 https://gudmishri.in (Website Audit View)";
+        
+        leftScrollBadge.style.display = 'block';
+        rightScrollBadge.style.display = 'block';
+        
+        leftBadgeLabel.innerText = "Website Audit View";
+        rightBadgeLabel.innerText = "Website Audit View";
 
-        rightBefore.style.opacity = '1'; rightBefore.style.transform = 'scale(1)';
-        rightAfter.style.opacity = '0'; rightAfter.style.transform = 'scale(0.98)';
+        // Scroll reset to top
+        if(leftViewport) leftViewport.scrollTop = 0;
+        if(rightViewport) rightViewport.scrollTop = 0;
+        scrollPosLeft = 0;
+        scrollPosRight = 0;
 
-        pill.innerText = "Status: Purchase ROAS is locked at 1.4";
+        pill.innerText = "Status: Website Audit Scroll View Active";
         pill.style.background = "#ef4444";
         pill.style.boxShadow = "0 8px 20px rgba(239, 68, 68, 0.25)";
       } else {
-        // Scale up and show After state on both columns smoothly
-        leftBefore.style.opacity = '0'; leftBefore.style.transform = 'scale(0.98)';
-        leftAfter.style.opacity = '1'; leftAfter.style.transform = 'scale(1)';
+        // SEO Audit Mode
+        leftImg.src = "img/before-after/before.png";
+        rightImg.src = "img/before-after/after.png";
+        
+        leftTopUrl.innerText = "🔒 SEO Metrics - Before View";
+        rightTopUrl.innerText = "🔒 SEO Metrics - After View";
+        
+        leftScrollBadge.style.display = 'none';
+        rightScrollBadge.style.display = 'none';
+        
+        leftBadgeLabel.innerText = "Before View";
+        rightBadgeLabel.innerText = "After View";
 
-        rightBefore.style.opacity = '0'; rightBefore.style.transform = 'scale(0.98)';
-        rightAfter.style.opacity = '1'; rightAfter.style.transform = 'scale(1)';
+        // Scroll reset to top
+        if(leftViewport) leftViewport.scrollTop = 0;
+        if(rightViewport) rightViewport.scrollTop = 0;
 
-        pill.innerText = "SEO Results: Before & After";
+        pill.innerText = "SEO Results: Audit Overview Active";
         pill.style.background = "#10b981";
         pill.style.boxShadow = "0 8px 20px rgba(16, 185, 129, 0.3)";
       }
     }
-  </script>
 
+    // 🌟 Auto-scroller engine
+    document.addEventListener('DOMContentLoaded', () => {
+      const leftViewport = document.getElementById('leftViewport');
+      const rightViewport = document.getElementById('rightViewport');
+      const leftBox = document.getElementById('leftPanelContainer');
+      const rightBox = document.getElementById('rightPanelContainer');
+      
+      let isPausedLeft = false;
+      let isPausedRight = false;
+
+      if(leftBox) {
+        leftBox.addEventListener('mouseenter', () => isPausedLeft = true);
+        leftBox.addEventListener('mouseleave', () => isPausedLeft = false);
+      }
+      if(rightBox) {
+        rightBox.addEventListener('mouseenter', () => isPausedRight = true);
+        rightBox.addEventListener('mouseleave', () => isPausedRight = false);
+      }
+
+      setInterval(() => {
+        if (currentMode === 'before') {
+          // Left Viewport Auto-Scroll
+          if (!isPausedLeft && leftViewport) {
+            scrollPosLeft += 1.2;
+            const maxScroll = leftViewport.scrollHeight - leftViewport.clientHeight;
+            if (maxScroll > 0 && scrollPosLeft >= maxScroll) scrollPosLeft = 0;
+            leftViewport.scrollTop = scrollPosLeft;
+          } else if (leftViewport) {
+            scrollPosLeft = leftViewport.scrollTop;
+          }
+
+          // Right Viewport Auto-Scroll
+          if (!isPausedRight && rightViewport) {
+            scrollPosRight += 1.4;
+            const maxScroll = rightViewport.scrollHeight - rightViewport.clientHeight;
+            if (maxScroll > 0 && scrollPosRight >= maxScroll) scrollPosRight = 0;
+            rightViewport.scrollTop = scrollPosRight;
+          } else if (rightViewport) {
+            scrollPosRight = rightViewport.scrollTop;
+          }
+        }
+      }, 30);
+    });
+  </script>
+ 
   <!-- ==========================================================================
     ✦ WHY CHOOSE US - CONTAINER CARD FORMAT WITH AMBIENT CYBER BLUE SHADOW
    ========================================================================== -->
@@ -2127,28 +2239,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq-list">
         <div class="faq-item open">
           <div class="faq-q">Which e-commerce platforms does Digital Whopper manage?<span class="plus">+</span></div>
-          <div class="faq-a">We manage stores across all major platforms — Amazon, Flipkart, Etsy, Shopify and more —
+          <div class="faq-a text-align-start">We manage stores across all major platforms — Amazon, Flipkart, Etsy, Shopify and more —
             handling listings, optimisation, ads and growth end to end.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Does Digital Whopper also help with website design and UI/UX?<span class="plus">+</span>
           </div>
-          <div class="faq-a">Yes — our in-house design team handles everything from wireframes to fully built,
+          <div class="faq-a text-align-start">Yes — our in-house design team handles everything from wireframes to fully built,
             conversion-focused websites and storefronts.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Which industrial sectors does Digital Whopper work with?<span class="plus">+</span></div>
-          <div class="faq-a">We work across diverse sectors — fashion, home décor, D2C startups, retail, services and
+          <div class="faq-a text-align-start">We work across diverse sectors — fashion, home décor, D2C startups, retail, services and
             more. Our strategies adapt to your industry.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Does Digital Whopper provide regular progress reports?<span class="plus">+</span></div>
-          <div class="faq-a">Yes, you'll receive clear, regular reports so you always know exactly what's working and
+          <div class="faq-a text-align-start">Yes, you'll receive clear, regular reports so you always know exactly what's working and
             where your budget is going.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What are the charges for digital marketing services?<span class="plus">+</span></div>
-          <div class="faq-a">Pricing depends on your goals and scope — get in touch for a free consultation and a plan
+          <div class="faq-a text-align-start">Pricing depends on your goals and scope — get in touch for a free consultation and a plan
             tailored to your budget.</div>
         </div>
       </div>
@@ -2445,6 +2557,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </svg>
     </div>
   </a>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSLZQ3LR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

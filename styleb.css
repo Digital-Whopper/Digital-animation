@@ -1946,7 +1946,7 @@ footer { border-top: 1px solid var(--line); padding: 30px 0 30px; color: var(--m
    ========================================================================== */
 .why-us-section-wrapper {
   background: #ffffff;
-  padding: 80px 0;
+  padding: 80px 0 0 0 ;
   width: 100%;
   box-sizing: border-box;
 }
@@ -3129,3 +3129,582 @@ footer .wrap {
     }
   }
 /* facebook */
+
+
+
+
+/* ************** right side news bar */
+/* ==========================================================================
+   🏛️ 80% - 20% DUAL COLUMN ONLY FOR BLOG & FAQ SECTION
+   ========================================================================== */
+.dw-blog-faq-split-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.dw-split-80-20-container {
+  display: grid;
+  grid-template-columns: minmax(0, 76%) 24%; /* 80% Blog/FAQ vs 20% Sidebar */
+  gap: 28px;
+  align-items: start;
+  width: 100%;
+}
+
+.dw-main-80-column {
+  width: 100%;
+  min-width: 0;
+}
+
+/* 🎯 Blog 3-Cards in 1 Line Grid */
+.blog-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* 🔵 20% STICKY DIGITAL WHOPPER SIDEBAR */
+.dw-sidebar-20-column {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px; /* Navbar ke niche se smooth stick */
+  width: 100%;
+  z-index: 40;
+}
+
+.li-news-widget-card.dw-brand-widget {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+}
+
+.li-widget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.dw-brand-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dw-mini-pill-logo {
+  background: linear-gradient(135deg, #0044ff, #00c4ff);
+  color: #ffffff;
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.li-widget-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.li-info-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 82, 255, 0.08);
+  color: #0052ff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.li-subtitle-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* 📰 Media Stories List with Mini Thumbnails */
+.li-stories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.li-story-link-media {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none !important;
+  transition: transform 0.2s ease;
+}
+
+.li-story-link-media:hover {
+  transform: translateX(3px);
+}
+
+.dw-story-thumb-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.dw-story-thumb-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dw-story-text-group {
+  flex-grow: 1;
+}
+
+.li-story-headline {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.li-story-link-media:hover .li-story-headline {
+  color: #0052ff;
+}
+
+.li-story-meta {
+  font-size: 10.5px;
+  color: #64748b;
+}
+
+.li-show-more-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none !important;
+  margin-top: 12px;
+  padding: 2px;
+  transition: color 0.2s ease;
+}
+
+.li-show-more-trigger:hover {
+  color: #0052ff;
+}
+
+/* 📚 4 Sidebar Trending Blogs Stack */
+.li-sidebar-blogs-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.li-side-blog-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+}
+
+.li-side-blog-card:hover {
+  background: #f8fafc;
+}
+
+.side-blog-mini-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e2e8f0;
+  flex-shrink: 0;
+}
+
+.side-blog-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side-blog-details {
+  flex-grow: 1;
+}
+
+.side-blog-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.li-side-blog-card:hover .side-blog-title {
+  color: #0052ff;
+}
+
+.side-blog-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0052ff;
+  background: rgba(0, 82, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.side-blog-arrow {
+  font-size: 18px;
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.li-side-blog-card:hover .side-blog-arrow {
+  transform: translateX(2px);
+  color: #0052ff;
+}
+
+/* 🔘 Read More Blogs Button */
+.btn-read-more-sidebar {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #0052ff 0%, #0044ff 100%);
+  color: #ffffff !important;
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  margin-top: 14px;
+  box-shadow: 0 4px 14px rgba(0, 82, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-read-more-sidebar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 82, 255, 0.3);
+}
+
+/* 📱 Responsive Reset for Tablet/Mobile */
+@media (max-width: 1024px) {
+  .dw-split-80-20-container {
+    grid-template-columns: 1fr !important;
+  }
+  .blog-grid-3col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .dw-sidebar-20-column {
+    position: static;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* -------------- */
+/* ==========================================================================
+   📱 MOBILE EXCLUSIVE RIGHT-EDGE FLOATING NEWS TAB & SLIDE-OUT CARD
+   ========================================================================== */
+
+/* Laptop/Desktop par hide rahega */
+.mobile-news-sticky-trigger,
+.mobile-news-toast-card {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  /* 🎯 1. Edge Tab Button (Like Screenshot 1) */
+  .mobile-news-sticky-trigger {
+    display: flex !important;
+    position: fixed !important;
+    right: 0 !important;
+    top: 42% !important;
+    transform: translateY(-50%) !important;
+    z-index: 1800 !important;
+    cursor: pointer !important;
+  }
+
+  .m-news-tab-bubble {
+    background: linear-gradient(180deg, #0052ff 0%, #0044ff 100%) !important;
+    color: #ffffff !important;
+    padding: 12px 7px !important;
+    border-radius: 12px 0 0 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: -4px 10px 25px rgba(0, 82, 255, 0.35) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-right: none !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .m-news-tab-bubble:active {
+    transform: scale(0.95) !important;
+  }
+
+  /* 🔴 Red/Gold Notification Count Pill (1-2) */
+  .m-news-icon-pulse {
+    position: relative !important;
+    width: 26px !important;
+    height: 26px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+  }
+
+  .m-news-badge-count {
+    position: absolute !important;
+    top: -6px !important;
+    right: -6px !important;
+    background: #ef4444 !important;
+    color: #ffffff !important;
+    font-size: 9.5px !important;
+    font-weight: 800 !important;
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1.5px solid #ffffff !important;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.5) !important;
+    animation: badgePulse 2s infinite !important;
+  }
+
+  @keyframes badgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* Vertical Japanese/Chinese writing style for crisp edge reading */
+  .m-news-vertical-text {
+    font-family: 'Sora', sans-serif !important;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    writing-mode: vertical-rl !important;
+    transform: rotate(180deg) !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+  }
+
+  .m-news-expand-arrow {
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    color: #38bdf8 !important;
+    animation: arrowNudge 1.5s infinite alternate !important;
+  }
+
+  @keyframes arrowNudge {
+    from { transform: translateX(0); }
+    to { transform: translateX(-3px); }
+  }
+
+
+  /* 🎯 2. Slide-Out Toast Card (Like Screenshot 2) */
+  .mobile-news-toast-card {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    right: -340px !important; /* Default hidden off-screen */
+    top: 42% !important;
+    transform: translateY(-50%) !important;
+    width: 300px !important;
+    background: #ffffff !important;
+    border-radius: 16px 0 0 16px !important;
+    border: 1px solid rgba(0, 82, 255, 0.15) !important;
+    border-right: none !important;
+    box-shadow: -8px 20px 45px rgba(0, 0, 0, 0.2) !important;
+    padding: 14px !important;
+    z-index: 1900 !important;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  /* Active Class: Slides into visible screen */
+  .mobile-news-toast-card.active-open {
+    right: 0 !important;
+  }
+
+  .m-toast-inner-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+  }
+
+  .m-toast-brand-tag {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 12px !important;
+    color: #0052ff !important;
+  }
+
+  .dw-mini-dot {
+    width: 7px !important;
+    height: 7px !important;
+    border-radius: 50% !important;
+    background: #10b981 !important;
+  }
+
+  .m-toast-close {
+    background: #f1f5f9 !important;
+    border: none !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    font-size: 11px !important;
+    color: #64748b !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .m-toast-story-anchor {
+    text-decoration: none !important;
+    display: block !important;
+  }
+
+  .m-toast-content-flex {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .m-toast-thumb {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    border: 1px solid #e2e8f0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .m-toast-badge {
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #0052ff !important;
+    background: rgba(0, 82, 255, 0.08) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    margin-bottom: 3px !important;
+  }
+
+  .m-toast-text h4 {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .m-toast-cta {
+    font-size: 10.5px !important;
+    font-weight: 700 !important;
+    color: #10b981 !important;
+    display: inline-block !important;
+  }
+}
+
+
+/* mobile navbar  */
+/* 💻 Desktop: Button ko bilkul hide rakhega (Only Hover Open) */
+.mobile-services-toggle-btn {
+  display: none !important;
+}
+
+/* 📱 Mobile Screens: Navbar Accordion (+ / -) Control */
+@media (max-width: 900px) {
+  .dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-nav-header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-services-toggle-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 82, 255, 0.08);
+    border: 1px solid rgba(0, 82, 255, 0.15);
+    border-radius: 8px;
+    color: #0052ff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-services-toggle-btn:active {
+    transform: scale(0.92);
+  }
+
+  /* Default closed state on mobile */
+  .dropdown .dropdown-menu {
+    display: none !important;
+    flex-direction: column;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* Open state when + is clicked */
+  .dropdown.mobile-open .dropdown-menu {
+    display: flex !important;
+  }
+}
+
+/* mobile new hide  */
+@media (max-width: 900px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+/* laptop new hide  */
+@media (min-width: 901px) {
+  .laptop-hide {
+    display: none !important;
+  }
+}

@@ -811,17 +811,24 @@ function startTypewriterLoop() {
 
 // 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
 // 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM
-// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM (Powered by DW_SERVICES_DATA)
+// 🌟 GLOBAL HEADER & FOOTER AUTO-INJECTION SYSTEM (Updated with All Services & Mobile Nav Accordion)
 document.addEventListener('DOMContentLoaded', () => {
   const globalHeaderContainer = document.getElementById('mainHeader');
   const globalFooterContainer = document.getElementById('footer');
 
-  // Dynamic dropdown list generated directly from Central Database
+  // Sabhi services dropdown ke liye list
   const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
     ? DW_SERVICES_DATA.map(s => `
         <a href="/services-details/?service=${s.slug}">
           <span>${s.icon}</span> ${s.menuTitle || s.title}
         </a>
+      `).join('')
+    : '';
+
+  // Sabhi services footer ke liye list (slice(0, 5) hata diya gaya hai)
+  const allFooterServicesHTML = (typeof DW_SERVICES_DATA !== 'undefined')
+    ? DW_SERVICES_DATA.map(s => `
+        <a href="/services-details/?service=${s.slug}">${s.title}</a>
       `).join('')
     : '';
 
@@ -836,7 +843,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="/">Home</a>
 
           <div class="dropdown">
-            <a href="/services/" class="services-main-link">Services</a>
+            <div class="services-nav-header-flex">
+              <a href="/services/" class="services-main-link">Services</a>
+              <span class="mobile-dropdown-arrow laptop-hide" id="mobileServicesToggle">▼</span>
+            </div>
             <div class="dropdown-menu" id="navServicesDropdown">
               <a href="/services/" class="services-view-all">✦ View All Services</a>
               <div class="services-divider"></div>
@@ -876,11 +886,22 @@ document.addEventListener('DOMContentLoaded', () => {
       else link.classList.remove('active');
     });
 
+    // Mobile Hamburger Toggle
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     if (hamburgerBtn) {
       hamburgerBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         globalHeaderContainer.classList.toggle('menu-active');
+      });
+    }
+
+    // 📱 Mobile Navbar Services Accordion Toggle Logic
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const dropdownWrapper = globalHeaderContainer.querySelector('.dropdown');
+    if (mobileServicesToggle && dropdownWrapper) {
+      mobileServicesToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownWrapper.classList.toggle('mobile-open');
       });
     }
 
@@ -895,12 +916,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (globalFooterContainer) {
-    const footerServicesHTML = (typeof DW_SERVICES_DATA !== 'undefined')
-      ? DW_SERVICES_DATA.slice(0, 5).map(s => `
-          <a href="/services-details/?service=${s.slug}">${s.title}</a>
-        `).join('')
-      : '';
-
     globalFooterContainer.innerHTML = `
       <div class="wrap">
         <div class="foot-top">
@@ -935,7 +950,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="foot-col">
               <h4>Our Services</h4>
-              ${footerServicesHTML}
+              ${allFooterServicesHTML}
             </div>
           </div>
 
@@ -956,7 +971,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span>Our Services</span><span class="footer-plus">+</span>
               </button>
               <div class="mobile-footer-content">
-                ${footerServicesHTML}
+                ${allFooterServicesHTML}
               </div>
             </div>
           </div>
@@ -980,18 +995,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  renderThreeDivWorkspace();
-  renderTwoRowCarouselTestimonials();
+  if (typeof renderThreeDivWorkspace === "function") renderThreeDivWorkspace();
+  if (typeof renderTwoRowCarouselTestimonials === "function") renderTwoRowCarouselTestimonials();
 
   setTimeout(() => {
     const firstCardElement = document.querySelector('.work-column-left .work-card[data-index="0"]');
-    if (firstCardElement && window.innerWidth > 900) {
+    if (firstCardElement && window.innerWidth > 900 && typeof updatePhoneDisplay === "function") {
       updatePhoneDisplay(0, firstCardElement);
     }
   }, 100);
 
-  document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
-  setTimeout(startTypewriterLoop, 1500);
+  document.querySelectorAll('.counter').forEach(c => {
+    if (typeof counterObserver !== 'undefined') counterObserver.observe(c);
+  });
+  if (typeof startTypewriterLoop === 'function') setTimeout(startTypewriterLoop, 1500);
 });
 
 // Full Window Preloader Fade Out Engine
@@ -1412,3 +1429,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ********** url check 
+// ==========================================================================
+// 📱 MOBILE NEWS EDGE TAB TRIGGER & SLIDE-OUT CONTROLLER
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const triggerBtn = document.getElementById('mobileNewsTrigger');
+  const toastCard = document.getElementById('mobileNewsToast');
+  const closeBtn = document.getElementById('closeNewsToastBtn');
+
+  if (triggerBtn && toastCard) {
+    // Tab par click karne par News card screen me slide hoga
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toastCard.classList.add('active-open');
+    });
+
+    // Close button par click karne par hide hoga
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toastCard.classList.remove('active-open');
+      });
+    }
+
+    // Screen par kahin aur tap karne par bhi card slide back ho jayega
+    document.addEventListener('click', (e) => {
+      if (!toastCard.contains(e.target) && e.target !== triggerBtn) {
+        toastCard.classList.remove('active-open');
+      }
+    });
+  }
+});

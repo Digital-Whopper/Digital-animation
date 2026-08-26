@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best SEO Company in Bikaner | Digital Whopper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styleb.css">
+  <link rel="stylesheet" href="../section.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f8fafd;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .logo-img-asset {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+      margin-right: 2px;
+    }
+
+    /* ==========================================================================
+     📐 MASTER PAGE CONTAINER (80% MAIN + 20% REAL STICKY SIDEBAR)
+     ========================================================================== */
+    .page-layout-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      max-width: 1460px;
+      margin: 0 auto;
+      padding: 110px 10px 40px;
+      align-items: flex-start !important;
+      width: 100%;
+      position: relative;
+    }
+
+    .main-content-column {
+      flex: 1;
+      width: calc(100% - 302px);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .right-sidebar-column {
+      width: 270px;
+      flex-shrink: 0;
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 110px !important;
+      height: fit-content !important;
+      align-self: flex-start !important;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 30;
+    }
+
+    #footer {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .mobile-location-toggle-bar {
+      display: none;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      box-shadow: 0 4px 12px rgba(0, 68, 255, 0.08);
+    }
+
+    .mobile-location-toggle-bar span.toggle-icon {
+      font-size: 14px;
+      color: #0044ff;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-location-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px 16px;
+      box-shadow: 0 8px 24px rgba(0, 68, 255, 0.05);
+    }
+
+    .sidebar-head-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-head-sub {
+      font-size: 11.5px;
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: #f1f5f9;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-location-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sidebar-location-list li a {
+      display: block;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-location-list li a:hover {
+      background: #f0f7ff;
+      color: #0044ff;
+      border-color: #dbeafe;
+      padding-left: 16px;
+    }
+
+    .sidebar-location-list li a.active {
+      background: linear-gradient(135deg, #0044ff, #00c4ff) !important;
+      color: #ffffff !important;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.3);
+    }
+
+    .sidebar-cta-banner {
+      background: linear-gradient(135deg, #0044ff, #00c4ff) !important;
+      border-radius: 16px;
+      padding: 20px 18px;
+      color: #ffffff;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 68, 255, 0.25);
+    }
+
+    .sidebar-cta-banner h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-cta-banner p {
+      font-size: 11.5px;
+      opacity: 0.95;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #ffffff;
+      color: #0044ff !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.25s ease;
+    }
+
+    .sidebar-wa-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+     🖼️ 1. HERO SECTION (JUNAGARH FORT BIKANER BG IMAGE)
+     ========================================================================== */
+    .hero-wrapper-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .img-bg-hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.82) 100%), 
+                  url("junagarh.webp") center / cover no-repeat;
+      padding: 85px 32px 95px;
+      color: #ffffff;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 68, 255, 0.1);
+    }
+
+    .hero-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(10px);
+      padding: 7px 18px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .img-bg-hero-section h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(26px, 4.2vw, 46px);
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      max-width: 920px;
+    }
+
+    .img-bg-hero-section h1 span {
+      background: linear-gradient(135deg, #60a5fa, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .img-bg-hero-section p.hero-sublead {
+      font-size: 15.5px;
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      line-height: 1.65;
+    }
+
+    .hero-btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-white {
+      background: #ffffff;
+      color: #0f172a !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-hero-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-hero-green {
+      background: #10b981;
+      color: #ffffff !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-hero-green:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+     🏛️ 2. WHAT DOES AN SEO COMPANY DO?
+     ========================================================================== */
+    .seo-action-split-section {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .section-main-heading-center {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .callout-blue-quote-box {
+      background: #eff6ff;
+      border-left: 4px solid #0044ff;
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #1e3a8a;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .seo-action-left p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .seo-checklist-clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .seo-checklist-clean li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .seo-checklist-clean li span.dot {
+      color: #10b981;
+      font-weight: 800;
+    }
+
+    .seo-action-right-img {
+      width: 100%;
+      height: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+
+    .seo-action-right-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+     📊 3. DARK METRIC COUNTER STRIP
+     ========================================================================== */
+    .dark-metric-strip-bar {
+      background: #0f172a;
+      border-radius: 18px;
+      padding: 26px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      color: #ffffff;
+      text-align: center;
+      width: 100%;
+    }
+
+    .dark-stat-box h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .dark-stat-box p {
+      font-size: 11.5px;
+      color: #94a3b8;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+     🛣️ 4. OUR BIKANER SEO ROLLOUT (TEXT FORMAT)
+     ========================================================================== */
+    .rollout-roadmap-section {
+      text-align: center;
+      width: 100%;
+    }
+
+    .section-pill-tag {
+      font-family: 'Sora', sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .rollout-steps-container-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .rollout-row-top-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      width: 100%;
+    }
+
+    .rollout-row-bottom-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .rollout-text-item {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      text-align: left;
+      box-shadow: none;
+      position: relative;
+    }
+
+    .rollout-step-num-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      display: block;
+      letter-spacing: 0.05em;
+    }
+
+    .rollout-step-head-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .rollout-step-paragraph {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+     ⚖️ 5. THE DIFFERENCE
+     ========================================================================== */
+    .diff-master-wrapper {
+      text-align: center;
+      width: 100%;
+    }
+
+    .comparison-table-container {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      background: #ffffff;
+      display: block;
+    }
+
+    .comparison-table-shell {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      text-align: left;
+      font-size: 12.5px;
+    }
+
+    .comparison-table-shell th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 18px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+    }
+
+    .comparison-table-shell td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+    }
+
+    .comparison-table-shell tr:last-child td { border-bottom: none; }
+
+    .badge-cross {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ef4444;
+      font-weight: 600;
+    }
+
+    .badge-cross .ico-x {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(239, 68, 68, 0.12);
+      color: #ef4444;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .badge-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #10b981;
+      font-weight: 700;
+    }
+
+    .badge-check .ico-v {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .diff-mobile-cards-grid {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .diff-vs-card {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 24px 14px 18px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    .diff-topic-pill {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #eef2ff;
+      color: #0052ff;
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 99px;
+      border: 1px solid #dbeafe;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .diff-side {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .diff-icon {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .icon-red-cross {
+      background: #fee2e2;
+      color: #ef4444;
+    }
+
+    .icon-green-check {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .diff-info h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+
+    .diff-info p {
+      font-size: 11px;
+      color: #64748b;
+      line-height: 1.35;
+    }
+
+    .diff-vs-divider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 40px;
+    }
+
+    .diff-vs-divider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: #f1f5f9;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .diff-vs-badge {
+      position: relative;
+      z-index: 2;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #0052ff;
+      font-family: 'Sora', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    @media (max-width: 900px) {
+      .comparison-table-container {
+        display: none !important;
+      }
+      .diff-mobile-cards-grid {
+        display: flex !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .diff-vs-card {
+        padding: 22px 8px 14px;
+        gap: 6px;
+      }
+      .diff-icon {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        font-size: 10px;
+      }
+      .diff-info h4 {
+        font-size: 10.5px;
+      }
+      .diff-info p {
+        font-size: 9.5px;
+      }
+      .diff-topic-pill {
+        font-size: 10px;
+        padding: 2px 10px;
+      }
+    }
+
+    /* ==========================================================================
+     🌟 6. OVERVIEW SECTION
+     ========================================================================== */
+    .overview-mid-centered-section {
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .overview-mid-centered-section p.centered-full-desc {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.75;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ==========================================================================
+     ❓ 7. FAQ ACCORDION
+     ========================================================================== */
+    .faq-section-new {
+      text-align: center;
+      width: 100%;
+    }
+
+    .faq-accordion-list {
+      max-width: 100%;
+      margin: 20px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .faq-item-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-item-card.active { border-color: #00c4ff; }
+    .faq-question-head { display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700; color: #0f172a; }
+    
+    .faq-plus-icon { 
+      width: 22px; 
+      height: 22px; 
+      border-radius: 50%; 
+      background: linear-gradient(135deg, #0044ff, #00c4ff); 
+      color: #ffffff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 12px; 
+      transition: transform 0.25s ease; 
+      flex-shrink: 0; 
+    }
+
+    .faq-item-card.active .faq-plus-icon { transform: rotate(45deg); }
+    .faq-answer-body { display: none; font-size: 13px; color: #64748b; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f1f5f9; }
+    .faq-item-card.active .faq-answer-body { display: block; }
+
+    /* ==========================================================================
+     🔟 BOTTOM READY TO RANK DARK CTA BANNER
+     ========================================================================== */
+    .bottom-cta-banner-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 18px;
+      padding: 40px 24px;
+      text-align: center;
+      color: #ffffff;
+      width: 100%;
+    }
+
+    .bottom-cta-banner-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .bottom-cta-banner-card p {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 22px;
+    }
+
+    /* ==========================================================================
+     📝 SEO AUDIT ENQUIRY MODAL STYLES
+     ========================================================================== */
+    .modal-backdrop-layer {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 16px;
+      animation: fadeInModal 0.25s ease forwards;
+    }
+
+    .modal-backdrop-layer.active {
+      display: flex;
+    }
+
+    .seo-audit-modal-box {
+      background: #ffffff;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 68, 255, 0.25);
+      position: relative;
+      animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .modal-header-area {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .modal-header-area .modal-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'Sora', sans-serif;
+      text-transform: uppercase;
+      color: #0044ff;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .modal-header-area h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .modal-header-area p {
+      font-size: 13px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .audit-enquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .form-field-group label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .form-field-group input,
+    .form-field-group select,
+    .form-field-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #f8fafd;
+    }
+
+    .form-field-group input:focus,
+    .form-field-group select:focus,
+    .form-field-group textarea:focus {
+      border-color: #0044ff;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 68, 255, 0.12);
+    }
+
+    .form-field-group textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .audit-submit-btn {
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 6px;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .audit-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 68, 255, 0.4);
+    }
+
+    .form-privacy-hint {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .chatbot-wrapper .robot-image-container {
+      animation: botContinuousLoop 3s ease-in-out infinite !important;
+      display: inline-block;
+      transform-origin: center bottom;
+    }
+
+    @keyframes botContinuousLoop {
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      25% { transform: translateY(-8px) rotate(-6deg) scale(1.04); }
+      50% { transform: translateY(-14px) rotate(4deg) scale(1.08); }
+      75% { transform: translateY(-6px) rotate(-3deg) scale(1.02); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUpModal {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @media(max-width: 1024px) {
+      .page-layout-container {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 85px 16px 30px !important;
+        gap: 24px !important;
+        width: 100% !important;
+      }
+      
+      .main-content-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        flex: none !important;
+      }
+
+      .right-sidebar-column {
+        width: 100% !important;
+        position: relative !important;
+        top: 0 !important;
+        order: -1;
+      }
+
+      .mobile-location-toggle-bar {
+        display: flex !important;
+      }
+
+      .sidebar-location-card {
+        display: none;
+      }
+
+      .sidebar-location-card.show-mobile {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .sidebar-cta-banner {
+        display: none;
+      }
+
+      .seo-action-split-section { grid-template-columns: 1fr; gap: 24px; }
+      .rollout-row-top-3 { grid-template-columns: 1fr; gap: 20px; }
+      .rollout-row-bottom-2 { grid-template-columns: 1fr; width: 100%; gap: 20px; }
+      .dark-metric-strip-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media(max-width: 600px) {
+      .page-layout-container { padding-left: 12px !important; padding-right: 12px !important; }
+      .dark-metric-strip-bar { grid-template-columns: 1fr; gap: 12px; padding: 20px 16px; }
+      .img-bg-hero-section { 
+        min-height: 440px !important; 
+        padding: 48px 16px 55px !important; 
+        border-radius: 16px; 
+      }
+      .img-bg-hero-section h1 { font-size: 26px !important; line-height: 1.3 !important; }
+      .hero-btn-row { flex-direction: column; width: 100%; }
+      .btn-hero-white, .btn-hero-green { width: 100%; }
+      .bottom-cta-banner-card { padding: 28px 16px; }
+      .section-main-heading-center { font-size: 22px; }
+      .form-grid-two { grid-template-columns: 1fr; }
+      .seo-audit-modal-box { padding: 24px 18px; }
+    }
+    @media (min-width:900px) {
+      .laptop-padding-left-only {
+        padding-left: 2.5rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="customPreloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <h2 class="preloader-brand">Digital Whopper</h2>
+      <div class="preloader-spinner">
+        <span class="spinner-dot"></span>
+        <span class="spinner-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✦ HEADER NAVBAR ✦ -->
+  <header id="mainHeader"></header>
+
+  <!-- 🌟 MASTER PAGE CONTAINER (80% MAIN CONTENT + 20% RIGHT SIDEBAR) -->
+  <div class="page-layout-container">
+
+    <!-- 80% LEFT MAIN CONTENT COLUMN -->
+    <main class="main-content-column">
+
+      <!-- 1️⃣ HERO SECTION WITH JUNAGARH FORT BIKANER BACKGROUND -->
+      <div class="hero-wrapper-container">
+        <section class="img-bg-hero-section">
+          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Bikaner</div>
+          <h1>Bikaner Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
+          <p class="hero-sublead">Dominate local, national, and global export search results across the Camel City. We build data-backed organic strategies tailored for Bikaner's Bhujia & Namkeen manufacturers, ceramic tile industries, wool carpet exporters, and regional businesses.</p>
+          
+          <div class="hero-btn-row">
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Bikaner SEO Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
+      <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
+        <h2 class="section-main-heading-center">What Does the Best SEO Company in Bikaner Actually Do?</h2>
+        
+        <div class="seo-action-split-section">
+          <div class="seo-action-left">
+            <div class="callout-blue-quote-box">
+              "SEO in Bikaner is about positioning your food brand, ceramic manufacturing unit, or local service directly in front of national buyers and international importers searching on Google and AI platforms."
+            </div>
+            <p>We target high-converting search intent across Kote Gate, Rani Bazar, Sadul Colony, Nokha Road, Khara Industrial Area, Ganga Shahar, and pan-India distribution channels. From Google Maps 3-Pack placement to B2B eCommerce optimization, we engineer complete search authority.</p>
+            <ul class="seo-checklist-clean">
+              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimization</li>
+              <li><span class="dot">✓</span> High-Intent Bhujia, Ceramics, Handicrafts & Industrial Keyword Mapping</li>
+              <li><span class="dot">✓</span> High-Authority Backlink Acquisition & Regional Geo-Citations</li>
+            </ul>
+          </div>
+          <div class="seo-action-right-img">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Bikaner Business Search Architecture">
+          </div>
+        </div>
+      </section>
+
+      <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
+      <section class="dark-metric-strip-bar">
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
+          <p>Of Google Searches Have Local Intent</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
+          <p>Mobile Searches Lead to Call/Visit in 24h</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
+          <p>Average Organic Revenue Growth</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
+          <p>Typical Time to Top Page 1 Rankings</p>
+        </div>
+      </section>
+
+      <!-- 4️⃣ OUR BIKANER SEO ROLLOUT (TEXT FORMAT) -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
+        <h2 class="section-main-heading-center">Our Bikaner SEO Rollout</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 01</span>
+              <div class="rollout-step-head-title">Deep Audit</div>
+              <p class="rollout-step-paragraph">Comprehensive technical site check, local Bikaner competitor gap analysis, indexation speed, and crawl error resolution.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 02</span>
+              <div class="rollout-step-head-title">Keyword Mapping</div>
+              <p class="rollout-step-paragraph">Targeting high-margin buyer keywords across Bikaneri sweets, packaged snacks, ceramic clay tiles, solar energy, and regional trade.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 03</span>
+              <div class="rollout-step-head-title">On-Page + AI</div>
+              <p class="rollout-step-paragraph">Schema engineering and structured content design built for traditional Google search engine positions and AI Overview generative summaries.</p>
+            </div>
+          </div>
+
+          <div class="rollout-row-bottom-2">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 04</span>
+              <div class="rollout-step-head-title">Authority Building</div>
+              <p class="rollout-step-paragraph">High-DA niche backlinks, Bikaner regional citations, and optimizing Google Maps Profile for top Local Pack placement.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 05</span>
+              <div class="rollout-step-head-title">Scale & Accelerate</div>
+              <p class="rollout-step-paragraph">Continuous keyword footprint expansion, organic lead conversion tracking, and scaling recurring ROI.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
+        
+        <div class="seo-action-split-section">
+          <div class="seo-action-right-img">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Modern Search Strategy">
+          </div>
+          <div class="seo-action-left">
+            <div class="callout-blue-quote-box">
+              "Modern search engines reward structure and authority. We position your Bikaner business directly in Google Maps 3-Pack, Local Snippets, and AI Overview Summaries."
+            </div>
+            <p>Dealers, distributors, and consumers find brands through mobile search, maps, and AI answers. We ensure your business dominates every modern search touchpoint with complete technical excellence.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6️⃣ THE DIFFERENCE -->
+      <section class="diff-master-wrapper laptop-padding-left-only">
+        <div class="section-pill-tag">THE DIFFERENCE</div>
+        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table-shell">
+            <thead>
+              <tr>
+                <th>Deliverables & Focus Areas</th>
+                <th>Generic SEO Vendor</th>
+                <th>Digital Whopper (Agency Advantage)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Keyword Strategy</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses generic, high-competition keywords</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets hyper-local & distributor buyer keywords</span></td>
+              </tr>
+              <tr>
+                <td><strong>Local Google Maps Ranking</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic or no focus on Maps</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Specializes in top Google Maps Pack</span></td>
+              </tr>
+              <tr>
+                <td><strong>Backlinks & Authority</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses low-quality or spammy backlinks</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Provides high-DA, authority backlinks</span></td>
+              </tr>
+              <tr>
+                <td><strong>Reporting & Transparency</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Confusing or infrequent reports</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Real-time dashboards & clear KPIs</span></td>
+              </tr>
+              <tr>
+                <td><strong>Focus</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> 100% focused on local & B2B SEO success</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="diff-mobile-cards-grid">
+          <div class="diff-vs-card">
+            <div class="diff-topic-pill">Keyword Strategy</div>
+            <div class="diff-side diff-bad">
+              <div class="diff-icon icon-red-cross">✕</div>
+              <div class="diff-info">
+                <h4>Generic SEO Agency</h4>
+                <p>Uses generic, high-competition keywords</p>
+              </div>
+            </div>
+            <div class="diff-vs-divider">
+              <span class="diff-vs-badge">VS</span>
+            </div>
+            <div class="diff-side diff-good">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>Digital Whopper</h4>
+                <p>Targets hyper-local & distributor buyer keywords</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diff-vs-card">
+            <div class="diff-topic-pill">Local Google Maps Ranking</div>
+            <div class="diff-side diff-bad">
+              <div class="diff-icon icon-red-cross">✕</div>
+              <div class="diff-info">
+                <h4>Generic SEO Agency</h4>
+                <p>Basic or no focus on Maps</p>
+              </div>
+            </div>
+            <div class="diff-vs-divider">
+              <span class="diff-vs-badge">VS</span>
+            </div>
+            <div class="diff-side diff-good">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>Digital Whopper</h4>
+                <p>Specializes in top Google Maps Pack</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diff-vs-card">
+            <div class="diff-topic-pill">Backlinks & Authority</div>
+            <div class="diff-side diff-bad">
+              <div class="diff-icon icon-red-cross">✕</div>
+              <div class="diff-info">
+                <h4>Generic SEO Agency</h4>
+                <p>Uses low-quality or spammy backlinks</p>
+              </div>
+            </div>
+            <div class="diff-vs-divider">
+              <span class="diff-vs-badge">VS</span>
+            </div>
+            <div class="diff-side diff-good">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>Digital Whopper</h4>
+                <p>Provides high-DA, authority backlinks</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diff-vs-card">
+            <div class="diff-topic-pill">Reporting & Transparency</div>
+            <div class="diff-side diff-bad">
+              <div class="diff-icon icon-red-cross">✕</div>
+              <div class="diff-info">
+                <h4>Generic SEO Agency</h4>
+                <p>Confusing or infrequent reports</p>
+              </div>
+            </div>
+            <div class="diff-vs-divider">
+              <span class="diff-vs-badge">VS</span>
+            </div>
+            <div class="diff-side diff-good">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>Digital Whopper</h4>
+                <p>Real-time dashboards & clear KPIs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diff-vs-card">
+            <div class="diff-topic-pill">Focus</div>
+            <div class="diff-side diff-bad">
+              <div class="diff-icon icon-red-cross">✕</div>
+              <div class="diff-info">
+                <h4>Generic SEO Agency</h4>
+                <p>One-size-fits-all approach</p>
+              </div>
+            </div>
+            <div class="diff-vs-divider">
+              <span class="diff-vs-badge">VS</span>
+            </div>
+            <div class="diff-side diff-good">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>Digital Whopper</h4>
+                <p>100% focused on local & B2B SEO success</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7️⃣ OVERVIEW SECTION -->
+      <section class="overview-mid-centered-section">
+        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
+        <h2 class="section-main-heading-center">Dominate Bikaner's Organic Search Ecosystem</h2>
+        <p class="centered-full-desc">
+          We don’t just build standard backlinks; we engineer comprehensive search authority customized for Bikaner's food manufacturing, minerals, solar, and heritage markets. By connecting high-intent transactional search queries with Core Web Vitals speed, mobile responsiveness, and Google Maps dominance, we convert web searches into sustainable distributor leads and high-margin revenue.
+        </p>
+      </section>
+
+      <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
+      <section class="faq-section-new laptop-padding-left-only">
+        <div class="section-pill-tag">FAQ</div>
+        <h2 class="section-main-heading-center">Bikaner SEO — Common Questions</h2>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How long does SEO take to show results in Bikaner?<span class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Local keyword rankings and Google Maps Pack visibility usually begin showing strong traction within 60 to 90 days, with competitive FMCG, sweets, and export terms reaching top positions in 4 to 6 months.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can you rank Bhujia, sweets & FMCG food brands nationally?<span class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes, we specialize in eCommerce SEO, D2C store ranking, and wholesale B2B keyword strategies targeting distributors, retail chains, and direct consumers across India.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do I need to sign a long-term contract?<span class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">No, we work on performance-based monthly retainers. You receive full transparency and detailed ROI reporting without long lock-in periods.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
+      <section class="bottom-cta-banner-card">
+        <h3>Ready to Rank #1 in Bikaner?</h3>
+        <p>Get a comprehensive search audit and a custom ranking roadmap engineered for your business.</p>
+        <div class="hero-btn-row" style="margin-bottom: 0;">
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Bikaner SEO Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="footer"></footer>
+
+    </main>
+
+    <!-- 20% RIGHT SIDEBAR COLUMN -->
+    <aside class="right-sidebar-column">
+
+      <div class="mobile-location-toggle-bar" onclick="toggleMobileLocationMenu()">
+        <span>📍 Locations We Serve</span>
+        <span class="toggle-icon" id="locMenuArrow">▼</span>
+      </div>
+
+      <div class="sidebar-location-card" id="sidebarLocationCard">
+        <h3 class="sidebar-head-title">Locations We Serve</h3>
+        <p class="sidebar-head-sub">Select your city for regional SEO solutions</p>
+        <div class="sidebar-divider"></div>
+
+        <ul class="sidebar-location-list">
+         <li><a href="../seo/">SEO in Jaipur</a></li>
+          <li><a href="../seo-ajmer/" >SEO in Ajmer</a></li>
+          <li><a href="../seo-udaipur/">SEO in Udaipur</a></li>
+          <li><a href="../seo-jodhpur/">SEO in Jodhpur</a></li>
+          <li><a href="../seo-kota/">SEO in Kota</a></li>
+          <li><a href="#" class="active">SEO in Bikaner</a></li>
+          <li><a href="../seo-alwar/">SEO in Alwar</a></li>
+          <li><a href="../seo-sikar/">SEO in Sikar</a></li>
+          <li><a href="../seo-chittorgarh/">SEO in Chittorgarh</a></li>
+          <li><a href="../seo-delhi/">SEO in Delhi NCR</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-cta-banner">
+        <h4>Need Custom Strategy?</h4>
+        <p>Talk directly with our senior SEO strategist.</p>
+        <a href="https://wa.me/916200379161" target="_blank" class="sidebar-wa-btn">Consult on WhatsApp ✦</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- 🤖 WHOPPY AI CHATBOT WITH ANIMATED CHOTU BADGE -->
+  <div class="chatbot-wrapper">
+    <div class="chat-bubble" id="chatBubble">
+      <div class="robot-image-container">
+        <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+      </div>
+    </div>
+
+    <div class="chatbot-caption-tag">
+      <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-header-user">
+          <div class="bot-avatar-container">
+            <img src="../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+          </div>
+          <div>
+            <h4>Whoppy AI (Chotu)</h4>
+            <span class="status-online">● Online</span>
+          </div>
+        </div>
+        <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+      </div>
+
+      <div class="chat-body-messages" id="chatMessages">
+        <div class="msg-bubble bot-msg">
+          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your brand's SEO rankings in Bikaner today? 🚀
+        </div>
+        <div class="chat-suggestions" id="chatSuggestions">
+          <button class="suggest-chip" onclick="triggerBotResponse('Services')">SEO Services</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Audit Pricing</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Expert 👤</button>
+        </div>
+      </div>
+
+      <div class="chat-footer-input">
+        <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+        <button id="sendChatBtn" class="send-msg-btn">✦</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener" class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener" class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeoBikaner)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGradSeoBikaner" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener" class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
+    <div class="wa-icon-holder-w">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+      </svg>
+    </div>
+    <span class="wa-vertical-text-w">let’s talk</span>
+  </a>
+
+  <!-- 📞 FLOATING LEFT ROUND GREEN CALL BUTTON -->
+  <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+    <div class="call-icon-holder-l">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </div>
+  </a>
+
+  <!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+  <div class="mobile-app-bottom-nav">
+    <a href="/index.html" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </div>
+      <span>Home</span>
+    </a>
+
+    <a href="/services/" class="app-nav-item active">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      </div>
+      <span>Services</span>
+    </a>
+
+    <a href="/projects/" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <span>Projects</span>
+    </a>
+
+    <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z" />
+        </svg>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </div>
+      <span>Call Us</span>
+    </a>
+  </div>
+
+  <!-- 🌟 SEO AUDIT ENQUIRY MODAL POPUP -->
+  <div class="modal-backdrop-layer" id="seoAuditModal" onclick="handleModalBackdropClick(event)">
+    <div class="seo-audit-modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeSeoAuditModal()">&times;</button>
+      
+      <div class="modal-header-area">
+        <span class="modal-badge">✦ Free Audit Report</span>
+        <h3>Request Your Bikaner SEO Audit</h3>
+        <p>Fill in the details below & our senior SEO strategist will prepare a customized audit report for your business.</p>
+      </div>
+
+      <form class="audit-enquiry-form" onsubmit="handleAuditFormSubmit(event)">
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditFullName">Full Name *</label>
+            <input type="text" id="auditFullName" placeholder="e.g. Rahul Tak" required>
+          </div>
+          <div class="form-field-group">
+            <label for="auditPhone">Phone Number *</label>
+            <input type="tel" id="auditPhone" placeholder="e.g. +91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditEmail">Business Email *</label>
+            <input type="email" id="auditEmail" placeholder="name@company.com" required>
+          </div>
+          <div class="form-field-group">
+            <label for="auditWebsite">Website URL *</label>
+            <input type="url" id="auditWebsite" placeholder="https://yourbrand.com" required>
+          </div>
+        </div>
+
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditTargetArea">Target Market / Location</label>
+            <select id="auditTargetArea">
+              <option value="Bikaner Local">Bikaner (Local City Focus)</option>
+              <option value="FMCG & Food Export">Bhujia, Sweets & FMCG (Pan-India/Export)</option>
+              <option value="Ceramics & Industrial">Ceramics, Tiles & Khara Industrial Cluster</option>
+              <option value="Rajasthan State">Rajasthan State-wide</option>
+              <option value="Pan India">Pan-India (National)</option>
+              <option value="International">International Export</option>
+            </select>
+          </div>
+          <div class="form-field-group">
+            <label for="auditServiceType">Primary Goal</label>
+            <select id="auditServiceType">
+              <option value="Google Business Profile (Map Pack)">Rank in Top 3 Local Maps (GBP)</option>
+              <option value="Organic Google Keywords">Organic Google Page 1 Rankings</option>
+              <option value="Distributor & B2B Leads">Distributor / Wholesale Lead Generation</option>
+              <option value="Technical SEO & Speed">Technical SEO & Speed Fixes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field-group">
+          <label for="auditCompetitors">Top Competitors or Notes (Optional)</label>
+          <textarea id="auditCompetitors" placeholder="Mention 1-2 competitor websites or specific keywords you want to rank for..."></textarea>
+        </div>
+
+        <button type="submit" class="audit-submit-btn">🚀 Claim Free Bikaner SEO Audit</button>
+        <div class="form-privacy-hint">🔒 We respect your privacy. No spam guaranteed.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🌟 SCRIPTS -->
+  <script>
+    function openSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'seoAuditModal') {
+        closeSeoAuditModal();
+      }
+    }
+
+    function handleAuditFormSubmit(event) {
+      event.preventDefault();
+      alert('Thank you! Your Bikaner SEO audit request has been received. Our team will contact you shortly.');
+      closeSeoAuditModal();
+    }
+
+    function initSeoMetricCounters() {
+      const counters = document.querySelectorAll('.seo-metric-counter');
+      if (counters.length === 0) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const targetVal = parseFloat(el.getAttribute('data-target'));
+            const prefix = el.getAttribute('data-prefix') || '';
+            const suffix = el.getAttribute('data-suffix') || '';
+            const isDecimal = el.getAttribute('data-decimal') === '1';
+
+            let current = 0;
+            const duration = 1800;
+            const totalFrames = 60;
+            const stepIncrement = targetVal / totalFrames;
+            let frame = 0;
+
+            function updateCounter() {
+              frame++;
+              current += stepIncrement;
+
+              if (frame >= totalFrames) {
+                el.textContent = `${prefix}${targetVal}${suffix}`;
+              } else {
+                const formattedNum = isDecimal ? current.toFixed(1) : Math.floor(current);
+                el.textContent = `${prefix}${formattedNum}${suffix}`;
+                requestAnimationFrame(updateCounter);
+              }
+            }
+
+            requestAnimationFrame(updateCounter);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      counters.forEach(c => observer.observe(c));
+    }
+
+    function toggleMobileLocationMenu() {
+      const card = document.getElementById('sidebarLocationCard');
+      const arrow = document.getElementById('locMenuArrow');
+      if (card.classList.contains('show-mobile')) {
+        card.classList.remove('show-mobile');
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        card.classList.add('show-mobile');
+        arrow.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initSeoMetricCounters();
+    });
+  </script>
+
+  <script src="../services-data.js"></script>
+  <script src="../scriptb.js"></script>
+  <script src="../section.js"></script>
+</body>
+
+</html>

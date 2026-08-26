@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blogs & Chronicles | Digital Whopper - Jaipur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styleb.css">
+<link rel="stylesheet" href="../section.css">
+<style>
+  /* ==========================================================================
+     🖼️ EXCLUSIVE MAGAZINE-LAYOUT GRAPHIC OVERRIDES
+     ========================================================================== */
+  .logo-img-asset {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  .blog-hero {
+    padding: 170px 0 30px !important;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  /* 🎯 FEATURED HERO CARD ARCHITECTURE (FIXED HEIGHT & OVERFLOW LOCK) */
+  .featured-blog-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 82, 255, 0.08);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow-default);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .featured-blog-card:hover {
+    transform: translateY(-6px);
+    border-color: #0052ff;
+    box-shadow: var(--card-shadow-active);
+  }
+  .featured-img-frame {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .featured-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .featured-blog-card:hover .featured-img-frame img {
+    transform: scale(1.03);
+  }
+
+  /* 🌟 FIRST CARD ONLY: TITLE STYLE MODULE */
+  .featured-title-custom {
+    font-family: 'Sora', sans-serif; 
+    font-size: 22px; 
+    font-weight: 700; 
+    color: var(--text); 
+    line-height: 1.35; 
+    margin: 8px 0 10px;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* 🌟 FIRST CARD ONLY: STRICT 2 LINES PLAIN TEXT TRUNCATE */
+  .featured-desc-truncate {
+    color: var(--muted); 
+    font-size: 14px; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; 
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    max-height: 3.2em;
+  }
+
+  /* 📦 PREMIUM GRID CORE Sync */
+  .blog-master-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 82, 255, 0.06);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow-default);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .blog-master-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 82, 255, 0.15);
+    box-shadow: var(--card-shadow-active);
+  }
+
+  /* Image Aspect Thumb Frame */
+  .blog-image-thumb-frame {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 82, 255, 0.05);
+    flex-shrink: 0;
+  }
+  .blog-image-thumb-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .blog-master-card:hover .blog-image-thumb-frame img {
+    transform: scale(1.05);
+  }
+
+  /* 🧬 ACCENT DETAILS */
+  .blog-meta-strip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .author-pill {
+    background: rgba(0, 82, 255, 0.05);
+    color: #0052ff;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 11px;
+  }
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 82, 255, 0.06);
+  }
+  .blog-meta-badge {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .read-anchor-btn {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0052ff;
+    text-decoration: none;
+  }
+
+  /* 🤖 CONTINUOUS CHATBOT ROBOT ANIMATION */
+  .chatbot-wrapper .robot-image-container {
+    animation: botContinuousLoop 3s ease-in-out infinite !important;
+    display: inline-block;
+    transform-origin: center bottom;
+  }
+
+  @keyframes botContinuousLoop {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    25% { transform: translateY(-8px) rotate(-6deg) scale(1.04); }
+    50% { transform: translateY(-14px) rotate(4deg) scale(1.08); }
+    75% { transform: translateY(-6px) rotate(-3deg) scale(1.02); }
+    100% { transform: translateY(0) rotate(0deg) scale(1); }
+  }
+
+  /* 📱 ADVANCED FLUID RESPONSIVE SYSTEM OVERRIDES */
+  @media(max-width: 1200px) {
+    .magazine-top-split { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .magazine-bottom-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media(max-width: 700px) {
+    .blog-right-top-grid { grid-template-columns: 1fr !important; }
+    .magazine-bottom-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+    .blog-hero h1 { font-size: 32px !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="customPreloader" class="preloader-overlay">
+  <div class="preloader-content">
+    <h2 class="preloader-brand">Digital Whopper</h2>
+    <div class="preloader-spinner">
+      <span class="spinner-dot"></span>
+      <span class="spinner-dot"></span>
+    </div>
+  </div>
+</div>
+
+<div class="custom-cursor" id="customCursor"></div>
+<div class="custom-cursor-blur" id="customCursorBlur"></div>
+
+<!-- ✦ HEADER NAVBAR ✦ -->
+<header id="mainHeader"></header>
+
+<!-- 🌟 BLOG HERO 🌟 -->
+<section class="blog-hero scroll-reveal">
+  <div class="pink-blob"></div>
+  <div class="purple-ambient-glow"></div>
+  <div class="stars-container"><canvas id="aiNodeCanvas"></canvas></div>
+
+  <div class="wrap">
+    <div class="eyebrow">The Intel Hub</div>
+    <h1 style="font-size: clamp(34px, 4.5vw, 54px); font-weight: 800; color: var(--text); line-height: 1.2; letter-spacing: -0.02em;">
+      The Digital Whopper <span class="highlight text-shine">Blog's</span>
+    </h1>
+    <p class="lead" style="margin: 16px auto 0; max-width: 640px;">Bespoke marketing strategy manuals, platform engineering insights, and algorithmic breakdowns designed carefully by our growth engineers.</p>
+  </div>
+</section>
+
+<!-- 🌟 MAGAZINE BLOG GRID 🌟 -->
+<section class="scroll-reveal" style="padding: 10px 0 60px;">
+  <div class="wrap2" style="max-width: 1300px; margin: 0 auto; padding: 0 16px;">
+    
+    <div class="magazine-top-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%;">
+      <!-- 🌟 INDEX 0: Left Featured Hero Box (Dynamically injected) -->
+      <div class="blog-left-hero-column" id="featuredContainer"></div>
+
+      <!-- 🌟 INDEX 1 & 2: Right Side Grid (2 Cards dynamically injected) -->
+      <div class="blog-right-top-grid" id="rightTopGridContainer" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;"></div>
+    </div>
+
+    <!-- 🌟 INDEX 3+: Bottom Row Grid Cards (4 Columns dynamically injected) -->
+    <div class="magazine-bottom-grid" id="magazineBottomGridContainer" style="display: none; grid-template-columns: repeat(4, 1fr); gap: 32px; width: 100%; margin-top: 32px;"></div>
+
+  </div>
+</section>
+
+<!-- 🏢 FOOTER -->
+<footer id="footer"></footer>
+
+<!-- 🤖 WHOPPY AI CHATBOT WITH ANIMATED CHOTU BADGE -->
+<div class="chatbot-wrapper">
+  <div class="chat-bubble" id="chatBubble">
+    <div class="robot-image-container">
+      <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+    </div>
+  </div>
+
+  <div class="chatbot-caption-tag">
+    <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-user">
+        <div class="bot-avatar-container">
+          <img src="../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+        </div>
+        <div>
+          <h4>Whoppy AI (Chotu)</h4>
+          <span class="status-online">● Online</span>
+        </div>
+      </div>
+      <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+    </div>
+
+    <div class="chat-body-messages" id="chatMessages">
+      <div class="msg-bubble bot-msg">
+        Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help you today? 🚀
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggest-chip" onclick="triggerBotResponse('Services')">SEO Services</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Audit Pricing</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Expert 👤</button>
+      </div>
+    </div>
+
+    <div class="chat-footer-input">
+      <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+      <button id="sendChatBtn" class="send-msg-btn">✦</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+<div class="side-social-shield-left">
+  <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener" class="social-side-node fb-color" aria-label="Facebook">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener" class="social-side-node insta-color" aria-label="Instagram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradBlog)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <defs>
+        <linearGradient id="instaGradBlog" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f09433" />
+          <stop offset="25%" stop-color="#e6683c" />
+          <stop offset="50%" stop-color="#dc2743" />
+          <stop offset="75%" stop-color="#cc2366" />
+          <stop offset="100%" stop-color="#bc1888" />
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener" class="social-side-node linkedin-color" aria-label="LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+    </svg>
+  </a>
+</div>
+
+<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER ("let's talk") -->
+<a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
+  <div class="wa-icon-holder-w">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+    </svg>
+  </div>
+  <span class="wa-vertical-text-w">let’s talk</span>
+</a>
+
+<!-- 📞 FLOATING LEFT ROUND GREEN CALL BUTTON -->
+<a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+  <div class="call-icon-holder-l">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </div>
+</a>
+
+<!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+<div class="mobile-app-bottom-nav">
+  <a href="/index.html" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+    </div>
+    <span>Home</span>
+  </a>
+
+  <a href="/services/" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+        <line x1="8" y1="21" x2="16" y2="21"></line>
+        <line x1="12" y1="17" x2="12" y2="21"></line>
+      </svg>
+    </div>
+    <span>Services</span>
+  </a>
+
+  <a href="/projects/" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </div>
+    <span>Projects</span>
+  </a>
+
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+      </svg>
+    </div>
+    <span>WhatsApp</span>
+  </a>
+
+  <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </div>
+    <span>Call Us</span>
+  </a>
+</div>
+
+<!-- 🌟 SCRIPTS (Pointing 1 Folder Up to blogs-data.js) -->
+<script src="../blogs-data.js"></script>
+<script src="../services-data.js"></script>
+<script src="../scriptb.js"></script>
+<script src="../section.js"></script>
+
+<!-- ==========================================================================
+     ⚙️ DYNAMIC BLOGS RENDERING SCRIPT (DIRECT FROM DW_BLOGS_DATA)
+     ========================================================================== -->
+<!-- ==========================================================================
+     ⚙️ DYNAMIC BLOGS RENDERING SCRIPT (LATEST ID FIRST SORTED)
+     ========================================================================== -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const featuredContainer = document.getElementById('featuredContainer');
+    const rightTopGridContainer = document.getElementById('rightTopGridContainer');
+    const magazineBottomGridContainer = document.getElementById('magazineBottomGridContainer');
+
+    if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA) || DW_BLOGS_DATA.length === 0) {
+      featuredContainer.innerHTML = '<p style="color: #64748b; padding: 20px;">No articles available in database.</p>';
+      return;
+    }
+
+    // 🌟 1. ID wise reverse sort: Highest/Latest ID sabse pehle (6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0)
+    const sortedBlogs = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
+
+    // 🌟 2. INDEX 0: Sabse naya blog (e.g. ID 6) -> Left Featured Hero Box
+    const hero = sortedBlogs[0];
+    featuredContainer.innerHTML = `
+      <div class="featured-blog-card" onclick="window.location.href='blogs-details/?slug=${hero.slug}'">
+        <div class="featured-img-frame">
+          <img src="${hero.bannerImage || hero.thumbnail}" alt="${hero.title}">
+        </div>
+        <div style="padding: 20px 28px 20px; display: flex; flex-direction: column; flex-grow: 1;">
+          <div class="blog-meta-strip">
+            <span class="author-pill">${hero.category || 'Digital Whopper'}</span>
+            <span>• ${hero.readTime || '3 min read'}</span>
+          </div>
+          <h2 class="featured-title-custom">
+            ${hero.title}
+          </h2>
+          <p class="featured-desc-truncate">
+            ${hero.excerpt || hero.content?.intro || ''}
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(0, 82, 255, 0.06);">
+            <span style="font-size: 12.5px; color: var(--muted); font-weight: 500;">🗓️ ${hero.publishDate}</span>
+            <span style="color: #0052ff; font-weight: 700; font-size: 14px;">Read Full Article →</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // 🌟 3. INDEX 1 & 2: Agle do latest blogs (e.g. ID 5 & 4) -> Right Side Grid Cards
+    const rightCardsData = sortedBlogs.slice(1, 3);
+    let rightGridHTML = '';
+    
+    rightCardsData.forEach((post) => {
+      rightGridHTML += `
+        <div class="blog-master-card" onclick="window.location.href='blogs-details/?slug=${post.slug}'">
+          <div class="blog-image-thumb-frame">
+            <img src="${post.thumbnail || post.bannerImage}" alt="${post.title}">
+          </div>
+          <div class="work-card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; word-break: break-word; overflow-wrap: anywhere;">
+            <div class="blog-meta-strip">
+              <span class="author-pill">${post.category || 'Digital Whopper'}</span>
+            </div>
+            <b style="font-size: 16px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif; word-break: break-word; overflow-wrap: anywhere;">${post.title}</b>
+            <p style="color: var(--muted); font-size: 13px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; word-break: break-word; overflow-wrap: anywhere;">
+              ${post.excerpt || post.content?.intro || ''}
+            </p>
+            <div class="blog-card-footer">
+              <span class="blog-meta-badge">🗓️ ${post.publishDate}</span>
+              <span class="read-anchor-btn">Read ↗</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    rightTopGridContainer.innerHTML = rightGridHTML;
+
+    // 🌟 4. INDEX 3+: Baaki purane blogs (e.g. ID 3, 2, 1, 0) -> Bottom Grid Cards
+    const bottomCardsData = sortedBlogs.slice(3);
+    if (bottomCardsData.length > 0) {
+      magazineBottomGridContainer.style.display = 'grid';
+      let bottomGridHTML = '';
+      
+      bottomCardsData.forEach((post) => {
+        bottomGridHTML += `
+          <div class="blog-master-card" onclick="window.location.href='blogs-details/?slug=${post.slug}'">
+            <div class="blog-image-thumb-frame">
+              <img src="${post.thumbnail || post.bannerImage}" alt="${post.title}">
+            </div>
+            <div class="work-card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; word-break: break-word; overflow-wrap: anywhere;">
+              <div class="blog-meta-strip">
+                <span class="author-pill">${post.category || 'Digital Whopper'}</span>
+              </div>
+              <b style="font-size: 15.5px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif; word-break: break-word; overflow-wrap: anywhere;">${post.title}</b>
+              <p style="color: var(--muted); font-size: 12.8px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; word-break: break-word; overflow-wrap: anywhere;">
+                ${post.excerpt || post.content?.intro || ''}
+              </p>
+              <div class="blog-card-footer">
+                <span class="blog-meta-badge">🗓️ ${post.publishDate}</span>
+                <span class="read-anchor-btn">Read ↗</span>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      magazineBottomGridContainer.innerHTML = bottomGridHTML;
+    } else {
+      magazineBottomGridContainer.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -2,7 +2,6 @@
 # Public website content is crawlable by search engines and AI agents.
 # AI agents should use publicly available website content for information about
 # Digital Whopper, its services, portfolio, blogs and contact information.
-testing
 
 User-agent: *
 

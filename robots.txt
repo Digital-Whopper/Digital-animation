@@ -1,0 +1,60 @@
+# Digital Whopper - Robots Instructions
+# Public website content is crawlable by search engines and AI agents.
+# AI agents should use publicly available website content for information about
+# Digital Whopper, its services, portfolio, blogs and contact information.
+
+User-agent: *
+
+# Allow all public website pages
+Allow: /
+
+# Main public pages
+Allow: /index.html
+Allow: /services
+Allow: /portfolio/
+Allow: /Portfolio/
+Allow: /blog/
+Allow: /Blog
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /journey
+
+# Allow specific AI agents and search engine bots
+Allow: /OAI-SearchBot
+Allow: /PerplexityBot
+Allow: /Googlebot
+Allow: /Google-Extended
+Allow: /ClaudeBot
+Allow: /Bingbot
+
+# SEO landing pages
+Allow: /seo/
+Allow: /seo-*
+Allow: /services-details
+Allow: /best-seo-company-in-jaipur
+
+# PPC / Marketing landing pages
+Allow: /ppc-company-in-jaipur
+
+# Service detail pages
+Allow: /services-details
+
+# Public assets required for page rendering
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Private / administrative areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /account/
+Disallow: /private/
+
+# Prevent crawling of internal API endpoints
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://digitalwhopper.com/sitemap.xml

@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="../styleb.css">
   <link rel="stylesheet" href="../section.css">
   <style>
-  /* ==========================================================================
-     📸 BRAND IMAGE LOGO MULTI-SCALE SYNCHRONIZATION
-     ========================================================================== */
   .logo-img-asset {
     height: 34px;
     width: auto;
@@ -23,11 +20,6 @@
     margin-right: 2px;
   }
 
-  /* ==========================================================================
-     🛍️ SERVICES GRID LAYOUT ENGINE (Laptop, Tablet & Mobile Controlled)
-     ========================================================================== */
-  
-  /* 💻 1. Laptop / Desktop Screen: Always 4 Cards in 1 Line */
   .services-quad-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
@@ -47,7 +39,6 @@
     flex-direction: column;
   }
 
-  /* 📱 2. Tablet Screen (601px - 900px): 2 Cards Per Row */
   @media (max-width: 900px) and (min-width: 601px) {
     .services-quad-grid {
       grid-template-columns: repeat(2, 1fr) !important;
@@ -55,7 +46,6 @@
     }
   }
 
-  /* 📲 3. Mobile View (max-width: 600px): Single Column (1 Card Per Row) */
   @media (max-width: 600px) {
     .services-quad-grid {
       grid-template-columns: 1fr !important;
@@ -70,7 +60,6 @@
       padding: 18px !important;
     }
 
-    /* Left Side Big Icon Frame for Mobile */
     .quad-icon-box {
       font-size: 42px !important;
       line-height: 1 !important;
@@ -86,7 +75,6 @@
       flex-shrink: 0 !important;
     }
 
-    /* Right Side Content Container for Mobile */
     .service-card-content-right {
       display: flex;
       flex-direction: column;
@@ -115,6 +103,30 @@
       padding: 90px 0 30px !important;
     }
   }
+
+  /* 📱 Mobile Navbar Dropdown Styling */
+  @media (max-width: 900px) {
+    .services-nav-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .mobile-dropdown-arrow {
+      font-size: 11px;
+      padding: 6px 12px;
+      cursor: pointer;
+      color: #0052ff;
+    }
+    .dropdown.mobile-open .dropdown-menu {
+      display: flex !important;
+      flex-direction: column;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 8px;
+    }
+  }
 </style>
 </head>
 
@@ -130,31 +142,7 @@
     </div>
   </div>
 
-  <header id="mainHeader">
-    <nav>
-      <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
-        <div class="logo-icon-box">
-           <a href="/" class="logo">
-          <img src="img/4.png" alt="Digital Whopper Logo" class="logo-img-asset">
-        </a> 
-            id="logoIcon">
-        </div>
-        <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
-      </a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/services/" class="active">Services</a>
-        <a href="/portfolio">PortFolio</a>
-        <a href="#">SEO Audit</a>
-        <a href="#">SMO Audit</a>
-        <a href="#">Shark Tank Journey</a>
-        <a href="#">Punch In</a>
-      </div>
-      <div class="nav-cta">
-        <a href="/" class="btn btn-gold">Enquire now</a>
-      </div>
-    </nav>
-  </header>
+  <header id="mainHeader"></header>
 
   <section class="hero scroll-reveal hero-service" style="padding: 140px 0 30px;">
     <div class="pink-blob"></div>
@@ -168,7 +156,6 @@
       <div class="eyebrow">Our Arsenal</div>
       <h1>360° Digital <span class="highlight text-shine">Growth Engines</span></h1>
       <p class="lead" style="margin: 15px auto 0; max-width: 680px;">Digital Whopper Service's </p>
-      <!-- <p class="lead" style="margin: 15px auto 0; max-width: 680px;">We engineer high-converting funnels, elite technical setups, and absolute organic domination tactics to turn your business into an unstoppable brand.</p> -->
     </div>
   </section>
 
@@ -182,68 +169,23 @@
     </div>
 
     <div class="wrap-services-custom">
-      <div class="services-quad-grid" id="servicesGrid">
-        <!-- Dynamic Quad Cards rendering as 1 item per row -->
-      </div>
+      <div class="services-quad-grid" id="servicesGrid"></div>
     </div>
   </section>
 
-  <!-- ✦ HOME PAGE FOOTER ✦ -->
-  <footer id="footer">
-    <div class="wrap">
-      <div class="foot-top">
-        <div class="foot-brand">
-          <a href="/" class="logo">
-            <div class="logo-mark">DW</div>Digital Whopper
-          </a>
-          <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
-          <p><a href="tel:+916200379161">+91 6200379161</a><br><a
-              href="mailto:hello@digitalwhopper.com">hello@digitalwhopper.com</a></p>
-          <div class="socials">
-            <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-        <div class="foot-links">
-          <div class="foot-col">
-            <h4>Pages</h4>
-            <a href="/index/">Home</a>
-            <a href="/services/">Services</a>
-            <a href="/projects/">Portfolio</a>
-            <a href="/#about">About</a>
-            <a href="/contact">Contact</a>
-          </div>
-          <div class="foot-col">
-            <h4>Our services</h4>
-            <a href="/services/">App &amp; Shopify Development</a>
-            <a href="/services/">SEO &amp; SMO Optimisation</a>
-            <a href="/services/">E-Commerce</a>
-            <a href="/services/">Performance Marketing</a>
-            <a href="/services/">Web Design &amp; Development</a>
-          </div>
-          <div class="foot-col">
-            <h4>Quick links</h4>
-            <a href="/#blog">Blog</a>
-            <a href="/#faq">FAQ</a>
-            <a href="/#milestones">Our journey</a>
-            <a href="https://wa.me/916200379161" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-      <div class="foot-bottom">
-        <span>© 2026 Digital Whopper. All rights reserved.</span>
-        <span>Made with ✦ in Jaipur, the Pink City</span>
-      </div>
-    </div>
-  </footer>
+  <!-- ✦ FOOTER ✦ -->
+  <footer id="footer"></footer>
 
-  <!-- 🤖 WHOPPY AI CHATBOT MATRIX -->
+  <!-- 🤖 WHOPPY AI CHATBOT -->
   <div class="chatbot-wrapper">
     <div class="chat-bubble" id="chatBubble">
       <div class="robot-image-container">
         <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
       </div>
+    </div>
+
+    <div class="chatbot-caption-tag">
+      <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
     </div>
 
     <div class="chat-window" id="chatWindow">
@@ -253,7 +195,7 @@
             <img src="../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
           </div>
           <div>
-            <h4>Whoppy AI</h4>
+            <h4>Whoppy AI (Chotu)</h4>
             <span class="status-online">● Online</span>
           </div>
         </div>
@@ -262,7 +204,7 @@
 
       <div class="chat-body-messages" id="chatMessages">
         <div class="msg-bubble bot-msg">
-          Hi there! I am Whoppy, your Digital Whopper AI assistant. How can I help grow your brand today? 🚀
+          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your brand today? 🚀
         </div>
         <div class="chat-suggestions" id="chatSuggestions">
           <button class="suggest-chip" onclick="triggerBotResponse('Services')">Our Services</button>
@@ -277,6 +219,65 @@
       </div>
     </div>
   </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGrad)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- 📞 FLOATING LEFT ROUND CALL BUTTON -->
+  <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+    <div class="call-icon-holder-l">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+    </div>
+  </a>
+
+  <!-- 💬 FLOATING RIGHT WHATSAPP BUTTON -->
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right"
+    aria-label="Chat on WhatsApp">
+    <div class="wa-icon-holder-w">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+      </svg>
+    </div>
+    <span class="wa-vertical-text-w">let’s talk</span>
+  </a>
 
   <!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
   <div class="mobile-app-bottom-nav">
@@ -336,38 +337,27 @@
     </a>
   </div>
 
+  <script src="../services-data.js"></script>
   <script src="../scriptb.js"></script>
   <script src="../section.js"></script>
-  <script src="../services-script.js"></script>
-
   <script>
-    // Services Data
-    const serviceDatabase = [
-      { title: "SEO Dominance", icon: "🔍", classColor: "color-c1", desc: "Outrank your competitors. We build a strong organic foundation that ranks your brand on top across Google search and AI answers. We strategically target high-intent keywords, optimize content and deliver quality that only the <b>best SEO Company in Jaipur</b> can execute." },
-      { title: "Performance Ads", icon: "🚀", classColor: "color-c2", desc: "Maximize your enterprise ROAS. We create high-velocity ads and full-funnel strategies that capture leads and drive sales, maximizing your ROAS. As your <b>performance marketing agency,</b> we actively scale your bottom line and ensure that your media spend gives you high-margin profit." },
-      { title: "Web Development", icon: "💻", classColor: "color-c3", desc: "Architect high-converting digital storefronts. We engineer custom, professional, responsive websites that engage your visitors and drive real conversions. As a leading <b>web development company in Jaipur,</b>  our core focus is on mobile-first responsiveness and seamless user journey - essential to thrive in present digital market." },
-      { title: "Ecommerce Marketing Services", icon: "🛍️", classColor: "color-c4", desc: "Whoop up your ecom business. We optimize your digital storefront across major retail platforms – Amazon, Flipkart, Shopify, and Etsy, turning one-time shoppers into repeat buyers. From streamlining product funnels to lowering cart abandonment, we guarantee unmatched growth through excellent ecommerce marketing services." },
-      { title: "Social Media Management", icon: "🎨", classColor: "color-c5", desc: "Lead trends and lock recall. Your search for the best <b>social media marketing company in Jaipur</b>  ends here. We master platform dynamics across Facebook, Instagram, LinkedIn, and YouTube, executing custom strategies that help your brand thrive." },
-      { title: "360° CRO Analytics", icon: "📱", classColor: "color-c6", desc: "Unlock maximum value per click. We simplify lead management, fix drop-offs, and boost conversions, getting you maximum ROI from every single click. Be it tracking real-time user behavior or running A/B tests for improvements, we cover every angle to ensure a compounding ROI." },
-      { title: "UI/UX Architecture", icon: "🎨", classColor: "color-c7", desc: "Design slick digital experiences. We craft conversion-first user interfaces with striking aesthetics that keep users hooked. Our psychology-backed designs and tactile visual storytelling will leave a lasting impression of your brand on your customer’s mind. " },
-      { title: "Pitch Consulting", icon: "📱", classColor: "color-c8", desc: "From seed to scale. As the best digital marketing company in Jaipur, we empower ambitious founders to build irresistible pitch decks for institutional funding milestones. Dreaming of Shark Tank India? Join us. Together we’ll work out a pitch that secures deals." }
-
-    ];
-
+  document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.getElementById('servicesGrid');
-    if (gridContainer) {
-      gridContainer.innerHTML = serviceDatabase.map((item, index) => `
-      <div class="service-quad-card ${item.classColor}">
-        <div class="quad-icon-box">${item.icon}</div>
-        <div class="service-card-content-right">
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-          <a href="services-details/?id=${index}" class="quad-action" style="text-decoration: none; display: inline-block;">Read More ✦</a>
+    if (gridContainer && typeof DW_SERVICES_DATA !== 'undefined') {
+      gridContainer.innerHTML = DW_SERVICES_DATA.map(item => `
+        <div class="service-quad-card ${item.classColor}">
+          <div class="quad-icon-box">${item.icon}</div>
+          <div class="service-card-content-right">
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+            <a href="/services-details/?service=${item.slug}" class="quad-action" style="text-decoration: none; display: inline-block;">Read More ✦</a>
+          </div>
         </div>
-      </div>
-    `).join('');
+      `).join('');
     }
-  </script>
+  });
+</script>
+
 </body>
 
 </html>

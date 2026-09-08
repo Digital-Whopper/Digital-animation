@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best SEO Company in Jaipur | Digital Whopper</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../styleb.css">
   <link rel="stylesheet" href="../section.css">
   <style>
@@ -228,8 +230,8 @@
       align-items: center;
       border-radius: 10px;
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.76) 100%), 
-                  url(https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1920&q=80) center / cover no-repeat;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.76) 100%),
+        url(https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1920&q=80) center / cover no-repeat;
       padding: 85px 32px 95px;
       color: #ffffff;
       text-align: center;
@@ -330,7 +332,7 @@
      🏛️ 2. WHAT DOES AN SEO COMPANY DO?
      ========================================================================== */
     .seo-action-split-section {
-      display: grid;
+      /* display: grid; */
       grid-template-columns: 1.1fr 0.9fr;
       gap: 32px;
       align-items: center;
@@ -557,7 +559,9 @@
       color: #334155;
     }
 
-    .comparison-table-shell tr:last-child td { border-bottom: none; }
+    .comparison-table-shell tr:last-child td {
+      border-bottom: none;
+    }
 
     .badge-cross {
       display: inline-flex;
@@ -732,6 +736,7 @@
       .comparison-table-container {
         display: none !important;
       }
+
       .diff-mobile-cards-grid {
         display: flex !important;
       }
@@ -742,18 +747,22 @@
         padding: 22px 8px 14px;
         gap: 6px;
       }
+
       .diff-icon {
         width: 22px;
         height: 22px;
         min-width: 22px;
         font-size: 10px;
       }
+
       .diff-info h4 {
         font-size: 10.5px;
       }
+
       .diff-info p {
         font-size: 9.5px;
       }
+
       .diff-topic-pill {
         font-size: 10px;
         padding: 2px 10px;
@@ -764,19 +773,35 @@
      🌟 6. OVERVIEW SECTION
      ========================================================================== */
     .overview-mid-centered-section {
-      text-align: center;
+      text-align: center !important;
       width: 100%;
       padding: 10px 0;
     }
 
-    .overview-mid-centered-section p.centered-full-desc {
+    /* .overview-mid-centered-section p.centered-full-desc {
       font-size: 15px;
       color: #475569;
       line-height: 1.75;
-      max-width: 860px;
+      max-width: 1000px;
       margin: 0 auto;
-      text-align: center;
-    }
+      text-align: left !important;
+    } */
+
+
+.overview-mid-centered-section ul.centered-full-desc-list {
+  text-align: left !important;
+  padding-left: 20px;
+  list-style-type: disc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.overview-mid-centered-section ul.centered-full-desc-list li {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.75;
+  margin-bottom: 12px;
+  text-align: left !important;
+}
 
     /* ==========================================================================
      ❓ 7. FAQ ACCORDION
@@ -804,26 +829,51 @@
       cursor: pointer;
     }
 
-    .faq-item-card.active { border-color: #00c4ff; }
-    .faq-question-head { display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700; color: #0f172a; }
-    
-    .faq-plus-icon { 
-      width: 22px; 
-      height: 22px; 
-      border-radius: 50%; 
-      background: linear-gradient(135deg, #0044ff, #00c4ff); 
-      color: #ffffff; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      font-size: 12px; 
-      transition: transform 0.25s ease; 
-      flex-shrink: 0; 
+    .faq-item-card.active {
+      border-color: #00c4ff;
     }
 
-    .faq-item-card.active .faq-plus-icon { transform: rotate(45deg); }
-    .faq-answer-body { display: none; font-size: 13px; color: #64748b; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #f1f5f9; }
-    .faq-item-card.active .faq-answer-body { display: block; }
+    .faq-question-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .faq-plus-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item-card.active .faq-plus-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer-body {
+      display: none;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .faq-item-card.active .faq-answer-body {
+      display: block;
+    }
 
     /* ==========================================================================
      🔟 BOTTOM READY TO RANK DARK CTA BANNER
@@ -1030,28 +1080,44 @@
       0% {
         transform: translateY(0) rotate(0deg) scale(1);
       }
+
       25% {
         transform: translateY(-8px) rotate(-6deg) scale(1.04);
       }
+
       50% {
         transform: translateY(-14px) rotate(4deg) scale(1.08);
       }
+
       75% {
         transform: translateY(-6px) rotate(-3deg) scale(1.02);
       }
+
       100% {
         transform: translateY(0) rotate(0deg) scale(1);
       }
     }
 
     @keyframes fadeInModal {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes slideUpModal {
-      from { opacity: 0; transform: translateY(20px) scale(0.96); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     /* ==========================================================================
@@ -1065,7 +1131,7 @@
         gap: 24px !important;
         width: 100% !important;
       }
-      
+
       .main-content-column {
         width: 100% !important;
         max-width: 100% !important;
@@ -1097,28 +1163,77 @@
         display: none;
       }
 
-      .seo-action-split-section { grid-template-columns: 1fr; gap: 24px; }
-      .rollout-row-top-3 { grid-template-columns: 1fr; gap: 20px; }
-      .rollout-row-bottom-2 { grid-template-columns: 1fr; width: 100%; gap: 20px; }
-      .dark-metric-strip-bar { grid-template-columns: repeat(2, 1fr); }
+      .seo-action-split-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .rollout-row-top-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .rollout-row-bottom-2 {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .dark-metric-strip-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media(max-width: 600px) {
-      .page-layout-container { padding-left: 12px !important; padding-right: 12px !important; }
-      .dark-metric-strip-bar { grid-template-columns: 1fr; gap: 12px; padding: 20px 16px; }
-      .img-bg-hero-section { 
-        min-height: 440px !important; 
-        padding: 48px 16px 55px !important; 
-        border-radius: 16px; 
+      .page-layout-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
       }
-      .img-bg-hero-section h1 { font-size: 26px !important; line-height: 1.3 !important; }
-      .hero-btn-row { flex-direction: column; width: 100%; }
-      .btn-hero-white, .btn-hero-green { width: 100%; }
-      .bottom-cta-banner-card { padding: 28px 16px; }
-      .section-main-heading-center { font-size: 22px; }
-      .form-grid-two { grid-template-columns: 1fr; }
-      .seo-audit-modal-box { padding: 24px 18px; }
+
+      .dark-metric-strip-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 16px;
+      }
+
+      .img-bg-hero-section {
+        min-height: 440px !important;
+        padding: 48px 16px 55px !important;
+        border-radius: 16px;
+      }
+
+      .img-bg-hero-section h1 {
+        font-size: 26px !important;
+        line-height: 1.3 !important;
+      }
+
+      .hero-btn-row {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-hero-white,
+      .btn-hero-green {
+        width: 100%;
+      }
+
+      .bottom-cta-banner-card {
+        padding: 28px 16px;
+      }
+
+      .section-main-heading-center {
+        font-size: 22px;
+      }
+
+      .form-grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      .seo-audit-modal-box {
+        padding: 24px 18px;
+      }
     }
+
     @media (min-width:900px) {
       .laptop-padding-left-only {
         padding-left: 2.5rem;
@@ -1126,8 +1241,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-6px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -1149,7 +1271,8 @@
     <nav>
       <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
         <div class="logo-icon-box">
-          <img src="../img/landing-logo1.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon" id="logoIcon">
+          <img src="../img/landing-logo1.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon"
+            id="logoIcon">
         </div>
         <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
       </a>
@@ -1179,10 +1302,16 @@
         <section class="img-bg-hero-section">
           <div class="hero-tag-pill">✦ Top Rated SEO Agency in Jaipur</div>
           <h1>Jaipur Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Dominate search rankings across the Pink City and pan-India. We build data-backed organic strategies that drive high-intent buying customers directly to your business.</p>
-          
+          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
+              Jaipur,</b> Digital Whopper builds search strategies around your business, your audience and the way
+            people in Jaipur actually search.</p>
+          <p class="hero-sublead">Our <b>SEO services in Jaipur</b>combine technical SEO, content, local search,
+            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
+            long-term growth.</p>
+
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Jaipur SEO Audit →</button>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Jaipur SEO Audit
+              →</button>
             <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
           </div>
         </section>
@@ -1203,22 +1332,31 @@
       <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
       <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
         <h2 class="section-main-heading-center">What Does the Best SEO Company in Jaipur Actually Do?</h2>
-        
+
         <div class="seo-action-split-section">
           <div class="seo-action-left">
             <div class="callout-blue-quote-box">
-              "SEO is not just stuffing keywords into pages. It is engineering your entire online footprint so Google and AI search engines view your brand as Jaipur's trusted authority."
+              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
+              and trust across Google, Maps and the growing world of AI-powered search.
             </div>
-            <p>We analyze search demand across Jaipur, Malviya Nagar, Mansarovar, Vaishali Nagar, and national markets to position your brand for high-converting queries. From technical health fixes to Google Maps optimization, we cover every angle.</p>
+            <p>At Digital Whopper, our <b>best SEO services in Jaipur</b> are built around search intent, technical
+              performance and business goals. We study Jaipur's search landscape, your competitors and the customers you
+              want to reach before building your SEO strategy.</p>
+            <p>From Malviya Nagar and Mansarovar to Vaishali Nagar and markets beyond Jaipur, we focus on the searches
+              that can actually bring value to your business.</p>
             <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimization</li>
-              <li><span class="dot">✓</span> High-Intent Regional & Global Keyword Mapping</li>
-              <li><span class="dot">✓</span> High-Authority Backlink Acquisition & Citation Building</li>
+              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
+              <li><span class="dot">✓</span> High-Intent Jaipur & Regional Keyword Mapping</li>
+              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
+              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
+              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
             </ul>
+
           </div>
-          <div class="seo-action-right-img">
+          <!-- <div class="seo-action-right-img">
             <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Architectural Structure Representation">
-          </div>
+          </div> -->
+
         </div>
       </section>
 
@@ -1226,22 +1364,24 @@
       <section class="dark-metric-strip-bar">
         <div class="dark-stat-box">
           <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Of Google Searches Have Local Intent</p>
+          <p>Local Search Opportunities</p>
         </div>
         <div class="dark-stat-box">
           <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Mobile Searches Lead to Call/Visit in 24h</p>
+          <p>Search Visibility Growth</p>
         </div>
         <div class="dark-stat-box">
           <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Average Organic Revenue Growth</p>
+          <p>Organic Growth Potential</p>
         </div>
         <div class="dark-stat-box">
           <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Top Page 1 Rankings</p>
+          <p>Typical Time to Initial SEO Improvements</p>
         </div>
       </section>
-
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
+        demand.
+      </p>
       <!-- 4️⃣ OUR JAIPUR SEO ROLLOUT (PARAGRAPH FORMAT - CARDS/SHADOWS REMOVED) -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
         <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
@@ -1253,17 +1393,23 @@
             <div class="rollout-text-item">
               <span class="rollout-step-num-text">STEP 01</span>
               <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">Full technical health review, competitor benchmarks, indexation analysis, and complete crawl issue resolution.</p>
+              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
+                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
+                competitor performance.</p>
             </div>
             <div class="rollout-text-item">
               <span class="rollout-step-num-text">STEP 02</span>
               <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">Identifying high-converting buyer intent search terms and local Jaipur search trends mapped to strategic landing pages.</p>
+              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
+                high-intent local queries, Jaipur-specific searches and opportunities beyond the city. Every important
+                keyword is mapped to the right page.</p>
             </div>
             <div class="rollout-text-item">
               <span class="rollout-step-num-text">STEP 03</span>
               <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">Content structuring and schema engineering designed for both traditional Google search and AI overview engines.</p>
+              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
+                experiences. This includes content structure, internal linking, metadata, schema and information that
+                makes your business easier for search systems to understand.</p>
             </div>
           </div>
 
@@ -1272,30 +1418,42 @@
             <div class="rollout-text-item">
               <span class="rollout-step-num-text">STEP 04</span>
               <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">High-quality regional PR backlinks, local Jaipur geo-citations, and Google Maps profile authority optimization.</p>
+              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
+                citations and digital authority while strengthening your Google Business Profile and local presence
+                across Jaipur.</p>
             </div>
             <div class="rollout-text-item">
               <span class="rollout-step-num-text">STEP 05</span>
               <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">Conversion tracking, revenue KPI monitoring, continuous keyword expansion, and compounding organic ROI.</p>
+              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
+                conversions and keyword movement, then expand into new opportunities to build sustainable organic
+                growth.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;">
+      <section style="width: 100%;" class="laptop-padding-left-only">
         <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-        
+
         <div class="seo-action-split-section">
-          <div class="seo-action-right-img">
+          <!-- <div class="seo-action-right-img">
             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Search Strategy Execution">
-          </div>
+          </div> -->
+
           <div class="seo-action-left">
             <div class="callout-blue-quote-box">
-              "Modern search engines reward clarity and structure. We optimize your business to appear in Google Maps, Local Snippets, and AI Generative Answers."
+              Search has changed. Your SEO strategy should too.
             </div>
-            <p>Today's customer finds answers across multiple formats. We ensure your brand dominates everywhere — from traditional Google search results to local voice search queries and AI engine summaries.</p>
+            <p>People in Jaipur don't discover businesses only through traditional Google results anymore. They use
+              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
+              answers.</p>
+            <p>We optimise your digital presence so your business has the right information, structure and authority to
+              compete across these search experiences.</p>
+            <p>Whether someone searches for a service in Jaipur, compares local businesses or asks an AI tool for a
+              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
+            </p>
           </div>
         </div>
       </section>
@@ -1312,34 +1470,54 @@
               <tr>
                 <th>Deliverables & Focus Areas</th>
                 <th>Generic SEO Vendor</th>
-                <th>Digital Whopper (Agency Advantage)</th>
+                <th>Digital Whopper</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses generic, high-competition keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets hyper-local buyer keywords</span></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
+                    keywords</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Jaipur
+                    searches</span></td>
               </tr>
               <tr>
-                <td><strong>Local Google Maps Ranking</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic or no focus on Maps</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Specializes in top Google Maps Pack</span></td>
+                <td><strong>Local SEO</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Jaipur-focused local search
+                    strategy</span></td>
+              </tr>
+              <tr>
+                <td><strong>Google Maps</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
+                    visibility focus</span></td>
+              </tr>
+              <tr>
+                <td><strong>Content</strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
+                    keywords</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
+                    customers</span></td>
               </tr>
               <tr>
                 <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses low-quality or spammy backlinks</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Provides high-DA, authority backlinks</span></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
+                </td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
+                    building</span></td>
               </tr>
               <tr>
-                <td><strong>Reporting & Transparency</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Confusing or infrequent reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Real-time dashboards & clear KPIs</span></td>
+                <td><strong>Reporting </strong></td>
+                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
+                    performance insights</span></td>
               </tr>
               <tr>
-                <td><strong>Focus</strong></td>
+                <td><strong>Strategy</strong></td>
                 <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> 100% focused on local SEO success</span></td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
+                    Jaipur market</span></td>
               </tr>
             </tbody>
           </table>
@@ -1347,7 +1525,7 @@
 
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards Matching Image -->
         <div class="diff-mobile-cards-grid">
-          
+
           <!-- Card 1: Keyword Strategy -->
           <div class="diff-vs-card">
             <div class="diff-topic-pill">Keyword Strategy</div>
@@ -1355,7 +1533,7 @@
               <div class="diff-icon icon-red-cross">✕</div>
               <div class="diff-info">
                 <h4>Generic SEO Agency</h4>
-                <p>Uses generic, high-competition keywords</p>
+                <p>Chases broad keywords because they have high search volume.</p>
               </div>
             </div>
             <div class="diff-vs-divider">
@@ -1365,7 +1543,7 @@
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
                 <h4>Digital Whopper</h4>
-                <p>Targets hyper-local keywords</p>
+                <p>Targets high-intent searches that are relevant to your business and Jaipur customers.</p>
               </div>
             </div>
           </div>
@@ -1377,7 +1555,7 @@
               <div class="diff-icon icon-red-cross">✕</div>
               <div class="diff-info">
                 <h4>Generic SEO Agency</h4>
-                <p>Basic or no focus on Maps</p>
+                <p>Treats local SEO as an add-on.</p>
               </div>
             </div>
             <div class="diff-vs-divider">
@@ -1387,19 +1565,20 @@
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
                 <h4>Digital Whopper</h4>
-                <p>Specializes in top Google Maps Pack</p>
+                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
+                  relevance.</p>
               </div>
             </div>
           </div>
 
           <!-- Card 3: Backlinks & Authority -->
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Backlinks & Authority</div>
+            <div class="diff-topic-pill">Content & Search Intent</div>
             <div class="diff-side diff-bad">
               <div class="diff-icon icon-red-cross">✕</div>
               <div class="diff-info">
                 <h4>Generic SEO Agency</h4>
-                <p>Uses low-quality or spammy backlinks</p>
+                <p>Publishes content simply to target keywords.</p>
               </div>
             </div>
             <div class="diff-vs-divider">
@@ -1409,7 +1588,7 @@
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
                 <h4>Digital Whopper</h4>
-                <p>Provides high-DA, authority backlinks</p>
+                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
               </div>
             </div>
           </div>
@@ -1421,7 +1600,7 @@
               <div class="diff-icon icon-red-cross">✕</div>
               <div class="diff-info">
                 <h4>Generic SEO Agency</h4>
-                <p>Confusing or infrequent reports</p>
+                <p>Reports activities without connecting them to business outcomes.</p>
               </div>
             </div>
             <div class="diff-vs-divider">
@@ -1431,19 +1610,19 @@
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
                 <h4>Digital Whopper</h4>
-                <p>Real-time dashboards & clear KPIs</p>
+                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
               </div>
             </div>
           </div>
 
           <!-- Card 5: Focus -->
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Focus</div>
+            <div class="diff-topic-pill">Overall Focus</div>
             <div class="diff-side diff-bad">
               <div class="diff-icon icon-red-cross">✕</div>
               <div class="diff-info">
                 <h4>Generic SEO Agency</h4>
-                <p>One-size-fits-all approach</p>
+                <p>Same playbook for every business.</p>
               </div>
             </div>
             <div class="diff-vs-divider">
@@ -1453,7 +1632,7 @@
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
                 <h4>Digital Whopper</h4>
-                <p>100% focused on local SEO success</p>
+                <p>A Jaipur-focused SEO strategy shaped around your market, competitors and growth goals.</p>
               </div>
             </div>
           </div>
@@ -1462,14 +1641,65 @@
       </section>
 
       <!-- 7️⃣ OVERVIEW SECTION -->
-      <section class="overview-mid-centered-section">
+      <!-- <section class="overview-mid-centered-section laptop-padding-left-only">
         <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
         <h2 class="section-main-heading-center">Dominate Jaipur's Organic Search Ecosystem</h2>
         <p class="centered-full-desc">
-          We don’t just build backlinks; we architect comprehensive digital dominance tailored for the Pink City's competitive landscape. By aligning high-intent search queries with flawless technical performance, responsive speed, and Google Business Profile authority, our strategies turn everyday searches into repeatable, high-margin customer acquisitions.
+          Jaipur is a competitive market. Whether you run a local service business, hotel, restaurant, real estate
+          company, educational institute, ecommerce brand or professional service, your customers are already searching
+          online.
         </p>
-      </section>
+        <p class="centered-full-desc">
+          Our <b>SEO services in Jaipur</b> help you compete for those searches by bringing together technical SEO,
+          content, local search, authority building and conversion-focused optimisation.
+        </p>
+        <p class="centered-full-desc">
+          And SEO doesn't have to work alone.
+        </p>
+        <p class="centered-full-desc">
+          As a <b>digital marketing company in Jaipur</b>, Digital Whopper can connect organic search with the rest of
+          your digital growth strategy. Need a stronger website? Our <b>web development company in Jaipur</b>
+          capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance
+            marketing agency</b> can complement SEO with paid campaigns.
+        </p>
+        <p class="centered-full-desc">
+          For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition,
+          content and conversion optimisation, while our <b> ecommerce marketing services</b> help products reach more
+          relevant customers.
+        </p>
+        <p class="centered-full-desc">
+          And when your brand needs stronger visibility beyond search, our <b> social media marketing company in
+            Jaipur</b> capabilities help connect your business with the right audience across social platforms.
 
+        </p>
+      </section> -->
+
+
+      <section class="overview-mid-centered-section laptop-padding-left-only">
+  <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
+  <h2 class="section-main-heading-center">Dominate Jaipur's Organic Search Ecosystem</h2>
+
+  <ul class="centered-full-desc-list">
+    <li>
+      Jaipur is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
+    </li>
+    <li>
+      Our <b>SEO services in Jaipur</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
+    </li>
+    <li>
+      And SEO doesn't have to work alone.
+    </li>
+    <li>
+      As a <b>digital marketing company in Jaipur</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Jaipur</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
+    </li>
+    <li>
+      For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
+    </li>
+    <li>
+      And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Jaipur</b> capabilities help connect your business with the right audience across social platforms.
+    </li>
+  </ul>
+</section>
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
@@ -1477,16 +1707,53 @@
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How long does SEO take to show results in Jaipur?<span class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO ranking improvements typically become visible within 60 to 90 days, while highly competitive keywords reach top positions in 4 to 6 months.</div>
+            <div class="faq-question-head">How long does SEO take to show results in Jaipur?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
+              position. Some improvements can appear within the first few months, while competitive Jaipur keywords can
+              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Will my Google Business Profile rank in the Top 3?<span class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes, our local SEO playbook focuses heavily on optimizing Google Maps profiles, geo-citations, and local reviews to ensure Top 3 map-pack placement.</div>
+            <div class="faq-question-head">What are the best SEO services in Jaipur for a local business?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">For a Jaipur-focused business, local SEO, technical SEO, on-page optimisation,
+              search-focused content, Google Business Profile optimisation and authority building are usually important
+              parts of the strategy. The right mix depends on your business and target customers.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do I need to sign a long-term contract?<span class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">No, we believe in delivering results that keep you with us. We offer flexible monthly performance retainers with full transparency.</div>
+            <div class="faq-question-head">How do I choose the best SEO company in Jaipur?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
+              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
+              meaningful business goals.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO help my business rank outside Jaipur?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. A Jaipur-focused SEO strategy does not have to limit your business to
+              Jaipur. Once the local foundation is strong, the strategy can expand towards Rajasthan, India-wide or
+              other target markets based on your business goals.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
+              business information, relevance, website content, citations, reviews and overall local authority. However,
+              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
+              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
+              convert more relevant customers.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
+            </div>
+            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
+              long-term organic visibility, while a performance marketing agency can help capture demand faster through
+              paid acquisition.</div>
           </div>
         </div>
       </section>
@@ -1496,7 +1763,8 @@
         <h3>Ready to Rank #1 in Jaipur?</h3>
         <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Jaipur SEO Audit →</button>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Jaipur SEO Audit
+            →</button>
           <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
         </div>
       </section>
@@ -1512,7 +1780,8 @@
                 <div class="logo-mark">DW</div>Digital Whopper
               </a>
               <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
-              <p><a href="tel:+916200379161">+91 6200379161</a><br><a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
+              <p><a href="tel:+916200379161">+91 6200379161</a><br><a
+                  href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
               <div class="socials">
                 <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
                 <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
@@ -1568,7 +1837,7 @@
 
         <ul class="sidebar-location-list">
           <li><a href="#" class="active">SEO in Jaipur</a></li>
-          <li><a href="../seo-ajmer/" >SEO in Ajmer</a></li>
+          <li><a href="../seo-ajmer/">SEO in Ajmer</a></li>
           <li><a href="../seo-udaipur/">SEO in Udaipur</a></li>
           <li><a href="../seo-jodhpur/">SEO in Jodhpur</a></li>
           <li><a href="../seo-kota/">SEO in Kota</a></li>
@@ -1618,7 +1887,8 @@
 
       <div class="chat-body-messages" id="chatMessages">
         <div class="msg-bubble bot-msg">
-          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your brand's SEO rankings today? 🚀
+          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your brand's SEO rankings today?
+          🚀
         </div>
         <div class="chat-suggestions" id="chatSuggestions">
           <button class="suggest-chip" onclick="triggerBotResponse('Services')">SEO Services</button>
@@ -1636,13 +1906,16 @@
 
   <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
   <div class="side-social-shield-left">
-    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener" class="social-side-node fb-color" aria-label="Facebook">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
       </svg>
     </a>
-    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener" class="social-side-node insta-color" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
         <defs>
           <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#f09433" />
@@ -1657,18 +1930,22 @@
         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
       </svg>
     </a>
-    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener" class="social-side-node linkedin-color" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
       </svg>
     </a>
   </div>
 
   <!-- 💬 STICKY RIGHT WHATSAPP TRIGGER ("let's talk") -->
-  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right"
+    aria-label="Chat on WhatsApp">
     <div class="wa-icon-holder-w">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
       </svg>
     </div>
     <span class="wa-vertical-text-w">let’s talk</span>
@@ -1677,8 +1954,11 @@
   <!-- 📞 FLOATING LEFT ROUND GREEN CALL BUTTON -->
   <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
     <div class="call-icon-holder-l">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
       </svg>
     </div>
   </a>
@@ -1687,7 +1967,8 @@
   <div class="mobile-app-bottom-nav">
     <a href="/index.html" class="app-nav-item">
       <div class="app-nav-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
@@ -1697,7 +1978,8 @@
 
     <a href="/services/" class="app-nav-item active">
       <div class="app-nav-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
           <line x1="8" y1="21" x2="16" y2="21"></line>
           <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -1708,7 +1990,8 @@
 
     <a href="/projects/" class="app-nav-item">
       <div class="app-nav-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
         </svg>
       </div>
@@ -1718,7 +2001,8 @@
     <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
       <div class="app-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z" />
+          <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z" />
         </svg>
       </div>
       <span>WhatsApp</span>
@@ -1726,8 +2010,11 @@
 
     <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
       <div class="app-nav-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
         </svg>
       </div>
       <span>Call Us</span>
@@ -1738,18 +2025,19 @@
   <div class="modal-backdrop-layer" id="seoAuditModal" onclick="handleModalBackdropClick(event)">
     <div class="seo-audit-modal-box">
       <button type="button" class="modal-close-btn" onclick="closeSeoAuditModal()">&times;</button>
-      
+
       <div class="modal-header-area">
         <span class="modal-badge">✦ Free Audit Report</span>
         <h3>Request Your Jaipur SEO Audit</h3>
-        <p>Fill in the details below & our SEO strategist will prepare a 100% complimentary audit report for your website.</p>
+        <p>Tell us a little about your business, website and goals. Our SEO strategist will review your current search
+          presence and identify opportunities to improve your visibility.</p>
       </div>
 
       <form class="audit-enquiry-form" onsubmit="handleAuditFormSubmit(event)">
         <div class="form-grid-two">
           <div class="form-field-group">
             <label for="auditFullName">Full Name *</label>
-            <input type="text" id="auditFullName" placeholder="e.g. Rahul Tak" required>
+            <input type="text" id="auditFullName" placeholder="e.g. Digital whopper" required>
           </div>
           <div class="form-field-group">
             <label for="auditPhone">Phone Number *</label>
@@ -1791,7 +2079,8 @@
 
         <div class="form-field-group">
           <label for="auditCompetitors">Top Competitors or Notes (Optional)</label>
-          <textarea id="auditCompetitors" placeholder="Mention 1-2 competitor websites or specific keywords you want to rank for..."></textarea>
+          <textarea id="auditCompetitors"
+            placeholder="Mention 1-2 competitor websites or specific keywords you want to rank for..."></textarea>
         </div>
 
         <button type="submit" class="audit-submit-btn">🚀 Claim Free SEO Audit</button>
@@ -1891,7 +2180,7 @@
     });
   </script>
 
-   <script src="../services-data.js"></script>
+  <script src="../services-data.js"></script>
   <script src="../scriptb.js"></script>
   <script src="../section.js"></script>
 </body>

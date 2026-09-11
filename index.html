@@ -60,6 +60,23 @@
   ] 
 }
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1601202514971601');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1601202514971601&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -2145,16 +2162,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Blog Section (3 Cards in 1 Row) -->
 <div id="blog" style="margin-bottom: 50px;">
   <div class="eyebrow" style="margin-bottom: 12px;">Blog</div>
-  <h2 class="h2 text-shine" style="margin-top: 0; font-size: clamp(24px, 3.2vw, 36px);">Our Latest Blogs</h2>
-  
+
+    <h2 class="h2 text-shine" style="margin-top: 0; font-size: clamp(24px, 3.2vw, 36px);">Our Latest Blogs</h2>
+    
+
   <!-- Target Grid for 3 Dynamic Blogs -->
   <div class="blog-grid-3col" id="dwHomeBlogGrid"></div>
 
   <!-- More Blogs Button -->
-  <div style="text-align: center; margin-top: 25px;">
+  <div style="text-align: center; margin-top: 35px;">
     <a href="/blogs/" class="btn btn-gold" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; text-decoration: none;">
       More Blogs ✦
     </a>
+
+  <div class="dw-submit-btn-wrapper" style="margin-left: 20px;">
+    <!-- Hand-Drawn Pointing Curved Arrow SVG (Exact Match to Screenshot) -->
+    <svg class="dw-doodle-arrow" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Curved Loop Tail -->
+      <path d="M53 30 C56 26 53 20 48 20 C42 20 45 28 50 27 C53 26 54 18 50 11 C44 3 28 3 14 20" 
+            stroke="#0052ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Pointing Arrowhead directly pointing towards the button -->
+      <path d="M12 11 L14 20 L23 18" 
+            stroke="#0052ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeP6aXkFBnQPrPqdrLQCZoUFXV0_Ckd29vVO7iDQ5GMU1Eucg/viewform" target="_blank" rel="noopener noreferrer" class="dw-dashed-publish-btn">
+      <!-- Pen/Pencil Edit Icon (Exact Match to Screenshot) -->
+      <span class="dw-edit-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0052ff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Angled Pen Nib & Body -->
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L7.5 19.5 3 21l1.5-4.5L18.5 2.5z"></path>
+          <!-- Underline Marker -->
+          <path d="M14 21h7"></path>
+        </svg>
+      </span>
+
+      <!-- Text -->
+      <span class="dw-btn-text">Submit Your Blog / News</span>
+
+      <!-- Round Blue Circle with Arrow -->
+      <span class="dw-circle-arrow">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </span>
+    </a>
+  </div>
   </div>
 </div>
         <!-- FAQ Accordion Section -->
@@ -2185,147 +2239,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- 🔵 20% STICKY DIGITAL WHOPPER NEWS & BLOGS SIDEBAR (CUSTOMIZED) -->
       <aside class="dw-sidebar-20-column">
-        
-        <!-- Top Card: Digital Whopper News (With Thumbnail Avatars) -->
-        <div class="li-news-widget-card dw-brand-widget mobile-hide">
-          <div class="li-widget-header">
-            <div class="dw-brand-badge-title">
-              <span class="dw-mini-pill-logo">DW</span>
-              <h3 class="li-widget-title">Digital Whopper News</h3>
-            </div>
-            <span class="li-info-badge" title="Verified Growth Updates">✦</span>
-          </div>
-
-          <span class="li-subtitle-label">Top stories &amp; Updates</span>
-
-          <ul class="li-stories-list">
-            <li class="li-story-item">
-              <a href="/blogs/" class="li-story-link-media">
-                <div class="dw-story-thumb-img">
-                  <img src="img/client/dresszilla.webp" alt="E-Commerce Fashion Scaling">
-                </div>
-                <div class="dw-story-text-group">
-                  <h4 class="li-story-headline">Scaling Fashion Store ROAS to 6.8x</h4>
-                  <div class="li-story-meta">3h ago • 4,280 readers</div>
-                </div>
-              </a>
-            </li>
-
-            <li class="li-story-item">
-              <a href="/blogs/" class="li-story-link-media">
-                <div class="dw-story-thumb-img">
-                  <img src="img/client/gudmishri.webp" alt="AI Marketing Strategy">
-                </div>
-                <div class="dw-story-text-group">
-                  <h4 class="li-story-headline">AI Ads vs Manual Meta Funnels</h4>
-                  <div class="li-story-meta">5h ago • 6,192 readers</div>
-                </div>
-              </a>
-            </li>
-
-            <li class="li-story-item">
-              <a href="/blogs/" class="li-story-link-media">
-                <div class="dw-story-thumb-img">
-                  <img src="img/client/homearte.webp" alt="Local Brand Expansion">
-                </div>
-                <div class="dw-story-text-group">
-                  <h4 class="li-story-headline">How Jaipur D2C Brands Win Globally</h4>
-                  <div class="li-story-meta">8h ago • 3,840 readers</div>
-                </div>
-              </a>
-            </li>
-
-            <li class="li-story-item">
-              <a href="/blogs/" class="li-story-link-media">
-                <div class="dw-story-thumb-img">
-                  <img src="img/client/reducetax.webp" alt="High-ticket B2B Generation">
-                </div>
-                <div class="dw-story-text-group">
-                  <h4 class="li-story-headline">B2B Lead Generation Blueprint 2026</h4>
-                  <div class="li-story-meta">1d ago • 1,940 readers</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <a href="/blogs/" class="li-show-more-trigger">
-            <span>Show more news</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </a>
-        </div>
-
-        <!-- Bottom Card: Digital Whopper Other Insights (4 Curated Blogs + Read More Button) -->
-        <!-- <div class="li-news-widget-card dw-brand-widget mobile-hide" style="margin-top: 16px;">
-          <div class="li-widget-header" style="margin-bottom: 12px;">
-            <h3 class="li-widget-title" style="font-size: 15px;">Trending Blog Insights</h3>
-          </div>
-
-          <div class="li-sidebar-blogs-stack">
-            <a href="/blogs/" class="li-side-blog-card">
-              <div class="side-blog-mini-thumb">
-                <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=150&q=80" alt="Conversion CRO Tips">
-              </div>
-              <div class="side-blog-details">
-                <h4 class="side-blog-title">10 Conversion Fixes to Double Shopify Sales</h4>
-                <span class="side-blog-tag">CRO Strategy</span>
-              </div>
-              <span class="side-blog-arrow">›</span>
-            </a>
-
-            <a href="/blogs/" class="li-side-blog-card">
-              <div class="side-blog-mini-thumb">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" alt="Google Search Ads">
-              </div>
-              <div class="side-blog-details">
-                <h4 class="side-blog-title">Google Performance Max vs Search Ads Guide</h4>
-                <span class="side-blog-tag">Google Ads</span>
-              </div>
-              <span class="side-blog-arrow">›</span>
-            </a>
-
-            <a href="/blogs/" class="li-side-blog-card">
-              <div class="side-blog-mini-thumb">
-                <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=150&q=80" alt="Shark Tank Blueprint">
-              </div>
-              <div class="side-blog-details">
-                <h4 class="side-blog-title">How Ekatra Pitched on Shark Tank India</h4>
-                <span class="side-blog-tag">Case Study</span>
-              </div>
-              <span class="side-blog-arrow">›</span>
-            </a>
-
-            <a href="/blogs/" class="li-side-blog-card">
-              <div class="side-blog-mini-thumb">
-                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=150&q=80" alt="Organic SEO Dominance">
-              </div>
-              <div class="side-blog-details">
-                <h4 class="side-blog-title">Top On-Page SEO Checklist for 2026</h4>
-                <span class="side-blog-tag">SEO Dominance</span>
-              </div>
-              <span class="side-blog-arrow">›</span>
-            </a>
-          </div>
-
-          <a href="/blogs/" class="btn-read-more-sidebar">
-            Read More Blogs ✦
-          </a>
-        </div> -->
-
-        <!-- Bottom Card: Trending Blog Insights -->
-<div class="li-news-widget-card dw-brand-widget mobile-hide" style="margin-top: 16px;">
-  <div class="li-widget-header" style="margin-bottom: 12px;">
-    <h3 class="li-widget-title" style="font-size: 15px;">Trending Blog Insights</h3>
+  
+  <!-- Top Card: Digital Whopper News (3 Items & All Closed by Default) -->
+ <!-- Top Card: Digital Whopper News (Dynamic 3 Items from JSON) -->
+<div class="li-news-widget-card dw-brand-widget mobile-hide">
+  <div class="li-widget-header">
+    <div class="dw-brand-badge-title">
+      <span class="dw-mini-pill-logo">DW</span>
+      <h3 class="li-widget-title">Digital Whopper News</h3>
+    </div>
+    <span class="li-info-badge" title="Verified Growth Updates">✦</span>
   </div>
 
-  <!-- Dynamic 4 Blogs Container -->
-  <div class="li-sidebar-blogs-stack" id="dwSidebarBlogStack"></div>
+  <span class="li-subtitle-label">Top stories &amp; Updates (Click to read)</span>
 
-  <!-- Read More Blogs Action Button -->
-  <a href="/blogs/" class="btn-read-more-sidebar">
-    Read More Blogs ✦
+  <!-- Dynamic News Container -->
+  <div class="news-accordion-list" id="dwSidebarNewsList"></div>
+
+  <a href="/blogs/" class="li-show-more-trigger">
+    <span>Show all updates</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
   </a>
 </div>
-      </aside>
+
+  <!-- Bottom Card: Trending Blog Insights -->
+  <div class="li-news-widget-card dw-brand-widget mobile-hide" style="margin-top: 16px;">
+    <div class="li-widget-header" style="margin-bottom: 12px;">
+      <h3 class="li-widget-title" style="font-size: 15px;">Trending Blog Insights</h3>
+    </div>
+
+    <!-- Dynamic 4 Blogs Container -->
+    <div class="li-sidebar-blogs-stack" id="dwSidebarBlogStack"></div>
+
+    <!-- Read More Blogs Action Button -->
+    <a href="/blogs/" class="btn-read-more-sidebar">
+      Read More Blogs ✦
+    </a>
+  </div>
+</aside>
 
     </div>
   </div>
@@ -2717,6 +2668,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   });
 </script>
+
+<!-- news blog me se show karne ke liye  -->
+ <script>
+  // 🕒 ऑटोमैटिक टाइम कैलकुलेटर फ़ंक्शन (Auto-calculate time ago)
+function getFormattedTimeAgo(dateString) {
+  if (!dateString) return "Just now";
+  const now = new Date();
+  const past = new Date(dateString);
+  const diffInSeconds = Math.floor((now - past) / 1000);
+
+  if (isNaN(diffInSeconds) || diffInSeconds < 0) return "Recently";
+
+  const intervals = {
+    year: 31536000,
+    month: 2592000,
+    week: 604800,
+    day: 86400,
+    hour: 3600,
+    minute: 60
+  };
+
+  for (const [unit, secondsInUnit] of Object.entries(intervals)) {
+    const interval = Math.floor(diffInSeconds / secondsInUnit);
+    if (interval >= 1) {
+      return `${interval}${unit.charAt(0)} ago`; // Jaise: 2d ago, 5h ago, 1w ago
+    }
+  }
+  return "Just now";
+}
+
+// 🌟 न्यूज़ लोड और FAQ ड्रॉपडाउन इंजन
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA)) return;
+
+  const newsListContainer = document.getElementById('dwSidebarNewsList');
+  if (newsListContainer) {
+    // 1. लेटेस्ट आईडी वाले केवल 3 ब्लॉग्स न्यूज़ के लिए लें
+    const top3News = [...DW_BLOGS_DATA]
+      .sort((a, b) => Number(b.id) - Number(a.id))
+      .slice(0, 3);
+
+    // 2. HTML रेंडर करें (सभी कार्ड डिफ़ॉल्ट रूप से बंद रहेंगे)
+    newsListContainer.innerHTML = top3News.map(blog => {
+      const timeAgo = getFormattedTimeAgo(blog.publishDate);
+      const headline = blog.newsHeadline || blog.title;
+      const summary = blog.newsSummary || blog.excerpt || blog.content?.intro || '';
+
+      return `
+        <div class="news-acc-item">
+          <div class="news-acc-header">
+            <div class="dw-story-thumb-img">
+              <img src="${blog.thumbnail || blog.bannerImage}" alt="${headline}">
+            </div>
+            <div class="dw-story-text-group">
+              <h4 class="li-story-headline">${headline}</h4>
+              <div class="li-story-meta">${timeAgo} • Verified Update</div>
+            </div>
+            <span class="news-acc-arrow">▾</span>
+          </div>
+          <div class="news-acc-body">
+            <p>${summary}</p>
+            <a href="/blogs-details/?slug=${blog.slug}" class="news-read-link">Read Full Story →</a>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // 3. एकॉर्डियन क्लिक हैंडलर (FAQ स्टाइल टॉगल)
+    const newsHeaders = newsListContainer.querySelectorAll('.news-acc-header');
+    newsHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const currentItem = header.closest('.news-acc-item');
+        const isOpen = currentItem.classList.contains('open');
+
+        // दूसरे खुले हुए आइटम्स को बंद करें
+        newsListContainer.querySelectorAll('.news-acc-item').forEach(item => {
+          item.classList.remove('open');
+        });
+
+        // क्लिक किए गए कार्ड को टॉगल करें
+        if (!isOpen) {
+          currentItem.classList.add('open');
+        }
+      });
+    });
+  }
+});
+ </script>
 </body>
 
 </html>

@@ -2632,25 +2632,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const mainGrid = document.getElementById('dwHomeBlogGrid');
     if (mainGrid && sortedBlogs.length > 0) {
       
-      // 🌟 Step A: Parent container ko wrap karo taaki arrows aur carousel properly position ho sakein
+      // Parent container setup for arrows alignment
       const wrapper = document.createElement('div');
       wrapper.className = 'dw-carousel-wrapper';
       wrapper.style.position = 'relative';
       wrapper.style.overflow = 'hidden';
       wrapper.style.width = '100%';
+      wrapper.style.padding = '0 40px'; // Arrows ke liye jagah banane ke liye padding
 
-      // Move mainGrid inside wrapper
       mainGrid.parentNode.insertBefore(wrapper, mainGrid);
       wrapper.appendChild(mainGrid);
 
-      // Main grid styling for smooth sliding track
       mainGrid.style.display = 'flex';
-      mainGrid.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)'; // Smooth easing
+      mainGrid.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
       mainGrid.style.width = '100%';
 
-      // 🌟 Step B: Render ALL blogs into the track once
+      // Render all blogs with reduced gap
       mainGrid.innerHTML = sortedBlogs.map(blog => `
-        <div class="blog-card" style="flex: 0 0 calc(33.333% - 16px); box-sizing: border-box; margin-right: 24px;">
+        <div class="blog-card" style="flex: 0 0 calc(33.333% - 12px); box-sizing: border-box; margin-right: 18px;">
           <a href="/blogs-details/?slug=${blog.slug}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
             <div class="blog-thumb">
               <img src="${blog.thumbnail || blog.bannerImage}" alt="${blog.title}">
@@ -2664,7 +2663,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       `).join('');
 
-      // 🌟 Step C: Left & Right Navigation Arrows add karna
+      // Left & Right Navigation Arrows (Placed on extreme left and right cards)
       const prevBtn = document.createElement('button');
       prevBtn.innerHTML = '&#10094;';
       prevBtn.className = 'dw-carousel-btn dw-prev-btn';
@@ -2678,21 +2677,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       let currentIndex = 0;
       const totalBlogs = sortedBlogs.length;
-      const maxIndex = Math.max(0, totalBlogs - 3); // Max index jahan tak 3 cards dikh sakein
+      const maxIndex = Math.max(0, totalBlogs - 3);
 
-      // Function to move carousel
       const updateCarousel = () => {
-        // Percentage shift calculate karna (har card ki width + gap ke hisab se)
         const movePercentage = currentIndex * (100 / 3);
         mainGrid.style.transform = `translateX(-${movePercentage}%)`;
       };
 
-      // Next / Prev handlers
+      // Loop logic: Jab end par pahuchega toh right se wapas loop start hoga
       const handleNext = () => {
         if (currentIndex < maxIndex) {
           currentIndex++;
         } else {
-          currentIndex = 0; // Loop back to start
+          currentIndex = 0; // Reset to start, sliding back from right direction loop
         }
         updateCarousel();
       };
@@ -2701,7 +2698,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (currentIndex > 0) {
           currentIndex--;
         } else {
-          currentIndex = maxIndex; // Loop to end
+          currentIndex = maxIndex;
         }
         updateCarousel();
       };
@@ -2709,17 +2706,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       nextBtn.addEventListener('click', handleNext);
       prevBtn.addEventListener('click', handlePrev);
 
-      // 🌟 Step D: Auto-slide loop (Har 3 second mein)
+      // Auto-slide loop
       let autoSlide = setInterval(handleNext, 3000);
 
-      // Jab user hover kare toh auto-slide ruk jaye (taaki manual click mein problem na aaye)
       wrapper.addEventListener('mouseenter', () => clearInterval(autoSlide));
       wrapper.addEventListener('mouseleave', () => {
         autoSlide = setInterval(handleNext, 3000);
       });
     }
 
-    // Right Sidebar Grid (As it is)
+    // Right Sidebar Grid
     const sidebarStack = document.getElementById('dwSidebarBlogStack');
     if (sidebarStack && sortedBlogs.length > 3) {
       const side4 = sortedBlogs.slice(3, 7);

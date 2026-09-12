@@ -817,19 +817,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const globalFooterContainer = document.getElementById('footer');
 
   // Sabhi services dropdown ke liye list
-  const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
-    ? DW_SERVICES_DATA.map(s => `
-        <a href="/services-details/?service=${s.slug}">
-          <span>${s.icon}</span> ${s.menuTitle || s.title}
-        </a>
-      `).join('')
+const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
+    ? DW_SERVICES_DATA.map(s => {
+        // Agar folder structure use kar rahe hain, toh /slug/index.html ya direct folder path denge
+        let pageUrl = `/service/${s.slug}/`; 
+        return `
+          <a href="${pageUrl}">
+            <span>${s.icon}</span> ${s.menuTitle || s.title}
+          </a>
+        `;
+      }).join('')
     : '';
 
-  // Sabhi services footer ke liye list (slice(0, 5) hata diya gaya hai)
   const allFooterServicesHTML = (typeof DW_SERVICES_DATA !== 'undefined')
-    ? DW_SERVICES_DATA.map(s => `
-        <a href="/services-details/?service=${s.slug}">${s.title}</a>
-      `).join('')
+    ? DW_SERVICES_DATA.map(s => {
+        let pageUrl = `/services/${s.slug}.html`;
+        if (s.slug === "web-development") {
+          pageUrl = `/services/web-development-in-jaipur.html`;
+        }
+        return `<a href="${pageUrl}">${s.title}</a>`;
+      }).join('')
     : '';
 
   if (globalHeaderContainer) {
@@ -855,7 +862,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <a href="/portfolio/">PortFolio</a>
-          <a href="/seo/">SEO Service</a>
+          <a href="/seo-company-in-jaipur/">SEO Service</a>
           <a href="#">SMO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
         </div>
@@ -1459,4 +1466,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+});
+
+// news dropdown
+// 📰 Sidebar News Accordion Trigger Engine
+document.addEventListener('DOMContentLoaded', () => {
+  const newsHeaders = document.querySelectorAll('.news-acc-header');
+  
+  newsHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const currentItem = header.closest('.news-acc-item');
+      const isOpen = currentItem.classList.contains('open');
+
+      // Dusre sabhi open news dropdowns ko close karein
+      document.querySelectorAll('.news-acc-item').forEach(item => {
+        item.classList.remove('open');
+      });
+
+      // Agar pehle se open nahi tha, toh open karein
+      if (!isOpen) {
+        currentItem.classList.add('open');
+      }
+    });
+  });
 });

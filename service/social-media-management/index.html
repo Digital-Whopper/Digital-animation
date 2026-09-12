@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Management Services | Digital Whopper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styleb.css">
+  <link rel="stylesheet" href="../../section.css">
+  <style>
+    .logo-img-asset {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      display: inline-block;
+      margin-right: 2px;
+    }
+
+    /* Back Button Styling */
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #0052ff;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 20px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      border-radius: 99px;
+      border: 1px solid rgba(0, 82, 255, 0.15);
+      transition: all 0.2s ease;
+      width: fit-content;
+    }
+
+    .back-nav-btn:hover {
+      background: #0052ff;
+      color: #ffffff;
+      transform: translateX(-4px);
+    }
+
+    /* Hero Section */
+    .detail-hero-section {
+      padding: 130px 0 60px !important;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background: #f8fafd;
+      overflow: hidden;
+    }
+
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 50px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e0f2fe;
+      color: #0052ff;
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 99px;
+      border: 1px solid rgba(0, 82, 255, 0.15);
+      margin-bottom: 20px;
+    }
+
+    .hero-title-main {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(34px, 4.5vw, 54px);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title-main span {
+      color: #0052ff;
+    }
+
+    .hero-subtitle-desc {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .hero-full-body-text {
+      font-size: 15px;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .hero-full-body-text strong, 
+    .hero-full-body-text b {
+      color: #0052ff !important;
+      font-weight: 700;
+    }
+
+    .hero-mini-badges-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      width: 100%;
+    }
+
+    .mini-badge-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 14px rgba(0, 82, 255, 0.03);
+    }
+
+    .mini-badge-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(0, 82, 255, 0.08);
+      color: #0052ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .mini-badge-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.25;
+    }
+
+    .dashboard-mockup-wrapper {
+      position: relative;
+      width: 100%;
+      padding-right: 35px;
+    }
+
+    .mockup-main-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 25px 60px rgba(0, 82, 255, 0.12);
+      padding: 24px;
+      position: relative;
+    }
+
+    .mockup-top-bar {
+      background: #93c5fd;
+      margin: -24px -24px 20px -24px;
+      padding: 12px 20px;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .mockup-top-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .mockup-top-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    .analytics-graph-box {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #dbeafe;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .graph-header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .graph-title-sm {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .graph-val-lg {
+      font-family: 'Sora', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .graph-growth-pill {
+      font-size: 11px;
+      background: #d1fae5;
+      color: #059669;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .floating-keyword-card {
+      position: absolute;
+      top: 15px;
+      right: -50px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 30px rgba(0, 82, 255, 0.15);
+      width: 155px;
+      z-index: 10;
+    }
+
+    .fk-title { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 10px; }
+    .fk-row { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; color: #64748b; margin-bottom: 6px; }
+    .fk-row span.num { color: #0f172a; font-weight: 700; }
+    .fk-row span.arrow { color: #10b981; font-weight: 700; }
+
+    .svg-line-chart {
+      width: 100%;
+      height: 110px;
+      margin-top: 12px;
+    }
+
+    .mockup-bottom-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .bento-mini-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bmc-label { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 8px; }
+    .bmc-val-row { display: flex; align-items: baseline; gap: 6px; }
+    .bmc-val { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 800; color: #0f172a; }
+    .bmc-tag { font-size: 10px; font-weight: 700; color: #10b981; }
+
+    .donut-chart-ui {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: conic-gradient(#0052ff 0% 92%, #e2e8f0 92% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 6px auto;
+      position: relative;
+    }
+
+    .donut-chart-ui::after {
+      content: "92%";
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    /* Trusted Brands Section */
+    .trusted-brands-section {
+      padding: 70px 0;
+      background: #ffffff;
+      text-align: center;
+      overflow: hidden;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .brands-pill-tag {
+      font-family: 'Sora', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0052ff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brands-main-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 36px;
+    }
+
+    .brands-main-title span { color: #0052ff; }
+
+    .two-line-carousel-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .logo-carousel-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .track-line-1 { animation: logoScrollLeft 26s linear infinite; }
+    .track-line-2 { animation: logoScrollRight 26s linear infinite; }
+
+    .logo-card-pad {
+      width: 140px;
+      height: 70px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .logo-card-pad img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    @keyframes logoScrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes logoScrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .brand-meta-pills-row {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .brand-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .brand-meta-item span.icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: #0052ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    /* Why Need & Solutions Grid */
+    .why-need-section { padding: 80px 0; background: #f8fafd; text-align: center; }
+    .why-pill-tag { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: #0052ff; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .why-title-main { font-family: 'Sora', sans-serif; font-size: clamp(28px, 3.8vw, 40px); font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+    .why-title-main span { color: #0052ff; }
+    .why-subtitle-lead { font-size: 14.5px; color: #64748b; max-width: 600px; margin: 0 auto 48px; line-height: 1.5; }
+    .why-cards-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .why-feature-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 36px 28px; text-align: center; box-shadow: 0 10px 30px rgba(0, 82, 255, 0.03); transition: all 0.3s ease; }
+    .why-feature-card:hover { transform: translateY(-8px); border-color: #0052ff; box-shadow: 0 20px 40px rgba(0, 82, 255, 0.1); }
+    .why-icon-aura { width: 64px; height: 64px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin: 0 auto 20px; }
+    .why-card-h3 { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+    .why-card-p { font-size: 13.5px; color: #64748b; line-height: 1.6; }
+
+    .solutions-section { padding: 80px 0; background: #ffffff; text-align: center; }
+    .solutions-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 48px; }
+    .solution-card-bento { border-radius: 20px; padding: 32px 28px; text-align: left; border: 1px solid #e2e8f0; display: flex; flex-direction: column; }
+    .solution-card-bento.c-blue { background: #f0f7ff; border-color: #dbeafe; }
+    .solution-card-bento.c-green { background: #f0fdf4; border-color: #d1fae5; }
+    .solution-card-bento.c-purple { background: #faf5ff; border-color: #e9d5ff; }
+    .sol-icon-box { width: 48px; height: 48px; border-radius: 12px; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); }
+    .c-blue .sol-icon-box { color: #0052ff; }
+    .c-green .sol-icon-box { color: #059669; }
+    .c-purple .sol-icon-box { color: #7c3aed; }
+    .sol-card-h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
+    .sol-card-p { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 24px; }
+    .sol-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .sol-checklist li { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #1e293b; }
+    .sol-checklist li span.check { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #ffffff; }
+    .c-blue .sol-checklist li span.check { background: #0052ff; }
+    .c-green .sol-checklist li span.check { background: #059669; }
+    .c-purple .sol-checklist li span.check { background: #7c3aed; }
+
+    .cta-center-block { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .btn-deploy-cta { display: inline-flex; align-items: center; gap: 12px; background: #0052ff; color: #ffffff !important; font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; padding: 16px 42px; border-radius: 99px; text-decoration: none; box-shadow: 0 12px 30px rgba(0, 82, 255, 0.3); transition: all 0.3s ease; }
+    .btn-deploy-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 40px rgba(0, 82, 255, 0.4); background: #0044ff; }
+    .cta-subtext { font-size: 13px; color: #64748b; font-weight: 500; }
+
+    /* FAQ */
+    .faq-section-new { padding: 80px 0; background: #f8fafd; text-align: center; }
+    .faq-accordion-list { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 14px; }
+    .faq-item-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 24px; text-align: left; cursor: pointer; transition: all 0.3s ease; }
+    .faq-item-card.active { border-color: #0052ff; box-shadow: 0 8px 24px rgba(0, 82, 255, 0.08); }
+    .faq-question-head { display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: #0f172a; }
+    .faq-plus-icon { width: 24px; height: 24px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.3s ease; }
+    .faq-item-card.active .faq-plus-icon { transform: rotate(45deg); }
+    .faq-answer-body { display: none; font-size: 13.5px; color: #64748b; line-height: 1.6; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
+    .faq-item-card.active .faq-answer-body { display: block; }
+
+    @media(max-width: 1100px) {
+      .hero-split-grid, .why-cards-triple-grid, .solutions-triple-grid { grid-template-columns: 1fr; gap: 32px; }
+      .dashboard-mockup-wrapper { padding-right: 0; }
+      .floating-keyword-card { right: 15px; }
+    }
+
+    @media(max-width: 600px) {
+      .hero-mini-badges-row { grid-template-columns: repeat(2, 1fr); }
+      .mockup-bottom-bento-grid { grid-template-columns: 1fr; }
+      .detail-hero-section { padding: 100px 0 40px !important; }
+      .floating-keyword-card { position: relative; top: 0; right: 0; width: 100%; margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="customPreloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <h2 class="preloader-brand">Digital Whopper</h2>
+      <div class="preloader-spinner">
+        <span class="spinner-dot"></span>
+        <span class="spinner-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <header id="mainHeader"></header>
+
+  <section class="detail-hero-section">
+    <div class="pink-blob"></div>
+    <div class="purple-ambient-glow"></div>
+
+    <div class="wrap">
+      <a href="/services/" class="back-nav-btn">
+        <span>←</span> Back to Services
+      </a>
+
+      <div class="hero-split-grid">
+        <div class="hero-left-content">
+          <div class="hero-pill-badge" id="serviceBadge">
+            <span style="font-size: 14px;">🎨</span> Viral Reach & Engagement
+          </div>
+          
+          <h1 class="hero-title-main" id="serviceTitle">Social Media <span>Management</span></h1>
+          
+          <p class="hero-subtitle-desc" id="serviceSubtext">Lead trends, build high recall, and cultivate active communities.</p>
+          
+          <div class="hero-full-body-text" id="serviceDesc">
+            Lead trends and lock recall. Your search for the best social media marketing company in Jaipur ends here. We master platform dynamics across Facebook, Instagram, LinkedIn, and YouTube, executing custom strategies that help your brand thrive[cite: 7].
+          </div>
+
+          <div class="hero-mini-badges-row">
+            <div class="mini-badge-card">
+              <div class="mini-badge-icon">🎬</div>
+              <div class="mini-badge-text">Short-Form Videos</div>
+            </div>
+            <div class="mini-badge-card">
+              <div class="mini-badge-icon">✨</div>
+              <div class="mini-badge-text">Aesthetic Grid</div>
+            </div>
+            <div class="mini-badge-card">
+              <div class="mini-badge-icon">🤝</div>
+              <div class="mini-badge-text">Influencer Kits</div>
+            </div>
+            <div class="mini-badge-card">
+              <div class="mini-badge-icon">🚀</div>
+              <div class="mini-badge-text">Algorithmic Push</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-mockup-wrapper">
+          <div class="mockup-main-card">
+            <div class="mockup-top-bar">
+              <div class="mockup-top-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="analytics-graph-box">
+              <div class="graph-header-meta">
+                <div>
+                  <span class="graph-title-sm">Social Reach & Impressions</span>
+                  <div class="graph-val-lg">
+                    125.4K <span class="graph-growth-pill">↑ Viral Reach</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-keyword-card">
+                <div class="fk-title">Engagement Metrics</div>
+                <div class="fk-row"><span>Reels Views</span><span class="num">84K</span><span class="arrow">↑</span></div>
+                <div class="fk-row"><span>Recall</span><span class="num">High</span><span class="arrow">↑</span></div>
+                <div class="fk-row"><span>Community</span><span class="num">Active</span><span class="arrow">✓</span></div>
+              </div>
+
+              <svg viewBox="0 0 300 90" class="svg-line-chart">
+                <path d="M0,75 Q40,60 90,35 T180,20 T300,5" fill="none" stroke="#0052ff" stroke-width="3" stroke-linecap="round" />
+                <circle cx="90" cy="35" r="4" fill="#0052ff" />
+                <circle cx="180" cy="20" r="4" fill="#0052ff" />
+                <circle cx="300" cy="5" r="5" fill="#0052ff" stroke="#ffffff" stroke-width="2" />
+              </svg>
+            </div>
+
+            <div class="mockup-bottom-bento-grid">
+              <div class="bento-mini-card" style="text-align: center;">
+                <div class="bmc-label">Brand Recall</div>
+                <div class="donut-chart-ui"></div>
+                <span style="font-size: 11px; font-weight: 700; color: #0052ff; margin-top: 4px;">Top Tier</span>
+              </div>
+
+              <div class="bento-mini-card">
+                <div class="bmc-label">Audience Growth</div>
+                <div class="bmc-val-row">
+                  <span class="bmc-val">3.8x</span>
+                  <span class="bmc-tag">Active Fans</span>
+                </div>
+                <div style="display: flex; gap: 4px; align-items: flex-end; height: 32px; margin-top: 10px;">
+                  <span style="width: 15%; height: 35%; background: #93c5fd; border-radius: 2px;"></span>
+                  <span style="width: 15%; height: 50%; background: #93c5fd; border-radius: 2px;"></span>
+                  <span style="width: 15%; height: 60%; background: #3b82f6; border-radius: 2px;"></span>
+                  <span style="width: 15%; height: 75%; background: #3b82f6; border-radius: 2px;"></span>
+                  <span style="width: 15%; height: 85%; background: #0052ff; border-radius: 2px;"></span>
+                  <span style="width: 15%; height: 100%; background: #1d4ed8; border-radius: 2px;"></span>
+                </div>
+              </div>
+
+              <div class="bento-mini-card">
+                <div class="bmc-label">Reels Engagement</div>
+                <div class="bmc-val-row">
+                  <span class="bmc-val">12.4%</span>
+                  <span class="bmc-tag">High CTR</span>
+                </div>
+                <svg viewBox="0 0 80 25" style="width: 100%; height: 30px; margin-top: 10px;">
+                  <path d="M0,22 Q20,15 40,8 T80,2" fill="none" stroke="#7c3aed" stroke-width="2.5" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Brands Section -->
+  <section class="trusted-brands-section">
+    <div class="wrap">
+      <div class="brands-pill-tag">TRUSTED BY GROWING BRANDS</div>
+      <h2 class="brands-main-title">Brands That Trust <span>Digital Whopper</span></h2>
+
+      <div class="two-line-carousel-wrapper">
+        <div class="logo-carousel-track track-line-1">
+          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
+          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
+          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
+          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
+          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
+          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
+          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
+          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
+        </div>
+
+        <div class="logo-carousel-track track-line-2">
+          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
+          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
+          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
+          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
+          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.webp" alt="Tea Cakes"></div>
+          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
+          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
+          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
+          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
+          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
+          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
+          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.jpg" alt="Tea Cakes"></div>
+          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
+          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
+          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
+        </div>
+      </div>
+
+      <div class="brand-meta-pills-row">
+        <div class="brand-meta-item"><span class="icon">👥</span> 50+ Happy Clients</div>
+        <div class="brand-meta-item"><span class="icon">📊</span> Multiple Industries</div>
+        <div class="brand-meta-item"><span class="icon">⚙️</span> Long-Term Partnerships</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-need-section">
+    <div class="wrap">
+      <div class="why-pill-tag">WHY CHOOSE US?</div>
+      <h2 class="why-title-main">Why You Need <span>Social Media Management?</span></h2>
+      <p class="why-subtitle-lead">Lead trends, build high brand recall, and cultivate active engaged communities across channels.</p>
+
+      <div class="why-cards-triple-grid">
+        <div class="why-feature-card">
+          <div class="why-icon-aura">🎬</div>
+          <h3 class="why-card-h3">Viral Video Playbooks</h3>
+          <p class="why-card-p">Create high-retention Reels and Shorts engineered for algorithmic push and organic reach[cite: 7].</p>
+        </div>
+        <div class="why-feature-card">
+          <div class="why-icon-aura">✨</div>
+          <h3 class="why-card-h3">Aesthetic Branding</h3>
+          <p class="why-card-p">Design striking grid architectures and carousel frameworks that maintain consistent brand appeal[cite: 7].</p>
+        </div>
+        <div class="why-feature-card">
+          <div class="why-icon-aura">🤝</div>
+          <h3 class="why-card-h3">Community & Creators</h3>
+          <p class="why-card-p">Connect your brand with relevant influencers and build loyal community fans and advocates[cite: 7].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Solutions -->
+  <section class="solutions-section">
+    <div class="wrap">
+      <div class="section-pill-tag">WHAT WE DELIVER</div>
+      <h2 class="section-title-center">Comprehensive <span>Social Solutions</span></h2>
+
+      <div class="solutions-triple-grid" id="solutionsGridContainer">
+        <!-- Short-Form Video Playbooks -->
+        <div class="solution-card-bento c-blue">
+          <div class="sol-icon-box">🎬</div>
+          <h3 class="sol-card-h3">Short-Form Video Playbooks</h3>
+          <p class="sol-card-p">High-retention Reels, Shorts, and TikTok style videos engineered for algorithmic push[cite: 7].</p>
+          <ul class="sol-checklist">
+            <li><span class="check">✓</span> Script Hook Blueprints</li>
+            <li><span class="check">✓</span> High-Retention Editing</li>
+            <li><span class="check">✓</span> Audio Trend Matching</li>
+            <li><span class="check">✓</span> Call-to-Actions</li>
+          </ul>
+        </div>
+
+        <!-- Brand Aesthetic Identity -->
+        <div class="solution-card-bento c-green">
+          <div class="sol-icon-box">✨</div>
+          <h3 class="sol-card-h3">Brand Aesthetic Identity</h3>
+          <p class="sol-card-p">Striking grid architecture, carousel design, and consistent branding across channels[cite: 7].</p>
+          <ul class="sol-checklist">
+            <li><span class="check">✓</span> Brand Guidelines</li>
+            <li><span class="check">✓</span> Carousel Design</li>
+            <li><span class="check">✓</span> Story Frameworks</li>
+            <li><span class="check">✓</span> Interactive Posts</li>
+          </ul>
+        </div>
+
+        <!-- Influencer & Community -->
+        <div class="solution-card-bento c-purple">
+          <div class="sol-icon-box">🤝</div>
+          <h3 class="sol-card-h3">Influencer & Community</h3>
+          <p class="sol-card-p">Connecting your brand with relevant creators and building loyal community fans[cite: 7].</p>
+          <ul class="sol-checklist">
+            <li><span class="check">✓</span> Creator Outreach</li>
+            <li><span class="check">✓</span> Collaboration Kits</li>
+            <li><span class="check">✓</span> Engagement Protocols</li>
+            <li><span class="check">✓</span> Sentiment Monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-center-block">
+        <a href="https://wa.me/916200379161" target="_blank" class="btn-deploy-cta">
+          Boost Your Social Media Reach <span style="font-size: 18px;">→</span>
+        </a>
+        <div class="cta-subtext">Let's lead trends and cultivate your active community.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section-new">
+    <div class="wrap">
+      <div class="section-pill-tag">FAQ</div>
+      <h2 class="section-title-center">Frequently Asked Questions</h2>
+
+      <div class="faq-accordion-list">
+        <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+          <div class="faq-question-head">
+            Which social media platforms do you manage?
+            <span class="faq-plus-icon">+</span>
+          </div>
+          <div class="faq-answer-body">
+            We manage and execute platform dynamics across Instagram, Facebook, LinkedIn, YouTube, and short-form video channels.
+          </div>
+        </div>
+
+        <div class="faq-item-card" onclick="this.classList.toggle('active')">
+          <div class="faq-question-head">
+            Do you create short-form videos like Reels and Shorts?
+            <span class="faq-plus-icon">+</span>
+          </div>
+          <div class="faq-answer-body">
+            Yes! We specialize in high-retention short-form video playbooks, script hooks, and trending audio strategies to maximize algorithmic reach.
+          </div>
+        </div>
+
+        <div class="faq-item-card" onclick="this.classList.toggle('active')">
+          <div class="faq-question-head">
+            How do you help build active communities and engagement?
+            <span class="faq-plus-icon">+</span>
+          </div>
+          <div class="faq-answer-body">
+            We combine consistent aesthetic branding, interactive stories, creator collaborations, and proactive engagement protocols to cultivate loyal community fans.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ FOOTER ✦ -->
+  <footer id="footer"></footer>
+
+  <!-- 🤖 WHOPPY AI CHATBOT -->
+  <div class="chatbot-wrapper">
+    <div class="chat-bubble" id="chatBubble">
+      <div class="robot-image-container">
+        <img src="../../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+      </div>
+    </div>
+
+    <div class="chatbot-caption-tag">
+      <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+    </div>
+
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div class="chat-header-user">
+          <div class="bot-avatar-container">
+            <img src="../../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+          </div>
+          <div>
+            <h4>Whoppy AI (Chotu)</h4>
+            <span class="status-online">● Online</span>
+          </div>
+        </div>
+        <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+      </div>
+
+      <div class="chat-body-messages" id="chatMessages">
+        <div class="msg-bubble bot-msg">
+          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your social media reach today? 🚀
+        </div>
+        <div class="chat-suggestions" id="chatSuggestions">
+          <button class="suggest-chip" onclick="triggerBotResponse('Social Media')">Social Services</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Package Cost</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Expert 👤</button>
+        </div>
+      </div>
+
+      <div class="chat-footer-input">
+        <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+        <button id="sendChatBtn" class="send-msg-btn">✦</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGrad)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- 📞 FLOATING LEFT ROUND CALL BUTTON -->
+  <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+    <div class="call-icon-holder-l">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+    </div>
+  </a>
+
+  <!-- 💬 FLOATING RIGHT WHATSAPP BUTTON -->
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right"
+    aria-label="Chat on WhatsApp">
+    <div class="wa-icon-holder-w">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z" />
+      </svg>
+    </div>
+    <span class="wa-vertical-text-w">let’s talk</span>
+  </div>
+
+  <!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+  <div class="mobile-app-bottom-nav">
+    <a href="/" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </div>
+      <span>Home</span>
+    </a>
+
+    <a href="/services" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      </div>
+      <span>Services</span>
+    </a>
+
+    <a href="/projects/" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <span>Projects</span>
+    </a>
+
+    <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z" />
+        </svg>
+      </div>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+      <span>Call Us</span>
+    </a>
+  </div>
+
+  <script src="../../scriptb.js"></script>
+  <script src="../../section.js"></script>
+  <script src="../../services-data.js"></script>
+</body>
+
+</html>

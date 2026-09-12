@@ -104,7 +104,7 @@ const DW_SERVICES_DATA = [
   },
   {
     id: 3,
-    slug: "ecommerce-marketing",
+    slug: "ecommerce-marketing-services",
     title: "Ecommerce Marketing Services",
     menuTitle: "Ecommerce Marketing",
     icon: "🛍️",

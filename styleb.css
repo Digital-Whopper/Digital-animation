@@ -3943,3 +3943,16 @@ footer .wrap {
   transform: translateX(3px);
   text-decoration: underline !important;
 }
+
+.btn-style{
+  height: 40px;
+    font-size: 24px;
+    width: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    background: white;
+    color: #0060ff;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 10px;
+}

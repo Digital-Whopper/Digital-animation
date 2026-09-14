@@ -236,7 +236,7 @@
    🔷 ENTERPRISE OWNER MASTER ABOUT STYLES (-o Unique Suffix Protection)
    ========================================================================== */
 #owner-profile-desk-o {
-  padding: 90px 0;
+  padding-bottom: 90px;
   background: #ffffff;
   width: 100%;
   position: relative;
@@ -2899,7 +2899,7 @@ box-shadow: 0 30px 70px rgb(234 88 12 / 30%), 0 5px 15px rgba(0, 0, 0, 0.01) !im
 
 /* chatbot ke liye mobile loop hover  */
 /* 📱 Mobile Screens Par Laptop Jaisa High-Jump & Somersault Animation Loop */
-@media (max-width: 900px) {
+@media (max-width: 7800px) {
   .chat-bubble .bot-bubble-img {
     animation: mobileRobotHighJumpLoop 3.1s cubic-bezier(0.25, 1, 0.5, 1) infinite !important;
   }

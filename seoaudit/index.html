@@ -339,83 +339,90 @@
   <script src="../services-data.js"></script>
 
   <!-- ✦ FRONTEND LIVE SERVERLESS CONNECTOR SCRIPT ✦ -->
-  <script>
-    document.getElementById('seoAuditForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
+ <script>
+  document.getElementById('seoAuditForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-      const btn = document.getElementById('submitBtn');
-      const websiteUrl = document.getElementById('userWebsite').value.trim();
-      const userName = document.getElementById('userName').value;
-      const userEmail = document.getElementById('userEmail').value;
-      const userPhone = document.getElementById('userPhone').value;
+    const btn = document.getElementById('submitBtn');
+    const websiteUrl = document.getElementById('userWebsite').value.trim();
+    const userName = document.getElementById('userName').value;
+    const userEmail = document.getElementById('userEmail').value;
+    const userPhone = document.getElementById('userPhone').value;
 
-      btn.disabled = true;
-      btn.innerText = "Crawling Website HTML... ⏳";
+    btn.disabled = true;
+    btn.innerText = "Crawling Website HTML... ⏳";
 
-      try {
-        // Calls the Vercel Serverless Function (/api/audit)
-        const response = await fetch('/api/audit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: userName,
-            email: userEmail,
-            phone: userPhone,
-            website: websiteUrl
-          })
-        });
+    try {
+      // Calling Vercel Serverless Function
+      const response = await fetch('/api/audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: userName,
+          email: userEmail,
+          phone: userPhone,
+          website: websiteUrl
+        })
+      });
 
-        const data = await response.json();
-        if (!data.success) throw new Error("Crawler failed");
-
-        const score = data.score;
-        const checks = data.checks || {};
-        const degree = (score / 100) * 360;
-
-        document.getElementById('scoreNumber').innerText = score;
-        document.getElementById('scoreMeterVisual').style.background = `conic-gradient(#0052ff 0deg ${degree}deg, #e2e8f0 ${degree}deg 360deg)`;
-
-        document.getElementById('formCardWrapper').style.display = 'none';
-        document.getElementById('sidebarCardWrapper').style.display = 'none';
-        
-        const resultBox = document.getElementById('auditResultBox');
-        resultBox.style.display = 'block';
-
-        document.getElementById('auditScoreText').innerHTML = `SEO Health Score for <b>${websiteUrl}</b>`;
-        document.getElementById('resultBadgeScore').innerText = score + "/100";
-        
-        document.getElementById('auditDetailsText').innerHTML = `
-          <b>🔍 Real-Time Source Code Inspection:</b><br><br>
-          • <b>SSL Security (HTTPS):</b> ${checks.hasHttps ? "Secure (Pass ✅)" : "Missing HTTPS (Critical ⚠️)"}<br>
-          • <b>H1 Tags Count:</b> Found <b>${checks.h1Count}</b> H1 tag(s) ${checks.h1Count === 1 ? "(Perfect ✅)" : "(Should be exactly 1 ⚠️)"}<br>
-          • <b>Meta Title Tag:</b> ${checks.hasTitle ? "Present (Pass ✅)" : "Missing (Critical ⚠️)"}<br>
-          • <b>Meta Description:</b> ${checks.hasMetaDesc ? "Present (Pass ✅)" : "Missing (Warning ⚠️)"}<br>
-          • <b>Mobile Viewport:</b> ${checks.hasViewport ? "Optimized (Pass ✅)" : "Missing (Warning ⚠️)"}<br><br>
-          <i>Connect with our expert team to fix these issues instantly!</i>
-        `;
-
-        const encodedMsg = encodeURIComponent(`Hi Digital Whopper, I ran a live source code SEO audit for (${websiteUrl}). Score: ${score}/100. Please share the complete report.`);
-        document.getElementById('whatsappAuditBtn').href = `https://wa.me/916200379161?text=${encodedMsg}`;
-
-        window.scrollTo({ top: resultBox.offsetTop - 100, behavior: 'smooth' });
-
-      } catch (err) {
-        alert("Live serverless crawler needs to be deployed on Vercel to fetch external HTML source codes correctly.");
-        console.error(err);
-      } finally {
-        btn.innerText = "Run Live Source Audit ✦";
-        btn.disabled = false;
+      // Check if server returned an error status (like 404 or 500)
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Server Error (${response.status}): ${errorText || response.statusText}`);
       }
-    });
 
-    function resetAuditView() {
-      document.getElementById('seoAuditForm').reset();
-      document.getElementById('auditResultBox').style.display = 'none';
-      document.getElementById('formCardWrapper').style.display = 'block';
-      document.getElementById('sidebarCardWrapper').style.display = 'flex';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const data = await response.json();
+      if (!data.success) throw new Error("Crawler returned unsuccessful response");
+
+      const score = data.score;
+      const checks = data.checks || {};
+      const degree = (score / 100) * 360;
+
+      document.getElementById('scoreNumber').innerText = score;
+      document.getElementById('scoreMeterVisual').style.background = `conic-gradient(#0052ff 0deg ${degree}deg, #e2e8f0 ${degree}deg 360deg)`;
+
+      document.getElementById('formCardWrapper').style.display = 'none';
+      document.getElementById('sidebarCardWrapper').style.display = 'none';
+      
+      const resultBox = document.getElementById('auditResultBox');
+      resultBox.style.display = 'block';
+
+      document.getElementById('auditScoreText').innerHTML = `SEO Health Score for <b>${websiteUrl}</b>`;
+      document.getElementById('resultBadgeScore').innerText = score + "/100";
+      
+      document.getElementById('auditDetailsText').innerHTML = `
+        <b>🔍 Real-Time Source Code Inspection:</b><br><br>
+        • <b>SSL Security (HTTPS):</b> ${checks.hasHttps ? "Secure (Pass ✅)" : "Missing HTTPS (Critical ⚠️)"}<br>
+        • <b>H1 Tags Count:</b> Found <b>${checks.h1Count}</b> H1 tag(s) ${checks.h1Count === 1 ? "(Perfect ✅)" : "(Should be exactly 1 ⚠️)"}<br>
+        • <b>Meta Title Tag:</b> ${checks.hasTitle ? "Present (Pass ✅)" : "Missing (Critical ⚠️)"}<br>
+        • <b>Meta Description:</b> ${checks.hasMetaDesc ? "Present (Pass ✅)" : "Missing (Warning ⚠️)"}<br>
+        • <b>Mobile Viewport:</b> ${checks.hasViewport ? "Optimized (Pass ✅)" : "Missing (Warning ⚠️)"}<br><br>
+        <i>Connect with our expert team to fix these issues instantly!</i>
+      `;
+
+      const encodedMsg = encodeURIComponent(`Hi Digital Whopper, I ran a live source code SEO audit for (${websiteUrl}). Score: ${score}/100. Please share the complete report.`);
+      document.getElementById('whatsappAuditBtn').href = `https://wa.me/916200379161?text=${encodedMsg}`;
+
+      window.scrollTo({ top: resultBox.offsetTop - 100, behavior: 'smooth' });
+
+    } catch (err) {
+      // Ab yahan exact error show hoga jo Vercel ya browser se aa raha hai
+      alert("API Error Details: " + err.message);
+      console.error(err);
+    } finally {
+      btn.innerText = "Run Live Source Audit ✦";
+      btn.disabled = false;
     }
-  </script>
+  });
+
+  function resetAuditView() {
+    document.getElementById('seoAuditForm').reset();
+    document.getElementById('auditResultBox').style.display = 'none';
+    document.getElementById('formCardWrapper').style.display = 'block';
+    document.getElementById('sidebarCardWrapper').style.display = 'flex';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 
 </body>
 

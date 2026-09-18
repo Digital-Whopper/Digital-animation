@@ -863,7 +863,7 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
 
           <a href="/portfolio/">PortFolio</a>
           <a href="/seo-company-in-jaipur/">SEO Service</a>
-          <a href="#">SMO Audit</a>
+          <a href="/seoaudit/">SEO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
         </div>
 

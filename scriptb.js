@@ -865,6 +865,7 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
           <a href="/seo-company-in-jaipur/">SEO Service</a>
           <a href="/seoaudit/">SEO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
+          <a href="/hiring/">Hiring</a>
         </div>
 
         <div class="nav-cta">
@@ -934,6 +935,7 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
             <p>
               <a href="tel:+916200379161">+91 6200379161</a><br>
               <a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a>
+              <a href="mailto:Info@digitalwhopper.com">Info@digitalwhopper.com</a>
             </p>
             <div class="socials">
               <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>

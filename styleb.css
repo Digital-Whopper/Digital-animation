@@ -3423,6 +3423,57 @@ footer .wrap {
     grid-template-columns: 1fr !important;
   }
 }
+/* --- Blog Grid Single Screen Fix --- */
+@media (max-width: 900px) {
+  .blog-grid-3col {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 16px !important;
+    padding-bottom: 15px !important;
+  }
+  
+  .blog-grid-3col .blog-card {
+    flex: 0 0 85% !important; /* Single screen par ek baar me 1 ya 2 card hi dikhenge */
+    max-width: 85% !important;
+    scroll-snap-align: start !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .blog-grid-3col {
+    grid-template-columns: repeat(2, 1fr) !important; /* Tablet par 2 cards */
+  }
+}
+
+
+/* Blog Carousel Wrapper Fix */
+.dw-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#dwHomeBlogGrid {
+  display: flex !important;
+  transition: transform 0.4s ease-in-out !important;
+  width: max-content !important;
+  gap: 16px !important;
+}
+
+#dwHomeBlogGrid .blog-card {
+  flex: 0 0 320px !important;
+  width: 320px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+  #dwHomeBlogGrid .blog-card {
+    flex: 0 0 78vw !important; /* Mobile par 1.5 cards ka view (1 poora aur aadha card) */
+    width: 78vw !important;
+  }
+}
 
 
 /* -------------- */

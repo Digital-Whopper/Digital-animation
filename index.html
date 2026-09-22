@@ -1224,7 +1224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     }
 
-    // 🌟 Auto-scroller engine
+    // 🌟 Auto-scroller engine with Mobile Touch Support
     document.addEventListener('DOMContentLoaded', () => {
       const leftViewport = document.getElementById('leftViewport');
       const rightViewport = document.getElementById('rightViewport');
@@ -1233,7 +1233,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       let isPausedLeft = false;
       let isPausedRight = false;
+      let touchTimeoutLeft, touchTimeoutRight;
 
+      // Desktop Hover Events
       if(leftBox) {
         leftBox.addEventListener('mouseenter', () => isPausedLeft = true);
         leftBox.addEventListener('mouseleave', () => isPausedLeft = false);
@@ -1243,6 +1245,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         rightBox.addEventListener('mouseleave', () => isPausedRight = false);
       }
 
+      // Mobile Touch Events (Touch karte hi auto-scroll pause ho jayega)
+      if(leftViewport) {
+        leftViewport.addEventListener('touchstart', () => {
+          isPausedLeft = true;
+          clearTimeout(touchTimeoutLeft);
+        }, {passive: true});
+
+        leftViewport.addEventListener('touchend', () => {
+          // Touch hatane ke 4 seconds baad wapas auto-scroll start hoga
+          touchTimeoutLeft = setTimeout(() => {
+            isPausedLeft = false;
+          }, 4000);
+        }, {passive: true});
+
+        leftViewport.addEventListener('scroll', () => {
+          scrollPosLeft = leftViewport.scrollTop;
+        });
+      }
+
+      if(rightViewport) {
+        rightViewport.addEventListener('touchstart', () => {
+          isPausedRight = true;
+          clearTimeout(touchTimeoutRight);
+        }, {passive: true});
+
+        rightViewport.addEventListener('touchend', () => {
+          touchTimeoutRight = setTimeout(() => {
+            isPausedRight = false;
+          }, 4000);
+        }, {passive: true});
+
+        rightViewport.addEventListener('scroll', () => {
+          scrollPosRight = rightViewport.scrollTop;
+        });
+      }
+
+      // Interval loop for smooth auto-scrolling
       setInterval(() => {
         if (currentMode === 'before') {
           // Left Viewport Auto-Scroll
@@ -1251,8 +1290,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const maxScroll = leftViewport.scrollHeight - leftViewport.clientHeight;
             if (maxScroll > 0 && scrollPosLeft >= maxScroll) scrollPosLeft = 0;
             leftViewport.scrollTop = scrollPosLeft;
-          } else if (leftViewport) {
-            scrollPosLeft = leftViewport.scrollTop;
           }
 
           // Right Viewport Auto-Scroll
@@ -1261,8 +1298,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const maxScroll = rightViewport.scrollHeight - rightViewport.clientHeight;
             if (maxScroll > 0 && scrollPosRight >= maxScroll) scrollPosRight = 0;
             rightViewport.scrollTop = scrollPosRight;
-          } else if (rightViewport) {
-            scrollPosRight = rightViewport.scrollTop;
           }
         }
       }, 30);
@@ -2628,33 +2663,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA)) return;
 
     const sortedBlogs = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
-
     const mainGrid = document.getElementById('dwHomeBlogGrid');
+    
     if (mainGrid && sortedBlogs.length > 0) {
-      
-      // Parent container setup for arrows alignment
-      const wrapper = document.createElement('div');
-      wrapper.className = 'dw-carousel-wrapper';
-      wrapper.style.position = 'relative';
-      wrapper.style.overflow = 'hidden';
-      wrapper.style.width = '100%';
-      wrapper.style.padding = '0 40px'; // Arrows ke liye jagah banane ke liye padding
+      let wrapper = mainGrid.closest('.dw-carousel-wrapper');
+      if (!wrapper) {
+        wrapper = document.createElement('div');
+        wrapper.className = 'dw-carousel-wrapper';
+        mainGrid.parentNode.insertBefore(wrapper, mainGrid);
+        wrapper.appendChild(mainGrid);
+      }
 
-      mainGrid.parentNode.insertBefore(wrapper, mainGrid);
-      wrapper.appendChild(mainGrid);
+      // 🌟 Seamless Infinite Loop ke liye blogs ko duplicate kar dete hain
+      const duplicatedBlogs = [...sortedBlogs, ...sortedBlogs];
 
-      mainGrid.style.display = 'flex';
-      mainGrid.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
-      mainGrid.style.width = '100%';
-
-      // Render all blogs with reduced gap
-      mainGrid.innerHTML = sortedBlogs.map(blog => `
-        <div class="blog-card" style="flex: 0 0 calc(33.333% - 12px); box-sizing: border-box; margin-right: 18px;">
+      // Render cards
+      mainGrid.innerHTML = duplicatedBlogs.map(blog => `
+        <div class="blog-card">
           <a href="/blogs-details/?slug=${blog.slug}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-            <div class="blog-thumb">
-              <img src="${blog.thumbnail || blog.bannerImage}" alt="${blog.title}">
+            <div class="blog-thumb" style="height: 160px; overflow: hidden;">
+              <img src="${blog.thumbnail || blog.bannerImage}" alt="${blog.title}" style="width:100%; height:100%; object-fit:cover;">
             </div>
-            <div class="blog-body">
+            <div class="blog-body" style="padding: 16px;">
               <span>${blog.category || 'Digital Whopper'}</span>
               <h3>${blog.title}</h3>
               <p>${blog.excerpt || blog.content?.intro || ''}</p>
@@ -2663,74 +2693,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       `).join('');
 
-      // Left & Right Navigation Arrows (Placed on extreme left and right cards)
-      const prevBtn = document.createElement('button');
-      prevBtn.innerHTML = '&#10094;';
-      prevBtn.className = 'dw-carousel-btn dw-prev-btn btn-style';
+      let prevBtn = wrapper.querySelector('.dw-prev-btn');
+      let nextBtn = wrapper.querySelector('.dw-next-btn');
 
-      const nextBtn = document.createElement('button');
-      nextBtn.innerHTML = '&#10095;';
-      nextBtn.className = 'dw-carousel-btn dw-next-btn btn-style';
+      if (!prevBtn) {
+        prevBtn = document.createElement('button');
+        prevBtn.innerHTML = '&#10094;';
+        prevBtn.className = 'dw-carousel-btn dw-prev-btn btn-style';
+        prevBtn.style.cssText = 'position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;';
+        wrapper.appendChild(prevBtn);
+      }
 
-      wrapper.appendChild(prevBtn);
-      wrapper.appendChild(nextBtn);
+      if (!nextBtn) {
+        nextBtn = document.createElement('button');
+        nextBtn.innerHTML = '&#10095;';
+        nextBtn.className = 'dw-carousel-btn dw-next-btn btn-style';
+        nextBtn.style.cssText = 'position: absolute; right: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;';
+        wrapper.appendChild(nextBtn);
+      }
 
       let currentIndex = 0;
-      const totalBlogs = sortedBlogs.length;
-      const maxIndex = Math.max(0, totalBlogs - 3);
+      const totalOriginal = sortedBlogs.length;
+      
+      const updateCarouselPosition = (withTransition = true) => {
+        const cardElement = mainGrid.querySelector('.blog-card');
+        if (!cardElement) return;
+        const cardWidth = cardElement.offsetWidth;
+        const gap = 16;
+        
+        if (!withTransition) {
+          mainGrid.style.transition = 'none';
+        } else {
+          mainGrid.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+        }
 
-      const updateCarousel = () => {
-        const movePercentage = currentIndex * (100 / 3);
-        mainGrid.style.transform = `translateX(-${movePercentage}%)`;
+        const moveAmount = currentIndex * (cardWidth + gap);
+        mainGrid.style.transform = `translateX(-${moveAmount}px)`;
       };
 
-      // Loop logic: Jab end par pahuchega toh right se wapas loop start hoga
       const handleNext = () => {
-        if (currentIndex < maxIndex) {
-          currentIndex++;
-        } else {
-          currentIndex = 0; // Reset to start, sliding back from right direction loop
+        currentIndex++;
+        updateCarouselPosition(true);
+
+        // Jab original set khatam ho jaye, bina transition ke wapas 0 index par reset kar denge (seamless loop)
+        if (currentIndex >= totalOriginal) {
+          setTimeout(() => {
+            currentIndex = 0;
+            updateCarouselPosition(false);
+          }, 500); // Transition time ke barabar delay
         }
-        updateCarousel();
       };
 
       const handlePrev = () => {
         if (currentIndex > 0) {
           currentIndex--;
+          updateCarouselPosition(true);
         } else {
-          currentIndex = maxIndex;
+          // Agar pehle card par hain aur prev dabaya, toh direct last original set par jump karke wapas aayega
+          currentIndex = totalOriginal - 1;
+          updateCarouselPosition(false);
         }
-        updateCarousel();
       };
 
-      nextBtn.addEventListener('click', handleNext);
-      prevBtn.addEventListener('click', handlePrev);
+      nextBtn.onclick = handleNext;
+      prevBtn.onclick = handlePrev;
 
-      // Auto-slide loop
-      let autoSlide = setInterval(handleNext, 3000);
-
-      wrapper.addEventListener('mouseenter', () => clearInterval(autoSlide));
-      wrapper.addEventListener('mouseleave', () => {
-        autoSlide = setInterval(handleNext, 3000);
-      });
-    }
-
-    // Right Sidebar Grid
-    const sidebarStack = document.getElementById('dwSidebarBlogStack');
-    if (sidebarStack && sortedBlogs.length > 3) {
-      const side4 = sortedBlogs.slice(3, 7);
-      sidebarStack.innerHTML = side4.map(blog => `
-        <a href="/blogs-details/?slug=${blog.slug}" class="li-side-blog-card">
-          <div class="side-blog-mini-thumb">
-            <img src="${blog.thumbnail || blog.bannerImage}" alt="${blog.title}">
-          </div>
-          <div class="side-blog-details">
-            <h4 class="side-blog-title">${blog.title}</h4>
-            <span class="side-blog-tag">${blog.category || 'Digital Whopper'}</span>
-          </div>
-          <span class="side-blog-arrow">›</span>
-        </a>
-      `).join('');
+      // Auto slide loop timer
+      let autoSlideTimer = setInterval(handleNext, 3500);
+      wrapper.onmouseenter = () => clearInterval(autoSlideTimer);
+      wrapper.onmouseleave = () => {
+        autoSlideTimer = setInterval(handleNext, 3500);
+      };
     }
   });
 </script>

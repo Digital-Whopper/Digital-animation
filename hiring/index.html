@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We're Hiring & Careers | Digital Whopper - Jaipur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styleb.css">
+<link rel="stylesheet" href="../section.css">
+<style>
+  .logo-img-asset {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  .blog-hero {
+    padding: 170px 0 30px !important;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .hiring-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hiring-hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .hiring-illustration-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 82, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 82, 255, 0.08);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* 💼 JOB CARD ARCHITECTURE */
+  .job-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 82, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--card-shadow-default);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .job-card:hover {
+    transform: translateY(-6px);
+    border-color: #0052ff;
+    box-shadow: var(--card-shadow-active);
+  }
+
+  .job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .job-icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 82, 255, 0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0052ff;
+  }
+
+  .job-status-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .job-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .job-category-tag {
+    color: #0052ff;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(0, 82, 255, 0.05);
+    padding: 3px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .job-desc {
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .job-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 82, 255, 0.06);
+  }
+
+  .job-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .job-detail-item svg {
+    color: #0052ff;
+    flex-shrink: 0;
+  }
+
+  .job-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 82, 255, 0.06);
+  }
+
+  .job-posted-date {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .apply-btn {
+    background: #0052ff;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .apply-btn:hover {
+    background: #0040cc;
+  }
+
+  .resume-cta-banner {
+    background: linear-gradient(135deg, rgba(0, 82, 255, 0.08) 0%, rgba(147, 51, 234, 0.06) 100%);
+    border: 1px solid rgba(0, 82, 255, 0.15);
+    border-radius: 20px;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  /* 🤖 CONTINUOUS CHATBOT ROBOT ANIMATION */
+  .chatbot-wrapper .robot-image-container {
+    animation: botContinuousLoop 3s ease-in-out infinite !important;
+    display: inline-block;
+    transform-origin: center bottom;
+  }
+
+  @keyframes botContinuousLoop {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    25% { transform: translateY(-8px) rotate(-6deg) scale(1.04); }
+    50% { transform: translateY(-14px) rotate(4deg) scale(1.08); }
+    75% { transform: translateY(-6px) rotate(-3deg) scale(1.02); }
+    100% { transform: translateY(0) rotate(0deg) scale(1); }
+  }
+
+  @media(max-width: 992px) {
+    .hiring-hero-grid { grid-template-columns: 1fr; gap: 30px; }
+    .resume-cta-banner { flex-direction: column; text-align: center; gap: 20px; padding: 24px; }
+  }
+  @media(max-width: 768px) {
+    .jobs-grid { grid-template-columns: 1fr !important; }
+    .job-details-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="customPreloader" class="preloader-overlay">
+  <div class="preloader-content">
+    <h2 class="preloader-brand">Digital Whopper</h2>
+    <div class="preloader-spinner">
+      <span class="spinner-dot"></span>
+      <span class="spinner-dot"></span>
+    </div>
+  </div>
+</div>
+
+<div class="custom-cursor" id="customCursor"></div>
+<div class="custom-cursor-blur" id="customCursorBlur"></div>
+
+<!-- ✦ HEADER NAVBAR ✦ -->
+<header id="mainHeader"></header>
+
+<!-- 🌟 HIRING HERO SECTION 🌟 -->
+<section class="blog-hero scroll-reveal">
+  <div class="pink-blob"></div>
+  <div class="purple-ambient-glow"></div>
+  <div class="stars-container"><canvas id="aiNodeCanvas"></canvas></div>
+
+  <div class="wrap">
+    <div class="hiring-hero-grid">
+      <div>
+        <div class="eyebrow">👥 JOIN OUR TEAM</div>
+        <h1 style="font-size: clamp(34px, 4.5vw, 54px); font-weight: 800; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; margin-top: 10px;">
+          We’re <span class="highlight text-shine">Hiring</span>
+        </h1>
+        <h3 style="font-size: 20px; font-weight: 600; color: var(--text); margin: 12px 0 10px;">Build Your Career With Digital Whopper</h3>
+        <p class="lead" style="margin: 0; max-width: 580px; font-size: 15px; line-height: 1.6;">
+          Join our team and work on exciting digital, technology & marketing projects. Grow your skills, make an impact and be a part of something great.
+        </p>
+      </div>
+
+      <div class="hiring-hero-right">
+        <div class="hiring-illustration-card">
+          <div style="font-family: 'Sora', sans-serif; font-weight: 700; color: var(--text); font-size: 18px; margin-bottom: 12px;">Good People Build Great Products</div>
+          <p style="color: var(--muted); font-size: 13px; margin: 0;">We foster an environment of creativity, autonomy, and continuous learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 JOBS GRID SECTION 🌟 -->
+<section class="scroll-reveal" style="padding: 20px 0 80px;">
+  <div class="wrap2" style="max-width: 1300px; margin: 0 auto; padding: 0 16px;">
+    
+    <!-- Dynamic Jobs Container -->
+    <div class="jobs-grid" id="jobsGridContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+      <!-- Data injected via jobs-data.js -->
+    </div>
+
+    <!-- 📬 BOTTOM RESUME CTA BANNER -->
+    <div class="resume-cta-banner">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 56px; height: 56px; background: rgba(0, 82, 255, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #0052ff; flex-shrink: 0;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div>
+          <h4 style="font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 6px;">Don't see the right role?</h4>
+          <p style="color: var(--muted); font-size: 14px; margin: 0;">We're always looking for talented people. Send us your resume and we'll get in touch when a suitable opportunity comes up.</p>
+        </div>
+      </div>
+      <div>
+        <a
+         href="https://docs.google.com/forms/d/e/1FAIpQLSefHDCGANP3OaBUyhyEufLR5pz2v3By_a7MR1RxNn4ooGyADA/viewform?usp=publish-editor" class="apply-btn" style="padding: 12px 24px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;">
+         <!-- href="mailto:digitalwhopperofficial@gmail.com?subject=General%20Resume%20Submission" class="apply-btn" style="padding: 12px 24px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;"> -->
+          Send Resume →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🏢 FOOTER -->
+<footer id="footer"></footer>
+
+<!-- 🤖 WHOPPY AI CHATBOT WITH ANIMATED CHOTU BADGE -->
+<div class="chatbot-wrapper">
+  <div class="chat-bubble" id="chatBubble">
+    <div class="robot-image-container">
+      <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+    </div>
+  </div>
+
+  <div class="chatbot-caption-tag">
+    <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-header-user">
+        <div class="bot-avatar-container">
+          <img src="../hero-robo.png" alt="Whoppy AI Avatar" class="bot-header-img">
+        </div>
+        <div>
+          <h4>Whoppy AI (Chotu)</h4>
+          <span class="status-online">● Online</span>
+        </div>
+      </div>
+      <button class="close-chat-btn" id="closeChatBtn">&times;</button>
+    </div>
+
+    <div class="chat-body-messages" id="chatMessages">
+      <div class="msg-bubble bot-msg">
+        Hi there! I am Chotu, your Digital Whopper AI assistant. Looking to join our team? Let me know! 🚀
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggest-chip" onclick="triggerBotResponse('Openings')">Current Openings</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Internship')">Internship Query</button>
+        <button class="suggest-chip" onclick="triggerBotResponse('Contact')">HR Contact 👤</button>
+      </div>
+    </div>
+
+    <div class="chat-footer-input">
+      <input type="text" id="chatUserInput" placeholder="Type your message here..." autocomplete="off">
+      <button id="sendChatBtn" class="send-msg-btn">✦</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+<div class="side-social-shield-left">
+  <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener" class="social-side-node fb-color" aria-label="Facebook">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener" class="social-side-node insta-color" aria-label="Instagram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradBlog)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <defs>
+        <linearGradient id="instaGradBlog" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#f09433" />
+          <stop offset="25%" stop-color="#e6683c" />
+          <stop offset="50%" stop-color="#dc2743" />
+          <stop offset="75%" stop-color="#cc2366" />
+          <stop offset="100%" stop-color="#bc1888" />
+        </linearGradient>
+      </defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener" class="social-side-node linkedin-color" aria-label="LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+    </svg>
+  </a>
+</div>
+
+<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->
+<a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
+  <div class="wa-icon-holder-w">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316zM17.486 14.4c-.3-.15-1.774-.874-2.026-.967-.253-.093-.437-.14-.62.14-.184.281-.712.893-.873 1.08-.161.189-.323.212-.623.063-.3-.15-1.27-.47-2.419-1.494-.893-.797-1.495-1.783-1.67-2.083-.174-.3-.019-.462.131-.611.135-.134.3-.349.45-.524.15-.174.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.62-1.494-.85-2.043-.224-.54-.447-.466-.62-.475-.16-.007-.343-.008-.528-.008-.185 0-.485.07-.74.349-.255.281-.972.951-.972 2.319s.993 2.69 1.133 2.878c.14.187 1.956 2.986 4.738 4.187.662.286 1.179.457 1.582.585.664.211 1.268.181 1.744.11.53-.08 1.774-.726 2.026-1.43.252-.704.252-1.31.178-1.43c-.075-.12-.256-.197-.556-.347z"/>
+    </svg>
+  </div>
+  <span class="wa-vertical-text-w">let’s talk</span>
+</a>
+
+<!-- 📞 FLOATING LEFT CALL BUTTON -->
+<a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+  <div class="call-icon-holder-l">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </div>
+</a>
+
+<!-- 📱 MOBILE APP BOTTOM NAV -->
+<div class="mobile-app-bottom-nav">
+  <a href="/index.html" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </div>
+    <span>Home</span>
+  </a>
+  <a href="/services/" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    </div>
+    <span>Services</span>
+  </a>
+  <a href="/projects/" class="app-nav-item">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+    </div>
+    <span>Projects</span>
+  </a>
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="app-nav-item wa-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z"/></svg>
+    </div>
+    <span>WhatsApp</span>
+  </a>
+  <a href="tel:+916200379161" class="app-nav-item call-accent-btn">
+    <div class="app-nav-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </div>
+    <span>Call Us</span>
+  </a>
+</div>
+
+<!-- 🌟 SCRIPTS -->
+<script src="../jobs-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('jobsGridContainer');
+    if (container && typeof DW_JOBS_DATA !== 'undefined') {
+      
+      function getJobIcon(type) {
+        if (type === 'video') {
+          return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>`;
+        } else if (type === 'design') {
+          return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>`;
+        } else {
+          return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
+        }
+      }
+
+      container.innerHTML = DW_JOBS_DATA.map(job => `
+        <div class="job-card">
+          <div class="job-card-header">
+            <div class="job-icon-box">${getJobIcon(job.iconType)}</div>
+            <span class="job-status-badge">● Open</span>
+          </div>
+          <div>
+            <span class="job-category-tag">${job.category}</span>
+            <h3 class="job-title">${job.title}</h3>
+            <p class="job-desc">${job.desc}</p>
+          </div>
+          <div class="job-details-grid">
+            <div class="job-detail-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+              <span>${job.salary}</span>
+            </div>
+            <div class="job-detail-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>${job.location}</span>
+            </div>
+            <div class="job-detail-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>${job.experience}</span>
+            </div>
+            <div class="job-detail-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>${job.type}</span>
+            </div>
+          </div>
+          <div class="job-card-footer">
+            <span class="job-posted-date">🗓️ Posted: ${job.postedDate}</span>
+            <a href="${job.applyLink}" target="_blank" rel="noopener" class="apply-btn">Apply Now →</a>
+          </div>
+        </div>
+      `).join('');
+    }
+  });
+</script>
+<script src="../scriptb.js"></script>
+<script src="../section.js"></script>
+<script src="../services-data.js"></script>
+
+</body>
+</html>

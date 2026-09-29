@@ -3309,8 +3309,8 @@ a {
 .stack_card.is-green {
   background-color: #c9d9e4;
   margin-bottom: 3.125rem;
-  margin-left: -45px;
-  margin-right: -45px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .stack_card.is-gray {
@@ -4861,7 +4861,7 @@ a {
   }
 
   .text-style-heading-2.is-cartoon {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     line-height: 3.1rem;
   }
 
@@ -5346,5 +5346,136 @@ a {
     padding-left: 0;
     padding-right: 0;
     font-size: .9rem;
+  }
+}
+
+
+/* second section responsive  */
+/* ==========================================================================
+   📱 RESPONSIVE FIX FOR STATS, NUMBERS & WORK SPACE SECTION
+   ========================================================================== */
+
+@media screen and (max-width: 991px) {
+  /* Tablet aur Medium screens par stats aur grid alignment */
+  .stats_wrapper {
+    width: 100% !important;
+  }
+  
+  .numbers {
+    grid-column-gap: 2rem !important;
+    grid-row-gap: 2rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Workspace / Grid sections ko tablet par stack karna */
+  .work-workspace-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Mobile screens par numbers ko 2x2 grid me set karna */
+  .numbers {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-column-gap: 1.5rem !important;
+    grid-row-gap: 1.5rem !important;
+  }
+
+  /* Single stat items centering */
+  .single-stat {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Headings aur text padding mobile ke liye */
+  .text-style-heading-1,
+  .h2 {
+    font-size: 2.2rem !important;
+    line-height: 2.8rem !important;
+  }
+
+  /* Phone mockup ya workspace center column ko mobile par adjust karna */
+  .phone-center-column,
+  .mock-device {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  /* Bahut chote mobiles par numbers ko single column (1fr) me karna */
+  .numbers {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* footer code responsive  */
+/* ==========================================================================
+   📱 RESPONSIVE FIX FOR FOOTER SECTION (Mobile & Tablet)
+   ========================================================================== */
+
+@media screen and (max-width: 991px) {
+  .footer-wrapper,
+  .footer-bottom-materials {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  .footer_bottom-left,
+  .footer_bottom-right {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+  }
+
+  .footer-text {
+    font-size: 15vw !important; /* Tablet par text size auto-scale hoga */
+    line-height: 1.1 !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 20px 0 !important;
+  }
+
+  .global-padding {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+
+  .footer-top-materials {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .footer-text {
+    font-size: 13vw !important; /* Mobile screen ke hisab se text fit rahega */
+  }
+
+  .footer-text-grafitti {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+    position: relative !important;
+    top: auto !important;
+  }
+
+  .footer_bottom-left {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .footer_bottom-right {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
 }

@@ -45,34 +45,10 @@
       box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.01);
     }
 
-    /* 🔒 Disabled Form Styling */
-    .form-field-input:disabled {
-      background: #f8fafc !important;
-      color: #94a3b8 !important;
-      border-color: #e2e8f0 !important;
-      cursor: not-allowed !important;
-    }
-
-    .btn-disabled-style {
-      background: #94a3b8 !important;
-      color: #ffffff !important;
-      box-shadow: none !important;
-      cursor: not-allowed !important;
-      pointer-events: none !important;
-    }
-
-    .disabled-notice-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(239, 68, 68, 0.08);
-      border: 1px solid rgba(239, 68, 68, 0.2);
-      color: #ef4444;
-      font-size: 11.5px;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 16px;
+    .form-field-input:focus {
+      border-color: #0052ff;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.1);
     }
 
     .contact-detail-card-item {
@@ -215,59 +191,58 @@
 
         </div>
 
-        <!-- RIGHT SIDE: Enquire Form (DISABLED VIEW) -->
+        <!-- RIGHT SIDE: Enquire Active Form Connected to Google Sheet -->
         <div class="contact-form-panel"
-          style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(0, 82, 255, 0.08); border-radius: 20px; padding: 36px; box-shadow: var(--card-shadow-default);">
-          
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-            <span class="form-eyebrow"
-              style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;">Growth
-              Transmission</span>
-            
-            <!-- Offline Feature Notice Badge -->
-            <div class="disabled-notice-badge">
-              <span>●</span> Direct Form Offline (Use WhatsApp/Call)
-            </div>
-          </div>
+  style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(0, 82, 255, 0.08); border-radius: 20px; padding: 36px; box-shadow: var(--card-shadow-default);">
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+    <span class="form-eyebrow"
+      style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase;">Growth
+      Transmission</span>
+    
+    <div id="formStatusMessage" style="font-size: 12px; font-weight: 700; color: #10b981; display: none;">
+      ✓ Data Sent to Google Sheet Successfully!
+    </div>
+  </div>
 
-          <div style="display: flex; flex-direction: column; gap: 20px; opacity: 0.85;">
-            <!-- Name Row -->
-            <div>
-              <label class="form-label-tag">Full Name</label>
-              <input type="text" id="enquiryName" class="form-field-input" placeholder="Form temporarily disabled"
-                autocomplete="off" disabled>
-            </div>
+  <form id="googleSheetContactForm" style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Name Row -->
+    <div>
+      <label class="form-label-tag">Full Name</label>
+      <input type="text" id="enquiryName" class="form-field-input" placeholder="Enter your full name"
+        autocomplete="off" required>
+    </div>
 
-            <!-- Email & Phone Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              <div>
-                <label class="form-label-tag">Email Address</label>
-                <input type="email" id="enquiryEmail" class="form-field-input" placeholder="name@company.com"
-                  autocomplete="off" disabled>
-              </div>
-              <div>
-                <label class="form-label-tag">Phone Number</label>
-                <input type="tel" id="enquiryPhone" class="form-field-input" placeholder="+91 98765-43210"
-                  autocomplete="off" disabled>
-              </div>
-            </div>
+    <!-- Email & Phone Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div>
+        <label class="form-label-tag">Email Address</label>
+        <input type="email" id="enquiryEmail" class="form-field-input" placeholder="name@company.com"
+          autocomplete="off" required>
+      </div>
+      <div>
+        <label class="form-label-tag">Phone Number</label>
+        <input type="tel" id="enquiryPhone" class="form-field-input" placeholder="+91 98765-43210"
+          autocomplete="off" required>
+      </div>
+    </div>
 
-            <!-- Message Field Container -->
-            <div>
-              <label class="form-label-tag">Project Parameters</label>
-              <textarea id="projectMessage" class="form-field-input"
-                placeholder="Direct enquiry transmission is coming soon. Please contact us via WhatsApp hotline or phone." rows="4" style="resize: none;" disabled></textarea>
-            </div>
+    <!-- Message Field Container -->
+    <div>
+      <label class="form-label-tag">Project Parameters</label>
+      <textarea id="projectMessage" class="form-field-input"
+        placeholder="Tell us about your project or inquiry..." rows="4" style="resize: none;" required></textarea>
+    </div>
 
-            <!-- Disabled Action Submission Button -->
-            <div style="margin-top: 8px;">
-              <button type="button" class="btn btn-disabled-style" id="submitFormBtn"
-                style="width: 100%; padding: 16px 28px; font-size: 14.5px;" disabled>
-                Transmission Under Maintenance ✦
-              </button>
-            </div>
-          </div>
-        </div>
+    <!-- Action Submission Button -->
+    <div style="margin-top: 8px;">
+      <button type="submit" class="btn btn-gold" id="submitFormBtn"
+        style="width: 100%; padding: 16px 28px; font-size: 14.5px; border: none; cursor: pointer;">
+        Transmit Enquiry ✦
+      </button>
+    </div>
+  </form>
+</div>
 
       </div>
 
@@ -446,6 +421,54 @@
       <span>Call Us</span>
     </a>
   </div>
+
+  <!-- Script for Google Sheet Submission -->
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbximHiSwbSF1nMTWJC6X2BRMtWoS2BMirg_H6uRDdAnu9GO2sxNmlGgQN8qf3R3D0A-/exec'; // ✦ Yahan apna deployed Web App URL paste karein
+  const form = document.getElementById('googleSheetContactForm');
+  const statusMsg = document.getElementById('formStatusMessage');
+  const submitBtn = document.getElementById('submitFormBtn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    submitBtn.textContent = 'Transmitting... ⏳';
+    submitBtn.disabled = true;
+
+    // 4 fields ka JSON data format
+    const requestData = {
+      cname: document.getElementById('enquiryName').value,
+      cemail: document.getElementById('enquiryEmail').value,
+      cphone: document.getElementById('enquiryPhone').value,
+      cmessage: document.getElementById('projectMessage').value
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestData)
+    })
+    .then(response => {
+      statusMsg.style.display = 'inline-block';
+      submitBtn.textContent = 'Transmitted Successfully ✓';
+      form.reset();
+      setTimeout(() => {
+        submitBtn.textContent = 'Transmit Enquiry ✦';
+        submitBtn.disabled = false;
+        statusMsg.style.display = 'none';
+      }, 4000);
+    })
+    .catch(error => {
+      console.error('Error!', error);
+      alert('Submission failed. Please try again or use WhatsApp hotline.');
+      submitBtn.textContent = 'Transmit Enquiry ✦';
+      submitBtn.disabled = false;
+    });
+  });
+</script>
 
   <!-- Core Scripts -->
   <script src="../services-data.js"></script>

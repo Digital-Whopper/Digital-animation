@@ -99,7 +99,7 @@ header.scrolled { top: 12px; }
 header.scrolled nav { border-radius: 24px; max-width: 1400px; background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(0, 82, 255, 0.15); box-shadow: var(--card-shadow-active) !important; animation: none; }
 .logo { display: flex; align-items: center; font-weight: 700; font-size: 19px; font-family: 'Sora', sans-serif; color: var(--text); }
 .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--btn-grad); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 13px; }
-.nav-links a { font-size: 14.5px; color: var(--muted); margin: 0 18px; font-weight: 500; }
+.nav-links a { font-size: 14.5px; color: var(--muted); margin: 0 10px; font-weight: 500; }
 .nav-links a:hover { color: var(--text); text-shadow: 0 0 10px rgba(0,0,0,0.05); }
 
 /* Active Page Link Styling */

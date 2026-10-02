@@ -865,12 +865,13 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
           <a href="/seo-company-in-jaipur/">SEO Service</a>
           <a href="/seoaudit/">SEO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
+          <a href="/team/">Team</a>
           <a href="/hiring/">Hiring</a>
          
         </div>
 
         <div class="nav-cta">
-          <a href="/contact/" class="btn btn-gold">Free Audit</a>
+          <a href="/contact/" class="btn btn-gold">Enquiry Center</a>
         </div>
 
         <button class="menu-toggle-trigger" id="hamburgerBtn" aria-label="Toggle Navigation">

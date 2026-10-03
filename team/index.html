@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Digital Whopper - Best Digital Marketing Agency in Jaipur</title>
+
+  <meta name="title" content="Meet Our Team | Digital Whopper - Jaipur">
+  <meta name="description" content="Meet the experts behind Digital Whopper. Our passionate team of developers, marketers, and strategists drive real growth and success for your brand.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styleb.css">
+  <link rel="stylesheet" href="../section.css">
+  <style>
+    .logo-img-asset {
+      height: 34px ;
+      width: auto !important;
+      object-fit: contain !important;
+      display: inline-block !important;
+      margin-right: 2px !important;
+    }
+
+    /* 🌟 Clean Split Section (Left Image & Right Supportive Content) */
+    .team-showcase-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 10px 0 40px 0;
+      margin-bottom: 20px;
+    }
+
+    .team-left-image-box {
+      width: 100%;
+      height: 380px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 82, 255, 0.08);
+    }
+
+    .team-left-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .team-showcase-split:hover .team-left-image-box img {
+      transform: scale(1.04);
+    }
+
+    .team-right-content-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Animated Badges */
+    .emoji-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .floating-emoji-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 82, 255, 0.05);
+      border: 1px solid rgba(0, 82, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0052ff;
+      animation: floatPill 3s ease-in-out infinite;
+    }
+
+    .floating-emoji-pill:nth-child(2) {
+      animation-delay: 1.5s;
+      background: rgba(16, 185, 129, 0.05);
+      border-color: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+
+    @keyframes floatPill {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    /* Team Members Grid Layout */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .team-card {
+      background: #ffffff !important;
+      border: 1px solid rgba(0, 82, 255, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 82, 255, 0.03);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #0052ff;
+      box-shadow: 0 20px 45px rgba(0, 82, 255, 0.12);
+    }
+
+    .team-img-box {
+      width: 100%;
+      height: 280px;
+      background: #f1f5f9;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-img-box img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      display: block !important;
+    }
+
+    .team-card-body {
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: #ffffff !important;
+    }
+
+    .team-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .team-socials a {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 82, 255, 0.06);
+      color: #0052ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+    .team-socials a:hover {
+      background: #0052ff;
+      color: #fff;
+    }
+
+    @media (max-width: 950px) {
+      .team-showcase-split {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-left-image-box {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="customPreloader" class="preloader-overlay">
+    <div class="preloader-content">
+      <h2 class="preloader-brand">Digital Whopper</h2>
+      <div class="preloader-spinner">
+        <span class="spinner-dot"></span>
+        <span class="spinner-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-blur" id="customCursorBlur"></div>
+
+  <!-- Header Navigation -->
+  <header id="mainHeader">
+    <nav>
+      <a href="../index.html" class="logo logo-eater-container" id="logoEaterBtn">
+        <div class="logo-icon-box">
+          <img src="../img/landing-logo1.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon" id="logoIcon">
+        </div>
+        <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="team.html" class="active">Our Team</a>
+        <a href="#">SEO Audit</a>
+        <a href="#">SMO Audit</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-gold">Enquire now</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+     🚀 OUR TEAM SECTION
+     ========================================================================== -->
+  <section class="hero scroll-reveal" style="padding-top: 140px; padding-bottom: 90px; position: relative;">
+    <div class="pink-blob"></div>
+    <div class="purple-ambient-glow"></div>
+    
+    <div class="stars-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 330px; pointer-events: none; z-index: 1;">
+      <canvas id="aiNodeCanvas" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+    <div class="wrap" style="max-width: 1300px; position: relative; z-index: 2;">
+      
+      <!-- Main Page Heading -->
+      <div class="text-center-wrapper" style="margin-bottom: 30px;">
+        <h1 class="text-shine" style="font-size: clamp(32px, 4.5vw, 46px); font-weight: 800; color: #07132c; margin-bottom: 0;">
+          Our Team
+        </h1>
+      </div>
+
+      <!-- 🌟 Section Heading for Group Image -->
+      <div style="margin-bottom: 20px;">
+        <span style="font-size: 12px; font-weight: 700; color: #0052ff; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 4px;">Family Culture</span>
+        <!-- <h2 style="font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: #07132c;">
+          Meet Our Supportive &amp; Close-Knit Family &#10084;
+        </h2> -->
+      </div>
+
+      <!-- Left Group Image & Right Supportive Content Split Section -->
+      <div class="team-showcase-split">
+        <!-- Left Side: Group Photo -->
+        <div class="team-left-image-box">
+          <img src="../img/team/group.jpg" alt="Digital Whopper Team Culture">
+        </div>
+
+        <!-- Right Side: Supportive & Family Content -->
+        <div class="team-right-content-box">
+          <div class="emoji-badge-row">
+            <span class="floating-emoji-pill">&#128107; Supportive Work Family</span>
+            <span class="floating-emoji-pill">&#9749; Passionate &amp; Creative</span>
+          </div>
+          <h3 style="font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 700; color: #07132c; line-height: 1.3;">
+            More than just colleagues, we are a close-knit family that supports each other every step of the way! &#10024;
+          </h3>
+          <p style="font-size: 14.5px; color: #5c6b82; line-height: 1.6;">
+            The greatest strength of Digital Whopper is our strong bond and mutual support. We tackle every challenge together, brainstorm creative ideas, and treat every client's success as our personal victory. A supportive environment is the true secret behind our exceptional performance! &#127774;&#128170;
+          </p>
+          <div style="margin-top: 6px;">
+            <a href="/contact/" class="btn btn-gold" style="padding: 12px 24px; font-size: 13.5px;">Work With Our Family &#8594;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🌟 Section Heading for Team Members Grid -->
+      <div style="margin-top: 50px; margin-bottom: 10px;">
+        <span style="font-size: 12px; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 4px;">Expert Minds</span>
+        <h2 style="font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; color: #07132c;">
+          Our Core Team Members &#128640;
+        </h2>
+        <p style="font-size: 14px; color: #5c6b82; margin-top: 4px;">
+          Meet the expert minds ready to take your business to new heights in the digital world.
+        </p>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="team-grid">
+        
+        <!-- Member 1: Founder -->
+        <div class="team-card">
+          <div class="team-img-box">
+            <img src="../img/team/pratham.jpg" alt="Mishal Ahmad">
+          </div>
+          <div class="team-card-body">
+            <h3 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #07132c;">Pratham Surani</h3>
+            <span style="font-size: 12.5px; font-weight: 700; color: #0052ff; text-transform: uppercase; letter-spacing: 0.05em;">Co Founder</span>
+            <p style="font-size: 13.5px; color: #5c6b82; margin-top: 6px; line-height: 1.5;">Expert in performance marketing and scaling high-impact business growth strategies.</p>
+            <div class="team-socials">
+              <a href="https://www.linkedin.com/in/prathamsurani/" target="_blank" aria-label="LinkedIn">in</a>
+              <a href="https://www.instagram.com/prathamsurani/?hl=en" target="_blank" aria-label="Instagram">ig</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 2: Lead Developer -->
+        <div class="team-card">
+          <div class="team-img-box">
+            <img src="../img/team/bhisham.jpg" alt="Development Lead">
+          </div>
+          <div class="team-card-body">
+            <h3 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #07132c;">Bisham Chhugani</h3>
+            <span style="font-size: 12.5px; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.05em;">Manager</span>
+            <p style="font-size: 13.5px; color: #5c6b82; margin-top: 6px; line-height: 1.5;">Managing end-to-end SEO operations and client relationships successfully.</p>
+            <div class="team-socials">
+              <a href="https://www.linkedin.com/in/bisham-chhugani-437164199/" target="_blank" aria-label="LinkedIn">in</a>
+              <a href="https://www.instagram.com/bisham___/" target="_blank" aria-label="Instagram">ig</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3: SEO & Growth Head -->
+        <div class="team-card">
+          <div class="team-img-box">
+            <img src="../img/team/harsh.png" alt="SEO Specialist">
+          </div>
+          <div class="team-card-body">
+            <h3 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #07132c;">Harsh Sain</h3>
+            <span style="font-size: 12.5px; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.05em;">Head of SEO & Analytics</span>
+            <p style="font-size: 13.5px; color: #5c6b82; margin-top: 6px; line-height: 1.5;">Specialized in technical SEO audits, multi-city organic rankings, and traffic growth.</p>
+            <div class="team-socials">
+              <a href="https://www.linkedin.com/in/harsh-sain-/" target="_blank" aria-label="LinkedIn">in</a>
+              <a href="https://www.instagram.com/harshsain829/" target="_blank" aria-label="Instagram">ig</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-mark">DW</div>Digital Whopper
+          </a>
+          <p>3rd Floor, 4/11, Vidyut Abhiyanta Colony, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017</p>
+          <p><a href="tel:+916200379161">+91 6200379161</a><br><a href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
+          <div class="socials">
+            <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="foot-links">
+          <div class="foot-col">
+            <h4>Pages</h4>
+            <a href="../index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+          <div class="foot-col">
+            <h4>Our services</h4>
+            <a href="services.html">App &amp; Shopify Development</a>
+            <a href="services.html">SEO &amp; SMO Optimisation</a>
+            <a href="services.html">Performance Marketing</a>
+            <a href="services.html">Web Design &amp; Development</a>
+          </div>
+          <div class="foot-col">
+            <h4>Quick links</h4>
+            <a href="../index.html#blog">Blog</a>
+            <a href="../index.html#faq">FAQ</a>
+            <a href="https://wa.me/916200379161" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Digital Whopper. All rights reserved.</span>
+        <span>Made with ✦ in Jaipur, the Pink City</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-wrapper">
+    <div class="chat-bubble" id="chatBubble">
+      <div class="robot-image-container">
+        <img src="../hero-robo.png" alt="Whoppy AI Robot" class="bot-bubble-img">
+      </div>
+    </div>
+    <div class="chatbot-caption-tag">
+      <span class="sparkle-ico">✦</span> I am Chotu! Share your enquiry
+    </div>
+  </div>
+
+  <!-- Floating Left Social Links -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener" class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener" class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradBlog)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGradBlog" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener" class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Floating Call & WhatsApp Buttons -->
+  <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
+    <div class="call-icon-holder-l">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.79 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </div>
+  </a>
+
+  <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
+    <div class="wa-icon-holder-w">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.413 1.451 5.428 0 9.845-4.37 9.849-9.742.002-2.602-1.005-5.05-2.839-6.887-1.834-1.838-4.272-2.851-6.878-2.852-5.43 0-9.85 4.372-9.855 9.746-.002 2.042.535 4.039 1.557 5.795L2.556 21.47l4.091-1.316z"/>
+      </svg>
+    </div>
+    <span class="wa-vertical-text-w">let’s talk</span>
+  </a>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div class="mobile-app-bottom-nav">
+    <a href="../index.html" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </div>
+      <span>Home</span>
+    </a>
+    <a href="services.html" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      </div>
+      <span>Services</span>
+    </a>
+    <a href="team.html" class="app-nav-item active">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M3 13a4 4 0 0 1 3-3.87"></path>
+        </svg>
+      </div>
+      <span>Team</span>
+    </a>
+    <a href="contact.html" class="app-nav-item">
+      <div class="app-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <script src="../scriptb.js"></script>
+  <script src="../section.js"></script>
+  <script src="../services-data.js"></script>
+
+</body>
+</html>

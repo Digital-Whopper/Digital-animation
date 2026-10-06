@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../section.css">
 <style>
   .logo-img-asset { height: 34px; width: auto; object-fit: contain; display: inline-block; margin-right: 2px; }
-  .detail-hero { padding: 160px 0 30px !important; position: relative; z-index: 2; }
+  .detail-hero { padding: 90px 0 30px !important; position: relative; z-index: 2; }
   
   /* Layout Architecture Box */
   .blog-detail-container { max-width: 860px; margin: 0 auto 100px; padding: 0 20px; position: relative; z-index: 5; }
@@ -278,7 +278,7 @@
 <script src="../section.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const slugParam = urlParams.get('slug');
     const idParam = urlParams.get('id');
@@ -288,7 +288,6 @@
       return;
     }
 
-    // 🌟 Slug ya ID ke exact match se blog find karein
     let blog = null;
     if (slugParam) {
       blog = DW_BLOGS_DATA.find((item) => item.slug === slugParam);
@@ -296,41 +295,128 @@
       blog = DW_BLOGS_DATA.find((item) => String(item.id) === String(idParam));
     }
 
-    // Fallback: Agar match na mile toh latest blog le
     if (!blog) {
       const sorted = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
       blog = sorted[0];
     }
 
-    // Dynamic Data Injection
-    document.title = `${blog.title} | Digital Whopper`;
+    document.title = `${blog.title || 'Blog'} | Digital Whopper`;
     document.getElementById('artTag').innerText = blog.category || "Digital Whopper";
-    document.getElementById('artReadTime').innerText = `• ${blog.readTime || '3 min read'}`;
+    document.getElementById('artReadTime').innerText = blog.readTime ? `• ${blog.readTime}` : '';
     document.getElementById('artDate').innerText = blog.publishDate || "";
-    document.getElementById('artTitle').innerText = blog.title;
-    document.getElementById('artIntro').innerText = blog.content?.intro || blog.excerpt || "";
-    document.getElementById('artImage').src = blog.bannerImage || blog.thumbnail;
-    document.getElementById('artImage').alt = blog.title;
+    document.getElementById('artTitle').innerText = blog.title || "";
+    
+    const introEl = document.getElementById('artIntro');
+    if (blog.content?.intro) {
+      introEl.innerHTML = blog.content.intro;
+      introEl.style.display = 'block';
+    } else {
+      introEl.style.display = 'none';
+    }
 
-    // Render Article Body
+    const bannerImg = document.getElementById('artImage');
+    const bannerFrame = document.querySelector('.featured-banner-frame');
+    if (blog.bannerImage || blog.thumbnail) {
+      bannerImg.src = blog.bannerImage || blog.thumbnail;
+      bannerImg.alt = blog.title || "Blog Graphic";
+      bannerFrame.style.display = 'block';
+    } else {
+      bannerFrame.style.display = 'none';
+    }
+
     let bodyHTML = '';
+    
+    // Render Sections & Tables
     if (blog.content?.sections && Array.isArray(blog.content.sections)) {
       blog.content.sections.forEach(sec => {
-        bodyHTML += `<h3>${sec.heading}</h3><p>${sec.desc}</p>`;
-        if (sec.takeaways && Array.isArray(sec.takeaways)) {
-          bodyHTML += `<div class="takeaways-box"><ul>`;
-          sec.takeaways.forEach(t => { bodyHTML += `<li>${t}</li>`; });
-          bodyHTML += `</ul></div>`;
+        if (sec.heading) {
+          bodyHTML += `<h3>${sec.heading}</h3>`;
+        }
+        if (sec.desc) {
+          bodyHTML += `<p>${sec.desc}</p>`;
+        }
+
+        if (sec.table && sec.table.headers && sec.table.rows) {
+          bodyHTML += `<div style="overflow-x:auto; margin: 20px 0;"><table style="width:100%; border-collapse: collapse; font-size: 14.5px;"><thead><tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">`;
+          sec.table.headers.forEach(h => {
+            bodyHTML += `<th style="padding: 10px 12px; text-align: left; color: #0f172a; border: 1px solid #e2e8f0;">${h}</th>`;
+          });
+          bodyHTML += `</tr></thead><tbody>`;
+          sec.table.rows.forEach(row => {
+            bodyHTML += `<tr>`;
+            const cells = row.cell || row;
+            cells.forEach(cell => {
+              bodyHTML += `<td style="padding: 10px 12px; border: 1px solid #e2e8f0; color: #334155;">${cell}</td>`;
+            });
+            bodyHTML += `</tr>`;
+          });
+          bodyHTML += `</tbody></table></div>`;
         }
       });
     }
 
+    // FAQ Accordion Section
+    if (blog.content?.faqs && Array.isArray(blog.content.faqs) && blog.content.faqs.length > 0) {
+      bodyHTML += `<div style="margin-top: 50px;">
+        <div style="display: inline-block; background: rgba(0, 82, 255, 0.08); color: #0052ff; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; margin-bottom: 12px;">● FAQ</div>
+        <h3 style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 24px;">Frequently asked questions</h3>
+        <div class="faq-container" style="display: flex; flex-direction: column; gap: 16px;">`;
+      
+      blog.content.faqs.forEach((faq, index) => {
+        bodyHTML += `
+          <div class="faq-item" style="border: 1px solid #dbeafe; border-radius: 12px; background: #ffffff; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+            <button class="faq-question-btn" onclick="toggleFaq(${index})" style="width: 100%; text-align: left; padding: 20px 24px; background: none; border: none; font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 700; color: #0f172a; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>${faq.q}</span>
+              <span id="faq-icon-${index}" style="font-size: 20px; color: #0052ff; font-weight: bold; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: rgba(0,82,255,0.05); border-radius: 50%;">+</span>
+            </button>
+            <div id="faq-answer-${index}" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 24px; color: #475569; font-size: 15px; line-height: 1.6;">
+              <p style="padding-bottom: 20px; margin: 0; border-top: 1px solid #f1f5f9; padding-top: 16px;">${faq.a}</p>
+            </div>
+          </div>`;
+      });
+      bodyHTML += `</div></div>`;
+    }
+
+    // Clickable References Section
+    if (blog.content?.references && Array.isArray(blog.content.references) && blog.content.references.length > 0) {
+      bodyHTML += `<div style="margin-top: 40px; padding: 20px; background: #f8fafd; border-radius: 12px; border: 1px solid #eef2f6;">
+        <strong style="font-family: 'Sora', sans-serif; font-size: 16px; color: #0f172a; display: block; margin-bottom: 12px;">References:</strong>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">`;
+      
+      blog.content.references.forEach(ref => {
+        bodyHTML += `<li><a href="${ref.url}" target="_blank" rel="noopener" style="color: #0052ff; text-decoration: none; font-size: 14.5px; font-weight: 500;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${ref.title} ↗</a></li>`;
+      });
+      
+      bodyHTML += `</ul></div>`;
+    }
+
+    // Conclusion Card
     if (blog.content?.conclusion) {
       bodyHTML += `<div class="conclusion-card"><strong>Key Takeaway:</strong> ${blog.content.conclusion}</div>`;
     }
 
     document.getElementById('artBody').innerHTML = bodyHTML;
   });
+
+  // FAQ Accordion Toggle Function
+  function toggleFaq(index) {
+    const answerEl = document.getElementById(`faq-answer-${index}`);
+    const iconEl = document.getElementById(`faq-icon-${index}`);
+    const itemEl = answerEl.closest('.faq-item');
+    
+    if (answerEl.style.maxHeight && answerEl.style.maxHeight !== "0px") {
+      answerEl.style.maxHeight = "0px";
+      iconEl.innerText = "+";
+      iconEl.style.background = "rgba(0,82,255,0.05)";
+      itemEl.style.borderColor = "#dbeafe";
+    } else {
+      answerEl.style.maxHeight = answerEl.scrollHeight + "0px";
+      iconEl.innerText = "×";
+      iconEl.style.background = "#0052ff";
+      iconEl.style.color = "#ffffff";
+      itemEl.style.borderColor = "#0052ff";
+    }
+  }
 </script>
 </body>
 </html>

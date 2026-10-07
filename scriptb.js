@@ -81,57 +81,57 @@ window.addEventListener('scroll', () => {
 // 🌟 20+ HIGH DENSITY REAL-WORLD MARKETING & DEV PROJECTS REPOSITORY
 const projects = [
   // 1
-  { title: "Marbleous", tag: "Custom High-Concurrency API", thumbnail: "img/projects/marbess2.png", images: ["img/projects/marbess2.png", "img/projects/marbess3.png"] },
+  { title: "Marbleous", tag: "Custom High-Concurrency API", thumbnail: "img/projects/marbess2.webp", images: ["img/projects/marbess2.webp", "img/projects/marbess3.webp"] },
   // 2
-  { title: "Ekatra", tag: "Immersive Elegant UX/UI", thumbnail: "img/projects/ekatra3.png", images: ["img/projects/ekatra1.png", "img/projects/ekatra2.png"] },
+  { title: "Ekatra", tag: "Immersive Elegant UX/UI", thumbnail: "img/projects/ekatra3.webp", images: ["img/projects/ekatra1.webp", "img/projects/ekatra2.webp"] },
 
   //  3
   {
     title: "Meenal Modi", tag: "SEO growth dashboard",
-    thumbnail: "img/projects/meenalth.png", images: ["img/projects/meenal.png", "img/projects/meenal1.png"]
+    thumbnail: "img/projects/meenath.webp", images: ["img/projects/meenal.webp", "img/projects/meenal1.webp"]
   },
   // 4
   {
     title: "Gud Mishri", tag: "Reels and creator content",
-    thumbnail: "img/projects/gudhmisrith.png", images: ["img/projects/gudhmisri1.png", "img/projects/gudhmisri3.png"]
+    thumbnail: "img/projects/gudhmisrith.webp", images: ["img/projects/gudhmisri1.webp", "img/projects/gudhmisri3.webp"]
   },
   //  5
-  { title: "Sahu Chai Wala", tag: "Lead nurture system", thumbnail: "img/projects/sahuchaiwala3.png", images: ["img/projects/sahuchaiwala1.png", "img/projects/sahuchaiwala2.png"] },
+  { title: "Sahu Chai Wala", tag: "Lead nurture system", thumbnail: "img/projects/sahuchaiwala3.webp", images: ["img/projects/sahuchaiwala1.webp", "img/projects/sahuchaiwala2.webp"] },
   // 6
-  { title: "Namo Tandoori Chai", tag: "Short-form launch kit", thumbnail: "img/projects/namo3.png", images: ["img/projects/namo1.png", "img/projects/namo2.png"] },
+  { title: "Namo Tandoori Chai", tag: "Short-form launch kit", thumbnail: "img/projects/namo3.webp", images: ["img/projects/namo1.webp", "img/projects/namo2.webp"] },
   // 7
-  { title: "Phulkari", tag: "LMS React Architecture", thumbnail: "img/projects/phulkari3.png", images: ["img/projects/phulkari1.png", "img/projects/phulkari2.png"] },
+  { title: "Phulkari", tag: "LMS React Architecture", thumbnail: "img/projects/phulkari3.webp", images: ["img/projects/phulkari1.webp", "img/projects/phulkari2.webp"] },
   // 8
-  { title: "J-Pure", tag: "Cloud Infrastructure Integration", thumbnail: "img/projects/jpure3.png", images: ["img/projects/jpure1.png", "img/projects/jpure2.png"] },
+  { title: "J-Pure", tag: "Cloud Infrastructure Integration", thumbnail: "img/projects/jpure3.webp", images: ["img/projects/jpure1.webp", "img/projects/jpure2.webp"] },
   // 9
-  { title: "Yatharth", tag: "High-Intent Meta Ad Lead Gen", thumbnail: "img/projects/yatharth3.png", images: ["img/projects/yatharth1.png", "img/projects/yatharth2.png"] },
+  { title: "Yatharth", tag: "High-Intent Meta Ad Lead Gen", thumbnail: "img/projects/yatharth3.webp", images: ["img/projects/yatharth1.webp", "img/projects/yatharth2.webp"] },
   // 10
   { title: "Exporis", tag: "Omnichannel Hyper-Growth", thumbnail: "img/projects/exporis.webp", images: ["img/projects/exporis.webp", "img/projects/exporis.webp"] },
   // 1
-  { title: "Dresszilla", tag: "Shopify conversion build", thumbnail: "img/projects/dresszilla.png", images: ["img/projects/dresszilla.png", "img/projects/dresszilla1.png"] },
+  { title: "Dresszilla", tag: "Shopify conversion build", thumbnail: "img/projects/dresszilla.webp", images: ["img/projects/dresszilla.webp", "img/projects/dresszilla1.webp"] },
   // 2
   {
     title: "Reducetax", tag: "Meta + Google funnels",
     // link: "https://rahultakdev.vercel.app/", 
-    thumbnail: "img/projects/reducetaxth.png",
-    images: ["img/projects/reducetax.png", "img/projects/reducetax1.png"]
+    thumbnail: "img/projects/reducetaxth.webp",
+    images: ["img/projects/reducetax.webp", "img/projects/reducetax1.webp"]
   },
   // 11
-  { title: "JCCA", tag: "Secure Mobile Wallet Design", thumbnail: "img/projects/jcca3.png", images: ["img/projects/jcca1.png", "img/projects/jcca2.png"] },
+  { title: "JCCA", tag: "Secure Mobile Wallet Design", thumbnail: "img/projects/jcca3.webp", images: ["img/projects/jcca1.webp", "img/projects/jcca2.webp"] },
   // 12
-  { title: "RajaRaya", tag: "Medical Directory Scaling", thumbnail: "img/projects/rajaraya3.png", images: ["img/projects/rajaraya1.png", "img/projects/rajaraya2.png"] },
+  { title: "RajaRaya", tag: "Medical Directory Scaling", thumbnail: "img/projects/rajaraya3.webp", images: ["img/projects/rajaraya1.webp", "img/projects/rajaraya2.webp"] },
   // 13
-  { title: "Thegasbh", tag: "High-Ticket WooCommerce Build", thumbnail: "img/projects/thegasbh3.png", images: ["img/projects/thegasbh1.png", "img/projects/thegasbh2.png"] },
+  { title: "Thegasbh", tag: "High-Ticket WooCommerce Build", thumbnail: "img/projects/thegasbh3.webp", images: ["img/projects/thegasbh1.webp", "img/projects/thegasbh2.webp"] },
   // 14
-  { title: "Weddingz Mantra", tag: "Real-time API Web Dashboard", thumbnail: "img/projects/wedding1.png", images: ["img/projects/wedding1.png", "img/projects/wedding2.png"] },
+  { title: "Weddingz Mantra", tag: "Real-time API Web Dashboard", thumbnail: "img/projects/wedding1.webp", images: ["img/projects/wedding1.webp", "img/projects/wedding2.webp"] },
   // 15
-  { title: "Coachify", tag: "Hyperlocal Lead Generation", thumbnail: "img/projects/coachify3.png", images: ["img/projects/coachify1.png", "img/projects/coachify2.png"] },
+  { title: "Coachify", tag: "Hyperlocal Lead Generation", thumbnail: "img/projects/coachify3.webp", images: ["img/projects/coachify1.webp", "img/projects/coachify2.webp"] },
   // 16
-  { title: "Maria Ross Paris", tag: "Lookbook & Creative Direction", thumbnail: "img/projects/ross3.png", images: ["img/projects/ross1.png", "img/projects/ross2.png"] },
+  { title: "Maria Ross Paris", tag: "Lookbook & Creative Direction", thumbnail: "img/projects/ross3.webp", images: ["img/projects/ross1.webp", "img/projects/ross2.webp"] },
   // 17
-  { title: "Mum & Daughter", tag: "Offline-First Mobile UI", thumbnail: "img/projects/momd3.png", images: ["img/projects/momd1.png", "img/projects/momd2.png"] },
+  { title: "Mum & Daughter", tag: "Offline-First Mobile UI", thumbnail: "img/projects/momd3.webp", images: ["img/projects/momd1.webp", "img/projects/momd2.webp"] },
   // 18
-  { title: "Homearte India", tag: "Subscription Funnel Build", thumbnail: "img/projects/homeart3.png", images: ["img/projects/homeart1.png", "img/projects/homeart2.png"] },
+  { title: "Homearte India", tag: "Subscription Funnel Build", thumbnail: "img/projects/homeart3.webp", images: ["img/projects/homeart1.webp", "img/projects/homeart2.webp"] },
   // 19
 
 ];

@@ -230,11 +230,30 @@ document.addEventListener('DOMContentLoaded', () => {
 // 🚀 PRELOADER FALLBACK SAFETY (यह पक्का करेगा कि लोडिंग स्क्रीन हमेशा हटे)
 window.addEventListener('load', () => {
   const preloader = document.getElementById('customPreloader');
-  if (preloader) {
+  if (!preloader) return;
+
+  // 1. Fast users ke liye minimum 200ms ka timer
+  const minTimer = new Promise(resolve => setTimeout(resolve, 200));
+
+  // 2. Pura page/resources load hone ka check
+  const pageFullyLoaded = new Promise(resolve => {
+    if (document.readyState === 'complete') {
+      resolve();
+    } else {
+      window.addEventListener('load', resolve);
+    }
+  });
+
+  // Promise.all ye ensure karega ki:
+  // - Agar net fast hai, toh 200ms pure hote hi preloader gayab ho jayega.
+  // - Agar net slow hai, toh jab tak window.load complete nahi hota, preloader 
+  //   ruk kar dikhta rahega taaki broken ya slow loading na dikhe.
+  Promise.all([minTimer, pageFullyLoaded]).then(() => {
+    preloader.classList.add('fade-out');
     setTimeout(() => {
-      preloader.classList.add('fade-out');
-    }, 200); // 1200ms की जगह 600ms में तुरंत लोड स्क्रीन हटा देगा
-  }
+      preloader.style.display = 'none';
+    }, 500);
+  });
 });
 
 function generateCardTemplate(p, globalIdx) {
@@ -1138,7 +1157,21 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animateAINetwork);
   }
 
-  animateAINetwork();
+  // animateAINetwork();
+  const canvasSection = document.getElementById('aiNodeCanvas');
+
+if (canvasSection) {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateAINetwork(); // Sirf tabhi start hoga jab user us section par aayega
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(canvasSection.parentElement);
+}
 });
 
 

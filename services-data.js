@@ -2,7 +2,7 @@
 const DW_SERVICES_DATA = [
   {
     id: 0,
-    slug: "seo-dominance",
+    slug: "social-media-marketing-company-in-jaipur",
     title: "SEO Dominance",
     menuTitle: "SEO & SMO Optimisation",
     icon: "🔍",
@@ -36,7 +36,7 @@ const DW_SERVICES_DATA = [
   },
   {
     id: 1,
-    slug: "performance-ads",
+    slug: "performance-marketing-agency",
     title: "Performance Ads",
     menuTitle: "Performance Marketing",
     icon: "🚀",
@@ -70,7 +70,7 @@ const DW_SERVICES_DATA = [
   },
   {
     id: 2,
-    slug: "web-development",
+    slug: "web-development-company-in-jaipur", // jis name se slug banayenge usi name se file name rakhenge, jaise ki web-development-company-in-jaipur.js
     title: "Web Development",
     menuTitle: "Web Design & Development",
     icon: "💻",
@@ -106,7 +106,7 @@ const DW_SERVICES_DATA = [
     id: 3,
     slug: "ecommerce-marketing-services",
     title: "Ecommerce Marketing Services",
-    menuTitle: "Ecommerce Marketing",
+    menuTitle: "Ecommerce Marketing Services", // website me navbar me menu me jo title dikhana hai wo yaha likhenge 
     icon: "🛍️",
     classColor: "color-c4",
     badge: "Marketplace Dominance",

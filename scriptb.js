@@ -227,33 +227,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// 🚀 PRELOADER FALLBACK SAFETY (यह पक्का करेगा कि लोडिंग स्क्रीन हमेशा हटे)
-window.addEventListener('load', () => {
+// 🚀 Clean & Fast Preloader Logic
+document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('customPreloader');
   if (!preloader) return;
 
-  // 1. Fast users ke liye minimum 200ms ka timer
-  const minTimer = new Promise(resolve => setTimeout(resolve, 200));
+  // Agar page pehle se load ho chuka hai toh turant hide rakhein
+  if (document.readyState === 'complete') {
+    preloader.style.display = 'none';
+    return;
+  }
 
-  // 2. Pura page/resources load hone ka check
-  const pageFullyLoaded = new Promise(resolve => {
-    if (document.readyState === 'complete') {
-      resolve();
-    } else {
-      window.addEventListener('load', resolve);
-    }
-  });
+  // Agar 400ms se zyada time lag raha hai tabhi loader dikhayein
+  // const loaderTimeout = setTimeout(() => {
+  //   preloader.style.display = 'flex';
+  //   preloader.style.opacity = '1';
+  // }, 400);
 
-  // Promise.all ye ensure karega ki:
-  // - Agar net fast hai, toh 200ms pure hote hi preloader gayab ho jayega.
-  // - Agar net slow hai, toh jab tak window.load complete nahi hota, preloader 
-  //   ruk kar dikhta rahega taaki broken ya slow loading na dikhe.
-  Promise.all([minTimer, pageFullyLoaded]).then(() => {
-    preloader.classList.add('fade-out');
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 500);
-  });
+  // window.addEventListener('load', () => {
+  //   clearTimeout(loaderTimeout); // Agar net fast hai toh timer cancel ho jayega
+    
+  //   preloader.classList.add('fade-out');
+  //   setTimeout(() => {
+  //     preloader.style.display = 'none';
+  //   }, 500);
+  // });
 });
 
 function generateCardTemplate(p, globalIdx) {
@@ -1042,14 +1040,14 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
 });
 
 // Full Window Preloader Fade Out Engine
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('customPreloader');
-  if (preloader) {
-    setTimeout(() => {
-      preloader.classList.add('fade-out');
-    }, 500);
-  }
-});
+// window.addEventListener('load', () => {
+//   const preloader = document.getElementById('customPreloader');
+//   if (preloader) {
+//     setTimeout(() => {
+//       preloader.classList.add('fade-out');
+//     }, 500);
+//   }
+// });
 
 // ==========================================================================
 // 🧠 FUTURISTIC AI CONSTELLATION BACKGROUND ENGINE (CANVAS NODE NET) WITH MOUSE TRAIL

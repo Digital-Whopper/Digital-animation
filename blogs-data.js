@@ -170,44 +170,7 @@ const DW_BLOGS_DATA = [
       conclusion: "Small systematic conversion adjustments yield massive compounding revenue growth."
     }
   },
-  {
-    id: 4,
-    slug: "next-gen-web-architecture-core-web-vitals-rahul",
-    title: "Next-Gen Web Architecture: Why Core Web Vitals Dictate rahul",
-    category: "Web Development",
-    badge: "Tech Deep-Dive",
-    icon: "💻",
-    classColor: "color-c3",
-    featured: false,
-    readTime: "5 min read",
-    publishDate: "Aug 14, 2026",
-    newsHeadline: "Frontend Performance & 60fps Rendering",
-    newsSummary: "How asynchronous script loading and modular component hierarchies prevent cumulative layout shifts completely.",
-    author: {
-      name: "Rahul Tak",
-      role: "Full-Stack Engineer",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
-    },
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-    bannerImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
-    excerpt: "A look into modern frontend architecture, micro-interactions, and reducing Time to Interactive (TTI) for seamless UX.",
-    tags: ["Web Dev", "Full-Stack", "Core Web Vitals", "UI/UX"],
-    content: {
-      intro: "This is the latest technical article explaining how architecture updates improve user interaction.",
-      sections: [
-        {
-          heading: "1. Deep Dive into Frontend Performance",
-          desc: "How modular CSS and asynchronous JS scripts prevent layout shifts and maintain 60fps rendering.",
-          takeaways: [
-            "Keep component hierarchies lightweight and reusable.",
-            "Maintain fast edge caching protocols.",
-            "Run automated Lighthouse audits in CI/CD pipelines."
-          ]
-        }
-      ],
-      conclusion: "Optimized infrastructure delivers instant user satisfaction and higher retention."
-    }
-  },
+ 
  {
   id: 5,
   slug: "google-moved-campaigns-ai-max-september",
@@ -509,5 +472,140 @@ const DW_BLOGS_DATA = [
       ],
       conclusion: "The festive season rewards brands that show up with a plan, not just a sale. Pick the right festivals, lock your delivery dates, and keep engaging your customers through the end of the year."
     }
+  },
+  {
+    id: 7,
+    slug: "eu-ai-act-ai-content-labelling",
+    title: "Do You Have to Label AI Content for EU Clients? What the EU AI Act Actually Requires (and What It Doesn't)",
+    category: "AI & Regulatory Compliance",
+    badge: "Legal Guide",
+    icon: "⚖️",
+    classColor: "color-c2",
+    featured: true,
+    readTime: "8 min read",
+    publishDate: "Oct 09, 2026",
+    newsHeadline: "EU AI Act Compliance & Content Labelling",
+    newsSummary: "Understand what the EU AI Act actually requires for AI-generated text, deepfakes, and what Indian agencies working with EU clients need to know.",
+    author: {
+      name: "Digital Whopper",
+      role: "Performance Marketing Agency",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    },
+    thumbnail: "img/blogs/blog3-1.png",
+    bannerImage: "img/blogs/blog3.png",
+    excerpt: "A plain-language breakdown of EU AI Act Article 50 transparency duties, watermarking, deepfakes, and what Indian agencies must label.",
+    tags: ["EU AI Act", "AI Content", "Legal", "Digital Marketing"],
+    content: {
+      intro: "Do You Have to Label AI Content for EU Clients? What the EU AI Act Actually Requires (and What It Doesn't)",
+      sections: [
+        {
+          heading: "The short answer",
+          desc: "<ul><li><b>Not all AI content needs a label.</b> The EU AI Act does not require every AI-written caption, blog or ad to be marked as AI-generated.</li><li><b>Watermarking is the AI tool's job.</b> Companies that build generative AI tools must embed machine-readable markers in what their tools create. Agencies and brands using those tools do not add watermarks themselves.</li><li><b>What you must label:</b> Deepfakes (realistic AI images, video or audio that could pass as real) and AI-written text published to inform the public on matters of public interest.</li><li><b>The text exception:</b> AI-assisted text that a human has reviewed and that someone takes editorial responsibility for does not need a label.</li><li><b>When:</b> These rules apply from 2 August 2026. The watermarking duty for AI tools already on the market applies from 2 December 2026.</li><li><b>Outside the EU?</b> The rules can still apply if your content is used in the EU, so Indian agencies with EU clients should take note.</li></ul><br><i>This article explains the rules in plain language. It is not legal advice. For decisions on a specific campaign, check with a lawyer who knows EU law.</i>"
+        },
+        {
+          heading: "What the EU AI Act actually says about AI content",
+          desc: "The rules sit in Article 50 of the EU AI Act. They split duties between two groups.",
+          table: {
+            headers: ["Who", "What the law calls them", "Example", "Main duty"],
+            rows: [
+              ["Companies that build AI tools", "Providers", "Makers of AI image, video, voice and text generators", "Mark AI outputs in a machine-readable way so they can be detected as AI-generated"],
+              ["Businesses that use AI tools", "Deployers", "Brands, agencies, publishers", "Tell people when content is a deepfake or AI-generated public-interest text"]
+            ]
+          },
+          conclusionNote: "Most marketing agencies and brands are deployers. That means your main job is disclosure, not technical watermarking."
+        },
+        {
+          heading: "The key dates",
+          table: {
+            headers: ["Date", "What happened or applies"],
+            rows: [
+              ["10 June 2026", "European Commission published the final Code of Practice on Transparency of AI-Generated Content"],
+              ["July 2026", "Commission adopted Guidelines on the transparency obligations"],
+              ["27 July 2026", "Digital Omnibus on AI entered into force, adjusting some AI Act deadlines"],
+              ["2 August 2026", "Article 50 transparency duties apply, including deployer labelling duties"],
+              ["2 December 2026", "Watermarking duty applies to AI tools that were already on the market before 2 August 2026"]
+            ]
+          },
+          conclusionNote: "The labelling duty is not retroactive. Images, audio and video generated before 2 August 2026 do not need a new label. For public-interest text, the publication date matters, so text written earlier but published after that date is covered."
+        },
+        {
+          heading: "The Code of Practice and the EU icons",
+          desc: "The Code of Practice is voluntary. Signing it is one way to show you comply, but the legal duties apply either way. The Code includes official EU icons that businesses can use to label AI-generated or AI-manipulated content."
+        },
+        {
+          heading: "Does the EU AI Act apply to an agency outside the EU?",
+          desc: "It can. The AI Act covers providers and deployers outside the EU when the output of their AI system is used in the EU. If an Indian agency creates AI-assisted content for a German, French or Dutch audience, the labelling rules can apply to that content.<br><br>In practice, both the agency and the EU client share the risk. The safest approach is to agree in writing who checks and labels AI content before it goes live."
+        },
+        {
+          heading: "What needs a label, and what does not",
+          desc: "<b>Content that needs a label</b><br>1. <b>Deepfakes.</b> These are AI-generated or AI-edited images, video or audio that resemble real people, objects, places or events and would falsely appear authentic.<br>• A realistic AI video of a real doctor, founder or celebrity saying something they never said<br>• An AI voice clone of a real person in an ad<br>• A photorealistic AI image of a real hotel, place or event shown as if it were a real photo<br><br>2. <b>AI-generated text on matters of public interest.</b> This covers text published to inform the public, such as news-style articles on health, politics, economics or public safety.<br>• An AI-written health news update published without human editorial review<br>• An AI-written article on a new public policy, published as information for the public<br><br><b>Content that usually does not need a label</b><br>• AI-assisted blog posts, captions or ad copy that a human has reviewed and edited, with someone taking editorial responsibility<br>• Marketing copy that is promotional rather than public-interest information<br>• Clearly artificial visuals, such as illustrations, cartoons or stylised graphics that nobody would mistake for a real photo<br>• Content where AI only did minor editing, like colour correction or background clean-up<br><br><i>Simple test: Could a reasonable viewer believe this AI image, video or voice is real? If yes, label it. Is this AI text informing the public about a public-interest issue without real human editorial review? If yes, label it.</i>"
+        },
+        {
+          heading: "Creative and artistic work",
+          desc: "For content that is clearly artistic, creative, satirical or fictional, the deepfake disclosure is lighter. You still disclose that AI was used, but in a way that does not spoil the work. A short note in the caption or credits can be enough."
+        },
+        {
+          heading: "Real marketing examples",
+          table: {
+            headers: ["Content", "Label needed?", "Why"],
+            rows: [
+              ["AI-drafted Instagram caption, edited by your team", "No", "Promotional text with human review"],
+              ["AI-generated product photo of a real product in a setting that never existed, made to look like a real photo", "Likely yes", "Realistic and resembles a real object"],
+              ["AI avatar presenter that is clearly a fictional character", "Usually no deepfake label, but disclose if viewers may think it is a real person", "Depends on whether it could pass as real"],
+              ["AI voice clone of the brand founder in a reel", "Yes", "Realistic audio of a real person"],
+              ["AI-written travel guide blog, reviewed and fact-checked by an editor", "No", "Human editorial review and responsibility"],
+              ["Auto-published AI news summaries on a health portal", "Yes", "Public-interest text without editorial review"],
+              ["AI illustration for a carousel in a clear cartoon style", "No", "Clearly not real"]
+            ]
+          }
+        },
+        {
+          heading: "A 7-step checklist for agencies with EU clients",
+          desc: "1. <b>List your AI use.</b> Note which tools create images, video, voice or text for EU-facing campaigns.<br>2. <b>Flag realistic media.</b> Mark any AI visual, video or voice that shows a real person, product, place or event as if it were real.<br>3. <b>Keep a human editor.</b> Have a named person review and approve AI-assisted text before publishing. Keep a simple record of who approved it.<br>4. <b>Label where required.</b> Add a clear note such as \"AI-generated\" or use the EU icons on deepfake-style media and unreviewed public-interest text.<br>5. <b>Do not strip AI metadata.</b> Avoid editing workflows that remove the markers AI tools embed in their outputs.<br>6. <b>Check your AI vendors.</b> Ask whether your image, video and voice tools mark their outputs in line with the AI Act.<br>7. <b>Put it in the contract.</b> Agree with each EU client who reviews, who labels and who approves AI-assisted content."
+        },
+        {
+          heading: "What happens if you get it wrong?",
+          desc: "Breaches of the AI Act's transparency duties can lead to fines of up to €15 million or 3% of worldwide annual turnover, whichever is higher. For smaller businesses, the lower of the two amounts applies. Beyond fines, a mislabelled deepfake can damage a client's trust and reputation fast."
+        },
+        {
+          heading: "How Digital Whopper approaches AI-assisted content",
+          desc: "Digital Whopper is a <a href=\"https://digitalwhopper.com/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">digital marketing company in Jaipur</a>, based in Malviya Nagar. We produce content for clients in India and international markets, including German-market travel brands. Our  <a href=\"../../services/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">content and social media services</a> keep a human editor responsible for every piece before it goes live.<br><br>If you work with EU audiences and want a content workflow that keeps AI use transparent, <a href=\"https://digitalwhopper.com/contact\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">talk to our content team</a>. For more updates on marketing rules and platform changes, browse the <a href=\"../../blogs/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">Digital Whopper blog</a>."
+        }
+      ],
+      faqs: [
+        {
+          q: "Do I have to label every AI-written blog post for EU readers?",
+          a: "No. AI-assisted text that a human has reviewed, with someone taking editorial responsibility, does not need a label. The text duty focuses on public-interest information published without that review."
+        },
+        {
+          q: "Do agencies have to add watermarks to AI content?",
+          a: "No. Watermarking is a duty for the companies that build generative AI tools. Agencies and brands should avoid removing those markers and should label deepfakes where required."
+        },
+        {
+          q: "When did the EU AI content labelling rules start?",
+          a: "The Article 50 transparency rules apply from 2 August 2026. The watermarking duty for AI tools already on the market before that date applies from 2 December 2026."
+        },
+        {
+          q: "Does the EU AI Act apply to Indian agencies?",
+          a: "It can, when AI-generated output is used in the EU. Agencies creating content for EU audiences should follow the labelling rules for that content."
+        },
+        {
+          q: "Are AI product photos deepfakes?",
+          a: "They can be, if they look like real photos of real products, places or events that did not happen that way. Clearly stylised or illustrated visuals are not deepfakes."
+        }
+      ],
+      references: [
+        {
+          title: "EUR-Lex: Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+          url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+        },
+        {
+          title: "European Commission: AI Act regulatory framework",
+          url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ],
+      conclusion: "Ensure human editorial oversight for public-interest text, properly label deepfakes, and coordinate with your EU clients to maintain compliance under the EU AI Act."
+    }
   }
+
 ];

@@ -1,39 +1,39 @@
 // 🌟 CENTRAL SERVICES MASTER DATABASE
 const DW_SERVICES_DATA = [
-  {
-    id: 0,
-    slug: "social-media-marketing-company-in-jaipur",
-    title: "SEO Dominance",
-    menuTitle: "SEO & SMO Optimisation",
-    icon: "🔍",
-    classColor: "color-c1",
-    badge: "Organic Traffic Growth",
-    subtext: "Outrank your competitors with data-driven SEO strategies.",
-    desc: "Outrank your competitors. We build a strong organic foundation that ranks your brand on top across Google search and AI answers. We strategically target high-intent keywords, optimize content and deliver quality that only the best SEO Company in Jaipur can execute.",
-    solutions: [
-      {
-        type: "c-blue",
-        icon: "🔍",
-        title: "On-Page SEO",
-        desc: "Optimizing website content, meta tags, and internal architecture for search engine friendliness.",
-        items: ["Keyword Research", "Content Optimization", "Meta Tags & Headings", "URL Optimization"]
-      },
-      {
-        type: "c-green",
-        icon: "🔗",
-        title: "Off-Page SEO",
-        desc: "High-quality link building and authority signals to boost domain power and visibility.",
-        items: ["Quality Backlinks", "Guest Posting", "Brand Mentions", "Local Citations"]
-      },
-      {
-        type: "c-purple",
-        icon: "⚙️",
-        title: "Technical SEO",
-        desc: "Fast, secure, mobile-friendly and easily crawlable infrastructure for ranking dominance.",
-        items: ["Site Speed Optimization", "Mobile Responsiveness", "Schema Markup", "Crawl & Indexing"]
-      }
-    ]
-  },
+  // {
+  //   id: 0,
+  //   slug: "social-media-marketing-company-in-jaipur",
+  //   title: "SEO Dominance",
+  //   menuTitle: "SEO & SMO Optimisation",
+  //   icon: "🔍",
+  //   classColor: "color-c1",
+  //   badge: "Organic Traffic Growth",
+  //   subtext: "Outrank your competitors with data-driven SEO strategies.",
+  //   desc: "Outrank your competitors. We build a strong organic foundation that ranks your brand on top across Google search and AI answers. We strategically target high-intent keywords, optimize content and deliver quality that only the best SEO Company in Jaipur can execute.",
+  //   solutions: [
+  //     {
+  //       type: "c-blue",
+  //       icon: "🔍",
+  //       title: "On-Page SEO",
+  //       desc: "Optimizing website content, meta tags, and internal architecture for search engine friendliness.",
+  //       items: ["Keyword Research", "Content Optimization", "Meta Tags & Headings", "URL Optimization"]
+  //     },
+  //     {
+  //       type: "c-green",
+  //       icon: "🔗",
+  //       title: "Off-Page SEO",
+  //       desc: "High-quality link building and authority signals to boost domain power and visibility.",
+  //       items: ["Quality Backlinks", "Guest Posting", "Brand Mentions", "Local Citations"]
+  //     },
+  //     {
+  //       type: "c-purple",
+  //       icon: "⚙️",
+  //       title: "Technical SEO",
+  //       desc: "Fast, secure, mobile-friendly and easily crawlable infrastructure for ranking dominance.",
+  //       items: ["Site Speed Optimization", "Mobile Responsiveness", "Schema Markup", "Crawl & Indexing"]
+  //     }
+  //   ]
+  // },
   {
     id: 1,
     slug: "performance-marketing-agency",

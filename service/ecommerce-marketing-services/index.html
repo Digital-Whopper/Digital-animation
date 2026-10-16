@@ -4,12 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecommerce Marketing Services | Digital Whopper</title>
+  <title>Ecommerce Marketing Services for Amazon, Flipkart & Shopify | Digital Whopper</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../../styleb.css">
   <link rel="stylesheet" href="../../section.css">
   <style>
+    /* ==========================================================================
+     📸 GLOBAL RESET (NO OVERFLOW-HIDDEN ON BODY TO KEEP STICKY WORKING)
+     ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f8fafd;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+    }
+
     .logo-img-asset {
       height: 34px;
       width: auto;
@@ -18,12 +35,59 @@
       margin-right: 2px;
     }
 
-    /* Back Button Styling */
+    /* ==========================================================================
+     📐 MASTER PAGE CONTAINER (FULL WIDTH - NO SIDEBAR)
+     ========================================================================== */
+    .page-layout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 16px 40px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Main Content Column */
+    .main-content-column {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Footer styling */
+    #footer {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+     🖼️ 1. HERO SECTION (MATCHING SCREENSHOT DESIGN)
+     ========================================================================== */
+    .detail-hero-section {
+      padding: 40px 0 30px !important;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background: #f8fafd;
+    }
+
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
     .back-nav-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #0052ff;
+      color: #0044ff;
       font-family: 'Sora', sans-serif;
       font-size: 13px;
       font-weight: 700;
@@ -32,33 +96,15 @@
       padding: 6px 14px;
       background: #eff6ff;
       border-radius: 99px;
-      border: 1px solid rgba(0, 82, 255, 0.15);
+      border: 1px solid rgba(0, 68, 255, 0.15);
       transition: all 0.2s ease;
       width: fit-content;
     }
 
     .back-nav-btn:hover {
-      background: #0052ff;
+      background: #0044ff;
       color: #ffffff;
       transform: translateX(-4px);
-    }
-
-    /* Hero Section */
-    .detail-hero-section {
-      padding: 130px 0 60px !important;
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      background: #f8fafd;
-      overflow: hidden;
-    }
-
-    .hero-split-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 50px;
-      align-items: center;
-      width: 100%;
     }
 
     .hero-pill-badge {
@@ -78,7 +124,7 @@
 
     .hero-title-main {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(34px, 4.5vw, 54px);
+      font-size: clamp(32px, 4.2vw, 50px);
       font-weight: 800;
       color: #0f172a;
       line-height: 1.15;
@@ -87,11 +133,11 @@
     }
 
     .hero-title-main span {
-      color: #0052ff;
+      color: #0044ff;
     }
 
     .hero-subtitle-desc {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: #1e293b;
       margin-bottom: 12px;
@@ -99,22 +145,22 @@
     }
 
     .hero-full-body-text {
-      font-size: 15px;
+      font-size: 14px;
       color: #64748b;
       line-height: 1.65;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .hero-full-body-text strong, 
     .hero-full-body-text b {
-      color: #0052ff !important;
+      color: #0044ff !important;
       font-weight: 700;
     }
 
     .hero-mini-badges-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 12px;
       width: 100%;
     }
 
@@ -122,28 +168,30 @@
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
-      padding: 12px;
+      padding: 12px 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 12px;
-      box-shadow: 0 4px 14px rgba(0, 82, 255, 0.03);
+      text-align: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.03);
     }
 
     .mini-badge-icon {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 10px;
-      background: rgba(0, 82, 255, 0.08);
-      color: #0052ff;
+      background: rgba(0, 68, 255, 0.08);
+      color: #0044ff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
       flex-shrink: 0;
     }
 
     .mini-badge-text {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: #1e293b;
       line-height: 1.25;
@@ -152,22 +200,21 @@
     .dashboard-mockup-wrapper {
       position: relative;
       width: 100%;
-      padding-right: 35px;
     }
 
     .mockup-main-card {
       background: #ffffff;
       border-radius: 20px;
       border: 1px solid #cbd5e1;
-      box-shadow: 0 25px 60px rgba(0, 82, 255, 0.12);
-      padding: 24px;
+      box-shadow: 0 25px 60px rgba(0, 68, 255, 0.12);
+      padding: 20px;
       position: relative;
     }
 
     .mockup-top-bar {
       background: #93c5fd;
-      margin: -24px -24px 20px -24px;
-      padding: 12px 20px;
+      margin: -20px -20px 18px -20px;
+      padding: 10px 16px;
       border-radius: 20px 20px 0 0;
       display: flex;
       align-items: center;
@@ -175,23 +222,23 @@
 
     .mockup-top-dots {
       display: flex;
-      gap: 7px;
+      gap: 6px;
     }
 
     .mockup-top-dots span {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: #ffffff;
     }
 
     .analytics-graph-box {
       background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 16px;
       border: 1px solid #dbeafe;
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .graph-header-meta {
@@ -201,267 +248,634 @@
     }
 
     .graph-title-sm {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #64748b;
       font-weight: 600;
     }
 
     .graph-val-lg {
       font-family: 'Sora', sans-serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
       color: #0f172a;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 2px;
     }
 
     .graph-growth-pill {
-      font-size: 11px;
+      font-size: 10.5px;
       background: #d1fae5;
       color: #059669;
       font-weight: 700;
-      padding: 3px 10px;
+      padding: 2px 8px;
       border-radius: 99px;
     }
 
     .floating-keyword-card {
       position: absolute;
       top: 15px;
-      right: -50px;
+      right: 15px;
       background: #ffffff;
-      border-radius: 14px;
-      padding: 14px 16px;
+      border-radius: 12px;
+      padding: 10px 12px;
       border: 1px solid #e2e8f0;
       box-shadow: 0 12px 30px rgba(0, 82, 255, 0.15);
-      width: 155px;
+      width: 140px;
       z-index: 10;
     }
 
-    .fk-title { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 10px; }
-    .fk-row { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; color: #64748b; margin-bottom: 6px; }
+    .fk-title { font-size: 10.5px; font-weight: 700; color: #475569; margin-bottom: 6px; }
+    .fk-row { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 4px; }
     .fk-row span.num { color: #0f172a; font-weight: 700; }
     .fk-row span.arrow { color: #10b981; font-weight: 700; }
 
     .svg-line-chart {
       width: 100%;
-      height: 110px;
-      margin-top: 12px;
+      height: 95px;
+      margin-top: 10px;
     }
 
     .mockup-bottom-bento-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
 
     .bento-mini-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px 14px;
+      border-radius: 14px;
+      padding: 12px 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .bmc-label { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 8px; }
-    .bmc-val-row { display: flex; align-items: baseline; gap: 6px; }
-    .bmc-val { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 800; color: #0f172a; }
-    .bmc-tag { font-size: 10px; font-weight: 700; color: #10b981; }
+    .bmc-label { font-size: 10.5px; font-weight: 700; color: #475569; margin-bottom: 6px; }
+    .bmc-val-row { display: flex; align-items: baseline; gap: 4px; }
+    .bmc-val { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; color: #0f172a; }
+    .bmc-tag { font-size: 9.5px; font-weight: 700; color: #10b981; }
 
     .donut-chart-ui {
-      width: 58px;
-      height: 58px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: conic-gradient(#7c3aed 0% 90%, #e2e8f0 90% 100%);
+      background: conic-gradient(#0052ff 0% 92%, #e2e8f0 92% 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 6px auto;
+      margin: 4px auto;
       position: relative;
     }
 
     .donut-chart-ui::after {
-      content: "90%";
-      width: 44px;
-      height: 44px;
+      content: "92%";
+      width: 38px;
+      height: 38px;
       background: #ffffff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 800;
       color: #0f172a;
     }
 
-    /* Trusted Brands Section */
-    .trusted-brands-section {
-      padding: 70px 0;
-      background: #ffffff;
+    /* ==========================================================================
+     🏛️ GENERAL SECTION STYLING
+     ========================================================================== */
+    .section-main-heading-center {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
       text-align: center;
-      overflow: hidden;
-      border-top: 1px solid #f1f5f9;
-      border-bottom: 1px solid #f1f5f9;
+      margin-bottom: 20px;
     }
 
-    .brands-pill-tag {
+    .section-pill-tag {
       font-family: 'Sora', sans-serif;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 700;
-      color: #0052ff;
-      letter-spacing: 0.1em;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 8px;
+      display: inline-block;
+      text-align: center;
     }
 
-    .brands-main-title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(26px, 3.5vw, 36px);
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 36px;
+    .callout-blue-quote-box {
+      background: #eff6ff;
+      border-left: 4px solid #0044ff;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #1e3a8a;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
 
-    .brands-main-title span { color: #0052ff; }
+    .seo-action-left p {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
 
-    .two-line-carousel-wrapper {
+    .seo-checklist-clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      width: 100%;
-      overflow: hidden;
-      margin-bottom: 32px;
+      gap: 12px;
     }
 
-    .logo-carousel-track {
+    .seo-checklist-clean li {
       display: flex;
-      gap: 20px;
-      width: max-content;
-      will-change: transform;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.5;
     }
 
-    .track-line-1 { animation: logoScrollLeft 26s linear infinite; }
-    .track-line-2 { animation: logoScrollRight 26s linear infinite; }
+    .seo-checklist-clean li span.dot {
+      color: #10b981;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
 
-    .logo-card-pad {
-      width: 140px;
-      height: 70px;
+    /* Table styles */
+    .comparison-table-container {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      background: #ffffff;
+      display: block;
+    }
+
+    .comparison-table-shell {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .comparison-table-shell th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 18px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+    }
+
+    .comparison-table-shell td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .comparison-table-shell tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Grid for pillars/items */
+    .rollout-steps-container-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .rollout-row-top-4 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+
+    .rollout-text-item {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
+      padding: 22px 18px;
+      text-align: left;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+      position: relative;
+    }
+
+    .rollout-step-num-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      display: block;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .rollout-step-head-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .rollout-step-paragraph {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-section-new {
+      text-align: center;
+      width: 100%;
+    }
+
+    .faq-accordion-list {
+      max-width: 100%;
+      margin: 20px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .faq-item-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-item-card.active {
+      border-color: #00c4ff;
+    }
+
+    .faq-question-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .faq-plus-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      font-size: 12px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
     }
 
-    .logo-card-pad img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+    .faq-item-card.active .faq-plus-icon {
+      transform: rotate(45deg);
     }
 
-    @keyframes logoScrollLeft {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    .faq-answer-body {
+      display: none;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
     }
 
-    @keyframes logoScrollRight {
-      0% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
+    .faq-item-card.active .faq-answer-body {
+      display: block;
     }
 
-    .brand-meta-pills-row {
+    /* BOTTOM CTA BANNER */
+    .bottom-cta-banner-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 18px;
+      padding: 40px 24px;
+      text-align: center;
+      color: #ffffff;
+      width: 100%;
+    }
+
+    .bottom-cta-banner-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .bottom-cta-banner-card p {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 22px;
+    }
+
+    /* BUTTON STYLING FIX */
+    .hero-btn-row {
       display: flex;
       justify-content: center;
-      gap: 32px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
-    .brand-meta-item {
+    .btn-hero-white {
+      background: #ffffff;
+      color: #0f172a !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-hero-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-hero-green {
+      background: #10b981;
+      color: #ffffff !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-hero-green:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    /* MODAL STYLES */
+    .modal-backdrop-layer {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 16px;
+      animation: fadeInModal 0.25s ease forwards;
+    }
+
+    .modal-backdrop-layer.active {
+      display: flex;
+    }
+
+    .seo-audit-modal-box {
+      background: #ffffff;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 68, 255, 0.25);
+      position: relative;
+      animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #64748b;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .modal-header-area {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .modal-header-area .modal-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'Sora', sans-serif;
+      text-transform: uppercase;
+      color: #0044ff;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .modal-header-area h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .modal-header-area p {
       font-size: 13px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .audit-enquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .form-field-group label {
+      font-size: 12.5px;
       font-weight: 700;
       color: #334155;
     }
 
-    .brand-meta-item span.icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #eff6ff;
-      color: #0052ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .form-field-group input,
+    .form-field-group select,
+    .form-field-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #f8fafd;
     }
 
-    /* Why Need & Solutions Grid */
-    .why-need-section { padding: 80px 0; background: #f8fafd; text-align: center; }
-    .why-pill-tag { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: #0052ff; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-    .why-title-main { font-family: 'Sora', sans-serif; font-size: clamp(28px, 3.8vw, 40px); font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-    .why-title-main span { color: #0052ff; }
-    .why-subtitle-lead { font-size: 14.5px; color: #64748b; max-width: 600px; margin: 0 auto 48px; line-height: 1.5; }
-    .why-cards-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .why-feature-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 36px 28px; text-align: center; box-shadow: 0 10px 30px rgba(0, 82, 255, 0.03); transition: all 0.3s ease; }
-    .why-feature-card:hover { transform: translateY(-8px); border-color: #0052ff; box-shadow: 0 20px 40px rgba(0, 82, 255, 0.1); }
-    .why-icon-aura { width: 64px; height: 64px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin: 0 auto 20px; }
-    .why-card-h3 { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
-    .why-card-p { font-size: 13.5px; color: #64748b; line-height: 1.6; }
+    .form-field-group input:focus,
+    .form-field-group select:focus,
+    .form-field-group textarea:focus {
+      border-color: #0044ff;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 68, 255, 0.12);
+    }
 
-    .solutions-section { padding: 80px 0; background: #ffffff; text-align: center; }
-    .solutions-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 48px; }
-    .solution-card-bento { border-radius: 20px; padding: 32px 28px; text-align: left; border: 1px solid #e2e8f0; display: flex; flex-direction: column; }
-    .solution-card-bento.c-blue { background: #f0f7ff; border-color: #dbeafe; }
-    .solution-card-bento.c-green { background: #f0fdf4; border-color: #d1fae5; }
-    .solution-card-bento.c-purple { background: #faf5ff; border-color: #e9d5ff; }
-    .sol-icon-box { width: 48px; height: 48px; border-radius: 12px; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); }
-    .c-blue .sol-icon-box { color: #0052ff; }
-    .c-green .sol-icon-box { color: #059669; }
-    .c-purple .sol-icon-box { color: #7c3aed; }
-    .sol-card-h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-    .sol-card-p { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 24px; }
-    .sol-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-    .sol-checklist li { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #1e293b; }
-    .sol-checklist li span.check { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #ffffff; }
-    .c-blue .sol-checklist li span.check { background: #0052ff; }
-    .c-green .sol-checklist li span.check { background: #059669; }
-    .c-purple .sol-checklist li span.check { background: #7c3aed; }
+    .form-field-group textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
 
-    .cta-center-block { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-    .btn-deploy-cta { display: inline-flex; align-items: center; gap: 12px; background: #0052ff; color: #ffffff !important; font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; padding: 16px 42px; border-radius: 99px; text-decoration: none; box-shadow: 0 12px 30px rgba(0, 82, 255, 0.3); transition: all 0.3s ease; }
-    .btn-deploy-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 40px rgba(0, 82, 255, 0.4); background: #0044ff; }
-    .cta-subtext { font-size: 13px; color: #64748b; font-weight: 500; }
+    .audit-submit-btn {
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 6px;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.3);
+      transition: all 0.2s ease;
+    }
 
-    /* FAQ */
-    .faq-section-new { padding: 80px 0; background: #f8fafd; text-align: center; }
-    .faq-accordion-list { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 14px; }
-    .faq-item-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 24px; text-align: left; cursor: pointer; transition: all 0.3s ease; }
-    .faq-item-card.active { border-color: #0052ff; box-shadow: 0 8px 24px rgba(0, 82, 255, 0.08); }
-    .faq-question-head { display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: #0f172a; }
-    .faq-plus-icon { width: 24px; height: 24px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.3s ease; }
-    .faq-item-card.active .faq-plus-icon { transform: rotate(45deg); }
-    .faq-answer-body { display: none; font-size: 13.5px; color: #64748b; line-height: 1.6; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
-    .faq-item-card.active .faq-answer-body { display: block; }
+    .audit-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 68, 255, 0.4);
+    }
+
+    .form-privacy-hint {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUpModal {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
     @media(max-width: 1100px) {
-      .hero-split-grid, .why-cards-triple-grid, .solutions-triple-grid { grid-template-columns: 1fr; gap: 32px; }
-      .dashboard-mockup-wrapper { padding-right: 0; }
-      .floating-keyword-card { right: 15px; }
+      .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      .page-layout-container {
+        padding: 85px 16px 30px !important;
+        gap: 24px !important;
+      }
+
+      .rollout-row-top-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media(max-width: 600px) {
-      .hero-mini-badges-row { grid-template-columns: repeat(2, 1fr); }
-      .mockup-bottom-bento-grid { grid-template-columns: 1fr; }
-      .detail-hero-section { padding: 100px 0 40px !important; }
-      .floating-keyword-card { position: relative; top: 0; right: 0; width: 100%; margin-bottom: 16px; }
+      .page-layout-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      .rollout-row-top-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-mini-badges-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mockup-bottom-bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-cta-banner-card {
+        padding: 28px 16px;
+      }
+
+      .section-main-heading-center {
+        font-size: 22px;
+      }
+
+      .form-grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      .seo-audit-modal-box {
+        padding: 24px 18px;
+      }
     }
   </style>
 </head>
@@ -478,308 +892,549 @@
     </div>
   </div>
 
-  <header id="mainHeader"></header>
-
-  <section class="detail-hero-section">
-    <div class="pink-blob"></div>
-    <div class="purple-ambient-glow"></div>
-
-    <div class="wrap">
-      <a href="/services/" class="back-nav-btn">
-        <span>←</span> Back to Services
-      </a>
-
-      <div class="hero-split-grid">
-        <div class="hero-left-content">
-          <div class="hero-pill-badge" id="serviceBadge">
-            <span style="font-size: 14px;">🛍️</span> Marketplace Dominance
-          </div>
-          
-          <h1 class="hero-title-main" id="serviceTitle">Ecommerce <span>Marketing</span></h1>
-          
-          <p class="hero-subtitle-desc" id="serviceSubtext">Scale across Amazon, Flipkart, Etsy, and global storefronts.</p>
-          
-          <div class="hero-full-body-text" id="serviceDesc">
-            Whoop up your ecom business. We optimize your digital storefront across major retail platforms – Amazon, Flipkart, Shopify, and Etsy, turning one-time shoppers into repeat buyers. From streamlining product funnels to lowering cart abandonment, we guarantee unmatched growth[cite: 7].
-          </div>
-
-          <div class="hero-mini-badges-row">
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🏷️</div>
-              <div class="mini-badge-text">Marketplace SEO</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🎨</div>
-              <div class="mini-badge-text">A+ Content Stores</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">📢</div>
-              <div class="mini-badge-text">Marketplace PPC</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🔄</div>
-              <div class="mini-badge-text">Repeat Buyers</div>
-            </div>
-          </div>
+  <!-- ✦ HEADER NAVBAR ✦ -->
+  <header id="mainHeader">
+    <nav>
+      <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
+        <div class="logo-icon-box">
+          <img src="../../img/landing-logo1.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon"
+            id="logoIcon">
         </div>
+        <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/projects/">PortFolio</a>
+        <a href="javascript:void(0)" onclick="openSeoAuditModal()">SEO Audit</a>
+        <a href="#">SMO Audit</a>
+        <a href="#">Shark Tank Journey</a>
+        <a href="#">Punch In</a>
+      </div>
+      <div class="nav-cta">
+        <a href="javascript:void(0)" onclick="openSeoAuditModal()" class="btn btn-gold">Enquire now</a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="dashboard-mockup-wrapper">
-          <div class="mockup-main-card">
-            <div class="mockup-top-bar">
-              <div class="mockup-top-dots">
-                <span></span><span></span><span></span>
+  <!-- 🌟 MASTER PAGE CONTAINER (FULL WIDTH - NO SIDEBAR) -->
+  <div class="page-layout-container">
+
+    <!-- MAIN CONTENT COLUMN -->
+    <main class="main-content-column">
+
+      <!-- 1️⃣ HERO SECTION -->
+      <div class="hero-wrapper-container" id="audit-form">
+        <section class="detail-hero-section">
+          <a href="/services/" class="back-nav-btn">
+            <span>←</span> Back to Services
+          </a>
+
+          <div class="hero-split-grid">
+            <div class="hero-left-content">
+              <div class="hero-pill-badge">
+                <span>✦</span> Grow Sales on Marketplaces and Your Own Store
+              </div>
+              
+              <h1 class="hero-title-main">Ecommerce Marketing <span>Services</span></h1>
+              
+              <p class="hero-subtitle-desc">Selling online is easy to start and hard to scale profitably. Between ad costs, commissions, returns and discounting, many brands grow revenue while their margins quietly shrink.</p>
+              
+              <div class="hero-full-body-text">
+                Digital Whopper's <strong>ecommerce marketing services</strong> help D2C brands and online sellers grow on Amazon, Flipkart, Shopify and Etsy, without losing sight of profit. We combine marketplace optimisation, ads, conversion-focused store improvements and retention so every channel pulls its weight.
+              </div>
+
+              <div class="hero-mini-badges-row">
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">📦</div>
+                  <div class="mini-badge-text">Marketplace SEO</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">📈</div>
+                  <div class="mini-badge-text">Sponsored Ads</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">🛍️</div>
+                  <div class="mini-badge-text">Shopify Growth</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">🔄</div>
+                  <div class="mini-badge-text">Customer Retention</div>
+                </div>
               </div>
             </div>
 
-            <div class="analytics-graph-box">
-              <div class="graph-header-meta">
-                <div>
-                  <span class="graph-title-sm">Store Sales Growth</span>
-                  <div class="graph-val-lg">
-                    $184.5K <span class="graph-growth-pill">↑ 42.8%</span>
+            <div class="dashboard-mockup-wrapper">
+              <div class="mockup-main-card">
+                <div class="mockup-top-bar">
+                  <div class="mockup-top-dots">
+                    <span></span><span></span><span></span>
                   </div>
                 </div>
-              </div>
 
-              <div class="floating-keyword-card">
-                <div class="fk-title">Storefront Metrics</div>
-                <div class="fk-row"><span>Conversion</span><span class="num">4.2%</span><span class="arrow">↑</span></div>
-                <div class="fk-row"><span>ACOS</span><span class="num">Optimal</span><span class="arrow">↓</span></div>
-                <div class="fk-row"><span>Orders</span><span class="num">3.4K</span><span class="arrow">↑</span></div>
-              </div>
+                <div class="analytics-graph-box">
+                  <div class="graph-header-meta">
+                    <div>
+                      <span class="graph-title-sm">Ecommerce Revenue Scale</span>
+                      <div class="graph-val-lg">
+                        ₹4.2Cr <span class="graph-growth-pill">↑ High Margin</span>
+                      </div>
+                    </div>
+                  </div>
 
-              <svg viewBox="0 0 300 90" class="svg-line-chart">
-                <path d="M0,75 Q50,55 100,35 T200,20 T300,8" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" />
-                <circle cx="100" cy="35" r="4" fill="#7c3aed" />
-                <circle cx="200" cy="20" r="4" fill="#7c3aed" />
-                <circle cx="300" cy="8" r="5" fill="#7c3aed" stroke="#ffffff" stroke-width="2" />
-              </svg>
+                  <div class="floating-keyword-card">
+                    <div class="fk-title">Store Metrics</div>
+                    <div class="fk-row"><span>ROAS</span><span class="num">4.5x</span><span class="arrow">↑</span></div>
+                    <div class="fk-row"><span>TACOS</span><span class="num">Optimised</span><span class="arrow">✓</span></div>
+                    <div class="fk-row"><span>Repeat</span><span class="num">38%</span><span class="arrow">↑</span></div>
+                  </div>
+
+                  <svg viewBox="0 0 300 90" class="svg-line-chart">
+                    <path d="M0,70 Q50,55 100,30 T200,20 T300,8" fill="none" stroke="#0052ff" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="100" cy="30" r="4" fill="#0052ff" />
+                    <circle cx="200" cy="20" r="4" fill="#0052ff" />
+                    <circle cx="300" cy="8" r="5" fill="#0052ff" stroke="#ffffff" stroke-width="2" />
+                  </svg>
+                </div>
+
+                <div class="mockup-bottom-bento-grid">
+                  <div class="bento-mini-card" style="text-align: center;">
+                    <div class="bmc-label">Store Conversion</div>
+                    <div class="donut-chart-ui"></div>
+                    <span style="font-size: 10px; font-weight: 700; color: #0052ff; margin-top: 2px;">Optimised</span>
+                  </div>
+
+                  <div class="bento-mini-card">
+                    <div class="bmc-label">D2C Scale</div>
+                    <div class="bmc-val-row">
+                      <span class="bmc-val">3x</span>
+                      <span class="bmc-tag">Faster</span>
+                    </div>
+                    <div style="display: flex; gap: 3px; align-items: flex-end; height: 26px; margin-top: 8px;">
+                      <span style="width: 15%; height: 30%; background: #93c5fd; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 45%; background: #93c5fd; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 60%; background: #3b82f6; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 70%; background: #3b82f6; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 85%; background: #0052ff; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 100%; background: #1d4ed8; border-radius: 2px;"></span>
+                    </div>
+                  </div>
+
+                  <div class="bento-mini-card">
+                    <div class="bmc-label">Marketplace ROI</div>
+                    <div class="bmc-val-row">
+                      <span class="bmc-val">18.5%</span>
+                      <span class="bmc-tag">Net Margin</span>
+                    </div>
+                    <svg viewBox="0 0 80 22" style="width: 100%; height: 26px; margin-top: 8px;">
+                      <path d="M0,18 Q20,12 40,6 T80,2" fill="none" stroke="#7c3aed" stroke-width="2.5" />
+                    </svg>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </div>
+        </section>
+      </div>
 
-            <div class="mockup-bottom-bento-grid">
-              <div class="bento-mini-card" style="text-align: center;">
-                <div class="bmc-label">Cart Retention</div>
-                <div class="donut-chart-ui"></div>
-                <span style="font-size: 11px; font-weight: 700; color: #7c3aed; margin-top: 4px;">Optimized</span>
-              </div>
+      <!-- 2️⃣ DEFINITION (AEO) -->
+      <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;">
+        <h2 class="section-main-heading-center">What Are Ecommerce Marketing Services?</h2>
 
-              <div class="bento-mini-card">
-                <div class="bmc-label">Catalog Indexing</div>
-                <div class="bmc-val-row">
-                  <span class="bmc-val">99.4%</span>
-                  <span class="bmc-tag">Top Ranks</span>
-                </div>
-                <div style="display: flex; gap: 4px; align-items: flex-end; height: 32px; margin-top: 10px;">
-                  <span style="width: 15%; height: 40%; background: #ddd6fe; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 55%; background: #c4b5fd; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 65%; background: #a78bfa; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 80%; background: #8b5cf6; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 90%; background: #7c3aed; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 100%; background: #6d28d9; border-radius: 2px;"></span>
-                </div>
-              </div>
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              <strong>Ecommerce marketing services cover everything that helps an online brand attract shoppers, convert them into buyers and bring them back again.</strong> That includes marketplace listing optimisation, product content, marketplace and social ads, website conversion improvements, email and WhatsApp marketing, and the tracking needed to measure what's actually profitable.
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="bento-mini-card">
-                <div class="bmc-label">ROAS Growth</div>
-                <div class="bmc-val-row">
-                  <span class="bmc-val">5.4x</span>
-                  <span class="bmc-tag">PPC Scale</span>
-                </div>
-                <svg viewBox="0 0 80 25" style="width: 100%; height: 30px; margin-top: 10px;">
-                  <path d="M0,22 Q20,16 40,9 T80,2" fill="none" stroke="#7c3aed" stroke-width="2.5" />
-                </svg>
+      <!-- 3️⃣ MARKET SHIFT -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">WHERE INDIAN ECOMMERCE IS HEADING</div>
+        <h2 class="section-main-heading-center">Why Should Brands Build Beyond Marketplaces Now?</h2>
+        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">India's online shopping market is changing fast, and the brands that adapt early will capture most of the growth.</p>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">TREND 01</span>
+              <div class="rollout-step-head-title">D2C is Growing Faster Than Marketplaces</div>
+              <p class="rollout-step-paragraph">A February 2026 McKinsey report estimates India's D2C ecommerce could grow from around USD 10–12 billion in 2025 to USD 55–60 billion by 2030, roughly three times faster than traditional marketplaces.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">TREND 02</span>
+              <div class="rollout-step-head-title">Marketplaces Are Cutting Fees to Win Sellers</div>
+              <p class="rollout-step-paragraph">Flipkart waived commissions on products under ₹1,000 in late 2025, and Amazon India extended zero referral fees to over 12.5 crore products under ₹1,000 in March 2026. Lower fees mean more sellers, and more competition for the same search results.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">TREND 03</span>
+              <div class="rollout-step-head-title">Smaller Cities Are Driving Demand</div>
+              <p class="rollout-step-paragraph">Tier-2 and Tier-3 cities now account for more than 60% of ecommerce shipments, which changes how you price, message and deliver.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">The takeaway: marketplaces are still essential for reach, but owning your customer relationship through your own store is what protects margins in the long run.</p>
+      </section>
+
+      <!-- 4️⃣ CHANNEL ROLES -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">ONE BRAND, MANY CHANNELS</div>
+        <h2 class="section-main-heading-center">What Role Should Each Sales Channel Play?</h2>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table-shell">
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Main Role</th>
+                <th>What We Focus On</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Amazon</strong></td>
+                <td>Capture high-intent shoppers already searching to buy</td>
+                <td>Listing SEO, A+ content, Brand Store, Sponsored Products and Sponsored Brands</td>
+              </tr>
+              <tr>
+                <td><strong>Flipkart</strong></td>
+                <td>Reach value-conscious shoppers, including in smaller cities</td>
+                <td>Catalogue optimisation, pricing strategy, Flipkart Ads and sale-event planning</td>
+              </tr>
+              <tr>
+                <td><strong>Shopify / your own store</strong></td>
+                <td>Own the customer, the data and the margin</td>
+                <td>Conversion rate optimisation, Meta and Google ads, email and WhatsApp retention</td>
+              </tr>
+              <tr>
+                <td><strong>Etsy</strong></td>
+                <td>Sell handmade and craft products to international buyers</td>
+                <td>Search-friendly listings, photography guidance, shop branding and Etsy Ads</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5️⃣ MARKETPLACE GROWTH -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">MARKETPLACE GROWTH</div>
+        <h2 class="section-main-heading-center">How Do We Help Products Rank and Sell on Amazon and Flipkart?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 01</span>
+              <div class="rollout-step-head-title">Keyword research</div>
+              <p class="rollout-step-paragraph">We find the exact terms shoppers use, including Hinglish and regional variations, and map them to each product.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 02</span>
+              <div class="rollout-step-head-title">Listing optimisation</div>
+              <p class="rollout-step-paragraph">Titles, bullet points, descriptions and backend search terms are rewritten to rank well and answer buyer questions.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 03</span>
+              <div class="rollout-step-head-title">Visual content</div>
+              <p class="rollout-step-paragraph">Product images, infographics, A+ content modules, comparison charts and a branded storefront that build trust at a glance.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 04</span>
+              <div class="rollout-step-head-title">Reviews strategy</div>
+              <p class="rollout-step-paragraph">Ethical, platform-compliant ways to earn more genuine reviews and respond to feedback.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 05</span>
+              <div class="rollout-step-head-title">Marketplace ads</div>
+              <p class="rollout-step-paragraph">Sponsored campaigns structured by product and keyword, with ACOS and TACOS monitored so ad spend supports organic growth.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 06</span>
+              <div class="rollout-step-head-title">Listing protection</div>
+              <p class="rollout-step-paragraph">Monitoring for unauthorised sellers on your listings and guidance on Brand Registry and reporting tools.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6️⃣ OWN STORE -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">D2C & SHOPIFY GROWTH</div>
+        <h2 class="section-main-heading-center">How Do We Turn Your Shopify Store Into a Profitable Channel?</h2>
+        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px; text-align: center;">Traffic means little if your store doesn't convert. We work on both sides: bringing the right visitors and fixing what stops them from buying.</p>
+
+        <ul class="seo-checklist-clean" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px;">
+          <li><span class="dot">✓</span> <strong>Conversion rate optimisation:</strong> Faster pages, clearer product pages, better collection structure, trust badges and a smoother checkout</li>
+          <li><span class="dot">✓</span> <strong>Paid acquisition:</strong> Meta, Google Shopping and Performance Max campaigns tied to real revenue, not just clicks</li>
+          <li><span class="dot">✓</span> <strong>Product and collection SEO:</strong> Pages built to rank for buying searches on Google and appear in AI shopping answers</li>
+          <li><span class="dot">✓</span> <strong>Retention marketing:</strong> Email and WhatsApp flows for abandoned carts, post-purchase, reorders and win-backs</li>
+          <li><span class="dot">✓</span> <strong>Bundles and offers:</strong> Bundles, upsells and free-shipping thresholds that raise average order value</li>
+        </ul>
+      </section>
+
+      <!-- 7️⃣ PROFIT LEAKS -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">PROTECT YOUR MARGINS</div>
+        <h2 class="section-main-heading-center">Where Do Ecommerce Brands Lose Money Without Realising It?</h2>
+        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px; text-align: center;">Growing sales is only half the job. These hidden leaks can wipe out profit even when revenue looks healthy.</p>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table-shell">
+            <thead>
+              <tr>
+                <th>Profit Leak</th>
+                <th>Why It Hurts</th>
+                <th>How We Help</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>High RTO on COD orders</strong></td>
+                <td>Cash on delivery makes up around 60–65% of Indian online orders, and COD orders are returned to origin far more often than prepaid ones, adding logistics costs with no sale</td>
+                <td>Prepaid nudges, COD confirmation flows, address quality checks and smarter ad targeting</td>
+              </tr>
+              <tr>
+                <td><strong>Ads that only chase revenue</strong></td>
+                <td>High ROAS can still mean losses once product cost, fees, shipping and returns are counted</td>
+                <td>Contribution-margin targets and blended CAC tracking across channels</td>
+              </tr>
+              <tr>
+                <td><strong>Heavy discounting</strong></td>
+                <td>Constant sales train customers to wait for offers and erode brand value</td>
+                <td>Value-led offers, bundles and planned sale calendars</td>
+              </tr>
+              <tr>
+                <td><strong>One-time buyers</strong></td>
+                <td>Paying to acquire the same type of customer again and again keeps costs high</td>
+                <td>Retention flows, reorder reminders and loyalty incentives</td>
+              </tr>
+              <tr>
+                <td><strong>Cart abandonment</strong></td>
+                <td>Interested shoppers leave because of surprise costs, slow pages or a long checkout</td>
+                <td>Checkout improvements, transparent shipping costs and recovery messages</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8️⃣ CATEGORIES -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">CATEGORY EXPERIENCE</div>
+        <h2 class="section-main-heading-center">Which Ecommerce Categories Do We Work With?</h2>
+
+        <div class="callout-blue-quote-box" style="margin-top: 15px;">
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">✓</span> <strong>Home décor & handicrafts:</strong> marble, block print, wooden and artisan products where storytelling drives value</li>
+            <li><span class="dot">✓</span> <strong>Food & snacks:</strong> clean-label, regional and healthy food brands building trust and repeat orders</li>
+            <li><span class="dot">✓</span> <strong>Fashion & jewellery:</strong> ethnic wear, silver and fashion jewellery that depend on visuals and sizing clarity</li>
+            <li><span class="dot">✓</span> <strong>Beauty, wellness & personal care:</strong> skincare, Ayurveda and grooming brands, with claims kept accurate and compliant</li>
+            <li><span class="dot">✓</span> <strong>Gifting & festive products:</strong> seasonal ranges planned around Diwali, Raksha Bandhan, weddings and corporate gifting</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9️⃣ PROCESS -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">HOW WE WORK</div>
+        <h2 class="section-main-heading-center">What Does Working With Our Ecommerce Team Look Like?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 01</span>
+              <div class="rollout-step-head-title">Audit</div>
+              <p class="rollout-step-paragraph">We review your listings, store, ads, pricing, reviews and unit economics across every channel.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 02</span>
+              <div class="rollout-step-head-title">Profit map</div>
+              <p class="rollout-step-paragraph">We identify your hero products, margin per channel and the biggest leaks to fix first.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 03</span>
+              <div class="rollout-step-head-title">Fix foundation</div>
+              <p class="rollout-step-paragraph">Listings, product pages, tracking and checkout issues are corrected before scaling spend.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 04</span>
+              <div class="rollout-step-head-title">Launch campaigns</div>
+              <p class="rollout-step-paragraph">Marketplace ads, social and search campaigns go live with clear targets.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 05</span>
+              <div class="rollout-step-head-title">Build retention</div>
+              <p class="rollout-step-paragraph">Email and WhatsApp flows start turning first-time buyers into repeat customers.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 06</span>
+              <div class="rollout-step-head-title">Review & scale</div>
+              <p class="rollout-step-paragraph">Monthly reviews of revenue, margin, CAC and repeat rate guide where to grow next.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">Results depend on your product, pricing, margins, competition and stock availability. We set realistic goals before we begin.</p>
+      </section>
+
+      <!-- 🔟 CASE STUDY -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">RESULTS</div>
+        <h2 class="section-main-heading-center">What Does Ecommerce Growth Look Like in Practice?</h2>
+
+        <div class="callout-blue-quote-box" style="background: #f0fdf4; border-color: #10b981; color: #065f46;">
+          <h3 style="font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; margin-bottom: 8px; color: #065f46;">Marbleous: Scaling a Luxury Handicraft Brand</h3>
+          <p style="margin-bottom: 12px; color: #047857;">We worked with Marbleous from day one, building their social presence before scaling performance marketing. Along the way, we optimised product collections, lowered customer acquisition cost and removed conversion drop-offs on their store.</p>
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">✓</span> <strong>3.2X</strong> revenue scaled</li>
+            <li><span class="dot">✓</span> <strong>800K+</strong> users reached</li>
+            <li><span class="dot">✓</span> Featured on <strong>Shark Tank India</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 1️⃣1️⃣ WHY US -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Why Choose Digital Whopper for Ecommerce Marketing Services?</h2>
+        
+        <ul class="seo-checklist-clean" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px;">
+          <li><span class="dot">✓</span> <strong>Profit-first thinking:</strong> We track margin, CAC and repeat rate, not just top-line sales.</li>
+          <li><span class="dot">✓</span> <strong>All channels, one strategy:</strong> Marketplaces, your own store, ads and retention planned together, so channels support each other instead of competing.</li>
+          <li><span class="dot">✓</span> <strong>Creative and performance in-house:</strong> Product content, ad creative and media buying handled by one team.</li>
+          <li><span class="dot">✓</span> <strong>Proven with growing brands:</strong> 150+ projects across 12+ industries, including two Shark Tank India brands.</li>
+        </ul>
+      </section>
+
+      <!-- 1️⃣2️⃣ INTERNAL LINKS -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Complete Your Ecommerce Growth Stack</h2>
+        
+        <div class="seo-action-left" style="background: #eff6ff; border: 1px solid #dbeafe; border-radius: 12px; padding: 20px;">
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">→</span> Need a faster, higher-converting Shopify store? Our <strong><a href="https://digitalwhopper.com/service/web-development-company-in-jaipur" style="color: #0044ff; text-decoration: underline;">web development company in Jaipur</a></strong> team builds and optimises stores.</li>
+            <li><span class="dot">→</span> Scale profitable traffic with our <strong><a href="https://digitalwhopper.com/service/performance-marketing-agency" style="color: #0044ff; text-decoration: underline;">performance marketing agency</a></strong> services across Meta and Google.</li>
+            <li><span class="dot">→</span> Rank your product and collection pages on Google with our <strong><a href="https://digitalwhopper.com/seo-company-in-jaipur/" style="color: #0044ff; text-decoration: underline;">SEO company in Jaipur</a></strong> team.</li>
+            <li><span class="dot">→</span> Build a brand shoppers remember with our <strong><a href="https://digitalwhopper.com/services/" style="color: #0044ff; text-decoration: underline;">social media marketing</a></strong> services.</li>
+            <li><span class="dot">→</span> Learn more about us as a full-service <strong><a href="https://digitalwhopper.com/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a></strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 1️⃣3️⃣ FAQ -->
+      <section class="faq-section-new">
+        <div class="section-pill-tag">FAQ</div>
+        <h2 class="section-main-heading-center">Ecommerce Marketing Services: Frequently Asked Questions</h2>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Should I sell on marketplaces or build my own website?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Ideally both. Marketplaces like Amazon and Flipkart give you instant access to shoppers who are ready to buy. Your own store lets you keep customer data, control your brand and earn better margins over time. Most growing brands use marketplaces for reach and their own store for loyalty and profit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much do ecommerce marketing services cost?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Costs depend on the number of channels, products and services you need, such as listing optimisation, ads management, content or retention. Ad budgets are separate and paid directly to the platforms. We share a clear quote after auditing your store and marketplace accounts.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How do you improve product rankings on Amazon and Flipkart?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Rankings depend on relevance, conversion rate and sales history. We improve relevance through keyword-optimised listings, lift conversion with better images, A+ content and reviews, and use sponsored ads to build sales velocity that supports organic ranking.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">What is the difference between ACOS and TACOS?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">ACOS (advertising cost of sales) compares ad spend to sales generated by ads. TACOS (total advertising cost of sales) compares ad spend to your total sales, including organic. A falling TACOS usually means ads are helping you grow organic sales, not just buying them.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How can I reduce RTO and COD losses?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Encourage prepaid orders with small incentives, confirm COD orders before shipping, validate addresses and phone numbers, and avoid ad audiences that produce low-intent orders. Clear product information and accurate delivery timelines also reduce refusals at the doorstep.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can you help reduce cart abandonment on my Shopify store?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. We look at page speed, shipping cost transparency, payment options and checkout steps, then set up email and WhatsApp reminders and retargeting ads to bring back shoppers who left without buying.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How long does it take to see results from ecommerce marketing?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Listing and conversion improvements can show results within a few weeks. Marketplace ads need some time to gather data and optimise. Sustainable growth in organic rankings, repeat purchases and margins usually builds over three to six months.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do you help new brands launch online from scratch?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. We can help with marketplace account setup, listing creation, store launch, launch campaigns and early review strategy, so your first months online build a strong base instead of burning budget.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1️⃣4️⃣ FINAL CTA -->
+      <section class="bottom-cta-banner-card">
+        <h3>Ready to Grow Sales Without Shrinking Margins?</h3>
+        <p>Get a free audit of your store, listings and ads, with clear priorities on what to fix first and where to scale.</p>
+        <div class="hero-btn-row" style="margin-bottom: 0;">
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Ecommerce Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         🏢 FOOTER
+         ========================================================================== -->
+      <footer id="footer">
+        <div class="wrap">
+          <div class="foot-top">
+            <div class="foot-brand">
+              <a href="/" class="logo">
+                <div class="logo-mark">DW</div>Digital Whopper
+              </a>
+              <p>Sardarpura, Jodhpur, Rajasthan 342003</p>
+              <p><a href="tel:+916200379161">+91 6200379161</a><br><a
+                  href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
+              <div class="socials">
+                <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
               </div>
             </div>
-
+            <div class="foot-links">
+              <div class="foot-col">
+                <h4>Pages</h4>
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/#about">About</a>
+                <a href="/contact">Contact</a>
+              </div>
+              <div class="foot-col">
+                <h4>Our services</h4>
+                <a href="/services">App &amp; Shopify Development</a>
+                <a href="/services">SEO &amp; SMO Optimisation</a>
+                <a href="/services">E-Commerce</a>
+                <a href="/services">Performance Marketing</a>
+                <a href="/services">Web Design &amp; Development</a>
+              </div>
+              <div class="foot-col">
+                <h4>Quick links</h4>
+                <a href="/#blog">Blog</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#milestones">Our journey</a>
+                <a href="https://wa.me/916200379161" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          <div class="foot-bottom">
+            <span>© 2026 Digital Whopper. All rights reserved.</span>
+            <span>Made with ✦ in Jodhpur</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </footer>
 
-  <!-- Trusted Brands Section -->
-  <section class="trusted-brands-section">
-    <div class="wrap">
-      <div class="brands-pill-tag">TRUSTED BY GROWING BRANDS</div>
-      <h2 class="brands-main-title">Brands That Trust <span>Digital Whopper</span></h2>
+    </main>
 
-      <div class="two-line-carousel-wrapper">
-        <div class="logo-carousel-track track-line-1">
-          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
-          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
-          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
-          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
-          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
-          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
-          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
-          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
-        </div>
-
-        <div class="logo-carousel-track track-line-2">
-          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
-          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
-          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
-          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
-          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.webp" alt="Tea Cakes"></div>
-          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
-          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
-          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
-          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
-          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
-          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
-          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.jpg" alt="Tea Cakes"></div>
-          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
-          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
-        </div>
-      </div>
-
-      <div class="brand-meta-pills-row">
-        <div class="brand-meta-item"><span class="icon">👥</span> 50+ Happy Clients</div>
-        <div class="brand-meta-item"><span class="icon">📊</span> Multiple Industries</div>
-        <div class="brand-meta-item"><span class="icon">⚙️</span> Long-Term Partnerships</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="why-need-section">
-    <div class="wrap">
-      <div class="why-pill-tag">WHY CHOOSE US?</div>
-      <h2 class="why-title-main">Why You Need <span>Ecommerce Marketing?</span></h2>
-      <p class="why-subtitle-lead">Scale across Amazon, Flipkart, Etsy, and Shopify with targeted retail strategies.</p>
-
-      <div class="why-cards-triple-grid">
-        <div class="why-feature-card">
-          <div class="why-icon-aura">🏷️</div>
-          <h3 class="why-card-h3">Marketplace Dominance</h3>
-          <p class="why-card-p">Optimize product catalogs and metadata indexing to rank higher on Amazon, Flipkart, and Etsy[cite: 7].</p>
-        </div>
-        <div class="why-feature-card">
-          <div class="why-icon-aura">🎨</div>
-          <h3 class="why-card-h3">Immersive A+ Content</h3>
-          <p class="why-card-p">Deploy high-converting visual storytelling and branded storefront modules that skyrocket conversion rates[cite: 7].</p>
-        </div>
-        <div class="why-feature-card">
-          <div class="why-icon-aura">📢</div>
-          <h3 class="why-card-h3">Profitable PPC Ads</h3>
-          <p class="why-card-p">Run sponsored product and brand campaigns tailored to maintain a healthy and profitable ACOS[cite: 7].</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comprehensive Solutions -->
-  <section class="solutions-section">
-    <div class="wrap">
-      <div class="section-pill-tag">WHAT WE DELIVER</div>
-      <h2 class="section-title-center">Comprehensive <span>Ecommerce Solutions</span></h2>
-
-      <div class="solutions-triple-grid" id="solutionsGridContainer">
-        <!-- Marketplace Listing SEO -->
-        <div class="solution-card-bento c-blue">
-          <div class="sol-icon-box">🏷️</div>
-          <h3 class="sol-card-h3">Marketplace Listing SEO</h3>
-          <p class="sol-card-p">Optimizing catalog metadata and search indexing on Amazon, Flipkart, and Etsy[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> Keyword Cataloging</li>
-            <li><span class="check">✓</span> Title & Bullet Points</li>
-            <li><span class="check">✓</span> Backend Search Terms</li>
-            <li><span class="check">✓</span> Competitor Hijack Fix</li>
-          </ul>
-        </div>
-
-        <!-- A+ Content & Brand Store -->
-        <div class="solution-card-bento c-green">
-          <div class="sol-icon-box">🎨</div>
-          <h3 class="sol-card-h3">A+ Content & Brand Store</h3>
-          <p class="sol-card-p">Immersive visual storytelling and custom brand stores that skyrocket conversion rates[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> A+ Enhanced Modules</li>
-            <li><span class="check">✓</span> Brand Storefront</li>
-            <li><span class="check">✓</span> Lifestyle Banners</li>
-            <li><span class="check">✓</span> Visual Comparison Charts</li>
-          </ul>
-        </div>
-
-        <!-- Marketplace Ads (PPC) -->
-        <div class="solution-card-bento c-purple">
-          <div class="sol-icon-box">📢</div>
-          <h3 class="sol-card-h3">Marketplace Ads (PPC)</h3>
-          <p class="sol-card-p">Sponsored product and brand campaigns designed to maintain profitable ACOS[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> Sponsored Products</li>
-            <li><span class="check">✓</span> Sponsored Brands</li>
-            <li><span class="check">✓</span> Targeted Keyword PPC</li>
-            <li><span class="check">✓</span> ACOS Management</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cta-center-block">
-        <a href="https://wa.me/916200379161" target="_blank" class="btn-deploy-cta">
-          Scale Your Ecommerce Store Now <span style="font-size: 18px;">→</span>
-        </a>
-        <div class="cta-subtext">Let's dominate online marketplaces and grow together.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section-new">
-    <div class="wrap">
-      <div class="section-pill-tag">FAQ</div>
-      <h2 class="section-title-center">Frequently Asked Questions</h2>
-
-      <div class="faq-accordion-list">
-        <div class="faq-item-card active" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            Which retail platforms do you optimize and manage?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            We optimize and manage digital storefronts across major retail networks including Amazon, Flipkart, Shopify, and Etsy.
-          </div>
-        </div>
-
-        <div class="faq-item-card" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            How do you improve marketplace product rankings?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            We improve rankings by optimizing catalog metadata, backend search terms, enhancing A+ visual content, and managing targeted PPC campaigns.
-          </div>
-        </div>
-
-        <div class="faq-item-card" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            Can you help reduce cart abandonment on my store?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            Yes! We streamline checkout funnels, optimize user experience, and implement retargeting strategies to recover abandoned carts and turn visitors into repeat buyers.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✦ FOOTER ✦ -->
-  <footer id="footer"></footer>
+  </div>
 
   <!-- 🤖 WHOPPY AI CHATBOT -->
   <div class="chatbot-wrapper">
@@ -809,11 +1464,11 @@
 
       <div class="chat-body-messages" id="chatMessages">
         <div class="msg-bubble bot-msg">
-          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help scale your ecommerce sales today? 🚀
+          Hi there! I am Chotu, your Digital Whopper AI assistant. How can I help grow your ecommerce sales today? 🚀
         </div>
         <div class="chat-suggestions" id="chatSuggestions">
-          <button class="suggest-chip" onclick="triggerBotResponse('Ecommerce Marketing')">Store Growth</button>
-          <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Pricing Plans</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Ecommerce')">Ecommerce Services</button>
+          <button class="suggest-chip" onclick="triggerBotResponse('Pricing')">Audit Cost</button>
           <button class="suggest-chip" onclick="triggerBotResponse('Contact')">Speak to Expert 👤</button>
         </div>
       </div>
@@ -882,7 +1537,7 @@
       </svg>
     </div>
     <span class="wa-vertical-text-w">let’s talk</span>
-  </a>
+  </div>
 
   <!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
   <div class="mobile-app-bottom-nav">
@@ -942,9 +1597,102 @@
     </a>
   </div>
 
+  <!-- 🌟 SEO AUDIT ENQUIRY MODAL POPUP -->
+  <div class="modal-backdrop-layer" id="seoAuditModal" onclick="handleModalBackdropClick(event)">
+    <div class="seo-audit-modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeSeoAuditModal()">&times;</button>
+
+      <div class="modal-header-area">
+        <span class="modal-badge">✦ Free Ecommerce Audit</span>
+        <h3>Find Your Fastest Path to Profitable Growth</h3>
+        <p>Tell us where you sell and what you need. Our ecommerce strategist will review your listings, store and ads and share the quickest wins.</p>
+      </div>
+
+      <form class="audit-enquiry-form" onsubmit="handleAuditFormSubmit(event)">
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditFullName">Full Name *</label>
+            <input type="text" id="auditFullName" placeholder="e.g. Digital whopper" required>
+          </div>
+          <div class="form-field-group">
+            <label for="auditPhone">Phone Number *</label>
+            <input type="tel" id="auditPhone" placeholder="e.g. +91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditEmail">Business Email *</label>
+            <input type="email" id="auditEmail" placeholder="name@company.com" required>
+          </div>
+          <div class="form-field-group">
+            <label for="auditWebsite">Store / Marketplace URL *</label>
+            <input type="text" id="auditWebsite" placeholder="Shopify or Amazon store link" required>
+          </div>
+        </div>
+
+        <div class="form-grid-two">
+          <div class="form-field-group">
+            <label for="auditTargetArea">Main Goal</label>
+            <select id="auditTargetArea">
+              <option value="More sales">More sales</option>
+              <option value="Better margins">Better margins</option>
+              <option value="Higher repeat purchases">Higher repeat purchases</option>
+              <option value="New launch">New launch</option>
+            </select>
+          </div>
+          <div class="form-field-group">
+            <label for="auditServiceType">Monthly Online Revenue</label>
+            <select id="auditServiceType">
+              <option value="Just starting">Just starting</option>
+              <option value="Under ₹5 lakh">Under ₹5 lakh</option>
+              <option value="₹5 – 25 lakh">₹5 – 25 lakh</option>
+              <option value="₹25 lakh – 1 crore">₹25 lakh – 1 crore</option>
+              <option value="Above ₹1 crore">Above ₹1 crore</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="audit-submit-btn">🚀 Get My Free Audit</button>
+        <div class="form-privacy-hint">🔒 Your details stay private. No spam, ever.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🌟 SCRIPTS -->
+  <script>
+    function openSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'seoAuditModal') {
+        closeSeoAuditModal();
+      }
+    }
+
+    function handleAuditFormSubmit(event) {
+      event.preventDefault();
+      alert('Thank you! Your ecommerce audit request has been received. Our strategist will contact you shortly.');
+      closeSeoAuditModal();
+    }
+  </script>
+
+  <script src="../../services-data.js"></script>
   <script src="../../scriptb.js"></script>
   <script src="../../section.js"></script>
-  <script src="../../services-data.js"></script>
 </body>
 
 </html>

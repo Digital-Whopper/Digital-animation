@@ -4,12 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Management Services | Digital Whopper</title>
+  <title>Social Media Management Services | Reels, Content & Growth | Digital Whopper</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../../styleb.css">
   <link rel="stylesheet" href="../../section.css">
   <style>
+    /* ==========================================================================
+     📸 GLOBAL RESET (NO OVERFLOW-HIDDEN ON BODY TO KEEP STICKY WORKING)
+     ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f8fafd;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+    }
+
     .logo-img-asset {
       height: 34px;
       width: auto;
@@ -18,12 +35,59 @@
       margin-right: 2px;
     }
 
-    /* Back Button Styling */
+    /* ==========================================================================
+     📐 MASTER PAGE CONTAINER (FULL WIDTH - NO SIDEBAR)
+     ========================================================================== */
+    .page-layout-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 110px 16px 40px;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Main Content Column */
+    .main-content-column {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* Footer styling */
+    #footer {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+     🖼️ 1. HERO SECTION (MATCHING SCREENSHOT DESIGN)
+     ========================================================================== */
+    .detail-hero-section {
+      padding: 40px 0 30px !important;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      background: #f8fafd;
+    }
+
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
     .back-nav-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #0052ff;
+      color: #0044ff;
       font-family: 'Sora', sans-serif;
       font-size: 13px;
       font-weight: 700;
@@ -32,33 +96,15 @@
       padding: 6px 14px;
       background: #eff6ff;
       border-radius: 99px;
-      border: 1px solid rgba(0, 82, 255, 0.15);
+      border: 1px solid rgba(0, 68, 255, 0.15);
       transition: all 0.2s ease;
       width: fit-content;
     }
 
     .back-nav-btn:hover {
-      background: #0052ff;
+      background: #0044ff;
       color: #ffffff;
       transform: translateX(-4px);
-    }
-
-    /* Hero Section */
-    .detail-hero-section {
-      padding: 130px 0 60px !important;
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      background: #f8fafd;
-      overflow: hidden;
-    }
-
-    .hero-split-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 50px;
-      align-items: center;
-      width: 100%;
     }
 
     .hero-pill-badge {
@@ -78,7 +124,7 @@
 
     .hero-title-main {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(34px, 4.5vw, 54px);
+      font-size: clamp(32px, 4.2vw, 50px);
       font-weight: 800;
       color: #0f172a;
       line-height: 1.15;
@@ -87,11 +133,11 @@
     }
 
     .hero-title-main span {
-      color: #0052ff;
+      color: #0044ff;
     }
 
     .hero-subtitle-desc {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: #1e293b;
       margin-bottom: 12px;
@@ -99,22 +145,22 @@
     }
 
     .hero-full-body-text {
-      font-size: 15px;
+      font-size: 14px;
       color: #64748b;
       line-height: 1.65;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .hero-full-body-text strong, 
     .hero-full-body-text b {
-      color: #0052ff !important;
+      color: #0044ff !important;
       font-weight: 700;
     }
 
     .hero-mini-badges-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 12px;
       width: 100%;
     }
 
@@ -122,28 +168,30 @@
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
-      padding: 12px;
+      padding: 12px 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 12px;
-      box-shadow: 0 4px 14px rgba(0, 82, 255, 0.03);
+      text-align: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.03);
     }
 
     .mini-badge-icon {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 10px;
-      background: rgba(0, 82, 255, 0.08);
-      color: #0052ff;
+      background: rgba(0, 68, 255, 0.08);
+      color: #0044ff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
       flex-shrink: 0;
     }
 
     .mini-badge-text {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: #1e293b;
       line-height: 1.25;
@@ -152,22 +200,21 @@
     .dashboard-mockup-wrapper {
       position: relative;
       width: 100%;
-      padding-right: 35px;
     }
 
     .mockup-main-card {
       background: #ffffff;
       border-radius: 20px;
       border: 1px solid #cbd5e1;
-      box-shadow: 0 25px 60px rgba(0, 82, 255, 0.12);
-      padding: 24px;
+      box-shadow: 0 25px 60px rgba(0, 68, 255, 0.12);
+      padding: 20px;
       position: relative;
     }
 
     .mockup-top-bar {
       background: #93c5fd;
-      margin: -24px -24px 20px -24px;
-      padding: 12px 20px;
+      margin: -20px -20px 18px -20px;
+      padding: 10px 16px;
       border-radius: 20px 20px 0 0;
       display: flex;
       align-items: center;
@@ -175,23 +222,23 @@
 
     .mockup-top-dots {
       display: flex;
-      gap: 7px;
+      gap: 6px;
     }
 
     .mockup-top-dots span {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: #ffffff;
     }
 
     .analytics-graph-box {
       background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 16px;
       border: 1px solid #dbeafe;
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .graph-header-meta {
@@ -201,267 +248,634 @@
     }
 
     .graph-title-sm {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #64748b;
       font-weight: 600;
     }
 
     .graph-val-lg {
       font-family: 'Sora', sans-serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
       color: #0f172a;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       margin-top: 2px;
     }
 
     .graph-growth-pill {
-      font-size: 11px;
+      font-size: 10.5px;
       background: #d1fae5;
       color: #059669;
       font-weight: 700;
-      padding: 3px 10px;
+      padding: 2px 8px;
       border-radius: 99px;
     }
 
     .floating-keyword-card {
       position: absolute;
       top: 15px;
-      right: -50px;
+      right: 15px;
       background: #ffffff;
-      border-radius: 14px;
-      padding: 14px 16px;
+      border-radius: 12px;
+      padding: 10px 12px;
       border: 1px solid #e2e8f0;
       box-shadow: 0 12px 30px rgba(0, 82, 255, 0.15);
-      width: 155px;
+      width: 140px;
       z-index: 10;
     }
 
-    .fk-title { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 10px; }
-    .fk-row { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; color: #64748b; margin-bottom: 6px; }
+    .fk-title { font-size: 10.5px; font-weight: 700; color: #475569; margin-bottom: 6px; }
+    .fk-row { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 4px; }
     .fk-row span.num { color: #0f172a; font-weight: 700; }
     .fk-row span.arrow { color: #10b981; font-weight: 700; }
 
     .svg-line-chart {
       width: 100%;
-      height: 110px;
-      margin-top: 12px;
+      height: 95px;
+      margin-top: 10px;
     }
 
     .mockup-bottom-bento-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
 
     .bento-mini-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px 14px;
+      border-radius: 14px;
+      padding: 12px 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .bmc-label { font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 8px; }
-    .bmc-val-row { display: flex; align-items: baseline; gap: 6px; }
-    .bmc-val { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 800; color: #0f172a; }
-    .bmc-tag { font-size: 10px; font-weight: 700; color: #10b981; }
+    .bmc-label { font-size: 10.5px; font-weight: 700; color: #475569; margin-bottom: 6px; }
+    .bmc-val-row { display: flex; align-items: baseline; gap: 4px; }
+    .bmc-val { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; color: #0f172a; }
+    .bmc-tag { font-size: 9.5px; font-weight: 700; color: #10b981; }
 
     .donut-chart-ui {
-      width: 58px;
-      height: 58px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       background: conic-gradient(#0052ff 0% 92%, #e2e8f0 92% 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 6px auto;
+      margin: 4px auto;
       position: relative;
     }
 
     .donut-chart-ui::after {
       content: "92%";
-      width: 44px;
-      height: 44px;
+      width: 38px;
+      height: 38px;
       background: #ffffff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 800;
       color: #0f172a;
     }
 
-    /* Trusted Brands Section */
-    .trusted-brands-section {
-      padding: 70px 0;
-      background: #ffffff;
+    /* ==========================================================================
+     🏛️ GENERAL SECTION STYLING
+     ========================================================================== */
+    .section-main-heading-center {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
       text-align: center;
-      overflow: hidden;
-      border-top: 1px solid #f1f5f9;
-      border-bottom: 1px solid #f1f5f9;
+      margin-bottom: 20px;
     }
 
-    .brands-pill-tag {
+    .section-pill-tag {
       font-family: 'Sora', sans-serif;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 700;
-      color: #0052ff;
-      letter-spacing: 0.1em;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 8px;
+      display: inline-block;
+      text-align: center;
     }
 
-    .brands-main-title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(26px, 3.5vw, 36px);
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 36px;
+    .callout-blue-quote-box {
+      background: #eff6ff;
+      border-left: 4px solid #0044ff;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #1e3a8a;
+      line-height: 1.65;
+      margin-bottom: 20px;
     }
 
-    .brands-main-title span { color: #0052ff; }
+    .seo-action-left p {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
 
-    .two-line-carousel-wrapper {
+    .seo-checklist-clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      width: 100%;
-      overflow: hidden;
-      margin-bottom: 32px;
+      gap: 12px;
     }
 
-    .logo-carousel-track {
+    .seo-checklist-clean li {
       display: flex;
-      gap: 20px;
-      width: max-content;
-      will-change: transform;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.5;
     }
 
-    .track-line-1 { animation: logoScrollLeft 26s linear infinite; }
-    .track-line-2 { animation: logoScrollRight 26s linear infinite; }
+    .seo-checklist-clean li span.dot {
+      color: #10b981;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
 
-    .logo-card-pad {
-      width: 140px;
-      height: 70px;
+    /* Table styles */
+    .comparison-table-container {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      background: #ffffff;
+      display: block;
+    }
+
+    .comparison-table-shell {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .comparison-table-shell th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 18px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+    }
+
+    .comparison-table-shell td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .comparison-table-shell tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Grid for pillars/items */
+    .rollout-steps-container-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 24px;
+      width: 100%;
+    }
+
+    .rollout-row-top-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+
+    .rollout-text-item {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
+      padding: 22px 18px;
+      text-align: left;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+      position: relative;
+    }
+
+    .rollout-step-num-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+      display: block;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .rollout-step-head-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .rollout-step-paragraph {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* FAQ ACCORDION */
+    .faq-section-new {
+      text-align: center;
+      width: 100%;
+    }
+
+    .faq-accordion-list {
+      max-width: 100%;
+      margin: 20px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .faq-item-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-item-card.active {
+      border-color: #00c4ff;
+    }
+
+    .faq-question-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .faq-plus-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      font-size: 12px;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
     }
 
-    .logo-card-pad img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+    .faq-item-card.active .faq-plus-icon {
+      transform: rotate(45deg);
     }
 
-    @keyframes logoScrollLeft {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    .faq-answer-body {
+      display: none;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
     }
 
-    @keyframes logoScrollRight {
-      0% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
+    .faq-item-card.active .faq-answer-body {
+      display: block;
     }
 
-    .brand-meta-pills-row {
+    /* BOTTOM CTA BANNER */
+    .bottom-cta-banner-card {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: 18px;
+      padding: 40px 24px;
+      text-align: center;
+      color: #ffffff;
+      width: 100%;
+    }
+
+    .bottom-cta-banner-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .bottom-cta-banner-card p {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 22px;
+    }
+
+    /* BUTTON STYLING FIX */
+    .hero-btn-row {
       display: flex;
       justify-content: center;
-      gap: 32px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
-    .brand-meta-item {
+    .btn-hero-white {
+      background: #ffffff;
+      color: #0f172a !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-hero-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-hero-green {
+      background: #10b981;
+      color: #ffffff !important;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-hero-green:hover {
+      background: #059669;
+      transform: translateY(-2px);
+    }
+
+    /* MODAL STYLES */
+    .modal-backdrop-layer {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 16px;
+      animation: fadeInModal 0.25s ease forwards;
+    }
+
+    .modal-backdrop-layer.active {
+      display: flex;
+    }
+
+    .seo-audit-modal-box {
+      background: #ffffff;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px 28px;
+      box-shadow: 0 25px 50px -12px rgba(0, 68, 255, 0.25);
+      position: relative;
+      animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #64748b;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .modal-header-area {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .modal-header-area .modal-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      font-family: 'Sora', sans-serif;
+      text-transform: uppercase;
+      color: #0044ff;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .modal-header-area h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .modal-header-area p {
       font-size: 13px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .audit-enquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .form-field-group label {
+      font-size: 12.5px;
       font-weight: 700;
       color: #334155;
     }
 
-    .brand-meta-item span.icon {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #eff6ff;
-      color: #0052ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .form-field-group input,
+    .form-field-group select,
+    .form-field-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #f8fafd;
     }
 
-    /* Why Need & Solutions Grid */
-    .why-need-section { padding: 80px 0; background: #f8fafd; text-align: center; }
-    .why-pill-tag { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; color: #0052ff; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-    .why-title-main { font-family: 'Sora', sans-serif; font-size: clamp(28px, 3.8vw, 40px); font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-    .why-title-main span { color: #0052ff; }
-    .why-subtitle-lead { font-size: 14.5px; color: #64748b; max-width: 600px; margin: 0 auto 48px; line-height: 1.5; }
-    .why-cards-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .why-feature-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 36px 28px; text-align: center; box-shadow: 0 10px 30px rgba(0, 82, 255, 0.03); transition: all 0.3s ease; }
-    .why-feature-card:hover { transform: translateY(-8px); border-color: #0052ff; box-shadow: 0 20px 40px rgba(0, 82, 255, 0.1); }
-    .why-icon-aura { width: 64px; height: 64px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 26px; margin: 0 auto 20px; }
-    .why-card-h3 { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
-    .why-card-p { font-size: 13.5px; color: #64748b; line-height: 1.6; }
+    .form-field-group input:focus,
+    .form-field-group select:focus,
+    .form-field-group textarea:focus {
+      border-color: #0044ff;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 68, 255, 0.12);
+    }
 
-    .solutions-section { padding: 80px 0; background: #ffffff; text-align: center; }
-    .solutions-triple-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 48px; }
-    .solution-card-bento { border-radius: 20px; padding: 32px 28px; text-align: left; border: 1px solid #e2e8f0; display: flex; flex-direction: column; }
-    .solution-card-bento.c-blue { background: #f0f7ff; border-color: #dbeafe; }
-    .solution-card-bento.c-green { background: #f0fdf4; border-color: #d1fae5; }
-    .solution-card-bento.c-purple { background: #faf5ff; border-color: #e9d5ff; }
-    .sol-icon-box { width: 48px; height: 48px; border-radius: 12px; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); }
-    .c-blue .sol-icon-box { color: #0052ff; }
-    .c-green .sol-icon-box { color: #059669; }
-    .c-purple .sol-icon-box { color: #7c3aed; }
-    .sol-card-h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-    .sol-card-p { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 24px; }
-    .sol-checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-    .sol-checklist li { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; color: #1e293b; }
-    .sol-checklist li span.check { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #ffffff; }
-    .c-blue .sol-checklist li span.check { background: #0052ff; }
-    .c-green .sol-checklist li span.check { background: #059669; }
-    .c-purple .sol-checklist li span.check { background: #7c3aed; }
+    .form-field-group textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
 
-    .cta-center-block { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-    .btn-deploy-cta { display: inline-flex; align-items: center; gap: 12px; background: #0052ff; color: #ffffff !important; font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; padding: 16px 42px; border-radius: 99px; text-decoration: none; box-shadow: 0 12px 30px rgba(0, 82, 255, 0.3); transition: all 0.3s ease; }
-    .btn-deploy-cta:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 40px rgba(0, 82, 255, 0.4); background: #0044ff; }
-    .cta-subtext { font-size: 13px; color: #64748b; font-weight: 500; }
+    .audit-submit-btn {
+      background: linear-gradient(135deg, #0044ff, #00c4ff);
+      color: #ffffff;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 6px;
+      box-shadow: 0 4px 14px rgba(0, 68, 255, 0.3);
+      transition: all 0.2s ease;
+    }
 
-    /* FAQ */
-    .faq-section-new { padding: 80px 0; background: #f8fafd; text-align: center; }
-    .faq-accordion-list { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 14px; }
-    .faq-item-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px 24px; text-align: left; cursor: pointer; transition: all 0.3s ease; }
-    .faq-item-card.active { border-color: #0052ff; box-shadow: 0 8px 24px rgba(0, 82, 255, 0.08); }
-    .faq-question-head { display: flex; justify-content: space-between; align-items: center; font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; color: #0f172a; }
-    .faq-plus-icon { width: 24px; height: 24px; border-radius: 50%; background: #eff6ff; color: #0052ff; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.3s ease; }
-    .faq-item-card.active .faq-plus-icon { transform: rotate(45deg); }
-    .faq-answer-body { display: none; font-size: 13.5px; color: #64748b; line-height: 1.6; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f1f5f9; }
-    .faq-item-card.active .faq-answer-body { display: block; }
+    .audit-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 68, 255, 0.4);
+    }
+
+    .form-privacy-hint {
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUpModal {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
 
     @media(max-width: 1100px) {
-      .hero-split-grid, .why-cards-triple-grid, .solutions-triple-grid { grid-template-columns: 1fr; gap: 32px; }
-      .dashboard-mockup-wrapper { padding-right: 0; }
-      .floating-keyword-card { right: 15px; }
+      .hero-split-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      .page-layout-container {
+        padding: 85px 16px 30px !important;
+        gap: 24px !important;
+      }
+
+      .rollout-row-top-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media(max-width: 600px) {
-      .hero-mini-badges-row { grid-template-columns: repeat(2, 1fr); }
-      .mockup-bottom-bento-grid { grid-template-columns: 1fr; }
-      .detail-hero-section { padding: 100px 0 40px !important; }
-      .floating-keyword-card { position: relative; top: 0; right: 0; width: 100%; margin-bottom: 16px; }
+      .page-layout-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      .rollout-row-top-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-mini-badges-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mockup-bottom-bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-cta-banner-card {
+        padding: 28px 16px;
+      }
+
+      .section-main-heading-center {
+        font-size: 22px;
+      }
+
+      .form-grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      .seo-audit-modal-box {
+        padding: 24px 18px;
+      }
     }
   </style>
 </head>
@@ -478,308 +892,550 @@
     </div>
   </div>
 
-  <header id="mainHeader"></header>
-
-  <section class="detail-hero-section">
-    <div class="pink-blob"></div>
-    <div class="purple-ambient-glow"></div>
-
-    <div class="wrap">
-      <a href="/services/" class="back-nav-btn">
-        <span>←</span> Back to Services
-      </a>
-
-      <div class="hero-split-grid">
-        <div class="hero-left-content">
-          <div class="hero-pill-badge" id="serviceBadge">
-            <span style="font-size: 14px;">🎨</span> Viral Reach & Engagement
-          </div>
-          
-          <h1 class="hero-title-main" id="serviceTitle">Social Media <span>Management</span></h1>
-          
-          <p class="hero-subtitle-desc" id="serviceSubtext">Lead trends, build high recall, and cultivate active communities.</p>
-          
-          <div class="hero-full-body-text" id="serviceDesc">
-            Lead trends and lock recall. Your search for the best social media marketing company in Jaipur ends here. We master platform dynamics across Facebook, Instagram, LinkedIn, and YouTube, executing custom strategies that help your brand thrive[cite: 7].
-          </div>
-
-          <div class="hero-mini-badges-row">
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🎬</div>
-              <div class="mini-badge-text">Short-Form Videos</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">✨</div>
-              <div class="mini-badge-text">Aesthetic Grid</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🤝</div>
-              <div class="mini-badge-text">Influencer Kits</div>
-            </div>
-            <div class="mini-badge-card">
-              <div class="mini-badge-icon">🚀</div>
-              <div class="mini-badge-text">Algorithmic Push</div>
-            </div>
-          </div>
+  <!-- ✦ HEADER NAVBAR ✦ -->
+  <header id="mainHeader">
+    <nav>
+      <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
+        <div class="logo-icon-box">
+          <img src="../../img/landing-logo1.png" alt="Digital Whopper Logo" class="logo-img-asset logo-eater-icon"
+            id="logoIcon">
         </div>
+        <span class="logo-text-to-eat" id="logoText">Digital Whopper</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/projects/">PortFolio</a>
+        <a href="javascript:void(0)" onclick="openSeoAuditModal()">SEO Audit</a>
+        <a href="#">SMO Audit</a>
+        <a href="#">Shark Tank Journey</a>
+        <a href="#">Punch In</a>
+      </div>
+      <div class="nav-cta">
+        <a href="javascript:void(0)" onclick="openSeoAuditModal()" class="btn btn-gold">Enquire now</a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="dashboard-mockup-wrapper">
-          <div class="mockup-main-card">
-            <div class="mockup-top-bar">
-              <div class="mockup-top-dots">
-                <span></span><span></span><span></span>
+  <!-- 🌟 MASTER PAGE CONTAINER (FULL WIDTH - NO SIDEBAR) -->
+  <div class="page-layout-container">
+
+    <!-- MAIN CONTENT COLUMN -->
+    <main class="main-content-column">
+
+      <!-- 1️⃣ HERO SECTION -->
+      <div class="hero-wrapper-container" id="audit-form">
+        <section class="detail-hero-section">
+          <a href="/services/" class="back-nav-btn">
+            <span>←</span> Back to Services
+          </a>
+
+          <div class="hero-split-grid">
+            <div class="hero-left-content">
+              <div class="hero-pill-badge">
+                <span>✦</span> Content That Builds Recall, Trust and Enquiries
+              </div>
+              
+              <h1 class="hero-title-main">Social Media <span>Management</span></h1>
+              
+              <p class="hero-subtitle-desc">Posting every day isn't a strategy. Customers follow, trust and buy from brands that show up with a clear voice, useful content and a reason to remember them.</p>
+              
+              <div class="hero-full-body-text">
+                Digital Whopper offers end-to-end <strong>social media management</strong> for brands, doctors, D2C companies and local businesses. As a <strong>social media marketing company in Jaipur</strong> working with clients across India, we plan your content, produce reels and carousels, manage your community and track what actually moves your business forward.
+              </div>
+
+              <div class="hero-mini-badges-row">
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">🎬</div>
+                  <div class="mini-badge-text">Short-Form Videos</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">✨</div>
+                  <div class="mini-badge-text">Aesthetic Grid</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">🤝</div>
+                  <div class="mini-badge-text">Influencer Kits</div>
+                </div>
+                <div class="mini-badge-card">
+                  <div class="mini-badge-icon">🚀</div>
+                  <div class="mini-badge-text">Algorithmic Push</div>
+                </div>
               </div>
             </div>
 
-            <div class="analytics-graph-box">
-              <div class="graph-header-meta">
-                <div>
-                  <span class="graph-title-sm">Social Reach & Impressions</span>
-                  <div class="graph-val-lg">
-                    125.4K <span class="graph-growth-pill">↑ Viral Reach</span>
+            <div class="dashboard-mockup-wrapper">
+              <div class="mockup-main-card">
+                <div class="mockup-top-bar">
+                  <div class="mockup-top-dots">
+                    <span></span><span></span><span></span>
                   </div>
                 </div>
-              </div>
 
-              <div class="floating-keyword-card">
-                <div class="fk-title">Engagement Metrics</div>
-                <div class="fk-row"><span>Reels Views</span><span class="num">84K</span><span class="arrow">↑</span></div>
-                <div class="fk-row"><span>Recall</span><span class="num">High</span><span class="arrow">↑</span></div>
-                <div class="fk-row"><span>Community</span><span class="num">Active</span><span class="arrow">✓</span></div>
-              </div>
+                <div class="analytics-graph-box">
+                  <div class="graph-header-meta">
+                    <div>
+                      <span class="graph-title-sm">Social Reach & Impressions</span>
+                      <div class="graph-val-lg">
+                        125.4K <span class="graph-growth-pill">↑ Viral Reach</span>
+                      </div>
+                    </div>
+                  </div>
 
-              <svg viewBox="0 0 300 90" class="svg-line-chart">
-                <path d="M0,75 Q40,60 90,35 T180,20 T300,5" fill="none" stroke="#0052ff" stroke-width="3" stroke-linecap="round" />
-                <circle cx="90" cy="35" r="4" fill="#0052ff" />
-                <circle cx="180" cy="20" r="4" fill="#0052ff" />
-                <circle cx="300" cy="5" r="5" fill="#0052ff" stroke="#ffffff" stroke-width="2" />
-              </svg>
+                  <div class="floating-keyword-card">
+                    <div class="fk-title">Engagement Metrics</div>
+                    <div class="fk-row"><span>Reels Views</span><span class="num">84K</span><span class="arrow">↑</span></div>
+                    <div class="fk-row"><span>Recall</span><span class="num">High</span><span class="arrow">↑</span></div>
+                    <div class="fk-row"><span>Community</span><span class="num">Active</span><span class="arrow">✓</span></div>
+                  </div>
+
+                  <svg viewBox="0 0 300 90" class="svg-line-chart">
+                    <path d="M0,75 Q40,60 90,35 T180,20 T300,5" fill="none" stroke="#0052ff" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="90" cy="35" r="4" fill="#0052ff" />
+                    <circle cx="180" cy="20" r="4" fill="#0052ff" />
+                    <circle cx="300" cy="5" r="5" fill="#0052ff" stroke="#ffffff" stroke-width="2" />
+                  </svg>
+                </div>
+
+                <div class="mockup-bottom-bento-grid">
+                  <div class="bento-mini-card" style="text-align: center;">
+                    <div class="bmc-label">Brand Recall</div>
+                    <div class="donut-chart-ui"></div>
+                    <span style="font-size: 10px; font-weight: 700; color: #0052ff; margin-top: 2px;">Top Tier</span>
+                  </div>
+
+                  <div class="bento-mini-card">
+                    <div class="bmc-label">Audience Growth</div>
+                    <div class="bmc-val-row">
+                      <span class="bmc-val">3.8x</span>
+                      <span class="bmc-tag">Active</span>
+                    </div>
+                    <div style="display: flex; gap: 3px; align-items: flex-end; height: 26px; margin-top: 8px;">
+                      <span style="width: 15%; height: 35%; background: #93c5fd; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 50%; background: #93c5fd; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 60%; background: #3b82f6; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 75%; background: #3b82f6; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 85%; background: #0052ff; border-radius: 2px;"></span>
+                      <span style="width: 15%; height: 100%; background: #1d4ed8; border-radius: 2px;"></span>
+                    </div>
+                  </div>
+
+                  <div class="bento-mini-card">
+                    <div class="bmc-label">Reels Engagement</div>
+                    <div class="bmc-val-row">
+                      <span class="bmc-val">12.4%</span>
+                      <span class="bmc-tag">CTR</span>
+                    </div>
+                    <svg viewBox="0 0 80 22" style="width: 100%; height: 26px; margin-top: 8px;">
+                      <path d="M0,20 Q20,13 40,7 T80,2" fill="none" stroke="#7c3aed" stroke-width="2.5" />
+                    </svg>
+                  </div>
+                </div>
+
+              </div>
             </div>
+          </div>
+        </section>
+      </div>
 
-            <div class="mockup-bottom-bento-grid">
-              <div class="bento-mini-card" style="text-align: center;">
-                <div class="bmc-label">Brand Recall</div>
-                <div class="donut-chart-ui"></div>
-                <span style="font-size: 11px; font-weight: 700; color: #0052ff; margin-top: 4px;">Top Tier</span>
-              </div>
+      <!-- 2️⃣ DEFINITION (AEO) -->
+      <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;">
+        <h2 class="section-main-heading-center">What Is Social Media Management?</h2>
 
-              <div class="bento-mini-card">
-                <div class="bmc-label">Audience Growth</div>
-                <div class="bmc-val-row">
-                  <span class="bmc-val">3.8x</span>
-                  <span class="bmc-tag">Active Fans</span>
-                </div>
-                <div style="display: flex; gap: 4px; align-items: flex-end; height: 32px; margin-top: 10px;">
-                  <span style="width: 15%; height: 35%; background: #93c5fd; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 50%; background: #93c5fd; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 60%; background: #3b82f6; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 75%; background: #3b82f6; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 85%; background: #0052ff; border-radius: 2px;"></span>
-                  <span style="width: 15%; height: 100%; background: #1d4ed8; border-radius: 2px;"></span>
-                </div>
-              </div>
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              <strong>Social media management is the ongoing work of planning, creating, publishing and analysing content across your social platforms, and engaging with the people who interact with it.</strong> It covers strategy, content calendars, reels and design, captions, community replies and monthly performance reviews.
+            </div>
+            <p>It differs from paid social ads. Management builds your organic presence and reputation over time, while ads pay to reach specific audiences quickly. The strongest brands use both together.</p>
+          </div>
+        </div>
+      </section>
 
-              <div class="bento-mini-card">
-                <div class="bmc-label">Reels Engagement</div>
-                <div class="bmc-val-row">
-                  <span class="bmc-val">12.4%</span>
-                  <span class="bmc-tag">High CTR</span>
-                </div>
-                <svg viewBox="0 0 80 25" style="width: 100%; height: 30px; margin-top: 10px;">
-                  <path d="M0,22 Q20,15 40,8 T80,2" fill="none" stroke="#7c3aed" stroke-width="2.5" />
-                </svg>
+      <!-- 3️⃣ WHAT'S CHANGED -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">THE NEW RULES OF SOCIAL</div>
+        <h2 class="section-main-heading-center">What's Changed on Social Media, and Why Does It Matter?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">UPDATE 01</span>
+              <div class="rollout-step-head-title">Your Posts Can Now Show Up on Google</div>
+              <p class="rollout-step-paragraph">Since July 2025, public posts and reels from Instagram business and creator accounts can appear in Google and Bing search results. Your captions, alt text and on-screen text now affect discoverability far beyond Instagram, which makes social content part of your search strategy.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">UPDATE 02</span>
+              <div class="rollout-step-head-title">Original Content Wins, Reposts Lose Reach</div>
+              <p class="rollout-step-paragraph">Instagram now limits recommendations for accounts that mostly share content they didn't create or haven't meaningfully changed. This now applies to photos and carousels as well as reels, so reposting trends or stock content no longer grows an account.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">UPDATE 03</span>
+              <div class="rollout-step-head-title">The Audience Is Huge, and Highly Specific</div>
+              <p class="rollout-step-paragraph">India has over 50 crore Instagram users, and the largest group is aged 25 to 34. Reaching them isn't the challenge. Standing out in a crowded feed with content that speaks directly to your buyer is.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4️⃣ WHAT'S INCLUDED -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">WHAT YOU GET</div>
+        <h2 class="section-main-heading-center">What's Included in Our Social Media Management Services?</h2>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table-shell">
+            <thead>
+              <tr>
+                <th>Service Area</th>
+                <th>What We Do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Strategy & positioning</strong></td>
+                <td>Audience research, competitor review, brand voice and content pillars built around audience psychology</td>
+              </tr>
+              <tr>
+                <td><strong>Monthly content calendar</strong></td>
+                <td>A planned mix of reels, carousels, static posts and stories, shared in advance for your approval</td>
+              </tr>
+              <tr>
+                <td><strong>Reels & short-form video</strong></td>
+                <td>Hook-first scripts, shoot direction, editing, captions and on-screen text</td>
+              </tr>
+              <tr>
+                <td><strong>Design</strong></td>
+                <td>Carousels, posts, story frames and highlight covers that match your brand identity</td>
+              </tr>
+              <tr>
+                <td><strong>Copywriting & social SEO</strong></td>
+                <td>Captions, keywords, alt text and hashtags written for both people and search</td>
+              </tr>
+              <tr>
+                <td><strong>Community management</strong></td>
+                <td>Replies to comments and messages, enquiry handling guidelines and reputation monitoring</td>
+              </tr>
+              <tr>
+                <td><strong>Reporting</strong></td>
+                <td>Monthly insights on reach, engagement, followers, profile actions and enquiries, with next month's plan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5️⃣ PLATFORM ROLES -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">PLATFORM STRATEGY</div>
+        <h2 class="section-main-heading-center">Which Platforms Should Your Brand Focus On?</h2>
+        <p style="text-align: center; font-size: 14px; color: #64748b; margin-bottom: 20px;">Being everywhere usually means doing everything poorly. We help you prioritise the platforms where your customers actually spend time and make decisions.</p>
+
+        <div class="comparison-table-container">
+          <table class="comparison-table-shell">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Best For</th>
+                <th>Content That Works</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Instagram</strong></td>
+                <td>D2C brands, doctors, lifestyle, food, real estate and local businesses</td>
+                <td>Reels, educational carousels, behind-the-scenes stories, customer proof</td>
+              </tr>
+              <tr>
+                <td><strong>Facebook</strong></td>
+                <td>Local communities, older audiences and lead generation</td>
+                <td>Offers, updates, community posts, video and event promotion</td>
+              </tr>
+              <tr>
+                <td><strong>LinkedIn</strong></td>
+                <td>B2B companies, founders, consultants and hiring</td>
+                <td>Founder-led posts, industry insights, case studies and team culture</td>
+              </tr>
+              <tr>
+                <td><strong>YouTube</strong></td>
+                <td>Education, expert advice and long-term searchability</td>
+                <td>Shorts for reach, longer videos for in-depth questions and trust</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 6️⃣ CONTENT FRAMEWORK -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">HOW WE PLAN CONTENT</div>
+        <h2 class="section-main-heading-center">How Do We Create Content People Actually Stop For?</h2>
+        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">Every piece of content we plan has a job. We build your calendar around four content pillars, each designed to move followers one step closer to buying.</p>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">PILLAR 01</span>
+              <div class="rollout-step-head-title">Attract: Get Noticed</div>
+              <p class="rollout-step-paragraph">Hook-led reels and relatable content built on audience mirroring, showing your viewer their own problem or situation in the first few seconds.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">PILLAR 02</span>
+              <div class="rollout-step-head-title">Educate: Build Authority</div>
+              <p class="rollout-step-paragraph">Carousels and explainers that answer real customer questions, so your brand becomes the go-to expert in your space.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">PILLAR 03</span>
+              <div class="rollout-step-head-title">Prove: Earn Trust</div>
+              <p class="rollout-step-paragraph">Reviews, results, behind-the-scenes processes and founder stories that show why you're credible.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">PILLAR 04</span>
+              <div class="rollout-step-head-title">Convert: Prompt Action</div>
+              <p class="rollout-step-paragraph">Clear offers, product highlights and calls to action that turn interest into DMs, calls, bookings and sales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7️⃣ LANGUAGE -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Should Your Content Be in English, Hindi or Hinglish?</h2>
+        <div class="seo-action-left" style="grid-column: 1 / -1;">
+          <p>It depends on how your audience talks, not how you'd like to sound. A doctor explaining symptoms to local patients often connects better in Hinglish, while a B2B brand on LinkedIn usually needs polished English.</p>
+          <p>We write scripts and captions in English, Hindi or Romanised Hinglish based on your audience, and keep your brand voice consistent across all of them.</p>
+        </div>
+      </section>
+
+      <!-- 8️⃣ INDUSTRIES -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">INDUSTRY EXPERIENCE</div>
+        <h2 class="section-main-heading-center">Which Businesses Do We Manage Social Media For?</h2>
+
+        <div class="callout-blue-quote-box" style="margin-top: 15px;">
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">✓</span> <strong>Doctors, clinics & hospitals:</strong> educational reels and carousels in simple language, created in line with NMC ethical advertising guidelines, with no exaggerated claims or patient testimonials that break the rules</li>
+            <li><span class="dot">✓</span> <strong>D2C & ecommerce brands:</strong> product-led reels, user-generated content, launches and festive campaigns that support sales</li>
+            <li><span class="dot">✓</span> <strong>Real estate developers:</strong> project walkthroughs, location stories and construction updates that build buyer confidence</li>
+            <li><span class="dot">✓</span> <strong>B2B companies & founders:</strong> LinkedIn thought leadership, case studies and founder-led storytelling</li>
+            <li><span class="dot">✓</span> <strong>Education & coaching:</strong> student results, faculty introductions and exam tips that build trust with parents and students</li>
+            <li><span class="dot">✓</span> <strong>Restaurants, cafés & local businesses:</strong> menu highlights, events, offers and community content that drive footfall</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9️⃣ CREATORS -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">CREATORS & COLLABORATIONS</div>
+        <h2 class="section-main-heading-center">Can Influencers and Creators Help Grow Your Brand?</h2>
+        <p style="font-size: 14px; color: #64748b; margin-bottom: 16px;">The right creator can introduce your brand to an audience that already trusts them. We help you find creators whose followers genuinely match your customers, brief them clearly and track what each collaboration delivers.</p>
+        
+        <ul class="seo-checklist-clean" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+          <li><span class="dot">✓</span> Creator shortlisting based on audience fit, engagement quality and content style</li>
+          <li><span class="dot">✓</span> Collaboration briefs, product seeding and approval workflows</li>
+          <li><span class="dot">✓</span> Instagram collab posts so content appears on both profiles</li>
+          <li><span class="dot">✓</span> Proper ad disclosure in line with Indian advertising guidelines</li>
+        </ul>
+      </section>
+
+      <!-- 🔟 MONTHLY WORKFLOW -->
+      <section class="rollout-roadmap-section">
+        <div class="section-pill-tag">HOW WE WORK</div>
+        <h2 class="section-main-heading-center">What Does a Typical Month With Us Look Like?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-4" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 01</span>
+              <div class="rollout-step-head-title">Plan</div>
+              <p class="rollout-step-paragraph">We share next month's content calendar, including topics, formats and posting dates.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 02</span>
+              <div class="rollout-step-head-title">Approve</div>
+              <p class="rollout-step-paragraph">You review and give feedback on scripts, designs and captions before anything goes live.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 03</span>
+              <div class="rollout-step-head-title">Produce</div>
+              <p class="rollout-step-paragraph">We shoot or direct reels, design creatives and finalise copy.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 04</span>
+              <div class="rollout-step-head-title">Publish</div>
+              <p class="rollout-step-paragraph">Content goes live at the times your audience is most active.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 05</span>
+              <div class="rollout-step-head-title">Engage</div>
+              <p class="rollout-step-paragraph">We respond to comments and messages and flag sales enquiries to your team.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">STEP 06</span>
+              <div class="rollout-step-head-title">Review</div>
+              <p class="rollout-step-paragraph">A monthly report shows what worked, what didn't and what we'll change next.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">Growth depends on your industry, content approvals, posting consistency and whether organic content is supported by ads. We set realistic goals at the start.</p>
+      </section>
+
+      <!-- 1️⃣1️⃣ CASE STUDY -->
+      <section style="width: 100%;">
+        <div class="section-pill-tag">RESULTS</div>
+        <h2 class="section-main-heading-center">How Does Strong Social Media Support Business Growth?</h2>
+
+        <div class="callout-blue-quote-box" style="background: #f0fdf4; border-color: #10b981; color: #065f46;">
+          <h3 style="font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; margin-bottom: 8px; color: #065f46;">Marbleous: Building the Foundation for Growth</h3>
+          <p style="margin-bottom: 12px; color: #047857;">When we started working with Marbleous, our first step was building a strong social media footprint for the brand. That foundation of content and recall made it easier to scale performance marketing later, as the brand went on to feature on Shark Tank India.</p>
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">✓</span> <strong>800K+</strong> users reached</li>
+            <li><span class="dot">✓</span> <strong>3.2X</strong> revenue scaled with performance marketing</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 1️⃣2️⃣ WHY US -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Why Choose Digital Whopper for Social Media Management?</h2>
+        
+        <ul class="seo-checklist-clean" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 22px;">
+          <li><span class="dot">✓</span> <strong>Strategy before posting:</strong> Every calendar is built on audience psychology and business goals, not trends alone.</li>
+          <li><span class="dot">✓</span> <strong>Original content:</strong> We create content for your brand instead of recycling templates, which keeps you on the right side of platform rules.</li>
+          <li><span class="dot">✓</span> <strong>Compliance-aware:</strong> Experience creating healthcare and regulated-industry content within the rules.</li>
+          <li><span class="dot">✓</span> <strong>Connected growth:</strong> Social media works alongside SEO, ads and your website, all under one roof.</li>
+          <li><span class="dot">✓</span> <strong>Proven experience:</strong> 150+ projects across 12+ industries, including two Shark Tank India brands.</li>
+        </ul>
+      </section>
+
+      <!-- 1️⃣3️⃣ INTERNAL LINKS -->
+      <section style="width: 100%;">
+        <h2 class="section-main-heading-center">Make Your Social Media Work Harder</h2>
+        
+        <div class="seo-action-left" style="background: #eff6ff; border: 1px solid #dbeafe; border-radius: 12px; padding: 20px;">
+          <ul class="seo-checklist-clean">
+            <li><span class="dot">→</span> Turn your best-performing posts into ads with our <strong><a href="https://digitalwhopper.com/service/performance-marketing-agency" style="color: #0044ff; text-decoration: underline;">performance marketing agency</a></strong> services.</li>
+            <li><span class="dot">→</span> Connect your social presence to search with our <strong><a href="https://digitalwhopper.com/seo-company-in-jaipur/" style="color: #0044ff; text-decoration: underline;">SEO company in Jaipur</a></strong> team.</li>
+            <li><span class="dot">→</span> Send followers to a website that converts, built by our <strong><a href="https://digitalwhopper.com/service/web-development-company-in-jaipur" style="color: #0044ff; text-decoration: underline;">web development company in Jaipur</a></strong> team.</li>
+            <li><span class="dot">→</span> Selling products online? Explore our <strong><a href="https://digitalwhopper.com/service/ecommerce-marketing-services" style="color: #0044ff; text-decoration: underline;">ecommerce marketing services</a></strong>.</li>
+            <li><span class="dot">→</span> Learn more about us as a full-service <strong><a href="https://digitalwhopper.com/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a></strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 1️⃣4️⃣ FAQ -->
+      <section class="faq-section-new">
+        <div class="section-pill-tag">FAQ</div>
+        <h2 class="section-main-heading-center">Social Media Management: Frequently Asked Questions</h2>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much do social media management services cost?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Costs depend on the number of platforms, posts and reels per month, whether shoots are needed and how much community management is involved. A single-platform plan for a local business costs less than a multi-platform plan with regular video production. We share a clear package after understanding your goals.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How many posts should my brand publish each month?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Consistency matters more than volume. Most brands do well with a steady weekly mix of reels, carousels and stories. We recommend a posting frequency based on your goals, audience and the quality of content you can sustain.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do I need to appear on camera or shoot the content myself?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Not always. Some brands work best with founder or expert-led videos, while others rely on product shoots, designs and creator content. We script, direct and edit, and can plan shoots so your time commitment stays manageable.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How long does it take to see growth on social media?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Engagement and content quality usually improve within the first one to two months. Steady follower growth, stronger brand recall and consistent enquiries typically build over three to six months of consistent posting, faster if supported by ads.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can my Instagram posts help my business show up on Google?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Since July 2025, public content from Instagram business and creator accounts can appear in Google search results. Writing keyword-aware captions, alt text and clear on-screen text helps your posts get found by people searching outside Instagram.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do you manage social media for doctors and clinics?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. We create educational content for doctors and healthcare brands in English, Hindi or Hinglish, following NMC ethical advertising guidelines. That means no misleading claims, no guaranteed outcomes and responsible handling of patient information.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">What's the difference between social media management and social media ads?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Management builds your organic presence through regular content and community engagement. Ads pay to put specific content in front of targeted audiences. Organic content builds trust and recall, while ads speed up reach and sales. They work best together.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Will I get to approve content before it's posted?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. We share the monthly calendar, scripts, designs and captions in advance. Nothing goes live without your approval, and we build your feedback into future content.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1️⃣5️⃣ FINAL CTA -->
+      <section class="bottom-cta-banner-card">
+        <h3>Ready for Social Media That Builds Your Business?</h3>
+        <p>Get a free audit of your current profiles, with clear recommendations on content, platforms and quick wins.</p>
+        <div class="hero-btn-row" style="margin-bottom: 0;">
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Social Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         🏢 FOOTER
+         ========================================================================== -->
+      <footer id="footer">
+        <div class="wrap">
+          <div class="foot-top">
+            <div class="foot-brand">
+              <a href="/" class="logo">
+                <div class="logo-mark">DW</div>Digital Whopper
+              </a>
+              <p>Sardarpura, Jodhpur, Rajasthan 342003</p>
+              <p><a href="tel:+916200379161">+91 6200379161</a><br><a
+                  href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
+              <div class="socials">
+                <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener">LinkedIn</a>
               </div>
             </div>
-
+            <div class="foot-links">
+              <div class="foot-col">
+                <h4>Pages</h4>
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/#about">About</a>
+                <a href="/contact">Contact</a>
+              </div>
+              <div class="foot-col">
+                <h4>Our services</h4>
+                <a href="/services">App &amp; Shopify Development</a>
+                <a href="/services">SEO &amp; SMO Optimisation</a>
+                <a href="/services">E-Commerce</a>
+                <a href="/services">Performance Marketing</a>
+                <a href="/services">Web Design &amp; Development</a>
+              </div>
+              <div class="foot-col">
+                <h4>Quick links</h4>
+                <a href="/#blog">Blog</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#milestones">Our journey</a>
+                <a href="https://wa.me/916200379161" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          <div class="foot-bottom">
+            <span>© 2026 Digital Whopper. All rights reserved.</span>
+            <span>Made with ✦ in Jodhpur</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </footer>
 
-  <!-- Trusted Brands Section -->
-  <section class="trusted-brands-section">
-    <div class="wrap">
-      <div class="brands-pill-tag">TRUSTED BY GROWING BRANDS</div>
-      <h2 class="brands-main-title">Brands That Trust <span>Digital Whopper</span></h2>
+    </main>
 
-      <div class="two-line-carousel-wrapper">
-        <div class="logo-carousel-track track-line-1">
-          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
-          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
-          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
-          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
-          <div class="logo-card-pad"><img src="../../img/client/gudmishri.webp" alt="Gudmishri"></div>
-          <div class="logo-card-pad"><img src="../../img/client/homearte.webp" alt="Homearte"></div>
-          <div class="logo-card-pad"><img src="../../img/client/exporis.webp" alt="Exporis"></div>
-          <div class="logo-card-pad"><img src="../../img/client/dresszilla.webp" alt="Dresszilla"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(1).webp" alt="Client 1"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(2).webp" alt="Client 2"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(3).webp" alt="Client 3"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(4).webp" alt="Client 4"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(6).webp" alt="Client 6"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(7).webp" alt="Client 7"></div>
-        </div>
-
-        <div class="logo-carousel-track track-line-2">
-          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
-          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
-          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
-          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
-          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.webp" alt="Tea Cakes"></div>
-          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
-          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
-          <div class="logo-card-pad"><img src="../../img/client/NAMO.webp" alt="NAMO"></div>
-          <div class="logo-card-pad"><img src="../../img/client/phulkarijewels.webp" alt="Phulkari"></div>
-          <div class="logo-card-pad"><img src="../../img/client/rajaraya.webp" alt="Rajaraya"></div>
-          <div class="logo-card-pad"><img src="../../img/client/reducetax.webp" alt="ReduceTax"></div>
-          <div class="logo-card-pad"><img src="../../img/client/Tea-cakes-1.jpg" alt="Tea Cakes"></div>
-          <div class="logo-card-pad"><img src="../../img/client/yatharth.webp" alt="Yatharth"></div>
-          <div class="logo-card-pad"><img src="../../img/client/meenal.webp" alt="Meenal"></div>
-          <div class="logo-card-pad"><img src="../../img/client/logo(10).webp" alt="Client 10"></div>
-        </div>
-      </div>
-
-      <div class="brand-meta-pills-row">
-        <div class="brand-meta-item"><span class="icon">👥</span> 50+ Happy Clients</div>
-        <div class="brand-meta-item"><span class="icon">📊</span> Multiple Industries</div>
-        <div class="brand-meta-item"><span class="icon">⚙️</span> Long-Term Partnerships</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="why-need-section">
-    <div class="wrap">
-      <div class="why-pill-tag">WHY CHOOSE US?</div>
-      <h2 class="why-title-main">Why You Need <span>Social Media Management?</span></h2>
-      <p class="why-subtitle-lead">Lead trends, build high brand recall, and cultivate active engaged communities across channels.</p>
-
-      <div class="why-cards-triple-grid">
-        <div class="why-feature-card">
-          <div class="why-icon-aura">🎬</div>
-          <h3 class="why-card-h3">Viral Video Playbooks</h3>
-          <p class="why-card-p">Create high-retention Reels and Shorts engineered for algorithmic push and organic reach[cite: 7].</p>
-        </div>
-        <div class="why-feature-card">
-          <div class="why-icon-aura">✨</div>
-          <h3 class="why-card-h3">Aesthetic Branding</h3>
-          <p class="why-card-p">Design striking grid architectures and carousel frameworks that maintain consistent brand appeal[cite: 7].</p>
-        </div>
-        <div class="why-feature-card">
-          <div class="why-icon-aura">🤝</div>
-          <h3 class="why-card-h3">Community & Creators</h3>
-          <p class="why-card-p">Connect your brand with relevant influencers and build loyal community fans and advocates[cite: 7].</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comprehensive Solutions -->
-  <section class="solutions-section">
-    <div class="wrap">
-      <div class="section-pill-tag">WHAT WE DELIVER</div>
-      <h2 class="section-title-center">Comprehensive <span>Social Solutions</span></h2>
-
-      <div class="solutions-triple-grid" id="solutionsGridContainer">
-        <!-- Short-Form Video Playbooks -->
-        <div class="solution-card-bento c-blue">
-          <div class="sol-icon-box">🎬</div>
-          <h3 class="sol-card-h3">Short-Form Video Playbooks</h3>
-          <p class="sol-card-p">High-retention Reels, Shorts, and TikTok style videos engineered for algorithmic push[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> Script Hook Blueprints</li>
-            <li><span class="check">✓</span> High-Retention Editing</li>
-            <li><span class="check">✓</span> Audio Trend Matching</li>
-            <li><span class="check">✓</span> Call-to-Actions</li>
-          </ul>
-        </div>
-
-        <!-- Brand Aesthetic Identity -->
-        <div class="solution-card-bento c-green">
-          <div class="sol-icon-box">✨</div>
-          <h3 class="sol-card-h3">Brand Aesthetic Identity</h3>
-          <p class="sol-card-p">Striking grid architecture, carousel design, and consistent branding across channels[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> Brand Guidelines</li>
-            <li><span class="check">✓</span> Carousel Design</li>
-            <li><span class="check">✓</span> Story Frameworks</li>
-            <li><span class="check">✓</span> Interactive Posts</li>
-          </ul>
-        </div>
-
-        <!-- Influencer & Community -->
-        <div class="solution-card-bento c-purple">
-          <div class="sol-icon-box">🤝</div>
-          <h3 class="sol-card-h3">Influencer & Community</h3>
-          <p class="sol-card-p">Connecting your brand with relevant creators and building loyal community fans[cite: 7].</p>
-          <ul class="sol-checklist">
-            <li><span class="check">✓</span> Creator Outreach</li>
-            <li><span class="check">✓</span> Collaboration Kits</li>
-            <li><span class="check">✓</span> Engagement Protocols</li>
-            <li><span class="check">✓</span> Sentiment Monitoring</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cta-center-block">
-        <a href="https://wa.me/916200379161" target="_blank" class="btn-deploy-cta">
-          Boost Your Social Media Reach <span style="font-size: 18px;">→</span>
-        </a>
-        <div class="cta-subtext">Let's lead trends and cultivate your active community.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section-new">
-    <div class="wrap">
-      <div class="section-pill-tag">FAQ</div>
-      <h2 class="section-title-center">Frequently Asked Questions</h2>
-
-      <div class="faq-accordion-list">
-        <div class="faq-item-card active" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            Which social media platforms do you manage?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            We manage and execute platform dynamics across Instagram, Facebook, LinkedIn, YouTube, and short-form video channels.
-          </div>
-        </div>
-
-        <div class="faq-item-card" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            Do you create short-form videos like Reels and Shorts?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            Yes! We specialize in high-retention short-form video playbooks, script hooks, and trending audio strategies to maximize algorithmic reach.
-          </div>
-        </div>
-
-        <div class="faq-item-card" onclick="this.classList.toggle('active')">
-          <div class="faq-question-head">
-            How do you help build active communities and engagement?
-            <span class="faq-plus-icon">+</span>
-          </div>
-          <div class="faq-answer-body">
-            We combine consistent aesthetic branding, interactive stories, creator collaborations, and proactive engagement protocols to cultivate loyal community fans.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✦ FOOTER ✦ -->
-  <footer id="footer"></footer>
+  </div>
 
   <!-- 🤖 WHOPPY AI CHATBOT -->
   <div class="chatbot-wrapper">
@@ -942,9 +1598,40 @@
     </a>
   </div>
 
+  <!-- 🌟 SCRIPTS -->
+  <script>
+    function openSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSeoAuditModal() {
+      const modal = document.getElementById('seoAuditModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'seoAuditModal') {
+        closeSeoAuditModal();
+      }
+    }
+
+    function handleAuditFormSubmit(event) {
+      event.preventDefault();
+      alert('Thank you! Your social media audit request has been received. Our content team will contact you shortly.');
+      closeSeoAuditModal();
+    }
+  </script>
+
+  <script src="../../services-data.js"></script>
   <script src="../../scriptb.js"></script>
   <script src="../../section.js"></script>
-  <script src="../../services-data.js"></script>
 </body>
 
 </html>

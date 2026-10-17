@@ -138,7 +138,7 @@ const DW_SERVICES_DATA = [
   },
   {
     id: 4,
-    slug: "social-media-management",
+    slug: "social-media-marketing-company-in-jaipur",
     title: "Social Media Management",
     menuTitle: "Social Media Management",
     icon: "🎨",

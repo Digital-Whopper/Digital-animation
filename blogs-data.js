@@ -607,7 +607,7 @@ const DW_BLOGS_DATA = [
       conclusion: "Ensure human editorial oversight for public-interest text, properly label deepfakes, and coordinate with your EU clients to maintain compliance under the EU AI Act."
     }
   },
-{
+ {
     id: 8,
     slug: "rising-cac-protect-d2c-margins-festive-season",
     title: "Rising CAC, Rising Stakes: How D2C Brands Can Protect Margins This Festive Season",
@@ -617,7 +617,7 @@ const DW_BLOGS_DATA = [
     classColor: "color-c3",
     featured: true,
     readTime: "8 min read",
-    publishDate: "Oct 09, 2026",
+    publishDate: "Oct 13, 2026",
     newsHeadline: "Protecting D2C Margins & Lowering CAC",
     newsSummary: "Learn how to calculate break-even CAC, control COD returns, raise order value without cutting prices, and protect profits during the festive rush.",
     author: {
@@ -722,6 +722,239 @@ const DW_BLOGS_DATA = [
         }
       ],
       conclusion: "Calculate your break-even CAC, protect your margins with smart bundling, control RTO, and keep optimizing your performance post-Diwali to maximize festive profits."
+    }
+  },
+  {
+    id: 9,
+    slug: "gemini-replaced-google-assistant-local-business-impact",
+    title: "Gemini Has Replaced Google Assistant on Android. Will 'Hey Google' Still Find Your Business?",
+    category: "Local SEO & AI Search",
+    badge: "Platform Update",
+    icon: "🤖",
+    classColor: "color-c1",
+    featured: true,
+    readTime: "7 min read",
+    publishDate: "Oct 10, 2026",
+    newsHeadline: "Google Assistant Replaced by Gemini on Android",
+    newsSummary: "Google started replacing Assistant with Gemini on 4 September 2026. Learn how conversational voice searches impact local SEO and what your business must update.",
+    author: {
+      name: "Digital Whopper",
+      role: "Performance Marketing Agency",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    },
+    thumbnail: "img/blogs/blog5.png",
+    bannerImage: "img/blogs/blog5.png",
+    excerpt: "Google Assistant is being permanently replaced by Gemini on Android devices. Discover how conversational voice queries change local search visibility.",
+    tags: ["Gemini", "Google Assistant", "Local SEO", "Google Business Profile", "Digital Marketing"],
+    content: {
+      intro: "Gemini Has Replaced Google Assistant on Android. Will 'Hey Google' Still Find Your Business?",
+      sections: [
+        {
+          heading: "The short answer",
+          desc: "<ul><li><b>What changed:</b> From 4 September 2026, Google began removing Google Assistant from eligible Android phones and tablets. Gemini now answers when people say \"Hey Google\" or long-press the power button.</li><li><b>It is permanent:</b> Once a device switches, users cannot go back to the old Assistant.</li><li><b>Who is affected:</b> Android phones and tablets that meet Gemini's requirements, plus paired Wear OS watches, compatible earbuds and Android Auto running from the phone.</li><li><b>What it means for businesses:</b> Voice searches now go to a conversational AI assistant that gives fuller answers instead of short commands. Clear, consistent business information matters more than before.</li><li><b>What to do:</b> Keep your Google Business Profile complete and accurate, answer real customer questions on your website, and keep your details identical everywhere online.</li></ul>"
+        },
+        {
+          heading: "What Google changed, and when",
+          desc: "Google first announced in March 2025 that Gemini would replace Google Assistant on mobile. In August 2026, it emailed Android users to confirm the date.",
+          table: {
+            headers: ["Detail", "What happens"],
+            rows: [
+              ["Start date", "4 September 2026, rolling out gradually over several weeks"],
+              ["Devices", "Eligible Android phones and tablets in regions where Gemini is available"],
+              ["Paired devices", "Wear OS watches, compatible headphones and earbuds, Android Auto projected from the phone"],
+              ["Not affected for now", "Cars with Google built-in; devices that do not meet Gemini's requirements"],
+              ["How users call it", "\"Hey Google\" or a long press on the power button"],
+              ["Can users switch back?", "No, once the update reaches their device"]
+            ]
+          }
+        },
+        {
+          heading: "Why this is more than a name change",
+          desc: "Google Assistant was built for quick commands: set a timer, call a contact, open an app. Gemini is built for conversation. It handles follow-up questions and longer, more detailed requests.<br><br>That changes how people search by voice. Instead of \"dentist near me\", a user might ask, \"Which dentist near Malviya Nagar is open on Sunday and does root canals?\" The assistant then needs specific, trustworthy details to answer."
+        },
+        {
+          heading: "What this means for local businesses",
+          desc: "Google has not published a separate ranking system for voice answers in Gemini. What is clear is that Gemini works inside Google's ecosystem and can draw on Google services such as Search and Maps. The fundamentals that help you show up in Google Search and Maps still apply. The difference is that answers are now more conversational and more specific.",
+          table: {
+            headers: ["Old voice search habit", "New voice search habit", "What your business needs"],
+            rows: [
+              ["\"Cafe near me\"", "\"A quiet cafe near me with Wi-Fi that's open now\"", "Accurate hours, attributes and photos on your Business Profile"],
+              ["\"Call Sharma Clinic\"", "\"Does Sharma Clinic take walk-ins on Saturday?\"", "Clear service and timing details on your website and profile"],
+              ["\"Hotel in Jaipur\"", "\"Family hotel in Jaipur with parking near the airport\"", "Specific amenities, location details and reviews that mention them"],
+              ["\"Order cake\"", "\"Which bakery near me delivers eggless cakes tonight?\"", "Up-to-date products, delivery areas and FAQs"]
+            ]
+          },
+          conclusionNote: "<b>The one thing to remember:</b> A conversational assistant can only give a confident answer about your business if your details are complete, consistent and easy to find."
+        },
+        {
+          heading: "A 10-point visibility checklist for the Gemini era",
+          desc: "1. <b>Complete your Google Business Profile.</b> Fill in categories, services, hours, holiday hours, attributes and photos.<br>2. <b>Keep details identical everywhere.</b> Use the same business name, address and phone number on your website, profile and directories.<br>3. <b>Answer real questions on your website.</b> Add a short FAQ for the questions customers actually ask by phone or WhatsApp.<br>4. <b>Write how people speak.</b> Use natural phrases like \"open on Sunday\" or \"home delivery in Malviya Nagar\" where they fit.<br>5. <b>Describe services in detail.</b> One clear page or section per main service beats one vague list.<br>6. <b>Ask for detailed reviews.</b> Reviews that mention the service, area and experience give useful context.<br>7. <b>Reply to reviews.</b> It shows the business is active and adds helpful detail.<br>8. <b>Add structured data.</b> LocalBusiness and FAQ schema help search systems read your details correctly.<br>9. <b>Keep the site fast on mobile.</b> Voice users are almost always on a phone.<br>10. <b>Track calls and direction requests.</b> Watch your Business Profile performance over the coming months to spot changes."
+        },
+        {
+          heading: "Need help getting found?",
+          desc: "Digital Whopper is a <a href=\"https://digitalwhopper.com/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">digital marketing company in Jaipur</a>, based in Malviya Nagar. We handle Google Business Profile optimisation, local SEO and content for clinics, hotels, restaurants and retail brands. Explore our <a href=\"../../services/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">SEO and local marketing services</a>, or talk to our <a href=\"https://wa.me/916200379161\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">local SEO team</a> about your listing. For more platform updates, browse the <a href=\"../../blogs/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">Digital Whopper blog</a>."
+        }
+      ],
+      faqs: [
+        {
+          q: "When did Google Assistant stop working on Android?",
+          a: "Google began removing it from eligible Android phones and tablets on 4 September 2026. The rollout takes several weeks, so some devices switch later than others."
+        },
+        {
+          q: "Can users switch back to Google Assistant?",
+          a: "No. Once Gemini replaces Assistant on a device, the old Assistant is no longer available there."
+        },
+        {
+          q: "Does \"Hey Google\" still work?",
+          a: "Yes. Saying \"Hey Google\" now opens Gemini on updated devices."
+        },
+        {
+          q: "Is Google Assistant still available in cars?",
+          a: "Cars with Google built-in keep Google Assistant beyond 4 September 2026 for now. Android Auto projected from a phone switches to Gemini."
+        },
+        {
+          q: "Do I need a new strategy for voice search?",
+          a: "Not a new one, but a sharper one. Focus on accurate business details, specific service information and answers to real customer questions."
+        }
+      ],
+      references: [
+        {
+          title: "Search Engine Roundtable: Google Assistant shutting down on mobile devices on September 4",
+          url: "https://www.seroundtable.com/"
+        },
+        {
+          title: "Business Today: Google Assistant to be replaced by Gemini starting September",
+          url: "https://www.businesstoday.in/"
+        }
+      ],
+      conclusion: "With Gemini replacing Google Assistant, ensure your Google Business Profile is fully updated and your website answers conversational local search queries to maintain voice visibility."
+    }
+  },
+  {
+    id: 10,
+    slug: "meta-removed-explore-messenger-stories-placements",
+    title: "Meta Removed Instagram Explore and Messenger Stories Placements. Can You Still Control Where Your Ads Run?",
+    category: "Performance Marketing & Meta Ads",
+    badge: "Platform Update",
+    icon: "📱",
+    classColor: "color-c2",
+    featured: true,
+    readTime: "8 min read",
+    publishDate: "Oct 11, 2026",
+    newsHeadline: "Meta Ads Placement Changes & Control Strategy",
+    newsSummary: "Meta removed Instagram Explore Feed and Messenger Stories. Learn how this impacts manual placements, ad set controls, and what you should do now.",
+    author: {
+      name: "Digital Whopper",
+      role: "Performance Marketing Agency",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    },
+    thumbnail: "img/blogs/blogs1.png",
+    bannerImage: "img/blogs/blogs1.png",
+    excerpt: "Instagram Explore Feed and Messenger Stories placements are gone. Discover how to manage your ad placements and protect lead quality under Meta's automated updates.",
+    tags: ["Meta Ads", "Instagram", "Messenger", "Performance Marketing", "Digital Marketing"],
+    content: {
+      intro: "Meta Removed Instagram Explore and Messenger Stories Placements. Can You Still Control Where Your Ads Run?",
+      sections: [
+        {
+          heading: "The short answer",
+          desc: "<ul><li><b>What Meta removed:</b> Instagram Explore Feed and Messenger Stories are no longer available as ad placements. The change arrived with Meta's Marketing API v26.0 on 29 July 2026.</li><li><b>What is bigger:</b> Meta has started removing the option to exclude individual placements at ad set level in some accounts. Advantage+ placements is now the default path.</li><li><b>Can you still control placements?</b> Partly. Account-level Placement Controls can still block a placement fully. Value rules can lower bids on a placement by up to 90%, but cannot switch it off.</li><li><b>What to do now:</b> Check your placement breakdown, move must-never-run exclusions to account level, and judge placements by qualified leads, not cheap clicks.</li></ul>"
+        },
+        {
+          heading: "What Meta changed, and when",
+          desc: "Meta has been moving advertisers toward automated placements for some time. Two changes landed this summer.",
+          table: {
+            headers: ["Change", "Date", "What it means for you"],
+            rows: [
+              ["Instagram Explore Feed placement removed", "29 July 2026 (Marketing API v26.0)", "You can no longer pick Explore Feed. Delivery shifts to other eligible placements."],
+              ["Messenger Stories placement removed", "29 July 2026 (Marketing API v26.0)", "Messenger Stories drops out of your placements, without any error message."],
+              ["Removal applies to all API versions", "27 October 2026", "Tools and platforms using older API versions lose these placements too."],
+              ["Ad set-level placement exclusions disappearing", "Reported from late August 2026, rolling out gradually", "Some advertisers can no longer untick individual placements inside an ad set."]
+            ]
+          },
+          conclusionNote: "<b>If you use Advantage+ placements:</b> Nothing breaks. Meta says campaigns on Advantage+ placements (automatic placements) need no action, because the system excludes the retired placements on its own.<br><br><b>If you use manual placements:</b><br>• Explore Feed requests now fail, so saved templates or third-party tools that name it need updating.<br>• Messenger Stories is removed silently. If part of your reach came from there, you may see a dip with no warning.<br>• Older reports may still show Explore Feed or Messenger Stories rows from before the change."
+        },
+        {
+          heading: "The bigger shift: exclusions are moving out of ad sets",
+          desc: "Some advertisers report that the placement controls inside their ad sets are gone. Meta has not published a single global announcement, and its help pages still describe manual placements, so the rollout appears to be account by account.<br><br>The direction is clear either way. Meta reports that in one of its experiments, ad sets using Advantage+ placements delivered an 11.7% lower cost per action on average than ad sets with manual placements. That is Meta's own figure, and it is an average, not a promise for your account."
+        },
+        {
+          heading: "What still gives you control",
+          desc: "You lose the simple tick-box. You do not lose every lever. Four controls remain.",
+          table: {
+            headers: ["Control", "Where to find it", "What it can do", "Limit"],
+            rows: [
+              ["Account-level Placement Controls", "Advertising settings → Account controls → Placement controls", "Fully blocks a placement (for example, Audience Network)", "Applies to every campaign in the ad account"],
+              ["Value rules (placement)", "Ad set → Value rules", "Raises bids up to 1,000% or lowers them up to 90% for a placement", "A 90% cut is still a bid; the placement can still win cheap auctions"],
+              ["Brand safety tools", "Brand Safety and Suitability settings", "Inventory filters and block lists keep ads away from unsuitable content and publishers", "Covers content suitability, not performance"],
+              ["Asset customisation per placement", "Ad level → customise by placement", "Uses the right crop (9:16, 4:5, 1:1) for each placement", "Controls how the ad looks, not where it runs"]
+            ]
+          },
+          conclusionNote: "<b>The one thing to remember:</b> Only account-level Placement Controls can switch a placement off completely. Everything else just makes a placement cheaper or more expensive to win."
+        },
+        {
+          heading: "Is your budget going to the wrong placements? A 15-minute audit",
+          desc: "1. Open Ads Manager and select your active campaigns for the last 30 days.<br>2. Break down by placement: Breakdown → By delivery → Placement.<br>3. Sort by spend. Note which placements take the most budget.<br>4. Compare cost per result for each placement against your campaign average.<br>5. Match with your CRM or lead sheet. Check which placements brought leads that actually picked up the phone or bought.<br>6. Check Account controls. See which placements, if any, are already blocked at account level.<br>7. List your \"must never run\" placements. These are placements a client contract, brand rule or compliance need forbids."
+        },
+        {
+          heading: "Why cheap leads can be a warning sign",
+          desc: "For lead generation, automation chases the cheapest result it can find. If your campaign only counts a form submission as success, some placements can deliver many low-intent forms at a low cost.<br><br><b>Signs to watch:</b><br>• Cost per lead falls, but your sales team says lead quality dropped.<br>• Many leads come from one placement, often apps outside Facebook and Instagram.<br>• Phone numbers are invalid or people do not remember filling the form.<br><br><b>How to fix it:</b><br>• Send better signals. Pass qualified-lead or sale events back to Meta through the Conversions API, so it learns which leads matter.<br>• Use higher-intent forms. Add a qualifying question or a review step to instant forms.<br>• Lower bids, not just budgets. Use value rules to reduce bids on placements that bring weak leads.<br>• Block at account level only when a placement must never run at all."
+        },
+        {
+          heading: "Which control should you use?",
+          table: {
+            headers: ["Your situation", "Best control"],
+            rows: [
+              ["A placement must never show your ads (contract, brand or compliance rule)", "Account-level Placement Controls"],
+              ["A placement brings leads, but weaker ones", "Value rule with a lower bid"],
+              ["A placement brings your best customers", "Value rule with a higher bid"],
+              ["Your ad looks wrong in Stories or Reels", "Asset customisation per placement"],
+              ["You worry about the content your ad appears next to", "Inventory filters and block lists"],
+              ["You are not sure yet", "Keep Advantage+ placements, audit weekly for 30 days"]
+            ]
+          }
+        },
+        {
+          heading: "The 30-day plan after the change",
+          desc: "• <b>Week 1:</b> Run the 15-minute audit. Update any saved templates or tools that still name Explore Feed or Messenger Stories.<br>• <b>Week 1:</b> Move true \"never run\" placements to account-level Placement Controls.<br>• <b>Week 2:</b> Connect lead quality data from your CRM to Meta through the Conversions API.<br>• <b>Week 2:</b> Add placement-specific crops for Stories, Reels and Feed.<br>• <b>Week 3:</b> Set value rules for placements that clearly over- or under-perform.<br>• <b>Week 4:</b> Compare cost per qualified lead with your earlier baseline, then adjust.<br>• <b>Ongoing:</b> Review the placement breakdown every week."
+        },
+        {
+          heading: "Need a second opinion on your Meta Ads?",
+          desc: "Consider an outside review if:<br>• Cost per lead looks good, but sales says the leads are weak.<br>• You are not sure which placements are blocked at account level.<br>• One ad account runs several brands that need different placement rules.<br><br>Digital Whopper is a <a href=\"https://digitalwhopper.com/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">digital marketing company in Jaipur</a>, based in Malviya Nagar. As a <a href=\"../../services/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">performance marketing agency</a>, we run Meta Ads alongside Google Ads, SEO and Google Business Profile for healthcare, D2C, real estate, EdTech, travel and jewellery brands in India and international markets. You can see the kind of brands we work with in <a href=\"../../projects/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">our projects</a>. If you want us to look at your placement setup, <a href=\"https://wa.me/916200379161\" target=\"_blank\" rel=\"noopener\" style=\"color: #0052ff; text-decoration: underline; font-weight: 600;\">talk to our Meta Ads team</a>."
+        }
+      ],
+      faqs: [
+        {
+          q: "Can I still run ads on Instagram Explore?",
+          a: "Not through the Explore Feed placement, which Meta removed from 29 July 2026. Your ads can still reach Instagram users through other placements such as Feed, Stories and Reels."
+        },
+        {
+          q: "Do I need to change anything if I use Advantage+ placements?",
+          a: "No. Meta removes the retired placements from Advantage+ campaigns automatically."
+        },
+        {
+          q: "Can I still exclude Audience Network?",
+          a: "Yes, at account level, through Placement Controls in your advertising settings. That block applies to every campaign in the ad account."
+        },
+        {
+          q: "Can value rules switch a placement off?",
+          a: "No. Value rules can lower a bid by up to 90%. Your ads can still appear there if the auction is cheap enough."
+        },
+        {
+          q: "Why did my reach drop in August without any error?",
+          a: "If you used manual placements with Messenger Stories, Meta removed that placement silently. Check your placement breakdown for the change."
+        }
+      ],
+      references: [
+        {
+          title: "Meta for Developers: Introducing Graph API v26.0 and Marketing API v26.0",
+          url: "https://developers.facebook.com/"
+        },
+        {
+          title: "Meta for Developers: Marketing API v26.0 changelog",
+          url: "https://developers.facebook.com/"
+        }
+      ],
+      conclusion: "Adapt to Meta's automated placement shifts by auditing delivery reports, managing account-level controls, and optimizing lead quality through the Conversions API."
     }
   }
 

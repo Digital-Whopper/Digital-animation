@@ -138,9 +138,9 @@ const DW_SERVICES_DATA = [
   },
   {
     id: 4,
-    slug: "social-media-marketing-company-in-jaipur",
-    title: "Social Media Marketing Company in Jaipur",
-    menuTitle: "Social Media Marketing",
+    slug: "social-media-management",
+    title: "Social Media Management",
+    menuTitle: "Social Media Management",
     icon: "🎨",
     classColor: "color-c5",
     badge: "Viral Reach & Engagement",

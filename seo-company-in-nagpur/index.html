@@ -546,28 +546,6 @@
       border-bottom: none;
     }
 
-    .badge-cross {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .badge-cross .ico-x {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(239, 68, 68, 0.12);
-      color: #ef4444;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
     .badge-check {
       display: inline-flex;
       align-items: center;
@@ -605,7 +583,7 @@
       border-radius: 18px;
       padding: 24px 14px 18px;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
@@ -649,11 +627,6 @@
       margin-top: 1px;
     }
 
-    .icon-red-cross {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
     .icon-green-check {
       background: #dcfce7;
       color: #16a34a;
@@ -674,45 +647,6 @@
       line-height: 1.35;
     }
 
-    .diff-vs-divider {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 40px;
-    }
-
-    .diff-vs-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: #f1f5f9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .diff-vs-badge {
-      position: relative;
-      z-index: 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: #0052ff;
-      font-family: 'Sora', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-
     @media (max-width: 900px) {
       .comparison-table-container {
         display: none !important;
@@ -720,33 +654,6 @@
 
       .diff-mobile-cards-grid {
         display: flex !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .diff-vs-card {
-        padding: 22px 8px 14px;
-        gap: 6px;
-      }
-
-      .diff-icon {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        font-size: 10px;
-      }
-
-      .diff-info h4 {
-        font-size: 10.5px;
-      }
-
-      .diff-info p {
-        font-size: 9.5px;
-      }
-
-      .diff-topic-pill {
-        font-size: 10px;
-        padding: 2px 10px;
       }
     }
 
@@ -1048,47 +955,21 @@
     }
 
     @keyframes botContinuousLoop {
-      0% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
-
-      25% {
-        transform: translateY(-8px) rotate(-6deg) scale(1.04);
-      }
-
-      50% {
-        transform: translateY(-14px) rotate(4deg) scale(1.08);
-      }
-
-      75% {
-        transform: translateY(-6px) rotate(-3deg) scale(1.02);
-      }
-
-      100% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      25% { transform: translateY(-8px) rotate(-6deg) scale(1.04); }
+      50% { transform: translateY(-14px) rotate(4deg) scale(1.08); }
+      75% { transform: translateY(-6px) rotate(-3deg) scale(1.02); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
     }
 
     @keyframes fadeInModal {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes slideUpModal {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.96);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     /* ==========================================================================
@@ -1212,15 +1093,8 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-6px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -1271,45 +1145,35 @@
       <!-- 1️⃣ HERO SECTION -->
       <div class="hero-wrapper-container">
         <section class="img-bg-hero-section">
-          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Nagpur</div>
-          <h1>Nagpur Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
-              Nagpur,</b> Digital Whopper builds search strategies around your business, your audience and the way
-            people in Nagpur actually search.</p>
-          <p class="hero-sublead">Our <b>seo company in nagpur</b> combine technical SEO, content, local search,
-            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
-            long-term growth.</p>
+          <div class="hero-tag-pill">✦ SEO from the Centre of India</div>
+          <h1>SEO Company in <span>Nagpur</span></h1>
+          <p class="hero-sublead">Nagpur sits at the heart of India, and its businesses serve buyers in every direction. Your search visibility should reach just as far.</p>
+          <p class="hero-sublead">Digital Whopper is an SEO company in Nagpur-focused team for logistics firms, MIDC manufacturers, hospitals, IT companies and local brands. Whether your customer is in Dharampeth, Chandrapur or Chicago, we help them find you on Google, Maps and AI-powered search.</p>
 
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Nagpur SEO Audit
-              →</button>
-            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get a Free Nagpur SEO Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 WhatsApp Our SEO Team</a>
           </div>
         </section>
       </div>
 
       <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
       <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">What Does the Best SEO Company in Nagpur Actually Do?</h2>
+        <div class="section-pill-tag">WHY NOW</div>
+        <h2 class="section-main-heading-center">Why Is Nagpur's Search Market Heating Up?</h2>
 
         <div class="seo-action-split-section">
-          <div class="seo-action-left">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
             <div class="callout-blue-quote-box">
-              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
-              and trust across Google, Maps and the growing world of AI-powered search.
+              Nagpur is in the middle of a growth phase, and more growth means more businesses competing for the same searches.
             </div>
-            <p>At Digital Whopper, our <b>seo company in nagpur</b> are built around search intent, technical
-              performance and business goals. We study Nagpur's search landscape, your competitors and the customers you
-              want to reach before building your SEO strategy.</p>
-            <p>From Dharampeth and Civil Lines to Sitabuldi and markets beyond Nagpur, we focus on the searches
-              that can actually bring value to your business.</p>
-            <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
-              <li><span class="dot">✓</span> High-Intent Nagpur & Regional Keyword Mapping</li>
-              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
-              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
-              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>MIHAN is booming:</b> Exports from the MIHAN SEZ more than doubled to ₹3,961 crore in FY2024-25. IT majors like TCS, HCL, Infosys and Tech Mahindra operate there, alongside aviation MRO and pharma units.</li>
+              <li><span class="dot">✓</span> <b>Mumbai is now 8 hours away:</b> The full 701 km Samruddhi Mahamarg opened in June 2025, cutting travel time roughly in half and linking Nagpur directly to JNPT port.</li>
+              <li><span class="dot">✓</span> <b>More companies are coming:</b> Land has been allotted to 19 new companies in MIHAN, with many more in the pipeline.</li>
+              <li><span class="dot">✓</span> <b>A regional magnet:</b> As Vidarbha's largest city, Nagpur draws patients, students and shoppers from across the region and neighbouring states.</li>
             </ul>
+            <p>For local businesses, that means new customers. For B2B companies, it means new buyers searching from outside the city. Both need a stronger online presence to win.</p>
           </div>
         </div>
       </section>
@@ -1317,158 +1181,60 @@
       <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
       <section class="dark-metric-strip-bar">
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Local Search Opportunities</p>
+          <h3 class="seo-metric-counter" data-target="3961" data-suffix="cr">₹0cr</h3>
+          <p>MIHAN SEZ Annual Exports Baseline</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Search Visibility Growth</p>
+          <h3 class="seo-metric-counter" data-target="701" data-suffix=" km">0 km</h3>
+          <p>Samruddhi Mahamarg Direct Connectivity</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Organic Growth Potential</p>
+          <h3 class="seo-metric-counter" data-target="150" data-suffix="+">0+</h3>
+          <p>Successful Digital Projects Delivered</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Initial SEO Improvements</p>
+          <h3 class="seo-metric-counter" data-target="12" data-suffix="+">0+</h3>
+          <p>Core Industry Verticals Mastered</p>
         </div>
       </section>
-      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
-        demand.
-      </p>
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search demand. Monthly reporting ensures complete transparency.</p>
 
-      <!-- 4️⃣ OUR NAGPUR SEO ROLLOUT -->
+      <!-- 4️⃣ KNOW YOUR SEARCHER -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
-        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
-        <h2 class="section-main-heading-center">Our Nagpur SEO Rollout</h2>
-
-        <div class="rollout-steps-container-layout">
-          <!-- Top Row: 3 Items -->
-          <div class="rollout-row-top-3">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 01</span>
-              <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
-                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
-                competitor performance.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 02</span>
-              <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
-                high-intent local queries, Nagpur-specific searches and opportunities beyond the city. Every important
-                keyword is mapped to the right page.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 03</span>
-              <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
-                experiences. This includes content structure, internal linking, metadata, schema and information that
-                makes your business easier for search systems to understand.</p>
-            </div>
-          </div>
-
-          <!-- Bottom Row: 2 Items Centered -->
-          <div class="rollout-row-bottom-2">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 04</span>
-              <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
-                citations and digital authority while strengthening your Google Business Profile and local presence
-                across Nagpur.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 05</span>
-              <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
-                conversions and keyword movement, then expand into new opportunities to build sustainable organic
-                growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              Search has changed. Your SEO strategy should too.
-            </div>
-            <p>People in Nagpur don't discover businesses only through traditional Google results anymore. They use
-              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
-              answers.</p>
-            <p>We optimise your digital presence so your business has the right information, structure and authority to
-              compete across these search experiences.</p>
-            <p>Whether someone searches for a service in Nagpur, compares local businesses or asks an AI tool for a
-              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6️⃣ THE DIFFERENCE -->
-      <section class="diff-master-wrapper laptop-padding-left-only">
-        <div class="section-pill-tag">THE DIFFERENCE</div>
-        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+        <div class="section-pill-tag">KNOW YOUR SEARCHER</div>
+        <h2 class="section-main-heading-center">Who Is Searching for Your Nagpur Business?</h2>
+        <p style="font-size: 13.5px; color: #64748b; margin-bottom: 24px; text-align: center;">Most Nagpur businesses have more than one type of customer. Each one searches differently, so each one needs a different SEO approach.</p>
 
         <!-- DESKTOP VIEW (> 900px): Clean Comparison Table -->
         <div class="comparison-table-container">
           <table class="comparison-table-shell">
             <thead>
               <tr>
-                <th>Deliverables & Focus Areas</th>
-                <th>Generic SEO Vendor</th>
-                <th>Digital Whopper</th>
+                <th>Who's Searching</th>
+                <th>What They Look For</th>
+                <th>Where We Focus</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Nagpur
-                    searches</span></td>
+                <td><strong>Local customers</strong></td>
+                <td>Shops, clinics, restaurants and services near Sitabuldi, Dharampeth, Manish Nagar or Wardha Road</td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Maps, reviews, area-level keywords</span></td>
               </tr>
               <tr>
-                <td><strong>Local SEO</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Nagpur-focused local search
-                    strategy</span></td>
+                <td><strong>Vidarbha & central India</strong></td>
+                <td>Hospitals, specialists, colleges, coaching and wholesale suppliers in Nagpur</td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Regional keywords, treatment and course pages, trust content</span></td>
               </tr>
               <tr>
-                <td><strong>Google Maps</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
-                    visibility focus</span></td>
+                <td><strong>National B2B buyers</strong></td>
+                <td>Warehousing, transport, manufacturers and industrial suppliers</td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Service and product pages, route and capability content</span></td>
               </tr>
               <tr>
-                <td><strong>Content</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
-                    customers</span></td>
-              </tr>
-              <tr>
-                <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
-                </td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
-                    building</span></td>
-              </tr>
-              <tr>
-                <td><strong>Reporting </strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
-                    performance insights</span></td>
-              </tr>
-              <tr>
-                <td><strong>Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
-                    Nagpur market</span></td>
+                <td><strong>Global clients</strong></td>
+                <td>IT services, GCC partners, pharma and engineering exporters</td>
+                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> International keywords, case studies, authority building</span></td>
               </tr>
             </tbody>
           </table>
@@ -1477,206 +1243,270 @@
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards -->
         <div class="diff-mobile-cards-grid">
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Keyword Strategy</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Chases broad keywords because they have high search volume.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+            <div class="diff-topic-pill">Local Customers</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Targets high-intent searches that are relevant to your business and Nagpur customers.</p>
+                <h4>Sitabuldi, Dharampeth & Wardha Road</h4>
+                <p>Google Maps, reviews, area-level keywords for shops, clinics, restaurants and services.</p>
               </div>
             </div>
           </div>
 
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Local Google Maps Ranking</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Treats local SEO as an add-on.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+            <div class="diff-topic-pill">Vidarbha & Central India</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
-                  relevance.</p>
+                <h4>Hospitals, Colleges & Wholesalers</h4>
+                <p>Regional keywords, treatment and course pages, trust content for visitors from surrounding towns.</p>
               </div>
             </div>
           </div>
 
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Content & Search Intent</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Publishes content simply to target keywords.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+            <div class="diff-topic-pill">National B2B Buyers</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
+                <h4>Warehousing & Manufacturing</h4>
+                <p>Service and product pages, route and capability content for industrial procurement teams.</p>
               </div>
             </div>
           </div>
 
           <div class="diff-vs-card">
-            <div class="diff-topic-pill">Reporting & Transparency</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Reports activities without connecting them to business outcomes.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+            <div class="diff-topic-pill">Global Clients</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Overall Focus</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Same playbook for every business.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>A Nagpur-focused SEO strategy shaped around your market, competitors and growth goals.</p>
+                <h4>IT Services, GCCs & Exporters</h4>
+                <p>International keywords, case studies, authority building for global tech and engineering markets.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7️⃣ OVERVIEW SECTION -->
+      <!-- 5️⃣ LOGISTICS & WAREHOUSING -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">LOGISTICS & WAREHOUSING</div>
+        <h2 class="section-main-heading-center">How Can Logistics Companies in Nagpur Get More Enquiries From Google?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              Nagpur's central location has always made it a natural transport hub. With faster road links to Mumbai and the ports, competition among transporters, 3PLs and warehouse operators is rising fast.
+            </div>
+            <p>Most logistics websites in the city are thin and outdated, which is a big opportunity. As your <b>SEO company in Nagpur</b>, we help you:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Build route-specific pages (for example, Nagpur to Mumbai, Hyderabad or Raipur) that match how shippers actually search</li>
+              <li><span class="dot">✓</span> Create service pages for warehousing, part-load, full-load, cold chain and last-mile delivery</li>
+              <li><span class="dot">✓</span> Add clear quote forms and WhatsApp buttons so a search turns into a booking enquiry</li>
+              <li><span class="dot">✓</span> Show trust signals like fleet size, warehouse capacity, clients served and certifications</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6️⃣ MORE INDUSTRIES -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">MORE INDUSTRIES</div>
+        <h2 class="section-main-heading-center">What Other Nagpur Businesses Benefit From SEO?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <!-- Top Row: 3 Items -->
+          <div class="rollout-row-top-3">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">MIDC Manufacturers</div>
+              <p class="rollout-step-paragraph">(Butibori, Hingna & beyond): Industrial buyers search by product, specification and capacity. We create detailed product and capability pages that help procurement teams across India shortlist you without relying only on directories.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Hospitals & Specialty Clinics</div>
+              <p class="rollout-step-paragraph">Patients from across Vidarbha and nearby states travel to Nagpur for treatment. We build accurate treatment pages, doctor profiles and regional visibility, all written in line with medical advertising guidelines.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">IT Firms & GCCs</div>
+              <p class="rollout-step-paragraph">Nagpur's IT companies increasingly compete for global clients. We focus on international service keywords, case studies and thought-leadership content that builds credibility beyond the city.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Row: 3 Items -->
+          <div class="rollout-row-top-3" style="margin-top: 10px;">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Colleges & Coaching Institutes</div>
+              <p class="rollout-step-paragraph">Students from smaller Vidarbha towns research Nagpur institutes online before they move. Course pages, verified results and Maps visibility help you get shortlisted early.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">05</span>
+              <div class="rollout-step-head-title">Orange & Agri-Food Brands</div>
+              <p class="rollout-step-paragraph">The Nagpur orange carries a GI tag, and its name alone has search value. We help orange growers, processors and food brands build websites that rank for product and gifting searches, and sell directly to customers across India.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">06</span>
+              <div class="rollout-step-head-title">Retail & Wholesale Traders</div>
+              <p class="rollout-step-paragraph">From Sitabuldi showrooms to Itwari and Gandhibagh wholesalers, buyers now check Google before they visit. We strengthen your Maps listing, reviews and local pages so you're the first name they see.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7️⃣ OVERVIEW SECTION (LANGUAGE MIX) -->
       <section class="overview-mid-centered-section laptop-padding-left-only">
-        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
-        <h2 class="section-main-heading-center">Dominate Nagpur's Organic Search Ecosystem</h2>
+        <div class="section-pill-tag">✦ LANGUAGE STRATEGY</div>
+        <h2 class="section-main-heading-center">Should Your Nagpur Website Be in Marathi, Hindi or English?</h2>
 
         <ul class="centered-full-desc-list">
           <li>
-            Nagpur is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
+            Nagpur customers search in all three. Local and regional customers often use Marathi or Hindi, especially on voice search. B2B buyers and global clients search in English.
           </li>
           <li>
-            Our <b>seo company in nagpur</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
-          </li>
-          <li>
-            And SEO doesn't have to work alone.
-          </li>
-          <li>
-            As a <b>digital marketing company in Nagpur</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Nagpur</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
-          </li>
-          <li>
-            For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
-          </li>
-          <li>
-            And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Nagpur</b> capabilities help connect your business with the right audience across social platforms.
+            We look at your real customer mix and add the right language pages where they'll bring enquiries, rather than translating your whole site for no reason.
           </li>
         </ul>
+      </section>
+
+      <!-- GEO + AEO SECTION -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">GEO + AEO</div>
+        <h2 class="section-main-heading-center">Can AI Tools Find and Recommend Your Business?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              A shipper asks ChatGPT for "reliable warehousing companies in Nagpur near MIHAN". A family in Chandrapur asks Google's AI Overview which Nagpur hospitals specialise in cardiac care. These answers mention only a few businesses.
+            </div>
+            <p>We improve your chances of being one of them by:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Answering real buyer questions clearly on your website</li>
+              <li><span class="dot">✓</span> Adding schema markup for services, locations, products and FAQs</li>
+              <li><span class="dot">✓</span> Keeping your business details consistent across every platform</li>
+              <li><span class="dot">✓</span> Earning mentions on trusted local, industry and business websites</li>
+            </ul>
+            <p>When AI names a trusted Nagpur business, we want it to be yours.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT TO EXPECT SECTION -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">WHAT'S INCLUDED</div>
+        <h2 class="section-main-heading-center">What's Included in Our Nagpur SEO Plans?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">TECHNICAL</span>
+              <div class="rollout-step-head-title">Technical SEO</div>
+              <p class="rollout-step-paragraph">Site audit, speed and mobile fixes, indexing, crawl errors and Core Web Vitals.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">LOCAL</span>
+              <div class="rollout-step-head-title">Local & Regional SEO</div>
+              <p class="rollout-step-paragraph">Google Business Profile optimisation, citations, review strategy and Vidarbha-wide keyword targeting.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">CONTENT</span>
+              <div class="rollout-step-head-title">Content & On-Page</div>
+              <p class="rollout-step-paragraph">Service, product, route and location pages, FAQ content and schema built for both search and AI.</p>
+            </div>
+          </div>
+
+          <div class="rollout-row-bottom-2" style="width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">AUTHORITY</span>
+              <div class="rollout-step-head-title">Authority Building</div>
+              <p class="rollout-step-paragraph">Relevant backlinks, industry mentions and local listings that build long-term trust.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">REPORTING</span>
+              <div class="rollout-step-head-title">Monthly Reporting</div>
+              <p class="rollout-step-paragraph">Rankings, traffic, calls and enquiries in one clear report, with next month's priorities.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">SEO results depend on your industry, competition, website condition and search demand. We share realistic timelines before we start.</p>
+      </section>
+
+      <!-- WHY CHOOSE DIGITAL WHOPPER -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">WHY CHOOSE US</div>
+        <h2 class="section-main-heading-center">Why Choose Digital Whopper?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> <b>Experience across industries:</b> 150+ projects in 12+ industries, including two brands featured on Shark Tank India.</li>
+              <li><span class="dot">✓</span> <b>B2B and local, both covered:</b> We know how to rank a warehouse for national shippers and a clinic for local patients.</li>
+              <li><span class="dot">✓</span> <b>Transparent reporting:</b> Clear results, no ranking guarantees, no confusing jargon.</li>
+              <li><span class="dot">✓</span> <b>One growth team:</b> SEO, ads, websites and social media under one roof.</li>
+            </ul>
+            <p><b>Looking to Grow Faster?</b><br>Get leads while SEO builds momentum with our performance marketing agency services.<br>Need a modern, SEO-ready website? Our web development company team can help.<br>Selling oranges, food or products online? Explore our ecommerce marketing services.<br>Build recall beyond search with our social media marketing services.</p>
+            <p style="margin-top: 12px;">Expanding across central India? See our <a href="../seo-services-in-indore/" style="color: #0044ff; text-decoration: underline;">SEO services in Indore</a> and <a href="../seo-services-in-bhopal/" style="color: #0044ff; text-decoration: underline;">SEO services in Bhopal</a>.<br>Learn more about us as a <a href="/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a>.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
-        <h2 class="section-main-heading-center">Nagpur SEO — Common Questions</h2>
+        <h2 class="section-main-heading-center">SEO Company in Nagpur: Frequently Asked Questions</h2>
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much does it cost to hire an SEO company in Nagpur?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">It depends on your goals, industry and how far you want to reach. A local clinic needs a smaller plan than a logistics company targeting national shippers or an IT firm targeting global clients. We share a clear monthly scope and quote after a free audit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can my Nagpur business attract customers from across Vidarbha?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Hospitals, colleges, coaching institutes and wholesalers in Nagpur often serve customers from Chandrapur, Amravati, Wardha, Gondia and beyond. We target regional keywords and create content that answers questions people ask before travelling to Nagpur.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Does SEO work for logistics and transport companies?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes, and competition is still relatively low. Shippers search for specific routes and services. Route pages, service pages, clear quote forms and visible trust signals can bring steady B2B enquiries that don't depend on brokers.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">I run a manufacturing unit in Butibori MIDC. How can SEO help?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Procurement teams research suppliers online before contacting them. Detailed product pages, specifications, certifications and capability content help you rank for the searches your buyers use, and bring direct enquiries from across India.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO help me sell Nagpur oranges or food products online?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. The Nagpur orange is well known and GI-tagged, which gives these products strong search interest. A well-optimised website with good product pages, seasonal content and gifting angles can help you reach buyers across India directly.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Should I have Marathi content on my website?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">If many of your customers are local or regional, adding Marathi or Hindi pages can capture searches competitors miss, especially voice searches. For B2B and global audiences, English is usually enough. We decide based on your customer data.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
             <div class="faq-question-head">How long does SEO take to show results in Nagpur?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
-              position. Some improvements can appear within the first few months, while competitive Nagpur keywords can
-              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
+            <div class="faq-answer-body">Google Business Profile and technical fixes can show results within two to three months. Regional and national keywords usually take four to six months or longer, depending on competition and your website's current strength.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">What are the best SEO services in Nagpur for a local business?<span
+            <div class="faq-question-head">Can my business appear in Google AI Overviews and ChatGPT answers?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">For a Nagpur-focused business, local SEO, technical SEO, on-page optimisation,
-              search-focused content, Google Business Profile optimisation and authority building are usually important
-              parts of the strategy. The right mix depends on your business and target customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How do I choose the best SEO company in Nagpur?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
-              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
-              meaningful business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my business rank outside Nagpur?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. A Nagpur-focused SEO strategy does not have to limit your business to
-              Nagpur. Once the local foundation is strong, the strategy can expand towards Maharashtra, India-wide or
-              other target markets based on your business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
-              business information, relevance, website content, citations, reviews and overall local authority. However,
-              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
-              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
-              convert more relevant customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
-            </div>
-            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
-              long-term organic visibility, while a performance marketing agency can help capture demand faster through
-              paid acquisition.</div>
+            <div class="faq-answer-body">SEO can improve your chances. Clear content, structured data, consistent business details and mentions on trusted sites help AI tools understand and cite your business. No agency can guarantee AI placement, but these steps make you a stronger candidate.</div>
           </div>
         </div>
       </section>
 
       <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
       <section class="bottom-cta-banner-card">
-        <h3>Ready to Rank #1 in Nagpur?</h3>
-        <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
+        <h3>Ready to Be Found From the Centre of India to Everywhere Else?</h3>
+        <p>Get a free audit showing where you rank today and the fastest ways to grow your visibility locally, regionally and nationally.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Nagpur SEO Audit
-            →</button>
-          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Nagpur Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
         </div>
       </section>
 
@@ -1690,7 +1520,7 @@
               <a href="/" class="logo">
                 <div class="logo-mark">DW</div>Digital Whopper
               </a>
-              <p>Dharampeth, Nagpur, Maharashtra 440010</p>
+              <p>Sardarpura, Jodhpur, Rajasthan 342003</p>
               <p><a href="tel:+916200379161">+91 6200379161</a><br><a
                   href="mailto:digitalwhopperofficial@gmail.com">digitalwhopperofficial@gmail.com</a></p>
               <div class="socials">
@@ -1726,7 +1556,7 @@
           </div>
           <div class="foot-bottom">
             <span>© 2026 Digital Whopper. All rights reserved.</span>
-            <span>Made with ✦ in Nagpur</span>
+            <span>Made with ✦ in Jaipur</span>
           </div>
         </div>
       </footer>
@@ -1755,7 +1585,7 @@
           <li><a href="#" class="active">SEO in Nagpur</a></li>
           <li><a href="../seo-services-in-bhopal/">SEO in Bhopal</a></li>
           <li><a href="../seo-company-in-jodhpur/">SEO in Jodhpur</a></li>
-          <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li>
+          <!-- <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li> -->
         </ul>
       </div>
 
@@ -1971,7 +1801,7 @@
             <label for="auditTargetArea">Target Market / Location</label>
             <select id="auditTargetArea">
               <option value="Nagpur Local">Nagpur (Local City Focus)</option>
-              <option value="Maharashtra State">Maharashtra State-wide</option>
+              <option value="Vidarbha Region">Vidarbha Region-wide</option>
               <option value="Pan India">Pan-India (National)</option>
               <option value="International">International Export</option>
             </select>

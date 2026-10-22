@@ -546,28 +546,6 @@
       border-bottom: none;
     }
 
-    .badge-cross {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .badge-cross .ico-x {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(239, 68, 68, 0.12);
-      color: #ef4444;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
     .badge-check {
       display: inline-flex;
       align-items: center;
@@ -605,7 +583,7 @@
       border-radius: 18px;
       padding: 24px 14px 18px;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
@@ -649,11 +627,6 @@
       margin-top: 1px;
     }
 
-    .icon-red-cross {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
     .icon-green-check {
       background: #dcfce7;
       color: #16a34a;
@@ -674,45 +647,6 @@
       line-height: 1.35;
     }
 
-    .diff-vs-divider {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 40px;
-    }
-
-    .diff-vs-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: #f1f5f9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .diff-vs-badge {
-      position: relative;
-      z-index: 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: #0052ff;
-      font-family: 'Sora', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-
     @media (max-width: 900px) {
       .comparison-table-container {
         display: none !important;
@@ -720,33 +654,6 @@
 
       .diff-mobile-cards-grid {
         display: flex !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .diff-vs-card {
-        padding: 22px 8px 14px;
-        gap: 6px;
-      }
-
-      .diff-icon {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        font-size: 10px;
-      }
-
-      .diff-info h4 {
-        font-size: 10.5px;
-      }
-
-      .diff-info p {
-        font-size: 9.5px;
-      }
-
-      .diff-topic-pill {
-        font-size: 10px;
-        padding: 2px 10px;
       }
     }
 
@@ -1271,44 +1178,33 @@
       <!-- 1️⃣ HERO SECTION -->
       <div class="hero-wrapper-container">
         <section class="img-bg-hero-section">
-          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Lucknow</div>
-          <h1>Lucknow Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
-              Lucknow,</b> Digital Whopper builds search strategies around your business, your audience and the way
-            people in Lucknow actually search.</p>
-          <p class="hero-sublead">Our <b>seo services in lucknow</b> combine technical SEO, content, local search,
-            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
-            long-term growth.</p>
+          <div class="hero-tag-pill">✦ SEO for Lucknow's Old and New Economy</div>
+          <h1>SEO Service in <span>Lucknow</span></h1>
+          <p class="hero-sublead">Lucknow is no longer just the city of nawabs and kebabs. It's now a defence manufacturing node, a growing IT destination and a UNESCO-recognised food city, all at once.</p>
+          <p class="hero-sublead">That growth brings new customers, and new competitors, to every search result. Our SEO service in Lucknow helps restaurants, chikankari brands, hospitals, coaching institutes and B2B suppliers stay visible where buyers now look first: Google, Maps and AI-powered answers.</p>
 
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Lucknow SEO Audit
-              →</button>
-            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get a Free Lucknow SEO Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Talk to Our SEO Team</a>
           </div>
         </section>
       </div>
 
-      <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
+      <!-- 2️⃣ LUCKNOW IS CHANGING -->
       <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">What Does the Best SEO Company in Lucknow Actually Do?</h2>
+        <div class="section-pill-tag">LUCKNOW IS CHANGING</div>
+        <h2 class="section-main-heading-center">What's Changing in Lucknow's Search Market?</h2>
 
         <div class="seo-action-split-section">
-          <div class="seo-action-left">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
             <div class="callout-blue-quote-box">
-              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
-              and trust across Google, Maps and the growing world of AI-powered search.
+              Four big shifts are reshaping who searches in Lucknow, and what they search for.
             </div>
-            <p>At Digital Whopper, our <b>seo services in lucknow</b> are built around search intent, technical
-              performance and business goals. We study Lucknow's search landscape, your competitors and the customers you
-              want to reach before building your SEO strategy.</p>
-            <p>From Hazratganj and Gomti Nagar to Aliganj and markets beyond Lucknow, we focus on the searches
-              that can actually bring value to your business.</p>
-            <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
-              <li><span class="dot">✓</span> High-Intent Lucknow & Regional Keyword Mapping</li>
-              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
-              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
-              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>A Global Food Spotlight:</b> In October 2025, UNESCO named Lucknow a Creative City of Gastronomy. More food tourists now plan their trips around searches like "best Awadhi biryani in Lucknow", and restaurants that aren't optimised are missing that demand.</li>
+              <li><span class="dot">✓</span> <b>Defence and Manufacturing Investment:</b> BrahMos opened a ₹300 crore production unit in Lucknow in May 2025, as part of the UP Defence Industrial Corridor. Suppliers, engineering firms and service providers now compete for B2B attention online.</li>
+              <li><span class="dot">✓</span> <b>IT and Global Capability Centres:</b> Large IT and consulting firms are expanding in the city. That means more professionals relocating, more corporate demand and more competition for service-based searches.</li>
+              <li><span class="dot">✓</span> <b>Heritage Crafts Going Digital:</b> Lucknowi chikankari has held GI status since 2008. Today, hundreds of sellers market it online, so the brands that win are the ones customers can find and trust.</li>
             </ul>
           </div>
         </div>
@@ -1317,158 +1213,106 @@
       <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
       <section class="dark-metric-strip-bar">
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Local Search Opportunities</p>
+          <h3 class="seo-metric-counter" data-target="300" data-prefix="₹" data-suffix=" Cr">₹0 Cr</h3>
+          <p>BrahMos Lucknow Unit Investment</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Search Visibility Growth</p>
+          <h3 class="seo-metric-counter" data-target="2025" data-suffix="">0</h3>
+          <p>UNESCO Gastronomy City Recognition</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Organic Growth Potential</p>
+          <h3 class="seo-metric-counter" data-target="2008" data-suffix="">0</h3>
+          <p>Chikankari GI Status Established</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Initial SEO Improvements</p>
+          <h3 class="seo-metric-counter" data-target="150" data-suffix="+">0+</h3>
+          <p>Successful Digital Projects Delivered</p>
         </div>
       </section>
-      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
-        demand.
-      </p>
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search demand. Monthly reporting ensures complete transparency.</p>
 
-      <!-- 4️⃣ OUR LUCKNOW SEO ROLLOUT -->
+      <!-- 4️⃣ SEO BY INDUSTRY -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
-        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
-        <h2 class="section-main-heading-center">Our Lucknow SEO Rollout</h2>
+        <div class="section-pill-tag">SEO BY INDUSTRY</div>
+        <h2 class="section-main-heading-center">How Does SEO Work for Your Type of Lucknow Business?</h2>
 
         <div class="rollout-steps-container-layout">
           <!-- Top Row: 3 Items -->
           <div class="rollout-row-top-3">
             <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 01</span>
-              <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
-                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
-                competitor performance.</p>
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">Restaurants & Cafés</div>
+              <p class="rollout-step-paragraph">Tourists and locals both search on mobile, usually minutes before deciding where to eat. We optimise your Google Business Profile, menu visibility, photos and reviews around Aminabad, Chowk, Hazratganj and Gomti Nagar.</p>
             </div>
             <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 02</span>
-              <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
-                high-intent local queries, Lucknow-specific searches and opportunities beyond the city. Every important
-                keyword is mapped to the right page.</p>
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Chikankari & Fashion</div>
+              <p class="rollout-step-paragraph">Your competition isn't just local shops. It's every seller on Amazon and Instagram. We build product and category SEO, authenticity-focused content and buying guides that help your website rank.</p>
             </div>
             <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 03</span>
-              <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
-                experiences. This includes content structure, internal linking, metadata, schema and information that
-                makes your business easier for search systems to understand.</p>
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">Hospitals & Clinics</div>
+              <p class="rollout-step-paragraph">Patients from across UP research doctors and treatments in Lucknow before travelling. We create accurate treatment and doctor pages, local listings and review strategies compliant with guidelines.</p>
             </div>
           </div>
 
-          <!-- Bottom Row: 2 Items Centered -->
-          <div class="rollout-row-bottom-2">
+          <!-- Bottom Row: 3 Items -->
+          <div class="rollout-row-top-3" style="margin-top: 10px;">
             <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 04</span>
-              <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
-                citations and digital authority while strengthening your Google Business Profile and local presence
-                across Lucknow.</p>
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Coaching Institutes</div>
+              <p class="rollout-step-paragraph">Aliganj, Kapoorthala and Indira Nagar are packed with competitive exam coaching. Strong course pages, result-led content and Maps visibility help you get shortlisted early.</p>
             </div>
             <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 05</span>
-              <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
-                conversions and keyword movement, then expand into new opportunities to build sustainable organic
-                growth.</p>
+              <span class="rollout-step-num-text">05</span>
+              <div class="rollout-step-head-title">Real Estate & Builders</div>
+              <p class="rollout-step-paragraph">Buyers research projects in Gomti Nagar Extension, Shaheed Path and Sushant Golf City for weeks. We build project and location pages answering price, amenities and connectivity questions.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">06</span>
+              <div class="rollout-step-head-title">IT & B2B Suppliers</div>
+              <p class="rollout-step-paragraph">Your buyers are often outside Lucknow. We target national and industry-specific keywords, capability pages and trust signals that help procurement teams shortlist you.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              Search has changed. Your SEO strategy should too.
-            </div>
-            <p>People in Lucknow don't discover businesses only through traditional Google results anymore. They use
-              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
-              answers.</p>
-            <p>We optimise your digital presence so your business has the right information, structure and authority to
-              compete across these search experiences.</p>
-            <p>Whether someone searches for a service in Lucknow, compares local businesses or asks an AI tool for a
-              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6️⃣ THE DIFFERENCE -->
-      <section class="diff-master-wrapper laptop-padding-left-only">
-        <div class="section-pill-tag">THE DIFFERENCE</div>
-        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+      <!-- 5️⃣ TWO AUDIENCES, ONE CITY -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">TWO AUDIENCES, ONE CITY</div>
+        <h2 class="section-main-heading-center">Are You Selling to Old Lucknow or New Lucknow?</h2>
+        <p style="font-size: 13.5px; color: #64748b; margin-bottom: 24px; text-align: center;">Lucknow's search behaviour often splits along its geography.</p>
 
         <!-- DESKTOP VIEW (> 900px): Clean Comparison Table -->
         <div class="comparison-table-container">
           <table class="comparison-table-shell">
             <thead>
               <tr>
-                <th>Deliverables & Focus Areas</th>
-                <th>Generic SEO Vendor</th>
-                <th>Digital Whopper</th>
+                <th>Factor</th>
+                <th>Old Lucknow</th>
+                <th>New Lucknow</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Lucknow
-                    searches</span></td>
+                <td><strong>Key areas</strong></td>
+                <td>Chowk, Aminabad, Nakhas, Hazratganj</td>
+                <td>Gomti Nagar, Indira Nagar, Shaheed Path, Sushant Golf City</td>
               </tr>
               <tr>
-                <td><strong>Local SEO</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Lucknow-focused local search
-                    strategy</span></td>
+                <td><strong>Businesses</strong></td>
+                <td>Heritage food, chikankari, jewellery, wholesale trade</td>
+                <td>Cafés, clinics, gyms, real estate, corporate</td>
               </tr>
               <tr>
-                <td><strong>Google Maps</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
-                    visibility focus</span></td>
+                <td><strong>How people search</strong></td>
+                <td>Hindi and Hinglish, voice search, "famous" and "purani" style queries</td>
+                <td>English-first, comparison and review-based queries</td>
               </tr>
               <tr>
-                <td><strong>Content</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
-                    customers</span></td>
-              </tr>
-              <tr>
-                <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
-                </td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
-                    building</span></td>
-              </tr>
-              <tr>
-                <td><strong>Reporting </strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
-                    performance insights</span></td>
-              </tr>
-              <tr>
-                <td><strong>Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
-                    Lucknow market</span></td>
+                <td><strong>What wins</strong></td>
+                <td>Strong Maps presence, heritage storytelling, local reviews</td>
+                <td>Fast websites, detailed service pages, social proof</td>
               </tr>
             </tbody>
           </table>
@@ -1476,207 +1320,180 @@
 
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards -->
         <div class="diff-mobile-cards-grid">
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Keyword Strategy</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Chases broad keywords because they have high search volume.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Key Areas</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Targets high-intent searches that are relevant to your business and Lucknow customers.</p>
+                <h4>Old vs New Geography</h4>
+                <p>Chowk, Aminabad & Hazratganj vs Gomti Nagar, Shaheed Path & Sushant Golf City.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Local Google Maps Ranking</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Treats local SEO as an add-on.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Search Intent</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
-                  relevance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Content & Search Intent</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Publishes content simply to target keywords.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Reporting & Transparency</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Reports activities without connecting them to business outcomes.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Overall Focus</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Same playbook for every business.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>A Lucknow-focused SEO strategy shaped around your market, competitors and growth goals.</p>
+                <h4>Search Habits</h4>
+                <p>Hindi/Hinglish voice searches for traditional markets; English-first comparisons for corporate zones.</p>
               </div>
             </div>
           </div>
         </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">Many businesses need to reach both. Our local SEO Lucknow strategy maps your keywords and content to the audience that actually buys from you.</p>
       </section>
 
-      <!-- 7️⃣ OVERVIEW SECTION -->
-      <section class="overview-mid-centered-section laptop-padding-left-only">
-        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
-        <h2 class="section-main-heading-center">Dominate Lucknow's Organic Search Ecosystem</h2>
+      <!-- REGIONAL REACH -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">REGIONAL REACH</div>
+        <h2 class="section-main-heading-center">Can a Lucknow Business Attract Customers From Across UP?</h2>
 
-        <ul class="centered-full-desc-list">
-          <li>
-            Lucknow is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
-          </li>
-          <li>
-            Our <b>seo services in lucknow</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
-          </li>
-          <li>
-            And SEO doesn't have to work alone.
-          </li>
-          <li>
-            As a <b>digital marketing company in Lucknow</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Lucknow</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
-          </li>
-          <li>
-            For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
-          </li>
-          <li>
-            And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Lucknow</b> capabilities help connect your business with the right audience across social platforms.
-          </li>
-        </ul>
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              As the state capital, Lucknow draws people from nearby cities for healthcare, education, shopping and government work.
+            </div>
+            <p>Our SEO service in Lucknow can target searches from towns like Kanpur, Barabanki, Unnao and Sitapur alongside city level keywords. For hospitals, coaching institutes and wholesalers, this regional reach is often where the biggest growth sits.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO + AEO SECTION -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">GEO + AEO</div>
+        <h2 class="section-main-heading-center">Is Your Business Ready for AI-Powered Answers?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              A food blogger asks ChatGPT for "the best galouti kebab spots in Lucknow". A parent asks Google which coaching centres in Aliganj have the best UPPSC results. Neither may ever click a website.
+            </div>
+            <p>To be named in those answers, your business needs:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Clear, factual content that directly answers common questions</li>
+              <li><span class="dot">✓</span> Schema markup that tells search engines what you offer and where</li>
+              <li><span class="dot">✓</span> Matching business details across Google, directories and social profiles</li>
+              <li><span class="dot">✓</span> Mentions on sources that AI tools already trust, like local media and reputable listings</li>
+            </ul>
+            <p>We make your business easy for both people and AI to understand, trust and recommend.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">HOW WE WORK</div>
+        <h2 class="section-main-heading-center">What Does Our Lucknow SEO Process Look Like?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">Discover</div>
+              <p class="rollout-step-paragraph">Audit website, GBP and competitors, and study search behavior across Lucknow.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Prioritise</div>
+              <p class="rollout-step-paragraph">Separate quick wins from long-term opportunities for fastest enquiries.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">Build</div>
+              <p class="rollout-step-paragraph">Fix technical issues, improve key pages, publish intent content and add schema.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Strengthen</div>
+              <p class="rollout-step-paragraph">Earn relevant links, clean citations and grow reviews for local authority.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">05</span>
+              <div class="rollout-step-head-title">Report & Refine</div>
+              <p class="rollout-step-paragraph">Track monthly rankings, traffic, calls and leads with next steps planned.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">SEO results depend on your industry, competition, website condition and search demand. We set honest expectations from day one.</p>
+      </section>
+
+      <!-- WHY CHOOSE DIGITAL WHOPPER -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">WHY CHOOSE US</div>
+        <h2 class="section-main-heading-center">Why Work With Digital Whopper?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> <b>Experience with growing brands:</b> 150+ projects across 12+ industries, including two brands featured on Shark Tank India.</li>
+              <li><span class="dot">✓</span> <b>Industry-first strategy:</b> A restaurant, a hospital and a defence supplier each get a plan built for their buyers, not a template.</li>
+              <li><span class="dot">✓</span> <b>No ranking guarantees, real reporting:</b> We report on what matters to your business: visibility, traffic and enquiries.</li>
+              <li><span class="dot">✓</span> <b>One team for full growth:</b> SEO, ads, websites and social media under one roof when you need them.</li>
+            </ul>
+            <p><b>Looking for More Ways to Grow?</b><br>Get faster enquiries alongside SEO with our performance marketing agency services.<br>Need a faster, SEO-ready website? Talk to our web development company team.<br>Selling chikankari or fashion online? Our ecommerce marketing services cover Shopify, Amazon and Flipkart. Build brand recall with our social media marketing services.</p>
+            <p style="margin-top: 12px;">Expanding into Madhya Pradesh? See our <a href="../seo-services-in-indore/" style="color: #0044ff; text-decoration: underline;">SEO services in Indore</a>.<br>Learn more about our home base as a <a href="/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a>.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
-        <h2 class="section-main-heading-center">Lucknow SEO — Common Questions</h2>
+        <h2 class="section-main-heading-center">SEO Service in Lucknow: Frequently Asked Questions</h2>
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much does an SEO service in Lucknow cost?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">It depends on your industry, how many services or locations you want to rank for and how competitive your keywords are. A single restaurant needs a lighter plan than a multi-speciality hospital or an ecommerce brand. We share a clear monthly scope and quote after a free audit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How can my restaurant attract more food tourists in Lucknow?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Start with a complete Google Business Profile: accurate hours, a menu, fresh photos and steady reviews. Add website content around the dishes you're known for. Since Lucknow's UNESCO food recognition, these searches have more visibility, so being well listed matters even more.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO help my chikankari brand compete with marketplace sellers?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Marketplaces win generic searches, but your own website can rank for specific, high-intent queries around fabric, style, occasion and authenticity. Well-structured product pages and helpful buying guides build both rankings and trust, which also reduces your dependence on marketplace commissions.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do you offer SEO for hospitals and doctors in Lucknow?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Healthcare SEO focuses on accurate treatment pages, doctor profiles, local listings and review management. All content is written to be factual and compliant with medical advertising guidelines, with no exaggerated claims about outcomes.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Is SEO worth it for coaching institutes in Aliganj or Kapoorthala?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">It's one of the most effective channels for them. Students compare institutes online before visiting. Detailed course pages, verified results, strong Maps rankings and positive reviews help your institute stand out in a very crowded market.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can my Lucknow business rank in other cities of Uttar Pradesh?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Many Lucknow businesses serve customers from Kanpur, Barabanki, Unnao and beyond. We create content and keyword targets for those regional searches, especially for healthcare, education and wholesale businesses.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
             <div class="faq-question-head">How long does SEO take to show results in Lucknow?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
-              position. Some improvements can appear within the first few months, while competitive Lucknow keywords can
-              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
+            <div class="faq-answer-body">Google Business Profile and technical improvements can show results within two to three months. Competitive keywords usually take four to six months or more, depending on your website's history and how strong your competitors are.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">What are the best SEO services in Lucknow for a local business?<span
+            <div class="faq-question-head">Will SEO help my business appear in Google AI Overviews?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">For a Lucknow-focused business, local SEO, technical SEO, on-page optimisation,
-              search-focused content, Google Business Profile optimisation and authority building are usually important
-              parts of the strategy. The right mix depends on your business and target customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How do I choose the best SEO company in Lucknow?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
-              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
-              meaningful business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my business rank outside Lucknow?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. A Lucknow-focused SEO strategy does not have to limit your business to
-              Lucknow. Once the local foundation is strong, the strategy can expand towards Uttar Pradesh, India-wide or
-              other target markets based on your business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
-              business information, relevance, website content, citations, reviews and overall local authority. However,
-              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
-              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
-              convert more relevant customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
-            </div>
-            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
-              long-term organic visibility, while a performance marketing agency can help capture demand faster through
-              paid acquisition.</div>
+            <div class="faq-answer-body">It can improve your chances. Clear answers, structured data, consistent business information and mentions on trusted sites help AI tools understand and cite your business. No agency can guarantee AI placement, but these steps make you a much stronger candidate.</div>
           </div>
         </div>
       </section>
 
       <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
       <section class="bottom-cta-banner-card">
-        <h3>Ready to Rank #1 in Lucknow?</h3>
-        <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
+        <h3>Ready to Be Lucknow's First Choice on Google?</h3>
+        <p>Get a free audit of your website and local presence, plus a clear plan to grow your visibility.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Lucknow SEO Audit
-            →</button>
-          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Lucknow Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
         </div>
       </section>
 
@@ -1755,7 +1572,7 @@
           <li><a href="../seo-company-in-nagpur/">SEO in Nagpur</a></li>
           <li><a href="../seo-services-in-bhopal/">SEO in Bhopal</a></li>
           <li><a href="../seo-company-in-jodhpur/">SEO in Jodhpur</a></li>
-          <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li>
+          <!-- <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li> -->
         </ul>
       </div>
 
@@ -1767,6 +1584,41 @@
 
     </aside>
 
+  </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
   </div>
 
   <!-- 🤖 WHOPPY AI CHATBOT -->
@@ -1812,41 +1664,6 @@
         <button id="sendChatBtn" class="send-msg-btn">✦</button>
       </div>
     </div>
-  </div>
-
-  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
-  <div class="side-social-shield-left">
-    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
-      class="social-side-node fb-color" aria-label="Facebook">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
-      class="social-side-node insta-color" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <defs>
-          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f09433" />
-            <stop offset="25%" stop-color="#e6683c" />
-            <stop offset="50%" stop-color="#dc2743" />
-            <stop offset="75%" stop-color="#cc2366" />
-            <stop offset="100%" stop-color="#bc1888" />
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    </a>
-    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
-      class="social-side-node linkedin-color" aria-label="LinkedIn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-      </svg>
-    </a>
   </div>
 
   <!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->
@@ -1929,74 +1746,6 @@
       </div>
       <span>Call Us</span>
     </a>
-  </div>
-
-  <!-- 🌟 SEO AUDIT ENQUIRY MODAL POPUP -->
-  <div class="modal-backdrop-layer" id="seoAuditModal" onclick="handleModalBackdropClick(event)">
-    <div class="seo-audit-modal-box">
-      <button type="button" class="modal-close-btn" onclick="closeSeoAuditModal()">&times;</button>
-
-      <div class="modal-header-area">
-        <span class="modal-badge">✦ Free Audit Report</span>
-        <h3>Request Your Lucknow SEO Audit</h3>
-        <p>Tell us a little about your business, website and goals. Our SEO strategist will review your current search
-          presence and identify opportunities to improve your visibility.</p>
-      </div>
-
-      <form class="audit-enquiry-form" onsubmit="handleAuditFormSubmit(event)">
-        <div class="form-grid-two">
-          <div class="form-field-group">
-            <label for="auditFullName">Full Name *</label>
-            <input type="text" id="auditFullName" placeholder="e.g. Digital whopper" required>
-          </div>
-          <div class="form-field-group">
-            <label for="auditPhone">Phone Number *</label>
-            <input type="tel" id="auditPhone" placeholder="e.g. +91 98765 43210" required>
-          </div>
-        </div>
-
-        <div class="form-grid-two">
-          <div class="form-field-group">
-            <label for="auditEmail">Business Email *</label>
-            <input type="email" id="auditEmail" placeholder="name@company.com" required>
-          </div>
-          <div class="form-field-group">
-            <label for="auditWebsite">Website URL *</label>
-            <input type="url" id="auditWebsite" placeholder="https://yourbrand.com" required>
-          </div>
-        </div>
-
-        <div class="form-grid-two">
-          <div class="form-field-group">
-            <label for="auditTargetArea">Target Market / Location</label>
-            <select id="auditTargetArea">
-              <option value="Lucknow Local">Lucknow (Local City Focus)</option>
-              <option value="Uttar Pradesh State">Uttar Pradesh State-wide</option>
-              <option value="Pan India">Pan-India (National)</option>
-              <option value="International">International Export</option>
-            </select>
-          </div>
-          <div class="form-field-group">
-            <label for="auditServiceType">Primary Goal</label>
-            <select id="auditServiceType">
-              <option value="Google Business Profile (Map Pack)">Rank in Top 3 Local Maps (GBP)</option>
-              <option value="Organic Google Keywords">Organic Google Page 1 Rankings</option>
-              <option value="E-commerce SEO">E-commerce / Shopify SEO Growth</option>
-              <option value="Technical SEO & Speed">Technical SEO & Speed Fixes</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-field-group">
-          <label for="auditCompetitors">Top Competitors or Notes (Optional)</label>
-          <textarea id="auditCompetitors"
-            placeholder="Mention 1-2 competitor websites or specific keywords you want to rank for..."></textarea>
-        </div>
-
-        <button type="submit" class="audit-submit-btn">🚀 Claim Free SEO Audit</button>
-        <div class="form-privacy-hint">🔒 We respect your privacy. No spam guaranteed.</div>
-      </form>
-    </div>
   </div>
 
   <!-- 🌟 SCRIPTS -->

@@ -546,28 +546,6 @@
       border-bottom: none;
     }
 
-    .badge-cross {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .badge-cross .ico-x {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(239, 68, 68, 0.12);
-      color: #ef4444;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
     .badge-check {
       display: inline-flex;
       align-items: center;
@@ -605,7 +583,7 @@
       border-radius: 18px;
       padding: 24px 14px 18px;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
@@ -649,11 +627,6 @@
       margin-top: 1px;
     }
 
-    .icon-red-cross {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
     .icon-green-check {
       background: #dcfce7;
       color: #16a34a;
@@ -674,45 +647,6 @@
       line-height: 1.35;
     }
 
-    .diff-vs-divider {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 40px;
-    }
-
-    .diff-vs-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: #f1f5f9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .diff-vs-badge {
-      position: relative;
-      z-index: 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: #0052ff;
-      font-family: 'Sora', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-
     @media (max-width: 900px) {
       .comparison-table-container {
         display: none !important;
@@ -720,33 +654,6 @@
 
       .diff-mobile-cards-grid {
         display: flex !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .diff-vs-card {
-        padding: 22px 8px 14px;
-        gap: 6px;
-      }
-
-      .diff-icon {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        font-size: 10px;
-      }
-
-      .diff-info h4 {
-        font-size: 10.5px;
-      }
-
-      .diff-info p {
-        font-size: 9.5px;
-      }
-
-      .diff-topic-pill {
-        font-size: 10px;
-        padding: 2px 10px;
       }
     }
 
@@ -1271,204 +1178,54 @@
       <!-- 1️⃣ HERO SECTION -->
       <div class="hero-wrapper-container">
         <section class="img-bg-hero-section">
-          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Chandigarh</div>
-          <h1>Chandigarh Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
-              Chandigarh,</b> Digital Whopper builds search strategies around your business, your audience and the way
-            people in Chandigarh actually search.</p>
-          <p class="hero-sublead">Our <b>seo services in chandigarh</b> combine technical SEO, content, local search,
-            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
-            long-term growth.</p>
+          <div class="hero-tag-pill">✦ SEO for Chandigarh, Mohali & Panchkula</div>
+          <h1>SEO Service in <span>Chandigarh</span></h1>
+          <p class="hero-sublead">In Chandigarh, people don't search for "a dentist near me". They search for "dentist in Sector 35". Your SEO should be just as specific.</p>
+          <p class="hero-sublead">Our SEO service in Chandigarh is built for the way the Tricity actually works: sector-based searches, customers who move freely between Chandigarh, Mohali and Panchkula, and buyers who expect premium service before they ever call. We help clinics, immigration consultants, IT firms, real estate brands and lifestyle businesses rank where those decisions are made.</p>
 
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Chandigarh SEO Audit
-              →</button>
-            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get a Free Tricity SEO Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 WhatsApp Our SEO Team</a>
           </div>
         </section>
       </div>
 
-      <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
-      <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">What Does the Best SEO Company in Chandigarh Actually Do?</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
-              and trust across Google, Maps and the growing world of AI-powered search.
-            </div>
-            <p>At Digital Whopper, our <b>seo services in chandigarh</b> are built around search intent, technical
-              performance and business goals. We study Chandigarh's search landscape, your competitors and the customers you
-              want to reach before building your SEO strategy.</p>
-            <p>From Sector 17 and Sector 22 to IT Park and markets beyond Chandigarh, we focus on the searches
-              that can actually bring value to your business.</p>
-            <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
-              <li><span class="dot">✓</span> High-Intent Chandigarh & Regional Keyword Mapping</li>
-              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
-              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
-              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
-      <section class="dark-metric-strip-bar">
-        <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Local Search Opportunities</p>
-        </div>
-        <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Search Visibility Growth</p>
-        </div>
-        <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Organic Growth Potential</p>
-        </div>
-        <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Initial SEO Improvements</p>
-        </div>
-      </section>
-      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
-        demand.
-      </p>
-
-      <!-- 4️⃣ OUR CHANDIGARH SEO ROLLOUT -->
+      <!-- 2️⃣ THINK TRICITY, NOT JUST CITY -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
-        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
-        <h2 class="section-main-heading-center">Our Chandigarh SEO Rollout</h2>
-
-        <div class="rollout-steps-container-layout">
-          <!-- Top Row: 3 Items -->
-          <div class="rollout-row-top-3">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 01</span>
-              <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
-                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
-                competitor performance.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 02</span>
-              <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
-                high-intent local queries, Chandigarh-specific searches and opportunities beyond the city. Every important
-                keyword is mapped to the right page.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 03</span>
-              <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
-                experiences. This includes content structure, internal linking, metadata, schema and information that
-                makes your business easier for search systems to understand.</p>
-            </div>
-          </div>
-
-          <!-- Bottom Row: 2 Items Centered -->
-          <div class="rollout-row-bottom-2">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 04</span>
-              <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
-                citations and digital authority while strengthening your Google Business Profile and local presence
-                across Chandigarh.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 05</span>
-              <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
-                conversions and keyword movement, then expand into new opportunities to build sustainable organic
-                growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              Search has changed. Your SEO strategy should too.
-            </div>
-            <p>People in Chandigarh don't discover businesses only through traditional Google results anymore. They use
-              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
-              answers.</p>
-            <p>We optimise your digital presence so your business has the right information, structure and authority to
-              compete across these search experiences.</p>
-            <p>Whether someone searches for a service in Chandigarh, compares local businesses or asks an AI tool for a
-              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6️⃣ THE DIFFERENCE -->
-      <section class="diff-master-wrapper laptop-padding-left-only">
-        <div class="section-pill-tag">THE DIFFERENCE</div>
-        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+        <div class="section-pill-tag">THINK TRICITY, NOT JUST CITY</div>
+        <h2 class="section-main-heading-center">Why Should Your SEO Cover Mohali, Panchkula and Zirakpur Too?</h2>
+        <p style="font-size: 13.5px; color: #64748b; margin-bottom: 24px; text-align: center;">For customers, the Tricity is one market. Someone living in Zirakpur will happily visit a clinic in Sector 8 or a showroom in Mohali. If your SEO targets only "Chandigarh", you're missing a large share of your real audience.</p>
 
         <!-- DESKTOP VIEW (> 900px): Clean Comparison Table -->
         <div class="comparison-table-container">
           <table class="comparison-table-shell">
             <thead>
               <tr>
-                <th>Deliverables & Focus Areas</th>
-                <th>Generic SEO Vendor</th>
-                <th>Digital Whopper</th>
+                <th>Area</th>
+                <th>What Defines It</th>
+                <th>Search Opportunity</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Chandigarh
-                    searches</span></td>
+                <td><strong>Chandigarh</strong></td>
+                <td>Established sectors, premium retail, clinics, coaching and offices</td>
+                <td>High-intent, sector-specific local searches</td>
               </tr>
               <tr>
-                <td><strong>Local SEO</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Chandigarh-focused local search
-                    strategy</span></td>
+                <td><strong>Mohali</strong></td>
+                <td>IT companies, Quark City, Aerocity, newer residential phases</td>
+                <td>B2B, IT services, real estate and family services</td>
               </tr>
               <tr>
-                <td><strong>Google Maps</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
-                    visibility focus</span></td>
+                <td><strong>Panchkula</strong></td>
+                <td>Residential sectors, schools, hospitals and growing retail</td>
+                <td>Healthcare, education and home services</td>
               </tr>
               <tr>
-                <td><strong>Content</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
-                    customers</span></td>
-              </tr>
-              <tr>
-                <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
-                </td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
-                    building</span></td>
-              </tr>
-              <tr>
-                <td><strong>Reporting </strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
-                    performance insights</span></td>
-              </tr>
-              <tr>
-                <td><strong>Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
-                    Chandigarh market</span></td>
+                <td><strong>Zirakpur & Kharar</strong></td>
+                <td>Fast-growing housing and commercial belts</td>
+                <td>Real estate, interiors, gyms and everyday local services</td>
               </tr>
             </tbody>
           </table>
@@ -1476,207 +1233,265 @@
 
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards -->
         <div class="diff-mobile-cards-grid">
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Keyword Strategy</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Chases broad keywords because they have high search volume.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Chandigarh</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Targets high-intent searches that are relevant to your business and Chandigarh customers.</p>
+                <h4>Established Sectors & Retail</h4>
+                <p>High-intent, sector-specific local searches across premium retail, clinics and offices.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Local Google Maps Ranking</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Treats local SEO as an add-on.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Mohali</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
-                  relevance.</p>
+                <h4>IT & Residential Phases</h4>
+                <p>B2B, IT services, real estate and family services targeting Quark City and Aerocity.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Content & Search Intent</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Publishes content simply to target keywords.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Panchkula</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
+                <h4>Schools, Hospitals & Retail</h4>
+                <p>Targeting healthcare, education and home services in growing residential sectors.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Reporting & Transparency</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Reports activities without connecting them to business outcomes.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Zirakpur & Kharar</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
+                <h4>Fast-Growing Belts</h4>
+                <p>Real estate, interiors, gyms and everyday local services in high-growth housing areas.</p>
               </div>
             </div>
           </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">We map keywords and content to each area you actually serve, so you rank across the Tricity without creating thin, duplicate pages.</p>
+      </section>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Overall Focus</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Same playbook for every business.</p>
-              </div>
+      <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
+      <section class="dark-metric-strip-bar">
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="2.8" data-prefix="₹" data-suffix=" lakh" data-decimal="1">₹0 lakh</h3>
+          <p>Chandigarh Per Capita Income (FY24-25)</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="27" data-suffix=" lakh+">0 lakh+</h3>
+          <p>PGIMER Outpatient Visits (Annual)</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="8800" data-prefix="₹" data-suffix=" cr">₹0 cr</h3>
+          <p>Tricity Software Exports Baseline</p>
+        </div>
+        <div class="dark-stat-box">
+          <h3 class="seo-metric-counter" data-target="150" data-suffix="+">0+</h3>
+          <p>Successful Digital Projects Delivered</p>
+        </div>
+      </section>
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search demand. Monthly reporting ensures complete transparency.</p>
+
+      <!-- 4️⃣ SECTOR-LEVEL LOCAL SEO -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">SECTOR-LEVEL LOCAL SEO</div>
+        <h2 class="section-main-heading-center">How Do Sector Numbers Affect Your Google Maps Ranking?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              Chandigarh's planned layout means addresses, landmarks and even searches revolve around sector numbers and SCO/SCF plots. That creates a unique local SEO challenge.
             </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>Consistent addresses:</b> "SCO 45, Sector 17C" written five different ways across directories confuses Google. We standardise your business details everywhere.</li>
+              <li><span class="dot">✓</span> <b>Sector-aware content:</b> Your website and Google Business Profile should naturally mention your sector and nearby sectors you serve.</li>
+              <li><span class="dot">✓</span> <b>Category precision:</b> In crowded sectors like 17, 34 and 35, choosing the right primary category on Google often decides who appears in the Map Pack.</li>
+              <li><span class="dot">✓</span> <b>Review strategy:</b> Tricity customers read reviews closely. A steady flow of genuine, detailed reviews builds both rankings and trust.</li>
+            </ul>
+            <p><b>What Makes Chandigarh Customers Different?</b><br>Chandigarh has one of the highest per capita incomes in India, around ₹2.8 lakh in FY2024-25. Customers here have more choice and higher expectations. They compare carefully, read reviews, check websites on mobile and judge a business by how professional it looks online. A slow website, an incomplete Maps listing or a handful of old reviews can lose the customer before they ever call.<br>That's why our SEO service in Chandigarh goes beyond rankings. We make sure the page people land on is fast, credible and convincing enough to turn a search into an enquiry.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5️⃣ SEO BY INDUSTRY -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">SEO BY INDUSTRY</div>
+        <h2 class="section-main-heading-center">Which Chandigarh Businesses Do We Help Grow?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <!-- Top Row: 3 Items -->
+          <div class="rollout-row-top-3">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">Immigration & Study-Abroad</div>
+              <p class="rollout-step-paragraph">The Tricity is one of North India's biggest study-abroad hubs, drawing students from Punjab, Haryana and Himachal. We build content that answers real visa and course questions accurately and shows your credentials without exaggerated promises.</p>
             </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>A Chandigarh-focused SEO strategy shaped around your market, competitors and growth goals.</p>
-              </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Hospitals & Clinics</div>
+              <p class="rollout-step-paragraph">PGIMER alone recorded over 27 lakh outpatient visits in 2023. We create accurate treatment pages, doctor profiles and local listings written in line with medical advertising guidelines.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">IT Companies & SaaS</div>
+              <p class="rollout-step-paragraph">Software exports crossed ₹8,800 crore in FY2022-23. We target global service keywords, build case-study-led content and strengthen authority so international buyers find and trust you.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Row: 3 Items -->
+          <div class="rollout-row-top-3" style="margin-top: 10px;">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Real Estate & Builders</div>
+              <p class="rollout-step-paragraph">Buyers research projects in New Chandigarh, Mohali Aerocity, Zirakpur and Kharar for months. We build project and location pages that answer pricing and connectivity questions.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">05</span>
+              <div class="rollout-step-head-title">Premium Retail & Lifestyle</div>
+              <p class="rollout-step-paragraph">Lifestyle businesses compete on experience. We focus on Maps visibility, reviews and content matching high-value searches like bridal makeup and designer boutiques.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">06</span>
+              <div class="rollout-step-head-title">Architects & Interiors</div>
+              <p class="rollout-step-paragraph">In a city whose Capitol Complex is a UNESCO World Heritage Site, design matters. We help studios rank with portfolio-led project pages and local visibility.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7️⃣ OVERVIEW SECTION -->
-      <section class="overview-mid-centered-section laptop-padding-left-only">
-        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
-        <h2 class="section-main-heading-center">Dominate Chandigarh's Organic Search Ecosystem</h2>
+      <!-- GEO + AEO SECTION -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">GEO + AEO</div>
+        <h2 class="section-main-heading-center">Will AI Tools Recommend Your Business?</h2>
 
-        <ul class="centered-full-desc-list">
-          <li>
-            Chandigarh is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
-          </li>
-          <li>
-            Our <b>seo services in chandigarh</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
-          </li>
-          <li>
-            And SEO doesn't have to work alone.
-          </li>
-          <li>
-            As a <b>digital marketing company in Chandigarh</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Chandigarh</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
-          </li>
-          <li>
-            For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
-          </li>
-          <li>
-            And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Chandigarh</b> capabilities help connect your business with the right audience across social platforms.
-          </li>
-        </ul>
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              A student asks ChatGPT for "trusted Canada study visa consultants in Chandigarh". A patient asks Google's AI Overview which hospitals in Mohali offer knee replacement. Only a few names appear in each answer.
+            </div>
+            <p>We make your business easier for AI tools to understand and trust by:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Answering common questions clearly and factually on your website</li>
+              <li><span class="dot">✓</span> Adding schema markup for your services, location, reviews and FAQs</li>
+              <li><span class="dot">✓</span> Keeping your business details identical across every platform</li>
+              <li><span class="dot">✓</span> Earning mentions on trusted local and industry websites</li>
+            </ul>
+            <p>Search engines rank pages. AI recommends businesses it trusts. We help you earn both.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR APPROACH -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">OUR APPROACH</div>
+        <h2 class="section-main-heading-center">How Do We Build Your Chandigarh SEO Strategy?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">LAYER 1</span>
+              <div class="rollout-step-head-title">Foundation</div>
+              <p class="rollout-step-paragraph">Technical audit, site speed, mobile experience, indexing fixes and a fully optimised Google Business Profile with clean, consistent Tricity addresses.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">LAYER 2</span>
+              <div class="rollout-step-head-title">Visibility</div>
+              <p class="rollout-step-paragraph">Keyword mapping across Chandigarh, Mohali, Panchkula and Zirakpur, service and location pages, intent-led content and schema for search and AI.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">LAYER 3</span>
+              <div class="rollout-step-head-title">Authority</div>
+              <p class="rollout-step-paragraph">Relevant backlinks, local citations, review growth and ongoing content that keeps you ahead of competitors over time.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">Every month, you receive one clear report covering rankings, traffic, calls, form enquiries and next steps. SEO results depend on your industry, competition, website condition and search demand.</p>
+      </section>
+
+      <!-- WHY CHOOSE DIGITAL WHOPPER -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">WHY CHOOSE US</div>
+        <h2 class="section-main-heading-center">Why Choose Digital Whopper?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> <b>Track record:</b> 150+ projects across 12+ industries, including two brands featured on Shark Tank India.</li>
+              <li><span class="dot">✓</span> <b>Built for your industry:</b> An immigration consultancy and a dental clinic need very different strategies. We build each one from scratch.</li>
+              <li><span class="dot">✓</span> <b>Honest reporting:</b> We report on visibility, traffic and enquiries. No ranking guarantees, no inflated numbers.</li>
+              <li><span class="dot">✓</span> <b>One growth team:</b> SEO, ads, websites and social media when you need them, all under one roof.</li>
+            </ul>
+            <p><b>Need More Than SEO?</b><br>Get enquiries faster while rankings grow with our performance marketing agency services.<br>Need a faster, more credible website? Our web development company team builds SEO-ready sites.<br>Selling products online? Explore our ecommerce marketing services.<br>Build trust and recall with our social media marketing services.</p>
+            <p style="margin-top: 12px;">Working in other cities? See our SEO pages for <a href="../seo-services-in-lucknow/" style="color: #0044ff; text-decoration: underline;">SEO services in Lucknow</a> and <a href="../seo-company-in-surat/" style="color: #0044ff; text-decoration: underline;">SEO company in Surat</a>.<br>Learn more about us as a <a href="/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a>.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
-        <h2 class="section-main-heading-center">Chandigarh SEO — Common Questions</h2>
+        <h2 class="section-main-heading-center">SEO Service in Chandigarh: Frequently Asked Questions</h2>
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much does an SEO service in Chandigarh cost?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">It depends on your industry, how many Tricity areas you want to target and how competitive your keywords are. A single clinic needs a smaller plan than an immigration firm or an IT company targeting global clients. We share a clear monthly scope and quote after a free audit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">My office is in Chandigarh. Can I also rank in Mohali and Panchkula?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes, within limits. Google favours businesses close to the searcher, so Maps rankings are strongest near your address. But with well-planned service and location pages, strong reviews and relevant content, you can rank on Google for searches across the whole Tricity.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How can an immigration or IELTS consultancy rank higher on Google?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">By building trust signals. Publish accurate, up-to-date content on visas, courses and countries, show your registration and credentials clearly, collect genuine reviews and avoid unrealistic promises. Google treats immigration as a sensitive topic and rewards businesses that come across as reliable experts.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Should I mention my sector number in my Google Business Profile?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Your full address, including sector and SCO or SCF number, should be identical on your Google Business Profile, website and every directory. Mentioning your sector and nearby landmarks in your website content also helps Google connect your business to local searches.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do you offer SEO for hospitals and doctors in the Tricity?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. We build treatment pages, doctor profiles, local listings and review strategies for hospitals and clinics in Chandigarh, Mohali and Panchkula. All content is factual and written in line with medical advertising guidelines.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Should my website have content in Hindi or Punjabi?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">For most Tricity businesses, English content works best since many customers search in English. Some local services, healthcare and education businesses can benefit from Hindi or Punjabi pages for specific audiences. We decide based on your customers and search data.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
             <div class="faq-question-head">How long does SEO take to show results in Chandigarh?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
-              position. Some improvements can appear within the first few months, while competitive Chandigarh keywords can
-              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
+            <div class="faq-answer-body">Google Business Profile and technical improvements can show movement within two to three months. Competitive keywords, especially in immigration, healthcare and real estate, usually take four to six months or longer.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">What are the best SEO services in Chandigarh for a local business?<span
+            <div class="faq-question-head">Can SEO help my business appear in AI-generated answers?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">For a Chandigarh-focused business, local SEO, technical SEO, on-page optimisation,
-              search-focused content, Google Business Profile optimisation and authority building are usually important
-              parts of the strategy. The right mix depends on your business and target customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How do I choose the best SEO company in Chandigarh?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
-              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
-              meaningful business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my business rank outside Chandigarh?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. A Chandigarh-focused SEO strategy does not have to limit your business to
-              Chandigarh. Once the local foundation is strong, the strategy can expand towards Punjab & Haryana, India-wide or
-              other target markets based on your business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
-              business information, relevance, website content, citations, reviews and overall local authority. However,
-              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
-              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
-              convert more relevant customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
-            </div>
-            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
-              long-term organic visibility, while a performance marketing agency can help capture demand faster through
-              paid acquisition.</div>
+            <div class="faq-answer-body">It can improve your chances. Clear answers, structured data, consistent business information and mentions on trusted websites make it easier for AI tools like Google AI Overviews and ChatGPT to understand and cite your business. No one can guarantee AI placement.</div>
           </div>
         </div>
       </section>
 
       <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
       <section class="bottom-cta-banner-card">
-        <h3>Ready to Rank #1 in Chandigarh?</h3>
-        <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
+        <h3>Ready to Be the Tricity's First Choice on Google?</h3>
+        <p>Get a free audit of your website and local presence, with a clear plan to grow across Chandigarh, Mohali and Panchkula.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Chandigarh SEO Audit
-            →</button>
-          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Tricity Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
         </div>
       </section>
 
@@ -1755,7 +1570,7 @@
           <li><a href="../seo-company-in-nagpur/">SEO in Nagpur</a></li>
           <li><a href="../seo-services-in-bhopal/">SEO in Bhopal</a></li>
           <li><a href="../seo-company-in-jodhpur/">SEO in Jodhpur</a></li>
-          <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li>
+          <!-- <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li> -->
         </ul>
       </div>
 
@@ -1767,6 +1582,41 @@
 
     </aside>
 
+  </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS (Facebook, Instagram, LinkedIn included) -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
   </div>
 
   <!-- 🤖 WHOPPY AI CHATBOT -->
@@ -1812,41 +1662,6 @@
         <button id="sendChatBtn" class="send-msg-btn">✦</button>
       </div>
     </div>
-  </div>
-
-  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
-  <div class="side-social-shield-left">
-    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
-      class="social-side-node fb-color" aria-label="Facebook">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
-      class="social-side-node insta-color" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <defs>
-          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f09433" />
-            <stop offset="25%" stop-color="#e6683c" />
-            <stop offset="50%" stop-color="#dc2743" />
-            <stop offset="75%" stop-color="#cc2366" />
-            <stop offset="100%" stop-color="#bc1888" />
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    </a>
-    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
-      class="social-side-node linkedin-color" aria-label="LinkedIn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-      </svg>
-    </a>
   </div>
 
   <!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->

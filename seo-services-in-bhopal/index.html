@@ -546,28 +546,6 @@
       border-bottom: none;
     }
 
-    .badge-cross {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .badge-cross .ico-x {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(239, 68, 68, 0.12);
-      color: #ef4444;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
     .badge-check {
       display: inline-flex;
       align-items: center;
@@ -605,7 +583,7 @@
       border-radius: 18px;
       padding: 24px 14px 18px;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
@@ -649,11 +627,6 @@
       margin-top: 1px;
     }
 
-    .icon-red-cross {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
     .icon-green-check {
       background: #dcfce7;
       color: #16a34a;
@@ -674,45 +647,6 @@
       line-height: 1.35;
     }
 
-    .diff-vs-divider {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 40px;
-    }
-
-    .diff-vs-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: #f1f5f9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .diff-vs-badge {
-      position: relative;
-      z-index: 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: #0052ff;
-      font-family: 'Sora', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-
     @media (max-width: 900px) {
       .comparison-table-container {
         display: none !important;
@@ -720,33 +654,6 @@
 
       .diff-mobile-cards-grid {
         display: flex !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .diff-vs-card {
-        padding: 22px 8px 14px;
-        gap: 6px;
-      }
-
-      .diff-icon {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        font-size: 10px;
-      }
-
-      .diff-info h4 {
-        font-size: 10.5px;
-      }
-
-      .diff-info p {
-        font-size: 9.5px;
-      }
-
-      .diff-topic-pill {
-        font-size: 10px;
-        padding: 2px 10px;
       }
     }
 
@@ -1048,47 +955,21 @@
     }
 
     @keyframes botContinuousLoop {
-      0% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
-
-      25% {
-        transform: translateY(-8px) rotate(-6deg) scale(1.04);
-      }
-
-      50% {
-        transform: translateY(-14px) rotate(4deg) scale(1.08);
-      }
-
-      75% {
-        transform: translateY(-6px) rotate(-3deg) scale(1.02);
-      }
-
-      100% {
-        transform: translateY(0) rotate(0deg) scale(1);
-      }
+      0% { transform: translateY(0) rotate(0deg) scale(1); }
+      25% { transform: translateY(-8px) rotate(-6deg) scale(1.04); }
+      50% { transform: translateY(-14px) rotate(4deg) scale(1.08); }
+      75% { transform: translateY(-6px) rotate(-3deg) scale(1.02); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
     }
 
     @keyframes fadeInModal {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes slideUpModal {
-      from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.96);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     /* ==========================================================================
@@ -1212,15 +1093,8 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-6px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -1271,45 +1145,31 @@
       <!-- 1️⃣ HERO SECTION -->
       <div class="hero-wrapper-container">
         <section class="img-bg-hero-section">
-          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Bhopal</div>
-          <h1>Bhopal Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
-              Bhopal,</b> Digital Whopper builds search strategies around your business, your audience and the way
-            people in Bhopal actually search.</p>
-          <p class="hero-sublead">Our <b>seo services in bhopal</b> combine technical SEO, content, local search,
-            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
-            long-term growth.</p>
+          <div class="hero-tag-pill">✦ SEO for the City of Lakes</div>
+          <h1>SEO Service in <span>Bhopal</span></h1>
+          <p class="hero-sublead">Bhopal is a capital city with a student crowd, a growing middle class and a new wave of investment. Its customers are online. Is your business?</p>
+          <p class="hero-sublead">Our SEO service in Bhopal helps coaching institutes, hospitals, real estate developers, Mandideep suppliers and local businesses show up where Bhopal decides: on Google, in Maps and increasingly in AI-generated answers. Every plan starts with how your customers in Bhopal actually search, not a template built for another city.</p>
 
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Bhopal SEO Audit
-              →</button>
-            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get a Free Bhopal SEO Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 WhatsApp Our SEO Team</a>
           </div>
         </section>
       </div>
 
-      <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
+      <!-- 2️⃣ BHOPAL IS MOVING FAST -->
       <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">What Does the Best SEO Company in Bhopal Actually Do?</h2>
+        <div class="section-pill-tag">BHOPAL IS MOVING FAST</div>
+        <h2 class="section-main-heading-center">What's Changed in Bhopal Recently, and Why Does It Matter for SEO?</h2>
 
         <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
-              and trust across Google, Maps and the growing world of AI-powered search.
-            </div>
-            <p>At Digital Whopper, our <b>seo services in bhopal</b> are built around search intent, technical
-              performance and business goals. We study Bhopal's search landscape, your competitors and the customers you
-              want to reach before building your SEO strategy.</p>
-            <p>From MP Nagar and New Market to Kolar Road and markets beyond Bhopal, we focus on the searches
-              that can actually bring value to your business.</p>
-            <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
-              <li><span class="dot">✓</span> High-Intent Bhopal & Regional Keyword Mapping</li>
-              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
-              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
-              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>February 2025: A Record Investment Summit —</b> Madhya Pradesh's Global Investors Summit in Bhopal drew investment proposals worth over ₹26.6 lakh crore. New projects bring new suppliers, service providers and professionals into the city, along with new competition.</li>
+              <li><span class="dot">✓</span> <b>July 2025: Among India's Cleanest Big Cities —</b> Bhopal ranked second among India's million-plus cities in Swachh Survekshan 2024-25, strengthening its appeal as a place to live, study and invest.</li>
+              <li><span class="dot">✓</span> <b>December 2025: Metro Goes Live —</b> Bhopal Metro opened its first 7.5 km stretch from AIIMS to Subhash Nagar. As the network grows, neighbourhoods along the route will see more footfall and more "near me" searches.</li>
             </ul>
+            <p>Each of these shifts creates new search demand. Businesses that build visibility now will be the ones customers find first as the city grows.</p>
           </div>
         </div>
       </section>
@@ -1317,158 +1177,60 @@
       <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
       <section class="dark-metric-strip-bar">
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Local Search Opportunities</p>
+          <h3 class="seo-metric-counter" data-target="26.6" data-prefix="₹" data-suffix=" lakh cr" data-decimal="1">₹0 lakh cr</h3>
+          <p>Global Investors Summit Proposals</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Search Visibility Growth</p>
+          <h3 class="seo-metric-counter" data-target="2" data-suffix="nd">0nd</h3>
+          <p>Swachh Survekshan City Rank</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Organic Growth Potential</p>
+          <h3 class="seo-metric-counter" data-target="7.5" data-suffix=" km" data-decimal="1">0 km</h3>
+          <p>Bhopal Metro Initial Stretch</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Initial SEO Improvements</p>
+          <h3 class="seo-metric-counter" data-target="150" data-suffix="+">0+</h3>
+          <p>Successful Digital Projects Delivered</p>
         </div>
       </section>
-      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
-        demand.
-      </p>
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search demand. Monthly reporting ensures complete transparency.</p>
 
-      <!-- 4️⃣ OUR BHOPAL SEO ROLLOUT -->
+      <!-- 4️⃣ BHOPAL IS NOT INDORE -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
-        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
-        <h2 class="section-main-heading-center">Our Bhopal SEO Rollout</h2>
-
-        <div class="rollout-steps-container-layout">
-          <!-- Top Row: 3 Items -->
-          <div class="rollout-row-top-3">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 01</span>
-              <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
-                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
-                competitor performance.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 02</span>
-              <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
-                high-intent local queries, Bhopal-specific searches and opportunities beyond the city. Every important
-                keyword is mapped to the right page.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 03</span>
-              <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
-                experiences. This includes content structure, internal linking, metadata, schema and information that
-                makes your business easier for search systems to understand.</p>
-            </div>
-          </div>
-
-          <!-- Bottom Row: 2 Items Centered -->
-          <div class="rollout-row-bottom-2">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 04</span>
-              <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
-                citations and digital authority while strengthening your Google Business Profile and local presence
-                across Bhopal.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 05</span>
-              <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
-                conversions and keyword movement, then expand into new opportunities to build sustainable organic
-                growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              Search has changed. Your SEO strategy should too.
-            </div>
-            <p>People in Bhopal don't discover businesses only through traditional Google results anymore. They use
-              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
-              answers.</p>
-            <p>We optimise your digital presence so your business has the right information, structure and authority to
-              compete across these search experiences.</p>
-            <p>Whether someone searches for a service in Bhopal, compares local businesses or asks an AI tool for a
-              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6️⃣ THE DIFFERENCE -->
-      <section class="diff-master-wrapper laptop-padding-left-only">
-        <div class="section-pill-tag">THE DIFFERENCE</div>
-        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+        <div class="section-pill-tag">MARKET DIFFERENCE</div>
+        <h2 class="section-main-heading-center">Why Shouldn't Your Bhopal SEO Copy an Indore Strategy?</h2>
+        <p style="font-size: 13.5px; color: #64748b; margin-bottom: 24px; text-align: center;">Bhopal and Indore are just a few hours apart, but their markets work very differently. A plan that works in one city can easily miss the mark in the other.</p>
 
         <!-- DESKTOP VIEW (> 900px): Clean Comparison Table -->
         <div class="comparison-table-container">
           <table class="comparison-table-shell">
             <thead>
               <tr>
-                <th>Deliverables & Focus Areas</th>
-                <th>Generic SEO Vendor</th>
-                <th>Digital Whopper</th>
+                <th>Factor</th>
+                <th>Bhopal</th>
+                <th>Indore</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Bhopal
-                    searches</span></td>
+                <td><strong>Economic engine</strong></td>
+                <td>Government, education, healthcare and nearby industry</td>
+                <td>Trade, commerce, FMCG and startups</td>
               </tr>
               <tr>
-                <td><strong>Local SEO</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Bhopal-focused local search
-                    strategy</span></td>
+                <td><strong>Typical customer</strong></td>
+                <td>Salaried families, students and government employees</td>
+                <td>Traders, business owners and B2B buyers</td>
               </tr>
               <tr>
-                <td><strong>Google Maps</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
-                    visibility focus</span></td>
+                <td><strong>What they research</strong></td>
+                <td>Institutes, hospitals, homes and trusted services</td>
+                <td>Suppliers, products, deals and shopping</td>
               </tr>
               <tr>
-                <td><strong>Content</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
-                    customers</span></td>
-              </tr>
-              <tr>
-                <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
-                </td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
-                    building</span></td>
-              </tr>
-              <tr>
-                <td><strong>Reporting </strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
-                    performance insights</span></td>
-              </tr>
-              <tr>
-                <td><strong>Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
-                    Bhopal market</span></td>
+                <td><strong>What wins online</strong></td>
+                <td>Trust, credentials, reviews and clear information</td>
+                <td>Speed, pricing, range and availability</td>
               </tr>
             </tbody>
           </table>
@@ -1476,207 +1238,231 @@
 
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards -->
         <div class="diff-mobile-cards-grid">
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Keyword Strategy</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Chases broad keywords because they have high search volume.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Economic Engine</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Targets high-intent searches that are relevant to your business and Bhopal customers.</p>
+                <h4>Bhopal vs Indore Focus</h4>
+                <p>Bhopal relies on government, education, healthcare & industry; Indore focuses on trade & commerce.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Local Google Maps Ranking</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Treats local SEO as an add-on.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Typical Customer</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
-                  relevance.</p>
+                <h4>Audience Profiles</h4>
+                <p>Salaried families, students & government employees vs. traders, business owners & B2B buyers.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Content & Search Intent</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Publishes content simply to target keywords.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">What Wins Online</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
+                <h4>Trust & Transparency</h4>
+                <p>Trust, credentials, reviews & clear information rather than just speed and pricing.</p>
               </div>
             </div>
           </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">That's why our SEO service in Bhopal leans heavily on trust signals, detailed information and reputation, the things Bhopal customers check before they commit.</p>
+      </section>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Reporting & Transparency</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Reports activities without connecting them to business outcomes.</p>
-              </div>
+      <!-- 5️⃣ WHERE THE SEARCHES ARE -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">WHERE THE SEARCHES ARE</div>
+        <h2 class="section-main-heading-center">Which Bhopal Businesses Have the Biggest SEO Opportunity?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <!-- Top Row: 3 Items -->
+          <div class="rollout-row-top-3">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">Coaching Institutes & Colleges</div>
+              <p class="rollout-step-paragraph">With institutions like AIIMS, IISER, MANIT and NLIU, plus a busy coaching zone around MP Nagar, Bhopal attracts students from across the state. Families compare results, faculty, fees and hostel options online. We build course pages, result-led content and Maps visibility that help you get shortlisted.</p>
             </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Hospitals & Diagnostic Centres</div>
+              <p class="rollout-step-paragraph">Patients from surrounding districts come to Bhopal for specialist care. We create accurate treatment pages, doctor profiles and regional visibility, all written in line with medical advertising guidelines.</p>
             </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
-              </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">Real Estate Developers</div>
+              <p class="rollout-step-paragraph">Homebuyers research projects along Kolar Road, Narmadapuram Road, Ayodhya Bypass and other growth corridors for months. We build project and location pages that answer questions on price, approvals, connectivity and amenities.</p>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Overall Focus</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Same playbook for every business.</p>
-              </div>
+          <!-- Bottom Row: 3 Items -->
+          <div class="rollout-row-top-3" style="margin-top: 10px;">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Mandideep & Industrial Suppliers</div>
+              <p class="rollout-step-paragraph">The Mandideep industrial area, home to companies like P&G, Lupin, Eicher and HEG, supports a large network of vendors. We help suppliers, fabricators and service providers rank for the product and service searches procurement teams use.</p>
             </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">05</span>
+              <div class="rollout-step-head-title">Hotels & Event Venues</div>
+              <p class="rollout-step-paragraph">The lakes, nearby heritage sites and a strong wedding culture keep hospitality busy year-round. We focus on Maps rankings, photo-rich listings, reviews and content around stays, dining and events.</p>
             </div>
-            <div class="diff-side diff-good">
-              <div class="diff-icon icon-green-check">✓</div>
-              <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>A Bhopal-focused SEO strategy shaped around your market, competitors and growth goals.</p>
-              </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">06</span>
+              <div class="rollout-step-head-title">Local Services & Retail</div>
+              <p class="rollout-step-paragraph">From New Market and Chowk Bazaar to MP Nagar and Arera Colony, local shoppers check Google before stepping out. A strong Google Business Profile and genuine reviews make you their first choice.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7️⃣ OVERVIEW SECTION -->
+      <!-- 6️⃣ HINDI-FIRST SEO -->
       <section class="overview-mid-centered-section laptop-padding-left-only">
-        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
-        <h2 class="section-main-heading-center">Dominate Bhopal's Organic Search Ecosystem</h2>
+        <div class="section-pill-tag">✦ HINDI-FIRST SEO</div>
+        <h2 class="section-main-heading-center">Are You Missing Bhopal Customers Who Search in Hindi?</h2>
 
         <ul class="centered-full-desc-list">
           <li>
-            Bhopal is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
+            Many Bhopal customers search in Hindi or Hinglish, especially on mobile and voice search. Queries like "Bhopal mein achha hospital" or "MP Nagar coaching fees" are common, yet most local websites are written only in English.
           </li>
           <li>
-            Our <b>seo services in bhopal</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
-          </li>
-          <li>
-            And SEO doesn't have to work alone.
-          </li>
-          <li>
-            As a <b>digital marketing company in Bhopal</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Bhopal</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
-          </li>
-          <li>
-            For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
-          </li>
-          <li>
-            And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Bhopal</b> capabilities help connect your business with the right audience across social platforms.
+            We research the Hindi and Hinglish searches relevant to your business and add content that captures them, without hurting your English rankings. For education, healthcare and local services, this is often one of the fastest wins available.
           </li>
         </ul>
+      </section>
+
+      <!-- GEO + AEO SECTION -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">GEO + AEO</div>
+        <h2 class="section-main-heading-center">Will Your Business Appear in AI-Generated Answers?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              A parent asks ChatGPT which coaching institutes in Bhopal have the best results. A family asks Google's AI Overview for a good multispeciality hospital near Hoshangabad Road. Only a few names make it into each answer.
+            </div>
+            <p>We help you become one of them by:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Publishing clear, factual answers to the questions your customers ask</li>
+              <li><span class="dot">✓</span> Adding schema markup for your services, location, reviews and FAQs</li>
+              <li><span class="dot">✓</span> Keeping your business details consistent across every platform</li>
+              <li><span class="dot">✓</span> Earning mentions on trusted local and industry websites</li>
+            </ul>
+            <p>In a city that runs on trust, being the name AI recommends is a powerful advantage.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">HOW WE WORK</div>
+        <h2 class="section-main-heading-center">What Can You Expect When You Work With Us?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">01</span>
+              <div class="rollout-step-head-title">Audit Before Pitch</div>
+              <p class="rollout-step-paragraph">We review your website, Google Business Profile and competitors first, so recommendations are based on facts.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">02</span>
+              <div class="rollout-step-head-title">Real Search Demand</div>
+              <p class="rollout-step-paragraph">Keywords, pages and content are chosen based on what Bhopal customers actually search in English or Hindi.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">03</span>
+              <div class="rollout-step-head-title">Honest Timelines</div>
+              <p class="rollout-step-paragraph">We tell you upfront what improves early and what takes longer. No ranking guarantees.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">04</span>
+              <div class="rollout-step-head-title">Monthly Accountability</div>
+              <p class="rollout-step-paragraph">One clear report on rankings, traffic, calls and enquiries, with next steps already planned.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">SEO results depend on your industry, competition, website condition and search demand.</p>
+      </section>
+
+      <!-- WHY CHOOSE DIGITAL WHOPPER -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">WHY CHOOSE US</div>
+        <h2 class="section-main-heading-center">Why Choose Digital Whopper?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> <b>Proven experience:</b> 150+ projects across 12+ industries, including two brands featured on Shark Tank India.</li>
+              <li><span class="dot">✓</span> <b>Trust-first strategy:</b> We build the credibility signals that education, healthcare and real estate customers look for.</li>
+              <li><span class="dot">✓</span> <b>Full support:</b> SEO, ads, websites and social media under one roof when you need them.</li>
+            </ul>
+            <p><b>Want to Grow Even Faster?</b><br>Fill seats or beds faster with our performance marketing agency services alongside SEO.<br>Need a website that builds trust? Our web development company team builds fast, SEO-ready sites.<br>Selling products online? Explore our ecommerce marketing services.<br>Stay visible beyond search with our social media marketing services.</p>
+            <p style="margin-top: 12px;">Also targeting Indore? See how we approach <a href="../seo-services-in-indore/" style="color: #0044ff; text-decoration: underline;">SEO services in Indore</a>, or explore our <a href="../seo-company-in-nagpur/" style="color: #0044ff; text-decoration: underline;">SEO company in Nagpur</a> page.<br>Learn more about us as a <a href="/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a>.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
-        <h2 class="section-main-heading-center">Bhopal SEO — Common Questions</h2>
+        <h2 class="section-main-heading-center">SEO Service in Bhopal: Frequently Asked Questions</h2>
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How much does an SEO service in Bhopal cost?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">It depends on your industry, the number of services and locations you want to rank for, and how competitive your keywords are. A neighbourhood clinic needs a smaller plan than a coaching chain or real estate developer. We share a clear monthly scope and quote after a free audit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">I have branches in Bhopal and Indore. Can one SEO strategy cover both?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">One website can cover both, but each city needs its own location page, Google Business Profile and content. Customers in the two cities search differently, so we plan keywords and messaging separately for each while keeping your brand consistent.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How can my coaching institute in MP Nagar rank higher?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Create detailed pages for each course, show verified results, keep your Google Business Profile complete and collect genuine student reviews. Content that answers fee, batch and hostel questions also helps, since families search for these before they visit.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Can SEO help my business supply to Mandideep companies?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Yes. Procurement teams search online for vendors by product, service and location. Clear product and capability pages, certifications and Mandideep or Bhopal-specific content help you appear when buyers are shortlisting suppliers.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Should my Bhopal website have Hindi content?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">For most consumer-facing businesses, yes. Many Bhopal customers search in Hindi or Hinglish, especially on mobile. Adding Hindi pages for your key services can capture searches your competitors ignore. B2B businesses usually do well with English alone.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">How can my hotel or event venue near the lakes get more bookings from Google?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Keep your Google Business Profile complete with high-quality photos, accurate amenities and fresh reviews. Add website content for weddings, events and stays, and target searches from visitors planning trips to Bhopal and nearby heritage sites.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
             <div class="faq-question-head">How long does SEO take to show results in Bhopal?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
-              position. Some improvements can appear within the first few months, while competitive Bhopal keywords can
-              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
+            <div class="faq-answer-body">Google Business Profile and technical fixes can show movement within two to three months. Competitive keywords in education, healthcare and real estate usually take four to six months or longer.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">What are the best SEO services in Bhopal for a local business?<span
+            <div class="faq-question-head">Can SEO get my business into Google AI Overviews?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">For a Bhopal-focused business, local SEO, technical SEO, on-page optimisation,
-              search-focused content, Google Business Profile optimisation and authority building are usually important
-              parts of the strategy. The right mix depends on your business and target customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How do I choose the best SEO company in Bhopal?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
-              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
-              meaningful business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my business rank outside Bhopal?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. A Bhopal-focused SEO strategy does not have to limit your business to
-              Bhopal. Once the local foundation is strong, the strategy can expand towards Madhya Pradesh, India-wide or
-              other target markets based on your business goals.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
-              business information, relevance, website content, citations, reviews and overall local authority. However,
-              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
-                class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
-              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
-              convert more relevant customers.</div>
-          </div>
-          <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
-            </div>
-            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
-              long-term organic visibility, while a performance marketing agency can help capture demand faster through
-              paid acquisition.</div>
+            <div class="faq-answer-body">It can improve your chances. Clear answers, structured data, consistent business details and mentions on trusted sites help AI tools understand and cite your business. No agency can guarantee AI placement, but these steps make you a much stronger candidate.</div>
           </div>
         </div>
       </section>
 
       <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
       <section class="bottom-cta-banner-card">
-        <h3>Ready to Rank #1 in Bhopal?</h3>
-        <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
+        <h3>Ready to Be the Name Bhopal Trusts First?</h3>
+        <p>Get a free audit of your website and local presence, with a clear plan to grow your visibility in Bhopal and beyond.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Bhopal SEO Audit
-            →</button>
-          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Bhopal Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
         </div>
       </section>
 
@@ -1755,7 +1541,7 @@
           <li><a href="../seo-company-in-nagpur/">SEO in Nagpur</a></li>
           <li><a href="#" class="active">SEO in Bhopal</a></li>
           <li><a href="../seo-company-in-jodhpur/">SEO in Jodhpur</a></li>
-          <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li>
+          <!-- <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li> -->
         </ul>
       </div>
 

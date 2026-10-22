@@ -546,28 +546,6 @@
       border-bottom: none;
     }
 
-    .badge-cross {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ef4444;
-      font-weight: 600;
-    }
-
-    .badge-cross .ico-x {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(239, 68, 68, 0.12);
-      color: #ef4444;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
     .badge-check {
       display: inline-flex;
       align-items: center;
@@ -605,7 +583,7 @@
       border-radius: 18px;
       padding: 24px 14px 18px;
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
       gap: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
@@ -649,11 +627,6 @@
       margin-top: 1px;
     }
 
-    .icon-red-cross {
-      background: #fee2e2;
-      color: #ef4444;
-    }
-
     .icon-green-check {
       background: #dcfce7;
       color: #16a34a;
@@ -674,45 +647,6 @@
       line-height: 1.35;
     }
 
-    .diff-vs-divider {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      min-height: 40px;
-    }
-
-    .diff-vs-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background: #f1f5f9;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-
-    .diff-vs-badge {
-      position: relative;
-      z-index: 2;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      color: #0052ff;
-      font-family: 'Sora', sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    }
-
     @media (max-width: 900px) {
       .comparison-table-container {
         display: none !important;
@@ -720,33 +654,6 @@
 
       .diff-mobile-cards-grid {
         display: flex !important;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .diff-vs-card {
-        padding: 22px 8px 14px;
-        gap: 6px;
-      }
-
-      .diff-icon {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        font-size: 10px;
-      }
-
-      .diff-info h4 {
-        font-size: 10.5px;
-      }
-
-      .diff-info p {
-        font-size: 9.5px;
-      }
-
-      .diff-topic-pill {
-        font-size: 10px;
-        padding: 2px 10px;
       }
     }
 
@@ -1271,45 +1178,35 @@
       <!-- 1️⃣ HERO SECTION -->
       <div class="hero-wrapper-container">
         <section class="img-bg-hero-section">
-          <div class="hero-tag-pill">✦ Top Rated SEO Agency in Indore</div>
-          <h1>Indore Businesses Deserve to<br>Be <span>Found</span> — On Google & AI Search</h1>
-          <p class="hero-sublead">Get found by the right customers at the right time. As <b>a best SEO company in
-              Indore,</b> Digital Whopper builds search strategies around your business, your audience and the way
-            people in Indore actually search.</p>
-          <p class="hero-sublead">Our <b>seo service in indore</b> combine technical SEO, content, local search,
-            authority building and AI search optimisation to turn search visibility into traffic, enquiries and
-            long-term growth.</p>
+          <div class="hero-tag-pill">✦ SEO Built Around Indore's Market</div>
+          <h1>SEO Service in <span>Indore</span></h1>
+          <p class="hero-sublead">From Sarafa counters to Pithampur pharma units, Indore has always been a trading city. Today, that trade starts with a search.</p>
+          <p class="hero-sublead">A family running a sweet shop in Rajwada, a pharma packaging supplier near Pithampur and a D2C skincare startup on the Super Corridor all need visibility. But they need it in completely different places. Our SEO service in Indore starts by understanding which of those buyers you're chasing, then builds rankings exactly where they search.</p>
 
           <div class="hero-btn-row">
-            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Indore SEO Audit
-              →</button>
-            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+            <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get a Free Indore Search Audit →</button>
+            <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat With an SEO Strategist</a>
           </div>
         </section>
       </div>
 
-      <!-- 2️⃣ WHAT DOES AN SEO COMPANY DO? -->
+      <!-- 2️⃣ WHY INDORE NEEDS SMARTER SEO -->
       <section style="width: 100%; margin-top: 10px; padding-top: 0 !important;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">What Does the Best SEO Company in Indore Actually Do?</h2>
+        <div class="section-pill-tag">WHY INDORE NEEDS SMARTER SEO</div>
+        <h2 class="section-main-heading-center">Why Is Indore One of India's Most Competitive Tier-2 Search Markets?</h2>
 
         <div class="seo-action-split-section">
-          <div class="seo-action-left">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
             <div class="callout-blue-quote-box">
-              SEO is more than adding keywords to a website. It is about making your business easier to find, understand
-              and trust across Google, Maps and the growing world of AI-powered search.
+              Indore is the commercial capital of Madhya Pradesh, and its economy is far more varied than most cities its size. That variety is exactly why generic SEO fails here.
             </div>
-            <p>At Digital Whopper, our <b>seo service in indore</b> are built around search intent, technical
-              performance and business goals. We study Indore's search landscape, your competitors and the customers you
-              want to reach before building your SEO strategy.</p>
-            <p>From Vijay Nagar and Palasia to AB Road and markets beyond Indore, we focus on the searches
-              that can actually bring value to your business.</p>
-            <ul class="seo-checklist-clean">
-              <li><span class="dot">✓</span> Deep Technical Audits & Core Web Vitals Optimisation</li>
-              <li><span class="dot">✓</span> High-Intent Indore & Regional Keyword Mapping</li>
-              <li><span class="dot">✓</span> Local SEO & Google Business Profile Optimisation</li>
-              <li><span class="dot">✓</span> High-Quality Backlink & Citation Building</li>
-              <li><span class="dot">✓</span> SEO Content Built Around Real Search Intent</li>
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>8x Cleanest City:</b> Named India's cleanest city for eight years in a row, a brand that attracts investors, students and new businesses.</li>
+              <li><span class="dot">✓</span> <b>₹8,127 Cr Exports:</b> Exports from Indore SEZ in Pithampur between April and October 2025, up 32%, with pharma making up about 70%.</li>
+              <li><span class="dot">✓</span> <b>300+ Startups:</b> Active startups, including homegrown names like ShopKirana and Kimirica.</li>
+              <li><span class="dot">✓</span> <b>IIT + IIM Hub:</b> The only Indian city that hosts both, which fuels a large student and coaching market.</li>
             </ul>
+            <p>More businesses, more capital and more students all mean more competition for the same search results. Ranking in Indore today takes a sharper plan than it did even three years ago.</p>
           </div>
         </div>
       </section>
@@ -1317,158 +1214,70 @@
       <!-- 3️⃣ DARK IMPACT METRIC STRIP -->
       <section class="dark-metric-strip-bar">
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="46" data-suffix="%">0%</h3>
-          <p>Local Search Opportunities</p>
+          <h3 class="seo-metric-counter" data-target="8" data-suffix="x">0x</h3>
+          <p>Years as India's Cleanest City</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="88" data-suffix="%">0%</h3>
-          <p>Search Visibility Growth</p>
+          <h3 class="seo-metric-counter" data-target="8127" data-prefix="₹" data-suffix=" Cr">₹0 Cr</h3>
+          <p>Indore SEZ Pithampur Exports (Apr-Oct 25)</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="4.2" data-suffix="x" data-decimal="1">0x</h3>
-          <p>Organic Growth Potential</p>
+          <h3 class="seo-metric-counter" data-target="300" data-suffix="+">0+</h3>
+          <p>Active Startups in Indore</p>
         </div>
         <div class="dark-stat-box">
-          <h3 class="seo-metric-counter" data-target="6" data-prefix="[3-" data-suffix=" mo]">0 mo</h3>
-          <p>Typical Time to Initial SEO Improvements</p>
+          <h3 class="seo-metric-counter" data-target="150" data-suffix="+">0+</h3>
+          <p>Successful Digital Projects Delivered</p>
         </div>
       </section>
-      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search
-        demand.
-      </p>
+      <p class="laptop-padding-left-only">Actual results vary by industry, competition, website condition and search demand. Monthly reporting ensures complete transparency.</p>
 
-      <!-- 4️⃣ OUR INDORE SEO ROLLOUT -->
+      <!-- 4️⃣ ONE CITY, MANY MARKETS -->
       <section class="rollout-roadmap-section laptop-padding-left-only">
-        <div class="section-pill-tag">EXECUTION BLUEPRINT</div>
-        <h2 class="section-main-heading-center">Our Indore SEO Rollout</h2>
-
-        <div class="rollout-steps-container-layout">
-          <!-- Top Row: 3 Items -->
-          <div class="rollout-row-top-3">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 01</span>
-              <div class="rollout-step-head-title">Deep Audit</div>
-              <p class="rollout-step-paragraph">We start by understanding where your website stands. Our technical audit
-                covers crawlability, indexing, site structure, Core Web Vitals, mobile experience, content gaps and
-                competitor performance.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 02</span>
-              <div class="rollout-step-head-title">Keyword Mapping</div>
-              <p class="rollout-step-paragraph">We identify the searches that matter to your business, including
-                high-intent local queries, Indore-specific searches and opportunities beyond the city. Every important
-                keyword is mapped to the right page.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 03</span>
-              <div class="rollout-step-head-title">On-Page + AI</div>
-              <p class="rollout-step-paragraph">We optimise your pages for people, Google and emerging AI search
-                experiences. This includes content structure, internal linking, metadata, schema and information that
-                makes your business easier for search systems to understand.</p>
-            </div>
-          </div>
-
-          <!-- Bottom Row: 2 Items Centered -->
-          <div class="rollout-row-bottom-2">
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 04</span>
-              <div class="rollout-step-head-title">Authority Building</div>
-              <p class="rollout-step-paragraph">Strong rankings need credibility. We build relevant backlinks, local
-                citations and digital authority while strengthening your Google Business Profile and local presence
-                across Indore.</p>
-            </div>
-            <div class="rollout-text-item">
-              <span class="rollout-step-num-text">STEP 05</span>
-              <div class="rollout-step-head-title">Scale & Accelerate</div>
-              <p class="rollout-step-paragraph">SEO does not stop after rankings improve. We track traffic, enquiries,
-                conversions and keyword movement, then expand into new opportunities to build sustainable organic
-                growth.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5️⃣ BUILT FOR ALL SEARCH -->
-      <section style="width: 100%;" class="laptop-padding-left-only">
-        <h2 class="section-main-heading-center">Built for All Search, Not Just Blue Links</h2>
-
-        <div class="seo-action-split-section">
-          <div class="seo-action-left">
-            <div class="callout-blue-quote-box">
-              Search has changed. Your SEO strategy should too.
-            </div>
-            <p>People in Indore don't discover businesses only through traditional Google results anymore. They use
-              Google Maps, local listings, reviews, featured results, voice search and increasingly AI-generated
-              answers.</p>
-            <p>We optimise your digital presence so your business has the right information, structure and authority to
-              compete across these search experiences.</p>
-            <p>Whether someone searches for a service in Indore, compares local businesses or asks an AI tool for a
-              recommendation, the goal is the same: <b>make your business easier to discover and easier to choose.</b>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6️⃣ THE DIFFERENCE -->
-      <section class="diff-master-wrapper laptop-padding-left-only">
-        <div class="section-pill-tag">THE DIFFERENCE</div>
-        <h2 class="section-main-heading-center">Digital Whopper vs.<br>Generic Local SEO Vendor</h2>
+        <div class="section-pill-tag">ONE CITY, MANY MARKETS</div>
+        <h2 class="section-main-heading-center">How Do Different Indore Businesses Get Found on Google?</h2>
+        <p style="font-size: 13.5px; color: #64748b; margin-bottom: 24px; text-align: center;">Each part of Indore's economy has its own buyers, search habits and ranking challenges. Here's how we adapt our SEO service in Indore for each one.</p>
 
         <!-- DESKTOP VIEW (> 900px): Clean Comparison Table -->
         <div class="comparison-table-container">
           <table class="comparison-table-shell">
             <thead>
               <tr>
-                <th>Deliverables & Focus Areas</th>
-                <th>Generic SEO Vendor</th>
-                <th>Digital Whopper</th>
+                <th>Business Type</th>
+                <th>How Their Buyers Search</th>
+                <th>Where We Focus</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Keyword Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Uses broad, high-competition
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Targets relevant, high-intent Indore
-                    searches</span></td>
+                <td><strong>Pharma, auto & engineering units (Pithampur, Sanwer Road)</strong></td>
+                <td>Procurement teams search by product spec, certification and capacity, often from other states or countries</td>
+                <td>Product and capability pages, B2B keyword mapping, export-market SEO, technical trust signals</td>
               </tr>
               <tr>
-                <td><strong>Local SEO</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Basic local optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Indore-focused local search
-                    strategy</span></td>
+                <td><strong>Retail, jewellery & food (Sarafa, Rajwada, Siyaganj, 56 Dukan)</strong></td>
+                <td>Quick "near me" searches on mobile, often in Hindi or Hinglish</td>
+                <td>Google Business Profile, Maps rankings, review strategy, bilingual local content</td>
               </tr>
               <tr>
-                <td><strong>Google Maps</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Limited Maps optimisation</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Google Business Profile & local
-                    visibility focus</span></td>
+                <td><strong>D2C & ecommerce brands</strong></td>
+                <td>Shoppers compare products, read reviews and ask AI tools for recommendations</td>
+                <td>Category and product SEO, Shopify technical fixes, comparison and buying guide content</td>
               </tr>
               <tr>
-                <td><strong>Content</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Content created mainly for
-                    keywords</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Content built around search intent and
-                    customers</span></td>
+                <td><strong>IT firms & startups (Super Corridor, Vijay Nagar)</strong></td>
+                <td>Clients in other cities and abroad search for services, case studies and tech expertise</td>
+                <td>Service pages for national and global keywords, thought-leadership content, entity SEO</td>
               </tr>
               <tr>
-                <td><strong>Backlinks & Authority</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Quantity-focused link building</span>
-                </td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Relevant authority and citation
-                    building</span></td>
+                <td><strong>Coaching institutes (Bhawarkuan & around)</strong></td>
+                <td>Students and parents compare faculty, results, fees and batch timings</td>
+                <td>Course pages, Maps visibility, result-led content, FAQ and review management</td>
               </tr>
               <tr>
-                <td><strong>Reporting </strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> Activity-based reports</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span> Clear rankings, traffic, leads and
-                    performance insights</span></td>
-              </tr>
-              <tr>
-                <td><strong>Strategy</strong></td>
-                <td><span class="badge-cross"><span class="ico-x">&#x2715;</span> One-size-fits-all approach</span></td>
-                <td><span class="badge-check"><span class="ico-v">&#x2713;</span>Strategy built around your business and
-                    Indore market</span></td>
+                <td><strong>Clinics, hospitals & real estate</strong></td>
+                <td>High-trust decisions researched over days or weeks</td>
+                <td>E-E-A-T content, location pages, review signals, compliant and accurate information</td>
               </tr>
             </tbody>
           </table>
@@ -1476,207 +1285,236 @@
 
         <!-- MOBILE VIEW (<= 900px): Clean 2-Column VS Cards -->
         <div class="diff-mobile-cards-grid">
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Keyword Strategy</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Chases broad keywords because they have high search volume.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Pharma, Auto & Engineering</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Targets high-intent searches that are relevant to your business and Indore customers.</p>
+                <h4>Pithampur & Sanwer Road</h4>
+                <p>Product & capability pages, B2B keyword mapping, export-market SEO, technical trust signals.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Local Google Maps Ranking</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Treats local SEO as an add-on.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Retail, Jewellery & Food</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Builds local visibility through Google Business Profile optimisation, citations, reviews and location
-                  relevance.</p>
+                <h4>Sarafa, Rajwada & 56 Dukan</h4>
+                <p>Google Business Profile, Maps rankings, review strategy, bilingual local content.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Content & Search Intent</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Publishes content simply to target keywords.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">D2C & Ecommerce Brands</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Creates useful content around the questions, problems and buying decisions of your audience.</p>
+                <h4>Online Shoppers</h4>
+                <p>Category & product SEO, Shopify technical fixes, comparison and buying guide content.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Reporting & Transparency</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Reports activities without connecting them to business outcomes.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">IT Firms & Startups</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>Tracks search visibility, organic traffic, leads and other meaningful KPIs.</p>
+                <h4>Super Corridor & Vijay Nagar</h4>
+                <p>Service pages for national/global keywords, thought-leadership content, entity SEO.</p>
               </div>
             </div>
           </div>
 
-          <div class="diff-vs-card">
-            <div class="diff-topic-pill">Overall Focus</div>
-            <div class="diff-side diff-bad">
-              <div class="diff-icon icon-red-cross">✕</div>
-              <div class="diff-info">
-                <h4>Generic SEO Agency</h4>
-                <p>Same playbook for every business.</p>
-              </div>
-            </div>
-            <div class="diff-vs-divider">
-              <span class="diff-vs-badge">VS</span>
-            </div>
-            <div class="diff-side diff-good">
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Coaching Institutes</div>
+            <div class="diff-side diff-good" style="width: 100%;">
               <div class="diff-icon icon-green-check">✓</div>
               <div class="diff-info">
-                <h4>Digital Whopper</h4>
-                <p>An Indore-focused SEO strategy shaped around your market, competitors and growth goals.</p>
+                <h4>Bhawarkuan Hub</h4>
+                <p>Course pages, Maps visibility, result-led content, FAQ and review management.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diff-vs-card" style="grid-template-columns: 1fr;">
+            <div class="diff-topic-pill">Clinics, Hospitals & Real Estate</div>
+            <div class="diff-side diff-good" style="width: 100%;">
+              <div class="diff-icon icon-green-check">✓</div>
+              <div class="diff-info">
+                <h4>High-Trust Decisions</h4>
+                <p>E-E-A-T content, location pages, review signals, compliant and accurate information.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 7️⃣ OVERVIEW SECTION -->
+      <!-- 5️⃣ HYPERLOCAL STRATEGY -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">HYPERLOCAL STRATEGY</div>
+        <h2 class="section-main-heading-center">Should You Rank for "Indore" or for Your Neighbourhood?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              Usually both. Someone in Palasia searching for a dentist rarely wants to drive to Rau. Google knows this, so it shows results close to the searcher. That's why our local SEO Indore strategy works at area level, not just city level.
+            </div>
+            <ul class="seo-checklist-clean" style="margin-bottom: 20px;">
+              <li><span class="dot">✓</span> <b>Vijay Nagar & AB Road:</b> corporate offices, cafés, gyms and premium services competing for dense, high-income search traffic</li>
+              <li><span class="dot">✓</span> <b>Palasia, MG Road & South Tukoganj:</b> clinics, showrooms and professional services where trust and reviews decide the click</li>
+              <li><span class="dot">✓</span> <b>Rajwada, Sarafa & Siyaganj:</b> traditional retail and wholesale trade moving from word-of-mouth to Maps and WhatsApp enquiries</li>
+              <li><span class="dot">✓</span> <b>Bhawarkuan:</b> a crowded coaching belt where course pages and student reviews make the difference</li>
+              <li><span class="dot">✓</span> <b>Super Corridor:</b> IT companies, new townships and real estate projects targeting buyers and talent across India</li>
+              <li><span class="dot">✓</span> <b>Pithampur & Sanwer Road:</b> industrial clusters where B2B buyers search by product, not by location</li>
+            </ul>
+            <p>We build location relevance through your Google Business Profile, area-specific content and consistent citations, so you show up for the searches happening around you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6️⃣ HINDI & HINGLISH SEARCH -->
       <section class="overview-mid-centered-section laptop-padding-left-only">
-        <div class="section-pill-tag">✦ SCALABLE DOMINANCE</div>
-        <h2 class="section-main-heading-center">Dominate Indore's Organic Search Ecosystem</h2>
+        <div class="section-pill-tag">✦ LANGUAGE INTENT</div>
+        <h2 class="section-main-heading-center">Do Indore Customers Search in Hindi or English?</h2>
 
         <ul class="centered-full-desc-list">
           <li>
-            Indore is a competitive market. Whether you run a local service business, hotel, restaurant, real estate company, educational institute, ecommerce brand or professional service, your customers are already searching online.
+            Both, and often a mix. A customer might type "best gold jewellery shop Indore", say "Sarafa mein achhi mithai ki dukaan" into voice search, or ask a chatbot in Hinglish.
           </li>
           <li>
-            Our <b>seo services in indore</b> help you compete for those searches by bringing together technical SEO, content, local search, authority building and conversion-focused optimisation.
-          </li>
-          <li>
-            And SEO doesn't have to work alone.
-          </li>
-          <li>
-            As a <b>digital marketing company in Indore</b>, Digital Whopper can connect organic search with the rest of your digital growth strategy. Need a stronger website? Our <b>web development company in Indore</b> capabilities help create fast, search-friendly websites. Need faster customer acquisition? Our <b>performance marketing agency</b> can complement SEO with paid campaigns.
-          </li>
-          <li>
-            For online stores, our <b>digital marketing agency for ecommerce</b> approach combines SEO, paid acquisition, content and conversion optimisation, while our <b>ecommerce marketing services</b> help products reach more relevant customers.
-          </li>
-          <li>
-            And when your brand needs stronger visibility beyond search, our <b>social media marketing company in Indore</b> capabilities help connect your business with the right audience across social platforms.
+            Most agencies optimise only for English. We research how your specific customers phrase their searches and create content that covers Hindi, English and Hinglish intent where it makes business sense. For retail, food and local services, this often opens up searches your competitors are completely ignoring.
           </li>
         </ul>
+      </section>
+
+      <!-- GEO + AEO SECTION -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">GEO + AEO</div>
+        <h2 class="section-main-heading-center">Will Your Business Show Up When Someone Asks AI About Indore?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <div class="callout-blue-quote-box">
+              Buyers increasingly skip the list of links. A procurement manager might ask ChatGPT for "pharma packaging suppliers near Pithampur". A parent might ask Google's AI Overview which coaching centres in Indore have the best JEE results.
+            </div>
+            <p>AI tools pull answers from sources they can understand and trust. Our SEO service in Indore prepares your business for that by:</p>
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> Writing clear, fact-based answers to the questions your buyers actually ask</li>
+              <li><span class="dot">✓</span> Adding structured data (schema) so search engines understand your services, location and reviews</li>
+              <li><span class="dot">✓</span> Keeping your business name, address and details identical across every platform</li>
+              <li><span class="dot">✓</span> Building mentions and links from sources AI systems already trust</li>
+            </ul>
+            <p>Rankings get you listed. Clarity and authority get you recommended.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- YOUR FIRST 90 DAYS -->
+      <section class="rollout-roadmap-section laptop-padding-left-only">
+        <div class="section-pill-tag">YOUR FIRST 90 DAYS</div>
+        <h2 class="section-main-heading-center">What Happens After You Start With Us?</h2>
+
+        <div class="rollout-steps-container-layout">
+          <div class="rollout-row-top-3" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">MONTH 1</span>
+              <div class="rollout-step-head-title">Diagnose & Fix</div>
+              <p class="rollout-step-paragraph">Full technical audit, Google Business Profile review, competitor analysis against Indore businesses ranking ahead of you, and keyword mapping by sector and area.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">MONTH 2</span>
+              <div class="rollout-step-head-title">Build & Optimise</div>
+              <p class="rollout-step-paragraph">Service, product and location pages rewritten for intent. Schema added, internal links restructured, citations cleaned up and review collection started.</p>
+            </div>
+            <div class="rollout-text-item">
+              <span class="rollout-step-num-text">MONTH 3</span>
+              <div class="rollout-step-head-title">Grow Authority</div>
+              <p class="rollout-step-paragraph">Relevant backlinks and local mentions, AI-ready FAQ content and the first full performance report covering rankings, traffic, calls and leads.</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #64748b; margin-top: 20px; text-align: left;">Results depend on your industry, competition, website condition and search demand. We set realistic expectations before we begin.</p>
+      </section>
+
+      <!-- WHY CHOOSE DIGITAL WHOPPER -->
+      <section style="width: 100%;" class="laptop-padding-left-only">
+        <div class="section-pill-tag">WHY CHOOSE US</div>
+        <h2 class="section-main-heading-center">Why Do Indore Businesses Choose Digital Whopper?</h2>
+
+        <div class="seo-action-split-section">
+          <div class="seo-action-left" style="grid-column: 1 / -1;">
+            <ul class="seo-checklist-clean" style="margin-bottom: 16px;">
+              <li><span class="dot">✓</span> <b>Tier-2 market experience:</b> We've grown brands in trade-driven cities like Jaipur, where buyers behave much like Indore's. We know what works when word-of-mouth meets Google.</li>
+              <li><span class="dot">✓</span> <b>Proven with growing brands:</b> 150+ projects across 12+ industries, including two brands featured on Shark Tank India.</li>
+              <li><span class="dot">✓</span> <b>Honest reporting:</b> One clear monthly report on rankings, traffic and enquiries. No vanity metrics, no ranking guarantees.</li>
+              <li><span class="dot">✓</span> <b>Full-funnel support:</b> When SEO needs help from ads, a new website or social media, it's all under one roof.</li>
+            </ul>
+            <p><b>Need More Than Search Rankings?</b><br>Pair SEO with paid campaigns through our performance marketing agency team for faster enquiries while organic rankings build.<br>Slow or outdated site? Our web development company team builds fast, SEO-ready websites and Shopify stores.<br>Selling on Amazon, Flipkart or your own store? Explore our ecommerce marketing services.<br>Build recall beyond Google with our social media marketing services.</p>
+            <p style="margin-top: 12px;">Growing across Madhya Pradesh? See our <a href="../seo-services-in-bhopal/" style="color: #0044ff; text-decoration: underline;">SEO services in Bhopal</a>.<br>Learn more about our home market as a <a href="/" style="color: #0044ff; text-decoration: underline;">digital marketing company in Jaipur</a>.</p>
+          </div>
+        </div>
       </section>
 
       <!-- 8️⃣ FREQUENTLY ASKED QUESTIONS -->
       <section class="faq-section-new laptop-padding-left-only">
         <div class="section-pill-tag">FAQ</div>
-        <h2 class="section-main-heading-center">Indore SEO — Common Questions</h2>
+        <h2 class="section-main-heading-center">SEO Service in Indore: Questions We Hear Most</h2>
 
         <div class="faq-accordion-list">
           <div class="faq-item-card active" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How long does SEO take to show results in Indore?<span
+            <div class="faq-question-head">How much does an SEO service in Indore cost?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">SEO timelines depend on your website, competition, industry and starting
-              position. Some improvements can appear within the first few months, while competitive Indore keywords can
-              take longer to reach strong positions. SEO works best as a consistent, long-term growth channel.</div>
+            <div class="faq-answer-body">Cost depends on your industry, the number of pages and locations you want to rank for, and how competitive your keywords are. A single-location clinic needs far less work than a multi-product manufacturer. We share a fixed monthly scope and quote after a free audit, so you know exactly what you're paying for.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">What are the best SEO services in Indore for a local business?<span
+            <div class="faq-question-head">My factory is in Pithampur and sells B2B. Can SEO bring me buyers?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">For an Indore-focused business, local SEO, technical SEO, on-page optimisation,
-              search-focused content, Google Business Profile optimisation and authority building are usually important
-              parts of the strategy. The right mix depends on your business and target customers.</div>
+            <div class="faq-answer-body">Yes. B2B buyers research suppliers online long before they call. Detailed product pages, capability and certification content, and keywords targeting buyers in other states or export markets can bring in qualified enquiries that trade directories alone can't.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">How do I choose the best SEO company in Indore?<span
+            <div class="faq-question-head">Should my website content be in Hindi, English or both?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Look beyond promises of rankings. Check whether the agency understands your
-              market, explains its strategy clearly, provides transparent reporting and connects SEO performance with
-              meaningful business goals.</div>
+            <div class="faq-answer-body">It depends on your customers. B2B, IT and export businesses usually do best in English. Retail, food, coaching and local services in Indore often gain extra visibility by adding Hindi or Hinglish content. We decide this from your actual search data, not guesswork.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my business rank outside Indore?<span
+            <div class="faq-question-head">How can I rank on Google Maps in my area of Indore?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. An Indore-focused SEO strategy does not have to limit your business to
-              Indore. Once the local foundation is strong, the strategy can expand towards Madhya Pradesh, India-wide or
-              other target markets based on your business goals.</div>
+            <div class="faq-answer-body">Start with a complete, accurate Google Business Profile, consistent details across directories, steady genuine reviews and location-relevant website content. Proximity to the searcher matters too, so we focus on the areas around your business where you can realistically win.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO help my Google Business Profile rank better?<span
+            <div class="faq-question-head">Is SEO worth it for coaching institutes in a crowded area like Bhawarkuan?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Local SEO can improve the signals that influence local visibility, including
-              business information, relevance, website content, citations, reviews and overall local authority. However,
-              no legitimate SEO company can guarantee a permanent Top 3 Maps position.</div>
+            <div class="faq-answer-body">Yes, especially because competition is high. Most students and parents compare options online before visiting. Strong course pages, visible results, Maps rankings and good reviews help your institute stand out when families are shortlisting.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Do you provide ecommerce marketing services?<span
+            <div class="faq-question-head">How long before I see results from SEO in Indore?<span
                 class="faq-plus-icon">+</span></div>
-            <div class="faq-answer-body">Yes. Our <b>ecommerce marketing services</b> can combine SEO, content, paid
-              acquisition, product visibility and conversion optimisation to help ecommerce businesses attract and
-              convert more relevant customers.</div>
+            <div class="faq-answer-body">Technical fixes and Google Business Profile improvements can show movement within the first two to three months. Competitive keywords usually take four to six months or more, depending on your website's history and how established your competitors are.</div>
           </div>
           <div class="faq-item-card" onclick="this.classList.toggle('active')">
-            <div class="faq-question-head">Can SEO work with performance marketing?<span class="faq-plus-icon">+</span>
-            </div>
-            <div class="faq-answer-body">Absolutely. SEO and paid campaigns can complement each other. SEO builds
-              long-term organic visibility, while a performance marketing agency can help capture demand faster through
-              paid acquisition.</div>
+            <div class="faq-question-head">Can you help my business appear in Google AI Overviews and ChatGPT answers?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">We can improve your chances. Clear question-based content, structured data, consistent business details and authority from trusted sources make it easier for AI tools to understand and cite your business. No one can guarantee AI placement, but these steps make you a stronger candidate.</div>
+          </div>
+          <div class="faq-item-card" onclick="this.classList.toggle('active')">
+            <div class="faq-question-head">Do I need SEO if I already get customers through word of mouth?<span
+                class="faq-plus-icon">+</span></div>
+            <div class="faq-answer-body">Word of mouth still works in Indore, but most referred customers now search your name before they call. If your website, reviews or Maps listing look weak, you lose them at that step. SEO protects the reputation you've built and reaches people who haven't heard of you yet.</div>
           </div>
         </div>
       </section>
 
       <!-- 9️⃣ BOTTOM READY TO RANK DARK CTA BANNER -->
       <section class="bottom-cta-banner-card">
-        <h3>Ready to Rank #1 in Indore?</h3>
-        <p>Get a comprehensive search audit and a custom ranking roadmap tailored for your business.</p>
+        <h3>Let's Find Out Where Indore Is Searching for You</h3>
+        <p>Get a free audit showing where you rank today, which competitors are ahead and the fastest wins for your business.</p>
         <div class="hero-btn-row" style="margin-bottom: 0;">
-          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get Free Indore SEO Audit
-            →</button>
-          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Consult on WhatsApp</a>
+          <button type="button" onclick="openSeoAuditModal()" class="btn-hero-white">Get My Free Indore Audit →</button>
+          <a href="https://wa.me/916200379161" target="_blank" class="btn-hero-green">💬 Chat on WhatsApp</a>
         </div>
       </section>
 
@@ -1746,7 +1584,7 @@
         <p class="sidebar-head-sub">Select your city for regional SEO solutions</p>
         <div class="sidebar-divider"></div>
 
-       <ul class="sidebar-location-list">
+        <ul class="sidebar-location-list">
           <li><a href="../seo-company-in-jaipur/">SEO in Jaipur</a></li>
           <li><a href="#" class="active">SEO in Indore</a></li>
           <li><a href="../seo-services-in-lucknow/">SEO in Lucknow</a></li>
@@ -1755,7 +1593,7 @@
           <li><a href="../seo-company-in-nagpur/">SEO in Nagpur</a></li>
           <li><a href="../seo-services-in-bhopal/">SEO in Bhopal</a></li>
           <li><a href="../seo-company-in-jodhpur/">SEO in Jodhpur</a></li>
-          <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li>
+          <!-- <li><a href="../seo-company-in-bhubaneswar/">SEO in Bhubaneswar</a></li> -->
         </ul>
       </div>
 
@@ -1767,6 +1605,41 @@
 
     </aside>
 
+  </div>
+
+  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
+  <div class="side-social-shield-left">
+    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
+      class="social-side-node fb-color" aria-label="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
+      class="social-side-node insta-color" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f09433" />
+            <stop offset="25%" stop-color="#e6683c" />
+            <stop offset="50%" stop-color="#dc2743" />
+            <stop offset="75%" stop-color="#cc2366" />
+            <stop offset="100%" stop-color="#bc1888" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
+      class="social-side-node linkedin-color" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+      </svg>
+    </a>
   </div>
 
   <!-- 🤖 WHOPPY AI CHATBOT -->
@@ -1812,41 +1685,6 @@
         <button id="sendChatBtn" class="send-msg-btn">✦</button>
       </div>
     </div>
-  </div>
-
-  <!-- 🌐 FLOATING LEFT SOCIAL LINKS -->
-  <div class="side-social-shield-left">
-    <a href="https://www.facebook.com/officialdigitalwhopper" target="_blank" rel="noopener"
-      class="social-side-node fb-color" aria-label="Facebook">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.72-1 1-1h2V2h-3a4 4 0 0 0-4 4v2z" />
-      </svg>
-    </a>
-    <a href="https://www.instagram.com/digital_whopper/" target="_blank" rel="noopener"
-      class="social-side-node insta-color" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#instaGradSeo)" stroke-width="2.5"
-        stroke-linecap="round" stroke-linejoin="round">
-        <defs>
-          <linearGradient id="instaGradSeo" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f09433" />
-            <stop offset="25%" stop-color="#e6683c" />
-            <stop offset="50%" stop-color="#dc2743" />
-            <stop offset="75%" stop-color="#cc2366" />
-            <stop offset="100%" stop-color="#bc1888" />
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    </a>
-    <a href="https://www.linkedin.com/company/digitalwhopper/" target="_blank" rel="noopener"
-      class="social-side-node linkedin-color" aria-label="LinkedIn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-      </svg>
-    </a>
   </div>
 
   <!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->

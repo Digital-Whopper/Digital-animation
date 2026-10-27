@@ -319,9 +319,58 @@
     }
   </style>
 </head>
+<style>
+  /* Full Screen Loader Overlay */
+.fullscreen-loader-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #ffffff;
+  font-family: 'Sora', sans-serif;
+}
 
+.loader-spinner {
+  width: 54px;
+  height: 54px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00c4ff;
+  border-right-color: #0044ff;
+  border-radius: 50%;
+  animation: spinLoader 0.8s linear infinite;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+
+.loader-text {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.loader-subtext {
+  font-size: 12px;
+  color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+}
+</style>
 <body>
-
+<div id="fullScreenLoader" class="fullscreen-loader-overlay">
+  <div class="loader-spinner"></div>
+  <div class="loader-text">Uploading & Saving Details...</div>
+  <div class="loader-subtext">Google Sheet & Drive syncing in progress, kripya wait karein</div>
+</div>
   <header id="mainHeader">
     <nav>
       <a href="/" class="logo logo-eater-container" id="logoEaterBtn">
@@ -550,6 +599,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('profileImageInput');
     const previewContainer = document.getElementById('avatarPreviewContainer');
+    const fullScreenLoader = document.getElementById('fullScreenLoader');
 
     if (imageInput && previewContainer) {
       imageInput.addEventListener('change', (event) => {
@@ -564,7 +614,7 @@
       });
     }
 
-    // Fast image compression helper: Image ko turant 800px & 0.7 quality me compress karega
+    // Fast image compression: Image ko 500px & 0.6 quality par compress karega (Only ~40-60 KB)
     const compressImage = (file) => {
       return new Promise((resolve) => {
         if (!file) return resolve({ data: '', name: '' });
@@ -576,7 +626,7 @@
           img.src = event.target.result;
           img.onload = () => {
             const canvas = document.createElement('canvas');
-            const maxDimension = 800; // Profile photo ke liye 800px perfect hai
+            const maxDimension = 500;
             let width = img.width;
             let height = img.height;
 
@@ -593,8 +643,7 @@
             const ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0, width, height);
 
-            // Jpeg format me compress karke light-weight Base64 banayega (Only ~80KB-120KB)
-            const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
+            const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.6);
             resolve({ data: compressedDataUrl, name: file.name.replace(/\.[^/.]+$/, "") + ".jpg" });
           };
           img.onerror = () => resolve({ data: '', name: '' });
@@ -603,7 +652,7 @@
       });
     };
 
-    // Normal file reader for PDF/Docx
+    // Resume Base64 conversion
     const fileToBase64 = (file) => {
       return new Promise((resolve) => {
         if (!file) return resolve({ data: '', name: '' });
@@ -621,8 +670,11 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // 1. Full-screen loader chalu karein
+        if (fullScreenLoader) {
+          fullScreenLoader.style.display = 'flex';
+        }
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Saving details... ⚡';
 
         const photoInput = document.getElementById('profileImageInput');
         const resumeInput = document.getElementById('empResume');
@@ -630,7 +682,6 @@
         const photoFile = photoInput && photoInput.files.length > 0 ? photoInput.files[0] : null;
         const resumeFile = resumeInput && resumeInput.files.length > 0 ? resumeInput.files[0] : null;
 
-        // Photo ko compress karein aur resume ko direct encode karein
         Promise.all([compressImage(photoFile), fileToBase64(resumeFile)]).then(([photoObj, resumeObj]) => {
           
           const scriptURL = 'https://script.google.com/macros/s/AKfycbw9bEufFnegV2BN74ZUaCl5Q2QGtuYtVcbpgUf2EE2ZQ4qa6Q0_9XOMJrkLFeW76C-c/exec';
@@ -650,6 +701,7 @@
             resumeName: resumeObj.name
           };
 
+          // Yahan hum properly request ke complete hone (.then) ka intezar karenge
           fetch(scriptURL, {
             method: 'POST',
             mode: 'no-cors',
@@ -659,14 +711,16 @@
             body: JSON.stringify(payload)
           })
           .then(() => {
-            alert('🎉 Employee details Google Sheet me save ho gayi hain!');
+            // Upload complete hone ke baad hi loader band hoga aur reload hoga
+            if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+            alert('🎉 Employee details Google Sheet aur Drive me successfully save ho gayi hain!');
             window.location.reload();
           })
           .catch((error) => {
-            console.error('Error!', error);
-            alert('Data bhejne me error aayi. Console check karein.');
+            console.error('Error saving data:', error);
+            if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+            alert('Data save karne me dikkat aayi. Kripya dobara try karein.');
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Information 🚀';
           });
         });
       });

@@ -595,7 +595,8 @@
   });
 </script> -->
 
-<script>
+<!-- ye prefect script hai  -->
+<!-- <script>
   document.addEventListener('DOMContentLoaded', () => {
     const imageInput = document.getElementById('profileImageInput');
     const previewContainer = document.getElementById('avatarPreviewContainer');
@@ -726,8 +727,133 @@
       });
     }
   });
-</script>
+</script> -->
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const imageInput = document.getElementById('profileImageInput');
+    const previewContainer = document.getElementById('avatarPreviewContainer');
+    const fullScreenLoader = document.getElementById('fullScreenLoader');
+
+    // 1. Image Preview
+    if (imageInput && previewContainer) {
+      imageInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            previewContainer.innerHTML = `<img src="${e.target.result}" alt="Profile Preview" style="width:100%; height:100%; object-fit:cover;">`;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    }
+
+    // 2. Verified Cloudinary Direct Upload
+    const uploadToCloudinary = async (file) => {
+      if (!file) return "";
+      
+      const cloudName = "ywjdugiz";
+      const uploadPreset = "my_cloud_team"; // Agar aapka preset name alag ho toh wahi daalein
+
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", uploadPreset);
+
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await res.json();
+      if (data.secure_url) {
+        return data.secure_url;
+      } else {
+        console.error("Cloudinary Error:", data);
+        throw new Error(data.error ? data.error.message : "Image upload failed");
+      }
+    };
+
+    // 3. Resume File to Base64 (PDF/DOCX)
+    const fileToBase64 = (file) => {
+      return new Promise((resolve) => {
+        if (!file) return resolve({ data: '', name: '' });
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve({ data: reader.result, name: file.name });
+        reader.onerror = () => resolve({ data: '', name: '' });
+      });
+    };
+
+    // 4. Form Submit Handler
+    const form = document.getElementById('employeePortalForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const photoInput = document.getElementById('profileImageInput');
+        const resumeInput = document.getElementById('empResume');
+
+        const photoFile = photoInput && photoInput.files.length > 0 ? photoInput.files[0] : null;
+        const resumeFile = resumeInput && resumeInput.files.length > 0 ? resumeInput.files[0] : null;
+
+        if (!photoFile) {
+          alert("⚠️ Kripya profile image zaroor select karein!");
+          return;
+        }
+
+        // Loader chalu karein
+        if (fullScreenLoader) fullScreenLoader.style.display = 'flex';
+        submitBtn.disabled = true;
+
+        try {
+          // Cloudinary par direct photo upload aur resume read
+          const [uploadedPhotoUrl, resumeObj] = await Promise.all([
+            uploadToCloudinary(photoFile),
+            fileToBase64(resumeFile)
+          ]);
+
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbw9bEufFnegV2BN74ZUaCl5Q2QGtuYtVcbpgUf2EE2ZQ4qa6Q0_9XOMJrkLFeW76C-c/exec';
+
+          const payload = {
+            name: document.getElementById('empName') ? document.getElementById('empName').value : '',
+            email: document.getElementById('empEmail') ? document.getElementById('empEmail').value : '',
+            phone: document.getElementById('empPhone') ? document.getElementById('empPhone').value : '',
+            address: document.getElementById('empAddress') ? document.getElementById('empAddress').value : '',
+            aadhar: document.getElementById('empAadhaar') ? document.getElementById('empAadhaar').value : '',
+            pan: document.getElementById('empPan') ? document.getElementById('empPan').value : '',
+            department: document.getElementById('empDept') ? document.getElementById('empDept').value : '',
+            role: document.getElementById('empRole') ? document.getElementById('empRole').value : '',
+            photoUrl: uploadedPhotoUrl, // Direct verified Cloudinary CDN Link
+            resumeData: resumeObj.data,
+            resumeName: resumeObj.name
+          };
+
+          // Google Sheet me data bhej rahe hain
+          await fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          });
+
+          if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+          alert('🎉 Details safalpurvak save ho gayi hain!');
+          window.location.reload();
+
+        } catch (error) {
+          console.error("Submit Error:", error);
+          if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+          alert("Upload me dikkat aayi: " + error.message);
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  });
+</script>
 </body>
 
 </html>

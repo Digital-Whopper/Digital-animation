@@ -883,9 +883,16 @@ const servicesDropdownHTML = (typeof DW_SERVICES_DATA !== 'undefined')
           <a href="/seoaudit/">SEO Audit</a>
           <a href="/shark-tank-journey/">Shark Tank Journey</a>
           <a href="/team/">Team</a>
-          <a href="/hiring/">Hiring</a>
+          <a href="/hiring/" class="hiring-nav-link">
+  Hiring <span class="active-pulse-badge">Active</span>
+</a>
          
         </div>
+
+        <!-- 📱 Mobile ke liye Enquire Button yahan menu ke andar rakha gaya hai -->
+          <div class="nav-cta mobile-show-cta laptop-hide" style="margin-top: 15px;">
+            <a href="/contact/" class="btn btn-gold" style="width: 100%; text-align: center; display: block;">Enquiry Center</a>
+          </div>
 
         <div class="nav-cta">
           <a href="/contact/" class="btn btn-gold">Enquiry Center</a>

@@ -4028,3 +4028,64 @@ footer .wrap {
     transform: translateY(-12px);
   }
 }
+
+
+
+/* navbar hiring menu tab */
+/* 🌟 Hiring Navbar Active Pulsing Badge (Bigger Font, Red, Rounded Arrow & Half-outside position) */
+.hiring-nav-link {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.active-pulse-badge {
+  position: absolute !important;
+  top: -15px !important;  /* Text ke thoda upar */
+  right: -24px !important; /* Right side se thoda bahar */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #ef4444, #dc2626); /* Vibrant Red Gradient */
+  color: #ffffff;
+  font-size: 10.5px !important; /* Font size bada rakha hai */
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.6);
+  animation: hiringBadgePulseRed 1.8s infinite ease-in-out;
+  white-space: nowrap;
+  z-index: 10;
+  line-height: 1.1;
+}
+
+/* Badge ke neeche wala rounded/stylish arrow */
+.badge-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.badge-arrow svg {
+  width: 8px;
+  height: 6px;
+  fill: #ffffff;
+}
+
+/* Glowing Pulse Keyframes (Red) */
+@keyframes hiringBadgePulseRed {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}

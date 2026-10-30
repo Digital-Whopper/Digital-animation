@@ -406,7 +406,7 @@
               </div>
               <div>
                 <div style="font-family: 'Sora', sans-serif; font-size: 12.5px; font-weight: 700; color: #0f172a; margin-bottom: 2px;">Profile Photo</div>
-                <div style="font-size: 11px; color: #64748b; margin-bottom: 12px;">JPG, PNG (Max 2MB)</div>
+                <div style="font-size: 11px; color: #64748b; margin-bottom: 12px;">JPG, PNG (Max 200KB)</div>
                 
                 <label class="upload-file-btn">
                   <span>Upload Image</span>
@@ -438,15 +438,15 @@
               </div>
 
               <div class="form-row-2">
-                <div>
-                  <label class="portal-label">Aadhaar Number</label>
-                  <input type="text" id="empAadhaar" class="portal-input" placeholder="[Aadhaar Redacted]">
-                </div>
-                <div>
-                  <label class="portal-label">PAN Number</label>
-                  <input type="text" id="empPan" class="portal-input" placeholder="ABCDE1234F">
-                </div>
-              </div>
+  <div>
+    <label class="portal-label">Aadhaar Number (12 Digits) *</label>
+    <input type="text" id="empAadhaar" class="portal-input" placeholder="12 digit Aadhaar number" maxlength="12" pattern="\d{12}" required>
+  </div>
+  <div>
+    <label class="portal-label">PAN Number (10 Characters) *</label>
+    <input type="text" id="empPan" class="portal-input" placeholder="ABCDE1234F" maxlength="10" style="text-transform: uppercase;" required>
+  </div>
+</div>
 
               <div class="form-row-2">
                 <div>
@@ -463,6 +463,67 @@
                 <label class="portal-label">Upload Resume / CV (PDF, Docx) *</label>
                 <input type="file" id="empResume" class="portal-input" accept=".pdf,.doc,.docx" required style="padding: 9px; background: #fff;">
               </div>
+              <!-- Document Upload Section -->
+<div style="border-top: 1px dashed #cbd5e1; padding-top: 16px; margin-top: 6px;">
+  <div style="font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">
+    📄 Upload Verification Documents (Images/Photos)
+  </div>
+
+  <div class="form-row-2">
+    <div>
+      <label class="portal-label">Aadhaar Card Photo *</label>
+      <input type="file" id="empAadhaarDoc" class="portal-input" accept="image/*" required style="padding: 9px; background: #fff;">
+    </div>
+    <div>
+      <label class="portal-label">PAN Card Photo *</label>
+      <input type="file" id="empPanDoc" class="portal-input" accept="image/*" required style="padding: 9px; background: #fff;">
+    </div>
+  </div>
+
+  <div class="form-row-2" style="margin-top: 12px;">
+    <div>
+      <label class="portal-label">10th Marksheet Photo *</label>
+      <input type="file" id="empMarksheet10" class="portal-input" accept="image/*" required style="padding: 9px; background: #fff;">
+    </div>
+    <div>
+      <label class="portal-label">12th Marksheet Photo *</label>
+      <input type="file" id="empMarksheet12" class="portal-input" accept="image/*" required style="padding: 9px; background: #fff;">
+    </div>
+  </div>
+
+  <div style="margin-top: 12px;">
+    <label class="portal-label">Graduation Degree / Marksheet Photo</label>
+    <input type="file" id="empGraduationDoc" class="portal-input" accept="image/*" style="padding: 9px; background: #fff;">
+  </div>
+</div>
+<!-- Bank Details Section -->
+<div style="border-top: 1px dashed #cbd5e1; padding-top: 16px; margin-top: 16px;">
+  <div style="font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">
+    🏦 Bank Details (Salary Account)
+  </div>
+
+  <div class="form-row-2">
+    <div>
+      <label class="portal-label">Account Holder Name *</label>
+      <input type="text" id="empAccHolder" class="portal-input" placeholder="Bank passbook ke anusar" required>
+    </div>
+    <div>
+      <label class="portal-label">Bank Name *</label>
+      <input type="text" id="empBankName" class="portal-input" placeholder="e.g. State Bank of India, HDFC" required>
+    </div>
+  </div>
+
+  <div class="form-row-2" style="margin-top: 12px;">
+    <div>
+      <label class="portal-label">Account Number *</label>
+      <input type="text" id="empAccNumber" class="portal-input" placeholder="e.g. 123456789012" maxlength="18" pattern="\d*" required>
+    </div>
+    <div>
+      <label class="portal-label">IFSC Code *</label>
+      <input type="text" id="empIfsc" class="portal-input" placeholder="e.g. SBIN0001234" maxlength="11" style="text-transform: uppercase;" required>
+    </div>
+  </div>
+</div>
 
               <button type="submit" id="submitBtn" class="portal-submit-btn">Submit Information 🚀</button>
             </div>
@@ -731,128 +792,245 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const imageInput = document.getElementById('profileImageInput');
-    const previewContainer = document.getElementById('avatarPreviewContainer');
-    const fullScreenLoader = document.getElementById('fullScreenLoader');
+document.addEventListener('DOMContentLoaded', () => {
+  const imageInput = document.getElementById('profileImageInput');
+  const previewContainer = document.getElementById('avatarPreviewContainer');
+  const fullScreenLoader = document.getElementById('fullScreenLoader');
+  const MAX_FILE_SIZE = 200 * 1024; // 200 KB in Bytes
 
-    // 1. Image Preview
-    if (imageInput && previewContainer) {
-      imageInput.addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            previewContainer.innerHTML = `<img src="${e.target.result}" alt="Profile Preview" style="width:100%; height:100%; object-fit:cover;">`;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-    }
-
-    // 2. Verified Cloudinary Direct Upload
-    const uploadToCloudinary = async (file) => {
-      if (!file) return "";
-      
-      const cloudName = "ywjdugiz";
-      const uploadPreset = "my_cloud_team"; // Agar aapka preset name alag ho toh wahi daalein
-
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("upload_preset", uploadPreset);
-
-      const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await res.json();
-      if (data.secure_url) {
-        return data.secure_url;
-      } else {
-        console.error("Cloudinary Error:", data);
-        throw new Error(data.error ? data.error.message : "Image upload failed");
+  // Helper: File Size Validator (Max 200 KB)
+  const validateFileSize = (input, fileLabel) => {
+    if (input && input.files.length > 0) {
+      const file = input.files[0];
+      if (file.size > MAX_FILE_SIZE) {
+        const sizeInKb = (file.size / 1024).toFixed(1);
+        alert(`⚠️ ${fileLabel} ka size ${sizeInKb} KB hai! Kripya 200 KB se choti file upload karein.`);
+        input.value = ""; // File reset karein
+        return false;
       }
-    };
+    }
+    return true;
+  };
 
-    // 3. Resume File to Base64 (PDF/DOCX)
-    const fileToBase64 = (file) => {
-      return new Promise((resolve) => {
-        if (!file) return resolve({ data: '', name: '' });
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => resolve({ data: reader.result, name: file.name });
-        reader.onerror = () => resolve({ data: '', name: '' });
-      });
-    };
+  // Instant Validation on Selecting Files
+  const fileInputs = [
+    { id: 'profileImageInput', label: 'Profile Photo' },
+    { id: 'empResume', label: 'Resume' },
+    { id: 'empAadhaarDoc', label: 'Aadhaar Card Photo' },
+    { id: 'empPanDoc', label: 'PAN Card Photo' },
+    { id: 'empMarksheet10', label: '10th Marksheet' },
+    { id: 'empMarksheet12', label: '12th Marksheet' },
+    { id: 'empGraduationDoc', label: 'Graduation Degree' }
+  ];
 
-    // 4. Form Submit Handler
-    const form = document.getElementById('employeePortalForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    if (form) {
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        const photoInput = document.getElementById('profileImageInput');
-        const resumeInput = document.getElementById('empResume');
-
-        const photoFile = photoInput && photoInput.files.length > 0 ? photoInput.files[0] : null;
-        const resumeFile = resumeInput && resumeInput.files.length > 0 ? resumeInput.files[0] : null;
-
-        if (!photoFile) {
-          alert("⚠️ Kripya profile image zaroor select karein!");
-          return;
-        }
-
-        // Loader chalu karein
-        if (fullScreenLoader) fullScreenLoader.style.display = 'flex';
-        submitBtn.disabled = true;
-
-        try {
-          // Cloudinary par direct photo upload aur resume read
-          const [uploadedPhotoUrl, resumeObj] = await Promise.all([
-            uploadToCloudinary(photoFile),
-            fileToBase64(resumeFile)
-          ]);
-
-          const scriptURL = 'https://script.google.com/macros/s/AKfycbw9bEufFnegV2BN74ZUaCl5Q2QGtuYtVcbpgUf2EE2ZQ4qa6Q0_9XOMJrkLFeW76C-c/exec';
-
-          const payload = {
-            name: document.getElementById('empName') ? document.getElementById('empName').value : '',
-            email: document.getElementById('empEmail') ? document.getElementById('empEmail').value : '',
-            phone: document.getElementById('empPhone') ? document.getElementById('empPhone').value : '',
-            address: document.getElementById('empAddress') ? document.getElementById('empAddress').value : '',
-            aadhar: document.getElementById('empAadhaar') ? document.getElementById('empAadhaar').value : '',
-            pan: document.getElementById('empPan') ? document.getElementById('empPan').value : '',
-            department: document.getElementById('empDept') ? document.getElementById('empDept').value : '',
-            role: document.getElementById('empRole') ? document.getElementById('empRole').value : '',
-            photoUrl: uploadedPhotoUrl, // Direct verified Cloudinary CDN Link
-            resumeData: resumeObj.data,
-            resumeName: resumeObj.name
-          };
-
-          // Google Sheet me data bhej rahe hain
-          await fetch(scriptURL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(payload)
-          });
-
-          if (fullScreenLoader) fullScreenLoader.style.display = 'none';
-          alert('🎉 Details safalpurvak save ho gayi hain!');
-          window.location.reload();
-
-        } catch (error) {
-          console.error("Submit Error:", error);
-          if (fullScreenLoader) fullScreenLoader.style.display = 'none';
-          alert("Upload me dikkat aayi: " + error.message);
-          submitBtn.disabled = false;
-        }
-      });
+  fileInputs.forEach(({ id, label }) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('change', () => validateFileSize(el, label));
     }
   });
+
+  // Profile image preview
+  if (imageInput && previewContainer) {
+    imageInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file && file.size <= MAX_FILE_SIZE) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          previewContainer.innerHTML = `<img src="${e.target.result}" alt="Profile Preview" style="width:100%; height:100%; object-fit:cover;">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+
+  // Aadhaar only digits limitation (Strict 12 Digits)
+  const aadhaarInput = document.getElementById('empAadhaar');
+  if (aadhaarInput) {
+    aadhaarInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 12);
+    });
+  }
+
+  // PAN uppercase and limit (10 Chars)
+  const panInput = document.getElementById('empPan');
+  if (panInput) {
+    panInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 10);
+    });
+  }
+
+  // IFSC Code uppercase and limit (11 Chars)
+  const ifscInput = document.getElementById('empIfsc');
+  if (ifscInput) {
+    ifscInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 11);
+    });
+  }
+
+  // Account Number only digits
+  const accNumInput = document.getElementById('empAccNumber');
+  if (accNumInput) {
+    accNumInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 18);
+    });
+  }
+
+  // Cloudinary Direct Upload
+  const uploadToCloudinary = async (file) => {
+    if (!file) return "";
+    const cloudName = "ywjdugiz";
+    const uploadPreset = "my_cloud_team";
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", uploadPreset);
+
+    const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+    if (data.secure_url) {
+      return data.secure_url;
+    } else {
+      throw new Error(data.error ? data.error.message : "Document upload failed");
+    }
+  };
+
+  const fileToBase64 = (file) => {
+    return new Promise((resolve) => {
+      if (!file) return resolve({ data: '', name: '' });
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve({ data: reader.result, name: file.name });
+      reader.onerror = () => resolve({ data: '', name: '' });
+    });
+  };
+
+  const form = document.getElementById('employeePortalForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Final Checks on Submit
+      const photoFile = document.getElementById('profileImageInput')?.files[0];
+      const resumeFile = document.getElementById('empResume')?.files[0];
+      const aadharDocFile = document.getElementById('empAadhaarDoc')?.files[0];
+      const panDocFile = document.getElementById('empPanDoc')?.files[0];
+      const marksheet10File = document.getElementById('empMarksheet10')?.files[0];
+      const marksheet12File = document.getElementById('empMarksheet12')?.files[0];
+      const graduationDocFile = document.getElementById('empGraduationDoc')?.files[0];
+
+      if (!photoFile) {
+        alert("⚠️ Kripya profile photo zaroor select karein!");
+        return;
+      }
+
+      // Check Aadhaar Length
+      const aadhaarVal = document.getElementById('empAadhaar')?.value.trim();
+      if (aadhaarVal && aadhaarVal.length !== 12) {
+        alert("⚠️ Aadhaar number poore 12 digits ka hona chahiye!");
+        return;
+      }
+
+      // Check PAN Length
+      const panVal = document.getElementById('empPan')?.value.trim();
+      if (panVal && panVal.length !== 10) {
+        alert("⚠️ PAN number poore 10 characters ka hona chahiye!");
+        return;
+      }
+
+      // 200 KB Safety Check
+      const allFiles = [
+        { file: photoFile, label: 'Profile Photo' },
+        { file: resumeFile, label: 'Resume' },
+        { file: aadharDocFile, label: 'Aadhaar Card' },
+        { file: panDocFile, label: 'PAN Card' },
+        { file: marksheet10File, label: '10th Marksheet' },
+        { file: marksheet12File, label: '12th Marksheet' },
+        { file: graduationDocFile, label: 'Graduation Degree' }
+      ];
+
+      for (let item of allFiles) {
+        if (item.file && item.file.size > MAX_FILE_SIZE) {
+          alert(`⚠️ ${item.label} ka size 200 KB se bada hai! Kripya choti file select karein.`);
+          return;
+        }
+      }
+
+      if (fullScreenLoader) fullScreenLoader.style.display = 'flex';
+      submitBtn.disabled = true;
+
+      try {
+        const [
+          photoUrl,
+          aadharDocUrl,
+          panDocUrl,
+          marksheet10Url,
+          marksheet12Url,
+          graduationDocUrl,
+          resumeObj
+        ] = await Promise.all([
+          uploadToCloudinary(photoFile),
+          uploadToCloudinary(aadharDocFile),
+          uploadToCloudinary(panDocFile),
+          uploadToCloudinary(marksheet10File),
+          uploadToCloudinary(marksheet12File),
+          uploadToCloudinary(graduationDocFile),
+          fileToBase64(resumeFile)
+        ]);
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw9bEufFnegV2BN74ZUaCl5Q2QGtuYtVcbpgUf2EE2ZQ4qa6Q0_9XOMJrkLFeW76C-c/exec';
+
+        const payload = {
+          name: document.getElementById('empName')?.value || '',
+          email: document.getElementById('empEmail')?.value || '',
+          phone: document.getElementById('empPhone')?.value || '',
+          address: document.getElementById('empAddress')?.value || '',
+          aadhar: aadhaarVal || '',
+          pan: panVal || '',
+          department: document.getElementById('empDept')?.value || '',
+          role: document.getElementById('empRole')?.value || '',
+          // Bank Details
+          accHolderName: document.getElementById('empAccHolder')?.value || '',
+          bankName: document.getElementById('empBankName')?.value || '',
+          accNumber: document.getElementById('empAccNumber')?.value || '',
+          ifscCode: document.getElementById('empIfsc')?.value || '',
+          // Upload URLs
+          photoUrl: photoUrl,
+          resumeData: resumeObj.data,
+          resumeName: resumeObj.name,
+          aadharDocUrl: aadharDocUrl,
+          panDocUrl: panDocUrl,
+          marksheet10Url: marksheet10Url,
+          marksheet12Url: marksheet12Url,
+          graduationDocUrl: graduationDocUrl
+        };
+
+        await fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+        alert('🎉 Sabhi details aur bank record safalpurvak save ho gaye!');
+        window.location.reload();
+
+      } catch (error) {
+        console.error("Submit Error:", error);
+        if (fullScreenLoader) fullScreenLoader.style.display = 'none';
+        alert("Upload me dikkat aayi: " + error.message);
+        submitBtn.disabled = false;
+      }
+    });
+  }
+});
 </script>
 </body>
 

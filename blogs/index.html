@@ -9,9 +9,6 @@
 <link rel="stylesheet" href="../styleb.css">
 <link rel="stylesheet" href="../section.css">
 <style>
-  /* ==========================================================================
-     🖼️ EXCLUSIVE MAGAZINE-LAYOUT GRAPHIC OVERRIDES
-     ========================================================================== */
   .logo-img-asset {
     height: 34px;
     width: auto;
@@ -27,7 +24,6 @@
     text-align: center;
   }
 
-  /* 🎯 FEATURED HERO CARD ARCHITECTURE (FIXED HEIGHT & OVERFLOW LOCK) */
   .featured-blog-card {
     background: #ffffff;
     border: 1px solid rgba(0, 82, 255, 0.08);
@@ -52,18 +48,18 @@
     height: 320px;
     overflow: hidden;
     flex-shrink: 0;
+    background: #f1f5f9;
   }
   .featured-img-frame img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     transition: transform 0.6s ease;
   }
   .featured-blog-card:hover .featured-img-frame img {
     transform: scale(1.03);
   }
 
-  /* 🌟 FIRST CARD ONLY: TITLE STYLE MODULE */
   .featured-title-custom {
     font-family: 'Sora', sans-serif; 
     font-size: 22px; 
@@ -80,7 +76,6 @@
     overflow: hidden !important;
   }
 
-  /* 🌟 FIRST CARD ONLY: STRICT 2 LINES PLAIN TEXT TRUNCATE */
   .featured-desc-truncate {
     color: var(--muted); 
     font-size: 14px; 
@@ -96,7 +91,6 @@
     max-height: 3.2em;
   }
 
-  /* 📦 PREMIUM GRID CORE Sync */
   .blog-master-card {
     background: #ffffff;
     border: 1px solid rgba(0, 82, 255, 0.06);
@@ -117,7 +111,6 @@
     box-shadow: var(--card-shadow-active);
   }
 
-  /* Image Aspect Thumb Frame */
   .blog-image-thumb-frame {
     width: 100%;
     height: 190px;
@@ -125,6 +118,7 @@
     position: relative;
     border-bottom: 1px solid rgba(0, 82, 255, 0.05);
     flex-shrink: 0;
+    background: #f1f5f9;
   }
   .blog-image-thumb-frame img {
     width: 100%;
@@ -136,7 +130,6 @@
     transform: scale(1.05);
   }
 
-  /* 🧬 ACCENT DETAILS */
   .blog-meta-strip {
     display: flex;
     align-items: center;
@@ -174,7 +167,6 @@
     text-decoration: none;
   }
 
-  /* 🤖 CONTINUOUS CHATBOT ROBOT ANIMATION */
   .chatbot-wrapper .robot-image-container {
     animation: botContinuousLoop 3s ease-in-out infinite !important;
     display: inline-block;
@@ -189,7 +181,6 @@
     100% { transform: translateY(0) rotate(0deg) scale(1); }
   }
 
-  /* 📱 ADVANCED FLUID RESPONSIVE SYSTEM OVERRIDES */
   @media(max-width: 1200px) {
     .magazine-top-split { grid-template-columns: 1fr !important; gap: 32px !important; }
     .magazine-bottom-grid { grid-template-columns: repeat(2, 1fr) !important; }
@@ -239,14 +230,16 @@
   <div class="wrap2" style="max-width: 1300px; margin: 0 auto; padding: 0 16px;">
     
     <div class="magazine-top-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%;">
-      <!-- 🌟 INDEX 0: Left Featured Hero Box (Dynamically injected) -->
-      <div class="blog-left-hero-column" id="featuredContainer"></div>
+      <!-- 🌟 INDEX 0: Left Featured Hero Box -->
+      <div class="blog-left-hero-column" id="featuredContainer">
+        <p style="color: #64748b; padding: 20px;">Loading latest articles...</p>
+      </div>
 
-      <!-- 🌟 INDEX 1 & 2: Right Side Grid (2 Cards dynamically injected) -->
+      <!-- 🌟 INDEX 1 & 2: Right Side Grid -->
       <div class="blog-right-top-grid" id="rightTopGridContainer" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;"></div>
     </div>
 
-    <!-- 🌟 INDEX 3+: Bottom Row Grid Cards (4 Columns dynamically injected) -->
+    <!-- 🌟 INDEX 3+: Bottom Row Grid Cards -->
     <div class="magazine-bottom-grid" id="magazineBottomGridContainer" style="display: none; grid-template-columns: repeat(4, 1fr); gap: 32px; width: 100%; margin-top: 32px;"></div>
 
   </div>
@@ -255,7 +248,7 @@
 <!-- 🏢 FOOTER -->
 <footer id="footer"></footer>
 
-<!-- 🤖 WHOPPY AI CHATBOT WITH ANIMATED CHOTU BADGE -->
+<!-- 🤖 WHOPPY AI CHATBOT -->
 <div class="chatbot-wrapper">
   <div class="chat-bubble" id="chatBubble">
     <div class="robot-image-container">
@@ -329,7 +322,7 @@
   </a>
 </div>
 
-<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER ("let's talk") -->
+<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->
 <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
   <div class="wa-icon-holder-w">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -339,7 +332,7 @@
   <span class="wa-vertical-text-w">let’s talk</span>
 </a>
 
-<!-- 📞 FLOATING LEFT ROUND GREEN CALL BUTTON -->
+<!-- 📞 FLOATING LEFT CALL BUTTON -->
 <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
   <div class="call-icon-holder-l">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -348,7 +341,7 @@
   </div>
 </a>
 
-<!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+<!-- 📱 MOBILE BOTTOM NAV BAR -->
 <div class="mobile-app-bottom-nav">
   <a href="/index.html" class="app-nav-item">
     <div class="app-nav-icon">
@@ -399,117 +392,197 @@
   </a>
 </div>
 
-<!-- 🌟 SCRIPTS (Pointing 1 Folder Up to blogs-data.js) -->
-<script src="../blogs-data.js"></script>
 <script src="../services-data.js"></script>
 <script src="../scriptb.js"></script>
 <script src="../section.js"></script>
 
 <!-- ==========================================================================
-     ⚙️ DYNAMIC BLOGS RENDERING SCRIPT (DIRECT FROM DW_BLOGS_DATA)
-     ========================================================================== -->
-<!-- ==========================================================================
-     ⚙️ DYNAMIC BLOGS RENDERING SCRIPT (LATEST ID FIRST SORTED)
+     ⚙️ DYNAMIC BLOGS RENDERING SCRIPT (GOOGLE SHEET API)
      ========================================================================== -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  const BLOG_API_URL = "https://script.google.com/macros/s/AKfycbw_BwVlr--rrjFhPx--mnwXgHpxgV2sLH4foZtyKfCQRGfjvL6LewY7GiPg9DUdE49T/exec";
+  let GLOBAL_ACTIVE_BLOGS = [];
+
+  function formatDriveImage(url) {
+    if (!url) return "";
+    const clean = String(url).trim().replace(/^['"]|['"]$/g, "");
+    const match = clean.match(/\/d\/([a-zA-Z0-9_-]+)/) || clean.match(/id=([a-zA-Z0-9_-]+)/);
+    if (match && match[1]) {
+      return `https://lh3.googleusercontent.com/d/${match[1]}=w1000`;
+    }
+    return clean;
+  }
+
+  function stripHtml(html) {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html || "";
+    return (tmp.textContent || tmp.innerText || "").trim();
+  }
+
+  function calculateReadTime(html) {
+    const text = stripHtml(html);
+    const words = text ? text.split(/\s+/).length : 0;
+    const mins = Math.max(1, Math.ceil(words / 200));
+    return `${mins} min read`;
+  }
+
+  function formatPublishDate(dateStr) {
+    if (!dateStr) return "Recent";
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return String(dateStr);
+    return d.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+  }
+
+  function normalizeBlog(raw, idx) {
+    const getVal = (...keys) => {
+      for (const k of keys) {
+        if (raw[k] !== undefined && raw[k] !== "") return raw[k];
+        const foundKey = Object.keys(raw).find((rk) => rk.trim().toLowerCase() === k.toLowerCase());
+        if (foundKey && raw[foundKey] !== undefined && raw[foundKey] !== "") return raw[foundKey];
+      }
+      return "";
+    };
+
+    const rawId = getVal("id", "blogId", "blog_id");
+    return {
+      id: rawId ? String(rawId).trim() : `ROW_${idx}`,
+      idx: idx,
+      title: String(getVal("title", "blogTitle", "heading")),
+      description: String(getVal("description", "content", "desc", "body")),
+      image: String(getVal("image", "imageUrl", "image_url", "photo", "cover")),
+      status: String(getVal("status") || "Active").trim(),
+      author: String(getVal("author", "authorName", "createdBy") || "Digital Whopper"),
+      createdAt: getVal("createdAt", "date", "timestamp"),
+      thumbnail: String(getVal("thumbnail", "thumb", "thumbnailUrl") || getVal("image", "imageUrl")),
+    };
+  }
+
+  // Click handler: Save selected blog in sessionStorage & open details page
+  function openBlogDetail(index) {
+    const selected = GLOBAL_ACTIVE_BLOGS[index];
+    if (!selected) return;
+    try {
+      sessionStorage.setItem("DW_SELECTED_BLOG", JSON.stringify(selected));
+    } catch (e) {}
+    window.location.href = `blogs-details/?id=${encodeURIComponent(selected.id)}&idx=${index}`;
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
     const featuredContainer = document.getElementById('featuredContainer');
     const rightTopGridContainer = document.getElementById('rightTopGridContainer');
     const magazineBottomGridContainer = document.getElementById('magazineBottomGridContainer');
 
-    if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA) || DW_BLOGS_DATA.length === 0) {
-      featuredContainer.innerHTML = '<p style="color: #64748b; padding: 20px;">No articles available in database.</p>';
-      return;
-    }
+    try {
+      const response = await fetch(BLOG_API_URL);
+      const rawData = await response.json();
 
-    // 🌟 1. ID wise reverse sort: Highest/Latest ID sabse pehle (6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0)
-    const sortedBlogs = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
+      if (!Array.isArray(rawData) || rawData.length === 0) {
+        featuredContainer.innerHTML = '<p style="color: #64748b; padding: 20px;">No articles published yet.</p>';
+        return;
+      }
 
-    // 🌟 2. INDEX 0: Sabse naya blog (e.g. ID 6) -> Left Featured Hero Box
-    const hero = sortedBlogs[0];
-    featuredContainer.innerHTML = `
-      <div class="featured-blog-card" onclick="window.location.href='blogs-details/?slug=${hero.slug}'">
-        <div class="featured-img-frame">
-          <img src="${hero.bannerImage || hero.thumbnail}" alt="${hero.title}">
-        </div>
-        <div style="padding: 20px 28px 20px; display: flex; flex-direction: column; flex-grow: 1;">
-          <div class="blog-meta-strip">
-            <span class="author-pill">${hero.category || 'Digital Whopper'}</span>
-            <span>• ${hero.readTime || '3 min read'}</span>
-          </div>
-          <h2 class="featured-title-custom">
-            ${hero.title}
-          </h2>
-          <p class="featured-desc-truncate">
-            ${hero.excerpt || hero.content?.intro || ''}
-          </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(0, 82, 255, 0.06);">
-            <span style="font-size: 12.5px; color: var(--muted); font-weight: 500;">🗓️ ${hero.publishDate}</span>
-            <span style="color: #0052ff; font-weight: 700; font-size: 14px;">Read Full Article →</span>
-          </div>
-        </div>
-      </div>
-    `;
+      GLOBAL_ACTIVE_BLOGS = rawData
+        .map((item, i) => normalizeBlog(item, i))
+        .filter((b) => b.status.toLowerCase() === "active" && b.title);
 
-    // 🌟 3. INDEX 1 & 2: Agle do latest blogs (e.g. ID 5 & 4) -> Right Side Grid Cards
-    const rightCardsData = sortedBlogs.slice(1, 3);
-    let rightGridHTML = '';
-    
-    rightCardsData.forEach((post) => {
-      rightGridHTML += `
-        <div class="blog-master-card" onclick="window.location.href='blogs-details/?slug=${post.slug}'">
-          <div class="blog-image-thumb-frame">
-            <img src="${post.thumbnail || post.bannerImage}" alt="${post.title}">
+      if (GLOBAL_ACTIVE_BLOGS.length === 0) {
+        featuredContainer.innerHTML = '<p style="color: #64748b; padding: 20px;">No active articles available.</p>';
+        return;
+      }
+
+      // 🌟 INDEX 0: Left Featured Hero Box
+      const hero = GLOBAL_ACTIVE_BLOGS[0];
+      const heroImg = formatDriveImage(hero.image);
+      const heroDate = formatPublishDate(hero.createdAt);
+      const heroReadTime = calculateReadTime(hero.description);
+
+      featuredContainer.innerHTML = `
+        <div class="featured-blog-card" onclick="openBlogDetail(0)">
+          <div class="featured-img-frame">
+            <img src="${heroImg}" alt="${hero.title}" referrerpolicy="no-referrer" onerror="if(this.src !== '${hero.image}') this.src='${hero.image}';">
           </div>
-          <div class="work-card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; word-break: break-word; overflow-wrap: anywhere;">
+          <div style="padding: 20px 28px 20px; display: flex; flex-direction: column; flex-grow: 1;">
             <div class="blog-meta-strip">
-              <span class="author-pill">${post.category || 'Digital Whopper'}</span>
+              <span class="author-pill">${hero.author}</span>
+              <span>• ${heroReadTime}</span>
             </div>
-            <b style="font-size: 16px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif; word-break: break-word; overflow-wrap: anywhere;">${post.title}</b>
-            <p style="color: var(--muted); font-size: 13px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; word-break: break-word; overflow-wrap: anywhere;">
-              ${post.excerpt || post.content?.intro || ''}
-            </p>
-            <div class="blog-card-footer">
-              <span class="blog-meta-badge">🗓️ ${post.publishDate}</span>
-              <span class="read-anchor-btn">Read ↗</span>
+            <h2 class="featured-title-custom">${hero.title}</h2>
+            <p class="featured-desc-truncate">${stripHtml(hero.description)}</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(0, 82, 255, 0.06);">
+              <span style="font-size: 12.5px; color: var(--muted); font-weight: 500;">🗓️ ${heroDate}</span>
+              <span style="color: #0052ff; font-weight: 700; font-size: 14px;">Read Full Article →</span>
             </div>
           </div>
         </div>
       `;
-    });
-    rightTopGridContainer.innerHTML = rightGridHTML;
 
-    // 🌟 4. INDEX 3+: Baaki purane blogs (e.g. ID 3, 2, 1, 0) -> Bottom Grid Cards
-    const bottomCardsData = sortedBlogs.slice(3);
-    if (bottomCardsData.length > 0) {
-      magazineBottomGridContainer.style.display = 'grid';
-      let bottomGridHTML = '';
-      
-      bottomCardsData.forEach((post) => {
-        bottomGridHTML += `
-          <div class="blog-master-card" onclick="window.location.href='blogs-details/?slug=${post.slug}'">
+      // 🌟 INDEX 1 & 2: Right Side Grid Cards
+      const rightCardsData = GLOBAL_ACTIVE_BLOGS.slice(1, 3);
+      let rightGridHTML = '';
+      rightCardsData.forEach((post, i) => {
+        const realIndex = i + 1;
+        const postImg = formatDriveImage(post.image);
+        const postDate = formatPublishDate(post.createdAt);
+        rightGridHTML += `
+          <div class="blog-master-card" onclick="openBlogDetail(${realIndex})">
             <div class="blog-image-thumb-frame">
-              <img src="${post.thumbnail || post.bannerImage}" alt="${post.title}">
+              <img src="${postImg}" alt="${post.title}" referrerpolicy="no-referrer" onerror="if(this.src !== '${post.image}') this.src='${post.image}';">
             </div>
             <div class="work-card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; word-break: break-word; overflow-wrap: anywhere;">
               <div class="blog-meta-strip">
-                <span class="author-pill">${post.category || 'Digital Whopper'}</span>
+                <span class="author-pill">${post.author}</span>
               </div>
-              <b style="font-size: 15.5px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif; word-break: break-word; overflow-wrap: anywhere;">${post.title}</b>
-              <p style="color: var(--muted); font-size: 12.8px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; word-break: break-word; overflow-wrap: anywhere;">
-                ${post.excerpt || post.content?.intro || ''}
+              <b style="font-size: 16px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif;">${post.title}</b>
+              <p style="color: var(--muted); font-size: 13px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                ${stripHtml(post.description)}
               </p>
               <div class="blog-card-footer">
-                <span class="blog-meta-badge">🗓️ ${post.publishDate}</span>
+                <span class="blog-meta-badge">🗓️ ${postDate}</span>
                 <span class="read-anchor-btn">Read ↗</span>
               </div>
             </div>
           </div>
         `;
       });
-      magazineBottomGridContainer.innerHTML = bottomGridHTML;
-    } else {
-      magazineBottomGridContainer.style.display = 'none';
+      rightTopGridContainer.innerHTML = rightGridHTML;
+
+      // 🌟 INDEX 3+: Bottom Row Grid Cards
+      const bottomCardsData = GLOBAL_ACTIVE_BLOGS.slice(3);
+      if (bottomCardsData.length > 0) {
+        magazineBottomGridContainer.style.display = 'grid';
+        let bottomGridHTML = '';
+        bottomCardsData.forEach((post, i) => {
+          const realIndex = i + 3;
+          const postImg = formatDriveImage(post.image);
+          const postDate = formatPublishDate(post.createdAt);
+          bottomGridHTML += `
+            <div class="blog-master-card" onclick="openBlogDetail(${realIndex})">
+              <div class="blog-image-thumb-frame">
+                <img src="${postImg}" alt="${post.title}" referrerpolicy="no-referrer" onerror="if(this.src !== '${post.image}') this.src='${post.image}';">
+              </div>
+              <div class="work-card-body" style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; word-break: break-word; overflow-wrap: anywhere;">
+                <div class="blog-meta-strip">
+                  <span class="author-pill">${post.author}</span>
+                </div>
+                <b style="font-size: 15.5px; display: block; color: var(--text); margin-top: 4px; font-family: 'Sora', sans-serif;">${post.title}</b>
+                <p style="color: var(--muted); font-size: 12.8px; margin: 8px 0 16px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  ${stripHtml(post.description)}
+                </p>
+                <div class="blog-card-footer">
+                  <span class="blog-meta-badge">🗓️ ${postDate}</span>
+                  <span class="read-anchor-btn">Read ↗</span>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        magazineBottomGridContainer.innerHTML = bottomGridHTML;
+      } else {
+        magazineBottomGridContainer.style.display = 'none';
+      }
+    } catch (err) {
+      console.error("Failed to fetch blogs:", err);
+      featuredContainer.innerHTML = '<p style="color: #ef4444; padding: 20px;">Unable to load articles right now.</p>';
     }
   });
 </script>

@@ -15,42 +15,61 @@
   /* Layout Architecture Box */
   .blog-detail-container { max-width: 860px; margin: 0 auto 100px; padding: 0 20px; position: relative; z-index: 5; }
   
-  .detail-meta-row { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .detail-meta-row { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); margin-bottom: 16px; flex-wrap: wrap; }
   .author-pill { background: rgba(0, 82, 255, 0.05); color: #0052ff; padding: 4px 12px; border-radius: 4px; font-weight: 600; font-size: 12px; }
   
   .main-article-title { font-family: 'Sora', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: var(--text); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 24px; }
-  .article-intro-text { font-size: 17px; line-height: 1.65; color: #475569; margin-bottom: 36px; font-weight: 500; }
   
-  .featured-banner-frame { width: 100%; height: 360px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(0, 82, 255, 0.08); box-shadow: var(--card-shadow-default); margin-bottom: 40px; }
+  .featured-banner-frame { width: 100%; height: 380px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(0, 82, 255, 0.08); box-shadow: var(--card-shadow-default); margin-bottom: 40px; background: #f1f5f9; }
   .featured-banner-frame img { width: 100%; height: 100%; object-fit: cover; }
   
-  /* Article Rich Text Typography Styles */
-  .article-rich-body { font-family: 'Inter', sans-serif; font-size: 15.5px; color: #334155; line-height: 1.8; }
-  .article-rich-body h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; margin: 34px 0 12px; color: #0f172a; }
+  /* Article Rich Text Typography Styles (Jodit Editor Output Sync) */
+  .article-rich-body { font-family: 'Inter', sans-serif; font-size: 16px; color: #334155; line-height: 1.85; word-break: break-word; }
+  .article-rich-body h1 { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 800; margin: 38px 0 16px; color: #0f172a; line-height: 1.3; }
+  .article-rich-body h2 { font-family: 'Sora', sans-serif; font-size: 25px; font-weight: 700; margin: 34px 0 14px; color: #0f172a; line-height: 1.35; }
+  .article-rich-body h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; margin: 28px 0 12px; color: #0f172a; line-height: 1.4; }
+  .article-rich-body h4 { font-family: 'Sora', sans-serif; font-size: 17.5px; font-weight: 700; margin: 24px 0 10px; color: #1e293b; }
   .article-rich-body p { margin-bottom: 18px; }
-  
-  .takeaways-box {
+  .article-rich-body strong, .article-rich-body b { color: #0f172a; font-weight: 700; }
+  .article-rich-body u { text-decoration: underline; text-underline-offset: 3px; }
+  .article-rich-body a { color: #0052ff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .article-rich-body a:hover { color: #003ecb; }
+  .article-rich-body ul, .article-rich-body ol { padding-left: 24px; margin: 14px 0 22px; }
+  .article-rich-body li { margin-bottom: 8px; }
+  .article-rich-body blockquote {
     background: #f8fafd;
     border-left: 4px solid #0052ff;
     padding: 16px 20px;
     border-radius: 0 10px 10px 0;
-    margin: 16px 0 24px;
-    border-top: 1px solid #eef2f6;
-    border-right: 1px solid #eef2f6;
-    border-bottom: 1px solid #eef2f6;
+    margin: 20px 0;
+    color: #1e293b;
+    font-style: italic;
   }
-  .takeaways-box ul { padding-left: 20px; margin: 0; }
-  .takeaways-box li { font-size: 14.5px; margin-bottom: 6px; color: #334155; }
-  
-  .conclusion-card {
-    background: #eff6ff;
-    border: 1px solid #dbeafe;
+  .article-rich-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14.5px;
+    overflow-x: auto;
+    display: block;
+  }
+  .article-rich-body table th,
+  .article-rich-body table td {
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+  }
+  .article-rich-body table th,
+  .article-rich-body table tr:first-child td {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .article-rich-body img {
+    max-width: 100%;
+    height: auto;
     border-radius: 12px;
-    padding: 20px 24px;
-    margin-top: 40px;
-    font-size: 15px;
-    color: #1e3a8a;
-    line-height: 1.6;
+    margin: 20px 0;
   }
 
   .back-to-feed-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #0052ff; margin-bottom: 28px; text-decoration: none; transition: transform 0.2s; }
@@ -75,6 +94,61 @@
     .detail-hero { padding: 130px 0 20px !important; }
     .featured-banner-frame { height: 220px; margin-bottom: 28px; }
   }
+
+
+
+  /* Auto-Styled FAQ Accordion Support */
+.article-rich-body details {
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #ffffff;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.article-rich-body details summary {
+  padding: 18px 22px;
+  font-family: 'Sora', sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article-rich-body details summary::-webkit-details-marker {
+  display: none;
+}
+.article-rich-body details summary::after {
+  content: "+";
+  font-size: 20px;
+  color: #0052ff;
+  background: rgba(0,82,255,0.08);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.article-rich-body details[open] summary::after {
+  content: "×";
+  background: #0052ff;
+  color: #ffffff;
+}
+.article-rich-body details[open] {
+  border-color: #0052ff;
+}
+.article-rich-body details > *:not(summary) {
+  padding: 0 22px 18px;
+  margin: 0;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.65;
+}
 </style>
 </head>
 <body>
@@ -104,7 +178,7 @@
      ========================================================================== -->
 <article class="blog-detail-container" id="blogDetailContainer">
   
-  <a href="../blogs/" class="back-to-feed-btn">← Back to Blogs</a>
+  <a href="/blogs" class="back-to-feed-btn">← Back to Blogs</a>
   
   <div class="detail-meta-row">
     <span class="author-pill" id="artTag">Digital Whopper</span>
@@ -113,11 +187,10 @@
     <span id="artDate">Date</span>
   </div>
   
-  <h1 class="main-article-title" id="artTitle">Loading Blueprint Transmission...</h1>
-  <p class="article-intro-text" id="artIntro"></p>
+  <h1 class="main-article-title" id="artTitle">Loading Article...</h1>
   
-  <div class="featured-banner-frame">
-    <img src="" id="artImage" alt="Featured Article Graphic">
+  <div class="featured-banner-frame" id="bannerFrame" style="display: none;">
+    <img src="" id="artImage" alt="Featured Article Graphic" referrerpolicy="no-referrer">
   </div>
   
   <div class="article-rich-body" id="artBody"></div>
@@ -127,7 +200,7 @@
 <!-- Global Injection Footer Frame -->
 <footer id="footer"></footer>
 
-<!-- 🤖 WHOPPY AI CHATBOT WITH ANIMATED CHOTU BADGE -->
+<!-- 🤖 WHOPPY AI CHATBOT -->
 <div class="chatbot-wrapper">
   <div class="chat-bubble" id="chatBubble">
     <div class="robot-image-container">
@@ -201,7 +274,7 @@
   </a>
 </div>
 
-<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER ("let's talk") -->
+<!-- 💬 STICKY RIGHT WHATSAPP TRIGGER -->
 <a href="https://wa.me/916200379161" target="_blank" rel="noopener" class="sticky-whatsapp-trigger-right" aria-label="Chat on WhatsApp">
   <div class="wa-icon-holder-w">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -211,7 +284,7 @@
   <span class="wa-vertical-text-w">let’s talk</span>
 </a>
 
-<!-- 📞 FLOATING LEFT ROUND GREEN CALL BUTTON -->
+<!-- 📞 FLOATING LEFT CALL BUTTON -->
 <a href="tel:+916200379161" class="sticky-call-trigger-left" aria-label="Call Us Now">
   <div class="call-icon-holder-l">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -220,7 +293,7 @@
   </div>
 </a>
 
-<!-- 📱 MOBILE EXCLUSIVE LIVE BOTTOM NAV BAR -->
+<!-- 📱 MOBILE BOTTOM NAV BAR -->
 <div class="mobile-app-bottom-nav">
   <a href="/index.html" class="app-nav-item">
     <div class="app-nav-icon">
@@ -271,152 +344,183 @@
   </a>
 </div>
 
-<!-- 🌟 SCRIPTS (Pointing 1 Folder Up to blogs-data.js) -->
-<script src="../blogs-data.js"></script>
 <script src="../services-data.js"></script>
 <script src="../scriptb.js"></script>
 <script src="../section.js"></script>
 
 <script>
- document.addEventListener('DOMContentLoaded', () => {
+  const BLOG_API_URL = "https://script.google.com/macros/s/AKfycbw_BwVlr--rrjFhPx--mnwXgHpxgV2sLH4foZtyKfCQRGfjvL6LewY7GiPg9DUdE49T/exec";
+
+  function formatDriveImage(url) {
+    if (!url) return "";
+    const clean = String(url).trim().replace(/^['"]|['"]$/g, "");
+    const match = clean.match(/\/d\/([a-zA-Z0-9_-]+)/) || clean.match(/id=([a-zA-Z0-9_-]+)/);
+    if (match && match[1]) {
+      return `https://lh3.googleusercontent.com/d/${match[1]}=w1200`;
+    }
+    return clean;
+  }
+
+  function stripHtml(html) {
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html || "";
+    return (tmp.textContent || tmp.innerText || "").trim();
+  }
+
+  function calculateReadTime(html) {
+    const text = stripHtml(html);
+    const words = text ? text.split(/\s+/).length : 0;
+    const mins = Math.max(1, Math.ceil(words / 200));
+    return `${mins} min read`;
+  }
+
+  function formatPublishDate(dateStr) {
+    if (!dateStr) return "Recent";
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return String(dateStr);
+    return d.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+  }
+
+  function normalizeBlog(raw) {
+    const getVal = (...keys) => {
+      for (const k of keys) {
+        if (raw[k] !== undefined && raw[k] !== "") return raw[k];
+        const foundKey = Object.keys(raw).find((rk) => rk.trim().toLowerCase() === k.toLowerCase());
+        if (foundKey && raw[foundKey] !== undefined && raw[foundKey] !== "") return raw[foundKey];
+      }
+      return "";
+    };
+
+    return {
+      id: String(getVal("id", "blogId", "blog_id")),
+      title: String(getVal("title", "blogTitle", "heading")),
+      description: String(getVal("description", "content", "desc", "body")),
+      image: String(getVal("image", "imageUrl", "image_url", "photo", "cover")),
+      status: String(getVal("status") || "Active").trim(),
+      author: String(getVal("author", "authorName", "createdBy") || "Digital Whopper"),
+      createdAt: getVal("createdAt", "date", "timestamp"),
+    };
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const slugParam = urlParams.get('slug');
     const idParam = urlParams.get('id');
 
-    if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA)) {
-      document.getElementById('artTitle').innerText = "Database File Missing! ✕";
-      return;
+    try {
+      const response = await fetch(BLOG_API_URL);
+      const rawData = await response.json();
+
+      if (!Array.isArray(rawData) || rawData.length === 0) {
+        document.getElementById('artTitle').innerText = "Article Not Found";
+        return;
+      }
+
+      const blogs = rawData.map(normalizeBlog);
+
+      let blog = null;
+      if (idParam) {
+        blog = blogs.find((item) => String(item.id).trim() === String(idParam).trim());
+      }
+
+      // Fallback: agar direct link bina ?id= ke khula ho toh latest Active blog dikhayein
+      if (!blog) {
+        blog = blogs.find((item) => item.status.toLowerCase() === "active") || blogs[0];
+      }
+
+      if (!blog) {
+        document.getElementById('artTitle').innerText = "Article Not Found";
+        return;
+      }
+
+      document.title = `${blog.title || 'Blog'} | Digital Whopper`;
+      document.getElementById('artTag').innerText = blog.author || "Digital Whopper";
+      document.getElementById('artReadTime').innerText = `• ${calculateReadTime(blog.description)}`;
+      document.getElementById('artDate').innerText = formatPublishDate(blog.createdAt);
+      document.getElementById('artTitle').innerText = blog.title || "";
+
+      const bannerImg = document.getElementById('artImage');
+      const bannerFrame = document.getElementById('bannerFrame');
+      const formattedImg = formatDriveImage(blog.image);
+
+      if (formattedImg) {
+        bannerImg.src = formattedImg;
+        bannerImg.alt = blog.title || "Featured Article Graphic";
+        bannerImg.onerror = function () {
+          if (blog.image && this.src !== blog.image) {
+            this.src = blog.image;
+          } else {
+            bannerFrame.style.display = 'none';
+          }
+        };
+        bannerFrame.style.display = 'block';
+      } else {
+        bannerFrame.style.display = 'none';
+      }
+
+      // Rich HTML Content Render (H1-H4, Bold, Underline, Interlink URLs, Lists, Tables)
+      document.getElementById('artBody').innerHTML = blog.description || "";
+
+    } catch (err) {
+      console.error("Error loading blog details:", err);
+      document.getElementById('artTitle').innerText = "Unable to load article";
     }
-
-    let blog = null;
-    if (slugParam) {
-      blog = DW_BLOGS_DATA.find((item) => item.slug === slugParam);
-    } else if (idParam !== null) {
-      blog = DW_BLOGS_DATA.find((item) => String(item.id) === String(idParam));
-    }
-
-    if (!blog) {
-      const sorted = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
-      blog = sorted[0];
-    }
-
-    document.title = `${blog.title || 'Blog'} | Digital Whopper`;
-    document.getElementById('artTag').innerText = blog.category || "Digital Whopper";
-    document.getElementById('artReadTime').innerText = blog.readTime ? `• ${blog.readTime}` : '';
-    document.getElementById('artDate').innerText = blog.publishDate || "";
-    document.getElementById('artTitle').innerText = blog.title || "";
-    
-    const introEl = document.getElementById('artIntro');
-    if (blog.content?.intro) {
-      introEl.innerHTML = blog.content.intro;
-      introEl.style.display = 'block';
-    } else {
-      introEl.style.display = 'none';
-    }
-
-    const bannerImg = document.getElementById('artImage');
-    const bannerFrame = document.querySelector('.featured-banner-frame');
-    if (blog.bannerImage || blog.thumbnail) {
-      bannerImg.src = blog.bannerImage || blog.thumbnail;
-      bannerImg.alt = blog.title || "Blog Graphic";
-      bannerFrame.style.display = 'block';
-    } else {
-      bannerFrame.style.display = 'none';
-    }
-
-    let bodyHTML = '';
-    
-    // Render Sections & Tables
-    if (blog.content?.sections && Array.isArray(blog.content.sections)) {
-      blog.content.sections.forEach(sec => {
-        if (sec.heading) {
-          bodyHTML += `<h3>${sec.heading}</h3>`;
-        }
-        if (sec.desc) {
-          bodyHTML += `<p>${sec.desc}</p>`;
-        }
-
-        if (sec.table && sec.table.headers && sec.table.rows) {
-          bodyHTML += `<div style="overflow-x:auto; margin: 20px 0;"><table style="width:100%; border-collapse: collapse; font-size: 14.5px;"><thead><tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">`;
-          sec.table.headers.forEach(h => {
-            bodyHTML += `<th style="padding: 10px 12px; text-align: left; color: #0f172a; border: 1px solid #e2e8f0;">${h}</th>`;
-          });
-          bodyHTML += `</tr></thead><tbody>`;
-          sec.table.rows.forEach(row => {
-            bodyHTML += `<tr>`;
-            const cells = row.cell || row;
-            cells.forEach(cell => {
-              bodyHTML += `<td style="padding: 10px 12px; border: 1px solid #e2e8f0; color: #334155;">${cell}</td>`;
-            });
-            bodyHTML += `</tr>`;
-          });
-          bodyHTML += `</tbody></table></div>`;
-        }
-      });
-    }
-
-    // FAQ Accordion Section
-    if (blog.content?.faqs && Array.isArray(blog.content.faqs) && blog.content.faqs.length > 0) {
-      bodyHTML += `<div style="margin-top: 50px;">
-        <div style="display: inline-block; background: rgba(0, 82, 255, 0.08); color: #0052ff; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; margin-bottom: 12px;">● FAQ</div>
-        <h3 style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 24px;">Frequently asked questions</h3>
-        <div class="faq-container" style="display: flex; flex-direction: column; gap: 16px;">`;
-      
-      blog.content.faqs.forEach((faq, index) => {
-        bodyHTML += `
-          <div class="faq-item" style="border: 1px solid #dbeafe; border-radius: 12px; background: #ffffff; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-            <button class="faq-question-btn" onclick="toggleFaq(${index})" style="width: 100%; text-align: left; padding: 20px 24px; background: none; border: none; font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 700; color: #0f172a; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
-              <span>${faq.q}</span>
-              <span id="faq-icon-${index}" style="font-size: 20px; color: #0052ff; font-weight: bold; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: rgba(0,82,255,0.05); border-radius: 50%;">+</span>
-            </button>
-            <div id="faq-answer-${index}" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 24px; color: #475569; font-size: 15px; line-height: 1.6;">
-              <p style="padding-bottom: 20px; margin: 0; border-top: 1px solid #f1f5f9; padding-top: 16px;">${faq.a}</p>
-            </div>
-          </div>`;
-      });
-      bodyHTML += `</div></div>`;
-    }
-
-    // Clickable References Section
-    if (blog.content?.references && Array.isArray(blog.content.references) && blog.content.references.length > 0) {
-      bodyHTML += `<div style="margin-top: 40px; padding: 20px; background: #f8fafd; border-radius: 12px; border: 1px solid #eef2f6;">
-        <strong style="font-family: 'Sora', sans-serif; font-size: 16px; color: #0f172a; display: block; margin-bottom: 12px;">References:</strong>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">`;
-      
-      blog.content.references.forEach(ref => {
-        bodyHTML += `<li><a href="${ref.url}" target="_blank" rel="noopener" style="color: #0052ff; text-decoration: none; font-size: 14.5px; font-weight: 500;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${ref.title} ↗</a></li>`;
-      });
-      
-      bodyHTML += `</ul></div>`;
-    }
-
-    // Conclusion Card
-    if (blog.content?.conclusion) {
-      bodyHTML += `<div class="conclusion-card"><strong>Key Takeaway:</strong> ${blog.content.conclusion}</div>`;
-    }
-
-    document.getElementById('artBody').innerHTML = bodyHTML;
   });
-
-  // FAQ Accordion Toggle Function
-  function toggleFaq(index) {
+</script>
+<script>
+  // Global FAQ Toggle (Purane aur Naye dono HTML formats ke liye)
+  window.toggleFaq = function(index) {
     const answerEl = document.getElementById(`faq-answer-${index}`);
     const iconEl = document.getElementById(`faq-icon-${index}`);
+    if (!answerEl) return;
     const itemEl = answerEl.closest('.faq-item');
-    
+
     if (answerEl.style.maxHeight && answerEl.style.maxHeight !== "0px") {
       answerEl.style.maxHeight = "0px";
-      iconEl.innerText = "+";
-      iconEl.style.background = "rgba(0,82,255,0.05)";
-      itemEl.style.borderColor = "#dbeafe";
+      if (iconEl) {
+        iconEl.innerText = "+";
+        iconEl.style.background = "rgba(0,82,255,0.05)";
+        iconEl.style.color = "#0052ff";
+      }
+      if (itemEl) itemEl.style.borderColor = "#dbeafe";
     } else {
-      answerEl.style.maxHeight = answerEl.scrollHeight + "0px";
-      iconEl.innerText = "×";
-      iconEl.style.background = "#0052ff";
-      iconEl.style.color = "#ffffff";
-      itemEl.style.borderColor = "#0052ff";
+      answerEl.style.maxHeight = answerEl.scrollHeight + "px";
+      if (iconEl) {
+        iconEl.innerText = "×";
+        iconEl.style.background = "#0052ff";
+        iconEl.style.color = "#ffffff";
+      }
+      if (itemEl) itemEl.style.borderColor = "#0052ff";
     }
-  }
+  };
+
+  // Agar editor ne onclick attribute strip kar diya ho, tab bhi click par FAQ chalega
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.faq-question-btn');
+    if (!btn) return;
+    const faqItem = btn.closest('.faq-item');
+    if (!faqItem) return;
+    const answerEl = faqItem.querySelector('[id^="faq-answer-"]') || btn.nextElementSibling;
+    const iconEl = faqItem.querySelector('[id^="faq-icon-"]');
+    if (!answerEl) return;
+
+    if (answerEl.style.maxHeight && answerEl.style.maxHeight !== "0px") {
+      answerEl.style.maxHeight = "0px";
+      if (iconEl) {
+        iconEl.innerText = "+";
+        iconEl.style.background = "rgba(0,82,255,0.05)";
+        iconEl.style.color = "#0052ff";
+      }
+      faqItem.style.borderColor = "#dbeafe";
+    } else {
+      answerEl.style.maxHeight = answerEl.scrollHeight + "px";
+      if (iconEl) {
+        iconEl.innerText = "×";
+        iconEl.style.background = "#0052ff";
+        iconEl.style.color = "#ffffff";
+      }
+      faqItem.style.borderColor = "#0052ff";
+    }
+  });
 </script>
 </body>
 </html>

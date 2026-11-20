@@ -2704,119 +2704,29 @@
 
   <script src="blogs-data.js"></script>
 
+  <!-- ==========================================================================
+     ⚙️ LIVE GOOGLE SHEET BLOGS & NEWS ENGINE (HOME PAGE)
+     ========================================================================== -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA)) return;
+    const DW_BLOG_API_URL =
+      "https://script.google.com/macros/s/AKfycbw_BwVlr--rrjFhPx--mnwXgHpxgV2sLH4foZtyKfCQRGfjvL6LewY7GiPg9DUdE49T/exec";
 
-      const sortedBlogs = [...DW_BLOGS_DATA].sort((a, b) => Number(b.id) - Number(a.id));
-      const mainGrid = document.getElementById('dwHomeBlogGrid');
-
-      if (mainGrid && sortedBlogs.length > 0) {
-        let wrapper = mainGrid.closest('.dw-carousel-wrapper');
-        if (!wrapper) {
-          wrapper = document.createElement('div');
-          wrapper.className = 'dw-carousel-wrapper';
-          mainGrid.parentNode.insertBefore(wrapper, mainGrid);
-          wrapper.appendChild(mainGrid);
-        }
-
-        // 🌟 Seamless Infinite Loop ke liye blogs ko duplicate kar dete hain
-        const duplicatedBlogs = [...sortedBlogs, ...sortedBlogs];
-
-        // Render cards
-        mainGrid.innerHTML = duplicatedBlogs.map(blog => `
-        <div class="blog-card">
-          <a href="/blogs-details/?slug=${blog.slug}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-            <div class="blog-thumb" style="height: 160px; overflow: hidden;">
-              <img loading="lazy" src="${blog.thumbnail || blog.bannerImage}" alt="${blog.title}" style="width:100%; height:100%; object-fit:cover;">
-            </div>
-            <div class="blog-body" style="padding: 16px;">
-              <span>${blog.category || 'Digital Whopper'}</span>
-              <h3>${blog.title}</h3>
-              <p>${blog.excerpt || blog.content?.intro || ''}</p>
-            </div>
-          </a>
-        </div>
-      `).join('');
-
-        let prevBtn = wrapper.querySelector('.dw-prev-btn');
-        let nextBtn = wrapper.querySelector('.dw-next-btn');
-
-        if (!prevBtn) {
-          prevBtn = document.createElement('button');
-          prevBtn.innerHTML = '&#10094;';
-          prevBtn.className = 'dw-carousel-btn dw-prev-btn btn-style';
-          prevBtn.style.cssText = 'position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;';
-          wrapper.appendChild(prevBtn);
-        }
-
-        if (!nextBtn) {
-          nextBtn = document.createElement('button');
-          nextBtn.innerHTML = '&#10095;';
-          nextBtn.className = 'dw-carousel-btn dw-next-btn btn-style';
-          nextBtn.style.cssText = 'position: absolute; right: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;';
-          wrapper.appendChild(nextBtn);
-        }
-
-        let currentIndex = 0;
-        const totalOriginal = sortedBlogs.length;
-
-        const updateCarouselPosition = (withTransition = true) => {
-          const cardElement = mainGrid.querySelector('.blog-card');
-          if (!cardElement) return;
-          const cardWidth = cardElement.offsetWidth;
-          const gap = 16;
-
-          if (!withTransition) {
-            mainGrid.style.transition = 'none';
-          } else {
-            mainGrid.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
-          }
-
-          const moveAmount = currentIndex * (cardWidth + gap);
-          mainGrid.style.transform = `translateX(-${moveAmount}px)`;
-        };
-
-        const handleNext = () => {
-          currentIndex++;
-          updateCarouselPosition(true);
-
-          // Jab original set khatam ho jaye, bina transition ke wapas 0 index par reset kar denge (seamless loop)
-          if (currentIndex >= totalOriginal) {
-            setTimeout(() => {
-              currentIndex = 0;
-              updateCarouselPosition(false);
-            }, 500); // Transition time ke barabar delay
-          }
-        };
-
-        const handlePrev = () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateCarouselPosition(true);
-          } else {
-            // Agar pehle card par hain aur prev dabaya, toh direct last original set par jump karke wapas aayega
-            currentIndex = totalOriginal - 1;
-            updateCarouselPosition(false);
-          }
-        };
-
-        nextBtn.onclick = handleNext;
-        prevBtn.onclick = handlePrev;
-
-        // Auto slide loop timer
-        let autoSlideTimer = setInterval(handleNext, 3500);
-        wrapper.onmouseenter = () => clearInterval(autoSlideTimer);
-        wrapper.onmouseleave = () => {
-          autoSlideTimer = setInterval(handleNext, 3500);
-        };
+    function formatDriveImage(url) {
+      if (!url) return "";
+      const clean = String(url).trim().replace(/^['"]|['"]$/g, "");
+      const match = clean.match(/\/d\/([a-zA-Z0-9_-]+)/) || clean.match(/id=([a-zA-Z0-9_-]+)/);
+      if (match && match[1]) {
+        return `https://lh3.googleusercontent.com/d/${match[1]}=w1000`;
       }
-    });
-  </script>
+      return clean;
+    }
 
-  <!-- news blog me se show karne ke liye  -->
-  <script>
-    // 🕒 ऑटोमैटिक टाइम कैलकुलेटर फ़ंक्शन (Auto-calculate time ago)
+    function stripHtml(html) {
+      const tmp = document.createElement("div");
+      tmp.innerHTML = html || "";
+      return (tmp.textContent || tmp.innerText || "").trim();
+    }
+
     function getFormattedTimeAgo(dateString) {
       if (!dateString) return "Just now";
       const now = new Date();
@@ -2837,67 +2747,287 @@
       for (const [unit, secondsInUnit] of Object.entries(intervals)) {
         const interval = Math.floor(diffInSeconds / secondsInUnit);
         if (interval >= 1) {
-          return `${interval}${unit.charAt(0)} ago`; // Jaise: 2d ago, 5h ago, 1w ago
+          return `${interval}${unit.charAt(0)} ago`;
         }
       }
       return "Just now";
     }
 
-    // 🌟 न्यूज़ लोड और FAQ ड्रॉपडाउन इंजन
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof DW_BLOGS_DATA === 'undefined' || !Array.isArray(DW_BLOGS_DATA)) return;
+    function normalizeHomeBlog(raw, idx) {
+      const getVal = (...keys) => {
+        for (const k of keys) {
+          if (raw[k] !== undefined && raw[k] !== "") return raw[k];
+          const foundKey = Object.keys(raw).find((rk) => rk.trim().toLowerCase() === k.toLowerCase());
+          if (foundKey && raw[foundKey] !== undefined && raw[foundKey] !== "") return raw[foundKey];
+        }
+        return "";
+      };
 
-      const newsListContainer = document.getElementById('dwSidebarNewsList');
-      if (newsListContainer) {
-        // 1. लेटेस्ट आईडी वाले केवल 3 ब्लॉग्स न्यूज़ के लिए लें
-        const top3News = [...DW_BLOGS_DATA]
-          .sort((a, b) => Number(b.id) - Number(a.id))
-          .slice(0, 3);
+      const rawId = getVal("id", "blogId", "blog_id");
+      const banner = String(getVal("image", "imageUrl", "image_url", "photo", "cover"));
+      const thumb = String(getVal("thumbnail", "thumb", "thumbnailUrl")) || banner;
 
-        // 2. HTML रेंडर करें (सभी कार्ड डिफ़ॉल्ट रूप से बंद रहेंगे)
-        newsListContainer.innerHTML = top3News.map(blog => {
-          const timeAgo = getFormattedTimeAgo(blog.publishDate);
-          const headline = blog.newsHeadline || blog.title;
-          const summary = blog.newsSummary || blog.excerpt || blog.content?.intro || '';
+      return {
+        id: rawId ? String(rawId).trim() : `ROW_${idx}`,
+        title: String(getVal("title", "blogTitle", "heading")),
+        description: String(getVal("description", "content", "desc", "body")),
+        image: banner,
+        thumbnail: thumb,
+        newsTitle: String(getVal("newsTitle", "news_title")),
+        newsDescription: String(getVal("newsDescription", "news_description")),
+        status: String(getVal("status") || "Active").trim(),
+        author: String(getVal("author", "authorName", "createdBy") || "Digital Whopper"),
+        createdAt: getVal("createdAt", "date", "timestamp"),
+      };
+    }
 
-          return `
-        <div class="news-acc-item">
-          <div class="news-acc-header">
-            <div class="dw-story-thumb-img">
-              <img loading="lazy" src="${blog.thumbnail || blog.bannerImage}" alt="${headline}">
-            </div>
-            <div class="dw-story-text-group">
-              <h4 class="li-story-headline">${headline}</h4>
-              <div class="li-story-meta">${timeAgo} • Verified Update</div>
-            </div>
-            <span class="news-acc-arrow">▾</span>
-          </div>
-          <div class="news-acc-body">
-            <p>${summary}</p>
-            <a href="/blogs-details/?slug=${blog.slug}" class="news-read-link">Read Full Story →</a>
-          </div>
-        </div>
-      `;
-        }).join('');
+    // Blog click par sessionStorage save karke detail page kholna
+    window.openHomeBlog = function (blogId) {
+      if (window.__DW_HOME_BLOGS__) {
+        const found = window.__DW_HOME_BLOGS__.find((b) => String(b.id) === String(blogId));
+        if (found) {
+          try {
+            sessionStorage.setItem("DW_SELECTED_BLOG", JSON.stringify(found));
+          } catch (e) {}
+        }
+      }
+      window.location.href = `/blogs-details/index.html?id=${encodeURIComponent(blogId)}`;
+    };
 
-        // 3. एकॉर्डियन क्लिक हैंडलर (FAQ स्टाइल टॉगल)
-        const newsHeaders = newsListContainer.querySelectorAll('.news-acc-header');
-        newsHeaders.forEach(header => {
-          header.addEventListener('click', () => {
-            const currentItem = header.closest('.news-acc-item');
-            const isOpen = currentItem.classList.contains('open');
+    document.addEventListener("DOMContentLoaded", async () => {
+      const mainGrid = document.getElementById("dwHomeBlogGrid");
+      const newsListContainer = document.getElementById("dwSidebarNewsList");
+      const sidebarBlogStack = document.getElementById("dwSidebarBlogStack");
+      const mobileToast = document.getElementById("mobileNewsToast");
 
-            // दूसरे खुले हुए आइटम्स को बंद करें
-            newsListContainer.querySelectorAll('.news-acc-item').forEach(item => {
-              item.classList.remove('open');
-            });
+      try {
+        const res = await fetch(DW_BLOG_API_URL);
+        const rawData = await res.json();
+        if (!Array.isArray(rawData) || rawData.length === 0) return;
 
-            // क्लिक किए गए कार्ड को टॉगल करें
-            if (!isOpen) {
-              currentItem.classList.add('open');
+        // Sirf Active blogs filter karein (Apps Script latest-first order mein bhejta hai)
+        const activeBlogs = rawData
+          .map((item, idx) => normalizeHomeBlog(item, idx))
+          .filter((b) => b.status.toLowerCase() === "active" && b.title);
+
+        window.__DW_HOME_BLOGS__ = activeBlogs;
+        if (activeBlogs.length === 0) return;
+
+        // ============================================================
+        // 1. HOME PAGE LATEST BLOGS CAROUSEL (#dwHomeBlogGrid)
+        // ============================================================
+        if (mainGrid) {
+          let wrapper = mainGrid.closest(".dw-carousel-wrapper");
+          if (!wrapper) {
+            wrapper = document.createElement("div");
+            wrapper.className = "dw-carousel-wrapper";
+            mainGrid.parentNode.insertBefore(wrapper, mainGrid);
+            wrapper.appendChild(mainGrid);
+          }
+
+          const duplicatedBlogs = [...activeBlogs, ...activeBlogs];
+
+          mainGrid.innerHTML = duplicatedBlogs
+            .map((blog) => {
+              const thumbSrc = formatDriveImage(blog.thumbnail || blog.image);
+              const plainExcerpt = stripHtml(blog.description);
+              return `
+                <div class="blog-card" onclick="openHomeBlog('${blog.id}')" style="cursor: pointer;">
+                  <div style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                    <div class="blog-thumb" style="height: 160px; overflow: hidden; background: #f1f5f9;">
+                      <img loading="lazy" src="${thumbSrc}" alt="${blog.title}" referrerpolicy="no-referrer"
+                        onerror="if(this.src !== '${blog.thumbnail}') this.src='${blog.thumbnail}';"
+                        style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="blog-body" style="padding: 16px;">
+                      <span>${blog.author || "Digital Whopper"}</span>
+                      <h3>${blog.title}</h3>
+                      <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        ${plainExcerpt}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              `;
+            })
+            .join("");
+
+          let prevBtn = wrapper.querySelector(".dw-prev-btn");
+          let nextBtn = wrapper.querySelector(".dw-next-btn");
+
+          if (!prevBtn) {
+            prevBtn = document.createElement("button");
+            prevBtn.innerHTML = "&#10094;";
+            prevBtn.className = "dw-carousel-btn dw-prev-btn btn-style";
+            prevBtn.style.cssText =
+              "position: absolute; left: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;";
+            wrapper.appendChild(prevBtn);
+          }
+
+          if (!nextBtn) {
+            nextBtn = document.createElement("button");
+            nextBtn.innerHTML = "&#10095;";
+            nextBtn.className = "dw-carousel-btn dw-next-btn btn-style";
+            nextBtn.style.cssText =
+              "position: absolute; right: 5px; top: 50%; transform: translateY(-50%); z-index: 10; cursor: pointer;";
+            wrapper.appendChild(nextBtn);
+          }
+
+          let currentIndex = 0;
+          const totalOriginal = activeBlogs.length;
+
+          const updateCarouselPosition = (withTransition = true) => {
+            const cardElement = mainGrid.querySelector(".blog-card");
+            if (!cardElement) return;
+            const cardWidth = cardElement.offsetWidth;
+            const gap = 16;
+
+            mainGrid.style.transition = withTransition
+              ? "transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)"
+              : "none";
+
+            const moveAmount = currentIndex * (cardWidth + gap);
+            mainGrid.style.transform = `translateX(-${moveAmount}px)`;
+          };
+
+          const handleNext = () => {
+            currentIndex++;
+            updateCarouselPosition(true);
+            if (currentIndex >= totalOriginal) {
+              setTimeout(() => {
+                currentIndex = 0;
+                updateCarouselPosition(false);
+              }, 500);
             }
+          };
+
+          const handlePrev = () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarouselPosition(true);
+            } else {
+              currentIndex = totalOriginal - 1;
+              updateCarouselPosition(false);
+            }
+          };
+
+          nextBtn.onclick = handleNext;
+          prevBtn.onclick = handlePrev;
+
+          let autoSlideTimer = setInterval(handleNext, 3500);
+          wrapper.onmouseenter = () => clearInterval(autoSlideTimer);
+          wrapper.onmouseleave = () => {
+            autoSlideTimer = setInterval(handleNext, 3500);
+          };
+        }
+
+        // ============================================================
+        // 2. DIGITAL WHOPPER NEWS SIDEBAR (#dwSidebarNewsList)
+        //    (Latest blogs jisme newsTitle/newsDescription hai unhe priority milegi)
+        // ============================================================
+        if (newsListContainer) {
+          const blogsWithNews = activeBlogs.filter(
+            (b) => b.newsTitle.trim() !== "" || b.newsDescription.trim() !== ""
+          );
+          const newsSource = (blogsWithNews.length > 0 ? blogsWithNews : activeBlogs).slice(0, 3);
+
+          newsListContainer.innerHTML = newsSource
+            .map((blog) => {
+              const timeAgo = getFormattedTimeAgo(blog.createdAt);
+              const headline = blog.newsTitle.trim() || blog.title;
+              const summary = blog.newsDescription.trim() || stripHtml(blog.description);
+              const thumbSrc = formatDriveImage(blog.thumbnail || blog.image);
+
+              return `
+                <div class="news-acc-item">
+                  <div class="news-acc-header">
+                    <div class="dw-story-thumb-img">
+                      <img loading="lazy" src="${thumbSrc}" alt="${headline}" referrerpolicy="no-referrer"
+                        onerror="if(this.src !== '${blog.thumbnail}') this.src='${blog.thumbnail}';">
+                    </div>
+                    <div class="dw-story-text-group">
+                      <h4 class="li-story-headline">${headline}</h4>
+                      <div class="li-story-meta">${timeAgo} • Verified Update</div>
+                    </div>
+                    <span class="news-acc-arrow">▾</span>
+                  </div>
+                  <div class="news-acc-body">
+                    <p>${summary}</p>
+                    <a href="javascript:void(0)" onclick="openHomeBlog('${blog.id}')" class="news-read-link">Read Full Story →</a>
+                  </div>
+                </div>
+              `;
+            })
+            .join("");
+
+          // Accordion Toggle Handler
+          const newsHeaders = newsListContainer.querySelectorAll(".news-acc-header");
+          newsHeaders.forEach((header) => {
+            header.addEventListener("click", () => {
+              const currentItem = header.closest(".news-acc-item");
+              const isOpen = currentItem.classList.contains("open");
+
+              newsListContainer.querySelectorAll(".news-acc-item").forEach((item) => {
+                item.classList.remove("open");
+              });
+
+              if (!isOpen) {
+                currentItem.classList.add("open");
+              }
+            });
           });
-        });
+        }
+
+        // ============================================================
+        // 3. TRENDING BLOG INSIGHTS SIDEBAR (#dwSidebarBlogStack)
+        // ============================================================
+        if (sidebarBlogStack) {
+          const trending4 = activeBlogs.slice(0, 4);
+          sidebarBlogStack.innerHTML = trending4
+            .map((blog) => {
+              const thumbSrc = formatDriveImage(blog.thumbnail || blog.image);
+              const timeAgo = getFormattedTimeAgo(blog.createdAt);
+              return `
+                <a href="javascript:void(0)" onclick="openHomeBlog('${blog.id}')" class="li-sidebar-blog-row" style="text-decoration: none; display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                  <img loading="lazy" src="${thumbSrc}" alt="${blog.title}" referrerpolicy="no-referrer"
+                    style="width: 48px; height: 48px; border-radius: 8px; object-fit: cover; flex-shrink: 0;">
+                  <div style="min-width: 0;">
+                    <h4 style="font-size: 13px; font-weight: 700; color: #0f172a; margin: 0 0 3px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                      ${blog.title}
+                    </h4>
+                    <span style="font-size: 11px; color: #64748b;">${timeAgo}</span>
+                  </div>
+                </a>
+              `;
+            })
+            .join("");
+        }
+
+        // ============================================================
+        // 4. MOBILE FLASH NEWS TOAST (#mobileNewsToast)
+        // ============================================================
+        if (mobileToast) {
+          const latestNewsBlog =
+            activeBlogs.find((b) => b.newsTitle.trim() !== "") || activeBlogs[0];
+          const toastAnchor = mobileToast.querySelector(".m-toast-story-anchor");
+          const toastImg = mobileToast.querySelector(".m-toast-thumb");
+          const toastTitle = mobileToast.querySelector(".m-toast-text h4");
+
+          if (latestNewsBlog) {
+            if (toastAnchor) {
+              toastAnchor.href = "javascript:void(0)";
+              toastAnchor.onclick = () => openHomeBlog(latestNewsBlog.id);
+            }
+            if (toastImg) {
+              toastImg.src = formatDriveImage(latestNewsBlog.thumbnail || latestNewsBlog.image);
+            }
+            if (toastTitle) {
+              toastTitle.innerText = latestNewsBlog.newsTitle.trim() || latestNewsBlog.title;
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Home page Google Sheet blog fetch error:", err);
       }
     });
   </script>

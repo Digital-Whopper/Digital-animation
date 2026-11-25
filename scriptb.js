@@ -726,6 +726,45 @@ function isHinglishQuery(query) {
   return words.some(word => hinglishIndicators.includes(word));
 }
 
+// 📡 CHOTU AI SILENT GOOGLE SHEET LOGGER
+const CHOTU_LOG_API_URL = "https://script.google.com/macros/s/AKfycbwF9wDx3kECpGoMTlD1AVBCk1OMcH5KerkQ5BYcmL_KEg5CRr9b3PjAZOOo0krsPNvb/exec";
+
+function getChotuVisitorSession() {
+  let sid = sessionStorage.getItem("DW_CHOTU_SESSION");
+  if (!sid) {
+    sid = "VIS_" + Date.now().toString(36).toUpperCase();
+    sessionStorage.setItem("DW_CHOTU_SESSION", sid);
+  }
+  return sid;
+}
+
+function extractLeadContact(text) {
+  const phoneMatch = text.match(/(?:\+91[\-\s]?)?[6-9]\d{9}/);
+  const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+  return [phoneMatch ? phoneMatch[0] : "", emailMatch ? emailMatch[0] : ""].filter(Boolean).join(" | ");
+}
+
+function logChotuChatToSheet(userQuery, matchedCategory) {
+  if (!CHOTU_LOG_API_URL || !CHOTU_LOG_API_URL.startsWith("http")) return;
+  try {
+    fetch(CHOTU_LOG_API_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({
+        sessionId: getChotuVisitorSession(),
+        query: userQuery,
+        category: matchedCategory || "unmatched",
+        leadContact: extractLeadContact(userQuery),
+        pageUrl: window.location.pathname,
+        device: window.innerWidth <= 768 ? "Mobile" : "Desktop"
+      })
+    });
+  } catch (err) {
+    // Silent fail taaki user experience par koi asar na pade
+  }
+}
+
 // 🤖 DUAL-LANGUAGE SMART SEARCH ENGINE WITH ACCURATE WEIGHTAGE
 function processBotBrainResponse(input) {
   const query = input.toLowerCase().trim();
@@ -778,6 +817,7 @@ function processBotBrainResponse(input) {
     }
 
     appendMessageBubble(bestResponse, 'bot-msg');
+    logChotuChatToSheet(input, matchedItem && highestScore > 0 ? matchedItem.category : "unmatched");
     if (typeof applyCursorHooks === "function") applyCursorHooks();
   }, 700);
 }

@@ -2,7 +2,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Gud Mishri",
     "category": "ecommerce web , seo",
-    "image": "/img/projects/gudhmisrith.png",
+    "image": "/img/projects/gudhmisrith.webp",
     "alt": "Gud Mishri Custom Platform Screen Grid",
     "techs": ["Shopify Liquid", "Intent Blueprint", "Semantic Content"],
     "description": "Custom high-concurrency storefront architecture coupled with massive keyword clustering to scale a healthy sweets and traditional snacks brand on Google.",
@@ -14,7 +14,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "The Marbleous",
     "category": ", seo",
-    "image": "img/projects/marbess2.png",
+    "image": "img/projects/marbess2.webp",
     "alt": "SaaS Growth Metrics System Profile",
     "techs": ["Shopify Liquid", "Meta Ads Engine", "Social Media Grid","SEO Intent Blueprint"],
     "description": "Comprehensive e-commerce storefront development coupled with targeted Meta ads, performance social media marketing, and strategic SEO clustering to scale luxury marble handicrafts globally",
@@ -26,7 +26,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Ekatra Handmade",
     "category": "ecommerce web , seo",
-    "image": "img/projects/ekatra3.png",
+    "image": "img/projects/ekatra3.webp",
     "alt": "SEO Keyword Structure Platform Scale",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom sustainable e-commerce storefront architecture integrated with targeted Meta advertising and high-intent organic search scaling.",
@@ -38,7 +38,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Dresszilla Rental",
     "category": "ecommerce web",
-    "image": "img/projects/dresszilla.png",
+    "image": "img/projects/dresszilla.webp",
     "alt": "E-Commerce Ad Optimization Funnel Matrix",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom designer rental storefront architecture integrated with targeted performance marketing and high-intent organic scaling for luxury fashion.",
@@ -50,7 +50,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Sahu Chai Wala",
     "category": "web",
-    "image": "img/projects/sahuchaiwala3.png",
+    "image": "img/projects/sahuchaiwala3.webp",
     "alt": "Figma UIUX Wireframing Vector Chassis",
     "techs": ["Semantic SEO", "Meta Ads Funnel", "Social Media Growth"],
     "description": "Comprehensive digital marketing architecture combining high-intent organic search scaling, targeted social media campaigns, and engagement funnels to expand a heritage tea brand's digital footprint.",
@@ -62,7 +62,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Mum & Daughter",
     "category": "ecommerce web",
-    "image": "img/projects/momd3.png",
+    "image": "img/projects/momd3.webp",
     "alt": "Figma UIUX Wireframing Vector Chassis",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom mother-daughter matching wear storefront architecture integrated with targeted performance marketing and high-intent organic scaling for ethnic lifestyle fashion.",
@@ -74,7 +74,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Raja & Raya",
     "category": "web ecommerce",
-    "image": "img/projects/rajaraya3.png",
+    "image": "img/projects/rajaraya3.webp",
     "alt": "Node Code Repository Automation Framework",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom family twinning apparel storefront optimized for performance marketing and organic growth.",
@@ -86,7 +86,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Home Arte India",
     "category": "web ecommerce",
-    "image": "img/projects/homeart3.png",
+    "image": "img/projects/homeart3.webp",
     "alt": "Node Code Repository Automation Framework",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom home decor storefront optimized for performance marketing and organic growth.",
@@ -98,7 +98,7 @@ const DW_PROJECTS_DATA = [
   {
     "title": "Reducetax",
     "category": "web ",
-    "image": "img/projects/reducetaxth.png",
+    "image": "img/projects/reducetaxth.webp",
     "alt": "Node Code Repository Automation Framework",
     "techs": ["Shopify Liquid", "Meta Ads Funnel", "Semantic SEO"],
     "description": "Custom home decor storefront optimized for performance marketing and organic growth.",
